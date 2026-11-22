@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://taseries.goatcounter.com; connect-src 'self' https://taseries.goatcounter.com; frame-src https://drive.google.com https://docs.google.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<title>View file — TA SERIES</title>
+<meta name="description" content="Read a TA SERIES study file on the website, then download it if you like.">
+<link rel="canonical" href="https://taseries.pages.dev/viewer.html">
+<link rel="stylesheet" href="style.css">
+<style>
+html,body{height:100%}
+body{margin:0;background:#fff}
+.viewer{position:fixed;inset:0;height:100dvh;display:flex;flex-direction:column;background:#fff;color:var(--ink)}
+.viewer-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;min-height:56px;padding:8px 12px;background:#fff;border-bottom:1px solid var(--border);flex:none}
+.viewer-back{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border:0;border-radius:999px;background:var(--teal-soft);color:var(--teal-dark);font-size:15px;font-weight:700;cursor:pointer;flex:none}
+.viewer-name{flex:1;min-width:0;font-size:16px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.viewer-download{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--teal);color:#fff;font-size:15px;font-weight:700;text-decoration:none;flex:none;white-space:nowrap}
+.viewer-menu-wrap{position:relative;flex:none}
+.viewer-more{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--border);border-radius:50%;background:#fff;color:var(--ink);font-size:20px;font-weight:700;line-height:1;cursor:pointer}
+.viewer-menu{position:absolute;top:50px;right:0;min-width:230px;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:6px;z-index:10}
+.viewer-menu a{display:flex;align-items:center;min-height:44px;padding:10px 14px;border-radius:10px;color:var(--ink);font-size:15px;font-weight:600;text-decoration:none}
+.viewer-menu a:hover,.viewer-menu a:focus-visible{background:var(--teal-soft)}
+.viewer-help{flex:none;margin:0;padding:10px 16px;font-size:14px;line-height:1.5;color:var(--muted);background:#fff;border-bottom:1px solid var(--border);text-align:center}
+.viewer-help a{color:var(--teal-dark);font-weight:700}
+.viewer-body{flex:1;min-height:0;position:relative}
+.viewer-frame{width:100%;height:100%;border:0;display:block;background:#fff}
+.viewer-note{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;background:#fff}
+.viewer-note p{margin:0;font-size:16px;line-height:1.6;max-width:420px}
+.viewer-note .viewer-note-actions{display:flex;flex-direction:column;gap:12px;width:100%;max-width:320px}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E7C86'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+<script src="app-mode.js"></script>
+</head>
+<body>
+<div class="viewer" id="viewer">
+  <div class="viewer-bar">
+    <button type="button" class="viewer-back" id="back-btn" aria-label="Back">← Back</button>
+    <span class="viewer-name" id="file-name">View file</span>
+    <a class="viewer-download" id="dl-btn" href="#" target="_blank" rel="noopener">Download</a>
+    <div class="viewer-menu-wrap">
+      <button type="button" class="viewer-more" id="menu-btn" aria-label="More options" aria-expanded="false" aria-haspopup="true">⋯</button>
+      <div class="viewer-menu" id="viewer-menu" hidden>
+        <a id="open-drive" href="#" target="_blank" rel="noopener">Open in Google Drive</a>
+        <a id="report-btn" href="#" target="_blank" rel="noopener">Report a problem</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="viewer-help">Not loading? <a id="help-open" href="#" target="_blank" rel="noopener">Open in Google Drive</a> or <a id="help-dl" href="#" target="_blank" rel="noopener">download the file</a>.</p>
+
+  <div class="viewer-body">
+    <iframe id="viewer-frame" class="viewer-frame" title="File preview"></iframe>
+
+    <div id="no-preview" class="viewer-note" hidden>
+      <p>This file can&rsquo;t be previewed. Download it or open it in Google Drive.</p>
+      <div class="viewer-note-actions">
+        <a id="np-dl" class="btn btn-teal btn-block" href="#" target="_blank" rel="noopener">Download</a>
+        <a id="np-open" class="btn btn-outline btn-block" href="#" target="_blank" rel="noopener">Open in Google Drive</a>
+      </div>
+    </div>
+
+    <div id="no-file" class="viewer-note" hidden>
+      <p>No file was selected. Go back and tap a file to read it here.</p>
+      <div class="viewer-note-actions">
+        <a class="btn btn-teal btn-block" href="material.html">Back to Study Materials</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  function getParam(name){
+    var m=new RegExp('[?&]'+name+'=([^&]*)').exec(location.search);
+    return m ? decodeURIComponent(m[1].replace(/\+/g,' ')) : '';
+  }
+  function cleanName(name){return String(name).replace(/\.(pdf|docx|pptx|ppt|zip|xlsx?|mp4)$/i,'');}
+  function driveInfo(u){
+    var m;
+    m=/drive\.google\.com\/file\/d\/([A-Za-z0-9_-]+)/.exec(u);
+    if(m) return {kind:'drive', id:m[1]};
+    m=/drive\.google\.com\/open\?id=([A-Za-z0-9_-]+)/.exec(u);
+    if(m) return {kind:'drive', id:m[1]};
+    m=/docs\.google\.com\/document\/d\/([A-Za-z0-9_-]+)/.exec(u);
+    if(m) return {kind:'doc', id:m[1]};
+    m=/docs\.google\.com\/presentation\/d\/([A-Za-z0-9_-]+)/.exec(u);
+    if(m) return {kind:'slides', id:m[1]};
+    return null;
+  }
+  var url=getParam('u'), rawName=getParam('n');
+  var displayName=cleanName(rawName||'View file');
+  var nameEl=document.getElementById('file-name'),
+      frame=document.getElementById('viewer-frame'),
+      noPrev=document.getElementById('no-preview'),
+      noFile=document.getElementById('no-file'),
+      dlBtn=document.getElementById('dl-btn'),
+      npDl=document.getElementById('np-dl'),
+      npOpen=document.getElementById('np-open'),
+      openDrive=document.getElementById('open-drive'),
+      helpOpen=document.getElementById('help-open'),
+      helpDl=document.getElementById('help-dl'),
+      reportBtn=document.getElementById('report-btn');
+
+  /* Close the viewer. A history entry is added when the viewer opens, so
+     the phone Back button closes it too (see popstate below). */
+  var pushed=false, closing=false;
+  function returnUrl(){
+    if(document.referrer && document.referrer.indexOf(location.host)!==-1){ return document.referrer; }
+    return 'material.html';
+  }
+  function leave(){
+    if(closing) return;
+    closing=true;
+    location.href=returnUrl();
+  }
+  window.addEventListener('popstate', function(){ leave(); });
+  try{ history.pushState({taViewer:true},''); pushed=true; }catch(e){}
+  document.getElementById('back-btn').addEventListener('click', function(){
+    if(pushed){
+      history.back();
+      setTimeout(function(){ if(!closing){ leave(); } }, 400);
+    }else{
+      leave();
+    }
+  });
+
+  /* More options menu. */
+  var menuBtn=document.getElementById('menu-btn'),
+      menu=document.getElementById('viewer-menu');
+  function setMenu(open){
+    menu.hidden=!open;
+    menuBtn.setAttribute('aria-expanded', open?'true':'false');
+  }
+  menuBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    setMenu(menu.hidden);
+  });
+  document.addEventListener('click', function(e){
+    if(!menu.hidden && !menu.contains(e.target)){ setMenu(false); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape' && !menu.hidden){ setMenu(false); menuBtn.focus(); }
+  });
+
+  nameEl.textContent=displayName;
+  nameEl.title=displayName;
+  frame.title=displayName;
+  document.title=displayName+' — TA SERIES';
+
+  /* Report a problem opens WhatsApp with the file name filled in. */
+  var reportText='TA SERIES: broken link report\n\nFile name: '+(rawName||displayName)+'\nWhere I found it: File viewer\nWhat happens when I open it: ';
+  reportBtn.href='https://wa.me/923055959410?text='+encodeURIComponent(reportText);
+
+  if(!url){
+    frame.classList.add('hidden');
+    noFile.hidden=false;
+    dlBtn.classList.add('hidden');
+    openDrive.parentElement.classList.add('hidden');
+    return;
+  }
+
+  var info=driveInfo(url), previewUrl=null, downloadUrl=url, downloadLabel='Download';
+  if(info){
+    if(info.kind==='drive'){
+      previewUrl='https://drive.google.com/file/d/'+info.id+'/preview';
+      downloadUrl='https://drive.google.com/uc?export=download&id='+info.id;
+    }else if(info.kind==='doc'){
+      previewUrl='https://docs.google.com/document/d/'+info.id+'/preview';
+      downloadUrl='https://docs.google.com/document/d/'+info.id+'/export?format=pdf';
+      downloadLabel='Download PDF';
+    }else if(info.kind==='slides'){
+      previewUrl='https://docs.google.com/presentation/d/'+info.id+'/preview';
+      downloadUrl='https://docs.google.com/presentation/d/'+info.id+'/export/pdf';
+      downloadLabel='Download PDF';
+    }
+  }
+
+  dlBtn.textContent=downloadLabel;
+  dlBtn.href=downloadUrl;
+  npDl.textContent=downloadLabel;
+  npDl.href=downloadUrl;
+  helpDl.href=downloadUrl;
+  openDrive.href=url;
+  helpOpen.href=url;
+  npOpen.href=url;
+
+  if(previewUrl){
+    frame.src=previewUrl;
+  }else{
+    frame.classList.add('hidden');
+    noPrev.hidden=false;
+  }
+})();
+</script>
+<script data-goatcounter="https://taseries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://taseries.goatcounter.com; connect-src 'self' https://taseries.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About TA SERIES — TA SERIES</title>
+<meta name="description" content="TA SERIES is an independent, free educational resource platform for BS Nursing students, run by a BS Nursing student.">
+<link rel="canonical" href="https://taseries.pages.dev/about.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TA SERIES">
+<meta property="og:title" content="About TA SERIES">
+<meta property="og:description" content="TA SERIES is an independent, free educational resource platform for BS Nursing students, run by a BS Nursing student.">
+<meta property="og:url" content="https://taseries.pages.dev/about.html">
+<meta property="og:image" content="https://taseries.pages.dev/images/ta-series.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<meta property="og:image:alt" content="TA SERIES — open book with stethoscope">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E7C86'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+<script src="app-mode.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-in">
+    <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
+    <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="menu-label">Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="material.html">Study Materials</a>
+      <a href="mock-tests.html">Practice Tests</a>
+      <a href="mega.html">Past Papers</a>
+      <a href="examination.html">Examination</a>
+      <a href="gpa-calculator.html">GPA &amp; CGPA Calculator</a>
+    </nav>
+  </div>
+</header>
+
+<main><section class="fz-page"><div class="fz-page-in">
+<div class="fz-page-head">
+<p class="fz-eyebrow">TA SERIES</p>
+<h1>About TA SERIES</h1>
+<p class="fz-sub">TA SERIES is a free study library for BS Nursing students. You can find slides, solved past papers, MCQ practice tests, examination results and a GPA calculator in one place.</p>
+</div>
+
+<div class="fz-policy">
+<div class="fz-white-card rv">
+<h2>Who made it</h2>
+<p>TA SERIES was started by Tufail Ahmad, a BS Nursing student at GINAHS, Dera Ismail Khan. He found it hard to get good study material, so he began with one collection of lecture slides. Today the library covers all eight semesters.</p>
+
+<h2>Independence and accuracy</h2>
+<p>TA SERIES is independent. It is not affiliated with or endorsed by any university or examination board. Please check results and academic information with the official institution.</p>
+
+<h2>How files are collected</h2>
+<p>Resources are collected and organised by the founder. Files open from Google Drive. If a link is broken or a file is wrong, tell us on the Contact page.</p>
+
+<p class="fz-actions"><a class="fz-btn" href="contact.html">Contact us</a> <a class="fz-btn fz-btn-ghost" href="https://whatsapp.com/channel/0029VbDcAC81HsppHdpHvj3p" target="_blank" rel="noopener noreferrer">Join the WhatsApp channel</a></p>
+</div>
+</div>
+</div></section></main>
+
+<footer class="site-footer"><div class="site-footer-in">
+  <div class="foot-top">
+    <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
+    <nav class="foot-links" aria-label="Footer"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="copyright.html">Copyright</a><a href="contact.html">Give feedback</a></nav>
+    <a class="channel-link" href="https://whatsapp.com/channel/0029VbDcAC81HsppHdpHvj3p" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>WhatsApp channel</a>
+  </div>
+  <div class="foot-close">
+    <p class="foot-note">TA SERIES is independent and not affiliated with any university or examination board.</p>
+    <p class="tagline">Making Nursing Simple. Making Students Strong.</p>
+    <p>&copy; 2026 TA SERIES.</p>
+  </div>
+</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById('menu-btn'), nav=document.getElementById('site-nav');
+  if(!btn||!nav) return;
+  function setOpen(open){
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open?'true':'false');
+  }
+  btn.addEventListener('click', function(){ setOpen(!nav.classList.contains('open')); });
+  nav.addEventListener('click', function(e){ if(e.target.closest('a')){ setOpen(false); } });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && nav.classList.contains('open')){ setOpen(false); btn.focus(); } });
+})();
+</script>
+<script data-goatcounter="https://taseries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
