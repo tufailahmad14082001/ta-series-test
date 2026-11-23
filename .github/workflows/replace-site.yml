@@ -1,0 +1,45 @@
+name: Replace site from zip
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  replace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace repo contents with zip contents
+        run: |
+          set -e
+          ls -lh TA_SERIES_Test_Text_Only.zip
+          rm -rf /tmp/site
+          mkdir -p /tmp/site
+          unzip -o TA_SERIES_Test_Text_Only.zip -d /tmp/site
+          echo "--- top level ---"
+          ls -la /tmp/site
+          SRC=/tmp/site
+          TOP_COUNT=$(find "$SRC" -mindepth 1 -maxdepth 1 | wc -l)
+          TOP_ITEM=$(find "$SRC" -mindepth 1 -maxdepth 1 | head -n 1)
+          if [ "$TOP_COUNT" = "1" ] && [ -d "$TOP_ITEM" ] && [ -f "$TOP_ITEM/index.html" ]; then
+            SRC="$TOP_ITEM"
+            echo "Using top-level folder: $SRC"
+          fi
+          echo "--- source ---"
+          ls -la "$SRC"
+          test -f "$SRC/index.html"
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a "$SRC"/. .
+          rm -rf __MACOSX
+          rm -f TA_SERIES_Test_Text_Only.zip
+          ls -la
+          test -f index.html
+          test -f style.css
+          test -f data.js
+          test -f tree.js
+          test -f material.html
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git status --short
+          git commit -m "Replace site with contents of TA_SERIES_Test_Text_Only.zip" || echo "Nothing to commit"
+          git push
