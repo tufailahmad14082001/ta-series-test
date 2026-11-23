@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E7C86'/%3E%3Ctext x='32' y='42' font-family='Arial, Helvetica, sans-serif' font-size='26' font-weight='800' fill='%23ffffff' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+<title>Biostatistics Chapterwise Practice Test — TA SERIES</title>
+<meta name="description" content="Biostatistics (Biostatistics) chapterwise practice test by TA SERIES — 398 solved KMU past-paper MCQs in 6 chapters. BSN Semester 6, course NU-352. Answers stay hidden until you tap an option.">
+<style>
+/* TA SERIES website design system (teal) — same colours, fonts and components as taseries.pages.dev */
+:root{
+  --base:#E9EEF3; --card:#FFFFFF; --teal:#0E7C86; --teal-dark:#0B6B75; --teal-soft:#E0F0F0; --teal-light:#35A9B3;
+  --ink:#12304A; --muted:#64748B; --muted-2:#64748B; --border:#E2E8F0; --line:#E2E8F0; --paper:#EEF2F6; --sunken:#E4EAF0;
+  --shadow-d:#C2CBD5; --red:#CE4145; --red-soft:#FDECEC; --orange:#0E7C86; --blue:#0E7C86; --green:#1A8447; --green-soft:#E3F5E9;
+  --amber:#0E7C86; --gold:#0E7C86; --s6:#0E7C86; --why:#DCE9EC;
+  --r-lg:6px; --r-md:6px; --pill:6px; --btn-h:48px;
+  --raise:#FFFFFF;
+  --shadow:0 8px 24px rgba(15,42,68,.08);
+  --shadow-sm:0 4px 14px rgba(15,42,68,.08);
+  --sunken-shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--base);color:var(--ink);font-size:16px;line-height:1.5}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+input,select{font:inherit;color:inherit}
+h1,h2,h3{line-height:1.2;margin:0}
+p{margin:0}
+.container{max-width:640px;margin:0 auto;padding:0 20px}
+.hidden{display:none!important}
+
+/* header — same as website */
+.site-header{background:var(--card);color:var(--ink);position:sticky;top:0;z-index:50;box-shadow:0 4px 14px rgba(18,48,74,.08)}
+.site-header-in{max-width:1040px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:40px;height:40px;border-radius:6px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px;flex:none}
+.brand-name{font-weight:800;font-size:18px;letter-spacing:.02em;white-space:nowrap;color:var(--ink)}
+.brand-name em{font-style:normal;color:var(--teal)}
+.site-nav{margin-left:auto;display:flex;gap:4px}
+.site-nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;padding:8px 11px;border-radius:6px;white-space:nowrap;min-height:36px;display:inline-flex;align-items:center}
+.site-nav a:hover{background:var(--teal-soft);color:var(--teal-dark)}
+.site-nav a.active{color:var(--teal-dark);background:var(--teal-soft)}
+.menu-btn{display:none;width:44px;height:44px;border-radius:6px;place-items:center;color:var(--ink);margin-left:auto}
+.menu-btn svg{width:22px;height:22px}
+@media (max-width:1060px){
+  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--card);flex-direction:column;padding:8px 16px 12px;gap:2px;box-shadow:0 12px 24px rgba(18,48,74,.12)}
+  .site-nav.open{display:flex}
+  .site-nav a{min-height:44px}
+  .menu-btn{display:grid}
+  .site-header-in{position:relative}
+}
+
+/* page head — tight */
+.page-head{padding:14px 0 2px}
+.page-head h1{font-size:clamp(15px,4.5vw,32px);font-weight:800;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+.page-head p{font-size:14px;color:var(--muted);line-height:1.55;margin-top:6px;max-width:640px}
+.chip-row{display:flex;flex-wrap:nowrap;gap:6px;margin-top:10px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:var(--pill);background:#fff;border:1px solid var(--border);box-shadow:none;font-size:12px;font-weight:700;color:var(--ink);white-space:nowrap;flex:0 1 auto;min-width:0}
+.chip.teal{background:var(--teal);color:#fff;box-shadow:none}
+
+/* sticky book toolbar */
+.toolbar{position:static;background:var(--base);padding:6px 0;width:100%;max-width:100%}
+#view{margin-top:8px}
+.search{display:flex;align-items:center;gap:10px;background:var(--sunken);border-radius:var(--pill);padding:0 8px 0 16px;min-height:50px;width:100%;max-width:100%;margin:0}
+.search svg{width:20px;height:20px;color:var(--muted);flex:none}
+.search input{border:0;outline:0;background:none;flex:1;font-size:16px;min-width:0;width:100%;color:var(--ink);min-height:44px;-webkit-appearance:none;appearance:none}
+.search input::placeholder{color:var(--muted-2)}
+.search .clear-btn{flex:none;width:40px;height:40px;border-radius:6px;display:none;place-items:center;background:#fff;color:var(--teal-dark);font-size:18px;font-weight:700;box-shadow:var(--shadow-sm)}
+.search .clear-btn.show{display:grid}
+
+.count-line{font-size:14px;color:var(--muted);font-weight:700;margin:8px 0 2px}
+
+/* folder rows — same as website material list */
+.row{display:flex;align-items:center;gap:13px;background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-sm);border-radius:var(--r-md);padding:12px 16px;text-decoration:none;color:var(--ink);width:100%;text-align:left}
+.row + .row{margin-top:8px}
+.row:hover{box-shadow:0 10px 24px rgba(15,42,68,.12)}
+.fico{flex:none;width:52px;height:52px;border-radius:6px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800}
+.row .body{flex:1;min-width:0}
+.row .body b{display:block;font-size:16px;font-weight:700;line-height:1.35;overflow-wrap:anywhere}
+.row .body span{display:block;font-size:14px;color:var(--muted);margin-top:2px;line-height:1.45}
+.row .chev{font-size:22px;font-weight:700;color:var(--muted-2);flex:none}
+.row .count{flex:none;font-size:12px;font-weight:700;background:#E4EAF0;border-radius:var(--pill);padding:4px 11px;color:var(--ink)}
+
+/* home view fixes — chapter names on one line, compact chips on narrow screens */
+.row[data-chapter]{gap:9px;padding:11px 12px}
+.row[data-chapter] .fico{width:40px;height:40px;font-size:15px;border-radius:6px}
+.row[data-chapter] .body b{font-size:13.5px;white-space:nowrap;letter-spacing:-.02em;line-height:1.3;overflow-wrap:normal}
+.row[data-chapter] .count{font-size:11px;padding:3px 8px;white-space:nowrap}
+.row[data-chapter] .chev{font-size:18px}
+.row[data-year]{gap:9px;padding:11px 12px}
+.row[data-year] .fico{width:40px;height:40px;font-size:13px;border-radius:6px;letter-spacing:-.02em}
+.row[data-year] .body b{font-size:13.5px;white-space:nowrap;letter-spacing:-.02em;line-height:1.3;overflow-wrap:normal}
+.row[data-year] .count{font-size:11px;padding:3px 8px;white-space:nowrap}
+.row[data-year] .chev{font-size:18px}
+@media (max-width:480px){
+  .chip{font-size:10.5px;padding:4px 6px}
+  .chip-row{gap:5px}
+}
+@media (max-width:380px){
+  .row[data-chapter],.row[data-year]{gap:7px;padding:10px}
+  .row[data-chapter] .fico,.row[data-year] .fico{width:36px;height:36px;font-size:14px}
+  .row[data-year] .fico{font-size:12px}
+  .row[data-chapter] .body b,.row[data-year] .body b{font-size:12px}
+}
+
+/* section heads — same as website */
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:14px 0 10px}
+.sec-head h2{font-size:22px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+
+
+/* question cards */
+.qcard{background:#fff;border-radius:var(--r-md);box-shadow:var(--shadow-sm);padding:14px 16px;margin-top:10px}
+.qcard.flash{outline:2.5px solid var(--teal)}
+.qtop{display:flex;align-items:center;gap:9px}
+.qno{flex:none;display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:26px;padding:0 9px;border-radius:6px;background:var(--teal);color:#fff;font-size:12px;font-weight:800}
+.repeat-badge{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;color:var(--teal-dark);background:var(--teal-soft);padding:3px 9px;border-radius:var(--pill)}
+.report-link{display:inline-block;margin-top:10px;font-size:12px;color:var(--muted);text-decoration:underline}
+.qpaper{font-size:12px;font-weight:700;color:var(--muted)}
+.qtext{font-size:16px;font-weight:600;line-height:1.55;margin-top:8px;overflow-wrap:anywhere}
+.opts{margin-top:10px;display:grid;gap:7px}
+.opt{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;padding:9px 12px;border-radius:6px;background:#fff;border:1.5px solid var(--border);font-size:15px;line-height:1.45;min-height:44px}
+.opt .ol{flex:none;width:24px;height:24px;border-radius:6px;background:var(--teal-soft);display:grid;place-items:center;font-size:12px;font-weight:800;color:var(--teal-dark)}
+.opt.correct{background:var(--green-soft);border-color:var(--green)}
+.opt.correct .ol{background:var(--green);color:#fff;box-shadow:none}
+.opt.correct .ot{font-weight:700}
+.opt.wrong{background:var(--red-soft);border-color:var(--red)}
+.opt.wrong .ol{background:var(--red);color:#fff;box-shadow:none}
+.opt .tick{margin-left:auto;flex:none;font-weight:800;color:var(--green)}
+.ansline{margin-top:10px;font-size:14px;font-weight:700;color:var(--teal-dark)}
+.why{margin-top:7px;padding:10px 13px;background:var(--why);border-radius:6px;font-size:14px;line-height:1.6;color:#12304A}
+.why b{color:var(--teal-dark)}
+.note-box{margin-top:10px;padding:10px 13px;background:#E3F0F2;border-radius:6px;font-size:14px;line-height:1.6;color:#12304A}
+.score-line{margin-top:10px;font-size:14px;font-weight:700;color:var(--ink)}
+
+/* controls row in paper view */
+.paper-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.toggle-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 14px;border-radius:var(--pill);background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-sm);font-size:14px;font-weight:700;color:var(--ink)}
+.toggle-btn.on{background:var(--teal);color:#fff;box-shadow:0 4px 10px rgba(18,48,74,.12)}
+.jump-sel{min-height:44px;border:1.5px solid var(--border);border-radius:6px;background:#fff;padding:0 11px;font-size:14px;font-weight:600;color:var(--ink);max-width:130px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;border-radius:var(--pill);font-size:14px;font-weight:700;text-decoration:none;padding:10px 22px;border:0;cursor:pointer}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 8px 20px rgba(18,48,74,.12)}
+.btn-ghost{background:var(--teal-soft);color:var(--teal-dark)}
+.nav-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.nav-btns .btn{flex:1;min-width:0;padding:10px 12px;font-size:14px}
+#back-contents{order:3;flex:1 1 100%}
+
+/* topics */
+.topic-row{display:grid;grid-template-columns:26px 1fr auto;grid-template-areas:"r n c" ". b b";column-gap:10px;row-gap:6px;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);cursor:pointer}
+.topic-row[hidden]{display:none}
+.trank{grid-area:r;width:26px;height:26px;border-radius:6px;background:var(--teal-soft);color:var(--teal-dark);font-size:12px;font-weight:800;display:grid;place-items:center}
+.topic-row:nth-child(-n+3) .trank{background:var(--teal);color:#fff}
+.tname{grid-area:n;font-size:14px;font-weight:700;line-height:1.3;color:var(--ink)}
+.tcount{grid-area:c;font-size:12px;font-weight:800;color:var(--teal-dark);text-align:right}
+.tbar{grid-area:b;height:6px;border-radius:6px;background:var(--sunken);overflow:hidden}
+.tfill{height:100%;background:var(--teal);border-radius:6px}
+.t-more{display:block;width:100%;margin-top:12px;min-height:44px;border-radius:6px;border:1.5px solid var(--border);background:var(--card);color:var(--teal-dark);font-size:14px;font-weight:700;cursor:pointer}
+.t-note{margin-top:10px;font-size:12px}
+.row .body span.prog-line{font-size:12px;font-weight:800;color:var(--teal-dark)}
+.star-btn{margin-left:auto;flex:none;width:36px;height:36px;border-radius:6px;display:grid;place-items:center;font-size:18px;line-height:1;color:var(--muted);background:#fff;border:1.5px solid var(--border);cursor:pointer}
+.star-btn.on{color:var(--gold);background:#E3F0F2;border-color:var(--gold)}
+.star-btn.qz-star{float:right;margin:0 0 8px 10px}
+.panel{background:#fff;box-shadow:var(--shadow-sm);border-radius:var(--r-lg);padding:16px 18px;color:var(--ink);margin-top:10px}
+.panel p{font-size:14px;color:var(--muted);line-height:1.6}
+.empty{text-align:left;padding:26px 18px 14px;color:var(--muted)}
+.empty b{display:block;font-size:18px;color:var(--ink)}
+.empty p{font-size:14px;margin-top:7px;line-height:1.6}
+mark{background:#BFE6EA;border-radius:3px;padding:0 1px;color:inherit}
+
+/* footer — same as website, tight */
+.site-footer{background:var(--card);color:var(--ink);margin-top:12px;border-top:1px solid var(--border)}
+.site-footer-in{max-width:1040px;margin:0 auto;padding:14px 20px 22px}
+.foot-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.foot-links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.foot-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;padding:8px 10px;min-height:44px;display:inline-flex;align-items:center}
+.foot-links a:hover{color:var(--teal-dark)}
+.foot-close{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.8}
+.foot-close .tagline{color:var(--teal-dark);font-weight:700}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* ---------- v22 quiz design (hero, stats, setups, quiz, result) — website sizes 12/14/16/18 only ---------- */
+.glass{background:#fff;border:1px solid var(--border);box-shadow:var(--shadow);border-radius:var(--r-lg)}
+.sec-label{margin:16px 0 2px;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--teal-dark);text-transform:none}
+.qzwrap{max-width:640px;margin:0 auto}
+.eyebrow{font-size:12px;letter-spacing:3px;color:var(--muted);font-weight:700}
+.intro{margin:12px 0;padding:24px 18px;text-align:left;position:relative;z-index:2;animation:pagein .5s ease}
+.intro h2{font-weight:800;font-size:18px;margin-top:10px;line-height:1.35;color:var(--ink)}
+.intro p{color:var(--muted);line-height:1.6;margin-top:8px;font-size:14px}
+.intro .setup-ico{font-size:28px;line-height:1}
+.optlabel{font-size:12px;letter-spacing:3px;color:var(--muted);font-weight:700;margin-top:18px;text-align:left}
+.optrows{display:flex;flex-direction:column;gap:9px;margin-top:10px}
+.optrow{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--border);border-radius:6px;padding:13px 15px;font-size:14px;font-weight:600;color:var(--ink);cursor:pointer}
+.optrow:active{transform:scale(.98)}
+.optrow .radio{flex:0 0 24px;height:24px;border-radius:6px;background:#E4EAF0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800}
+.optrow.on{background:var(--teal-soft);border-color:var(--teal);box-shadow:none}
+.optrow.on .radio{background:var(--teal);color:#fff;box-shadow:0 3px 8px rgba(14,124,134,.4)}
+.optrows-off{opacity:.45;pointer-events:none}
+.setupinfo{font-size:14px;color:var(--muted);margin-top:16px;line-height:1.6;background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:12px 14px;text-align:left}
+.setupinfo b{color:var(--ink)}
+.qbtn{display:flex;align-items:center;justify-content:center;width:100%;padding:14px;border:none;border-radius:6px;font-size:14px;font-weight:700;cursor:pointer;margin-top:12px;min-height:48px;text-decoration:none}
+.qbtn.grad{background:var(--teal);color:#fff;box-shadow:0 10px 24px rgba(18,48,74,.12)}
+.qbtn.plain{background:var(--card);color:var(--ink);border:1px solid var(--border)}
+.qbtn.outline{background:var(--card);border:1.5px solid var(--teal);color:var(--teal-dark)}
+.qtopbar{display:flex;align-items:center;gap:8px;padding:14px 0 4px;position:relative;z-index:2}
+.backbtn{background:var(--card);color:var(--ink);border:1px solid var(--border);border-radius:6px;padding:8px 14px;font-size:14px;cursor:pointer;box-shadow:var(--shadow-sm);min-height:44px;flex:none}
+.qtop-spacer{flex:1;min-width:0}
+.qtitle{font-size:17px;font-weight:700;color:var(--ink);line-height:1.35;padding:2px 2px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.scorepill{background:var(--card);border:1px solid var(--border);color:var(--ink);border-radius:6px;padding:7px 10px;font-size:12px;white-space:nowrap;box-shadow:var(--shadow-sm);flex:none}
+.scorepill b{color:var(--teal-dark)}
+.prog{height:6px;background:var(--border);border-radius:6px;margin:8px 4px 14px;overflow:hidden;position:relative;z-index:2}
+.prog i{display:block;height:100%;background:var(--teal);border-radius:6px;transition:width .4s}
+.qzcard{margin:2px 0 18px;padding:20px 16px;position:relative;z-index:2;animation:pagein .45s ease}
+@keyframes pagein{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.qztag{display:inline-block;background:var(--teal-soft);color:var(--teal-dark);font-size:12px;font-weight:700;padding:6px 11px;border-radius:6px;margin-bottom:12px}
+.qztext{font-weight:700;font-size:16px;line-height:1.55;color:var(--ink);overflow-wrap:anywhere}
+.qzopts{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.qzopt{display:flex;align-items:flex-start;gap:11px;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--border);border-radius:6px;padding:13px 14px;font-size:15px;line-height:1.45;cursor:pointer;color:var(--ink);animation:optin .45s ease both;min-height:48px}
+@keyframes optin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.qzopt:active{transform:scale(.98)}
+.qzopt .letter{flex:0 0 30px;height:30px;border-radius:6px;background:var(--teal-soft);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--teal-dark);font-size:14px}
+.qzopt.correct{background:var(--green-soft);border-color:var(--green);box-shadow:0 0 0 3px rgba(26,132,71,.22);animation:win .55s ease}
+.qzopt.correct .letter{background:var(--green);color:#fff}
+.qzopt.wrong{background:var(--red-soft);border-color:var(--red);animation:shake .35s ease}
+.qzopt.wrong .letter{background:var(--red);color:#fff}
+.qzopt.dim{opacity:.35}
+.qzopt.gone{opacity:0;transform:scale(.82) translateY(12px);pointer-events:none}
+@keyframes win{0%{transform:scale(1)}35%{transform:scale(1.04)}100%{transform:scale(1.02)}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.qzmark{margin-left:auto;font-size:16px;font-weight:800;flex:none}
+.correct .qzmark{color:var(--green)}.wrong .qzmark{color:var(--red)}
+.qzwhy{margin-top:16px;background:var(--why);border:1px solid #B9D9DE;border-radius:6px;padding:14px;display:none;text-align:left}
+.qzwhy.show{display:block;animation:pagein .35s ease}
+.qzwhy b{color:var(--teal-dark);font-size:14px}
+.qzwhy p{margin-top:6px;font-size:14px;line-height:1.6;color:var(--ink)}
+.qznext{width:100%;margin-top:16px;padding:14px;border:none;border-radius:6px;background:var(--teal);color:#fff;font-size:14px;font-weight:700;cursor:pointer;display:none;box-shadow:0 10px 24px rgba(18,48,74,.12);min-height:48px}
+.qznext.show{display:block}
+.result{margin:14px 0;padding:26px 18px;text-align:left;position:relative;z-index:2;animation:pagein .45s ease}
+.result h2{font-weight:800;font-size:18px;margin-top:8px;line-height:1.35;color:var(--ink)}
+.result p{color:var(--muted);line-height:1.65;margin-top:9px;font-size:14px}
+.result .res-ico{font-size:28px;line-height:1}
+.ring-wrap{position:relative;width:max-content;margin:12px auto 4px}
+.ring-wrap svg{transform:rotate(-90deg);display:block}
+.ring-num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:left}
+.ring-num b{font-size:18px;color:var(--teal-dark)}
+.ring-num span{font-size:12px;color:var(--muted);font-weight:700}
+.statgrid{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.stat{padding:10px 13px;border-radius:6px;background:var(--paper);border:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.5}
+.stat b{display:block;font-size:16px;color:var(--ink)}
+.chrow{display:flex;justify-content:space-between;gap:10px;text-align:left;width:100%;background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:13px 15px;margin-top:9px;cursor:pointer;font-size:14px;line-height:1.45;color:var(--muted)}
+.chrow b{color:var(--ink)}
+.chrow .weak{color:var(--amber);font-weight:700}
+.chdetail{text-align:left;margin-top:8px}
+.revq{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:12px;margin-top:8px;font-size:14px;line-height:1.5}
+.revq .rq{font-weight:700;color:var(--ink)}
+.revq .ry{color:var(--red);margin-top:5px}
+.revq .rc{color:var(--green);margin-top:3px}
+.revq .rr{color:var(--muted);margin-top:5px;font-size:14px}
+
+@media print{.site-header,.toolbar,.site-footer,.paper-tools,.nav-btns,.up-btn{display:none!important}body{background:#fff}.qcard{box-shadow:none;border:1px solid var(--border)}}
+.fico svg{width:22px;height:22px;display:block}
+.setup-ico{color:var(--teal)}
+.setup-ico svg{width:28px;height:28px;display:block;margin:0 auto}
+.res-ico{color:var(--teal-dark)}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-in">
+    <a class="brand" href="https://taseries.pages.dev/"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
+    <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="https://taseries.pages.dev/">Home</a>
+      <a href="https://taseries.pages.dev/material">Study Materials</a>
+      <a href="https://taseries.pages.dev/mega">Past Papers</a>
+      <a href="https://taseries.pages.dev/mock-tests" class="active">Practice Tests</a>
+      <a href="https://taseries.pages.dev/results">Examination</a>
+      <a href="https://taseries.pages.dev/gpa-calculator">GPA &amp; CGPA Calculator</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="page-head">
+      <h1>Biostatistics — Practice Test</h1>
+      <div class="chip-row">
+        <span class="chip teal">Biostatistics · NU-352</span>
+        <span class="chip">Semester 6</span>
+        <span class="chip">6 chapters · 398 MCQs</span>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
+        <input id="q" type="search" placeholder="Search 398 MCQs…" aria-label="Search inside the book">
+        <button type="button" class="clear-btn" id="clear-btn" aria-label="Clear search">×</button>
+      </label>
+    </div>
+
+    <div id="view"></div>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="site-footer-in">
+  <div class="foot-top">
+    <a class="brand" href="https://taseries.pages.dev/"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="https://taseries.pages.dev/about">About</a>
+      <a href="https://taseries.pages.dev/terms">Terms</a>
+      <a href="https://taseries.pages.dev/privacy">Privacy</a>
+      <a href="https://taseries.pages.dev/copyright">Copyright</a>
+      <a href="https://taseries.pages.dev/contact">Contact</a>
+      <a href="https://taseries.pages.dev/app-support">App Support</a>
+      <a href="https://taseries.pages.dev/give-feedback">Give Feedback</a>
+    </nav>
+  </div>
+  <div class="foot-close">
+    <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
+    <p>Contact: WhatsApp <a href="https://wa.me/923055959410">+92 305 5959410</a> &middot; Email <a href="mailto:nurseofuture@gmail.com">nurseofuture@gmail.com</a></p>
+    <p>© 2026 TA SERIES. All rights reserved.</p>
+  </div>
+</div></footer>
+<script>
+"use strict";
+var BOOK = {"papers":[{"id":"ch1","num":1,"name":"Fall 2016 Paper","label":"Ch 1 · Fall 2016 Paper","weeks":"","questions":[{"n":1,"q":"Gender, age-class, religion, type of disease, and blood group are measured on:","o":["Nominal scale of measurement","Ordinal scale of measurement","Interval scale of measurement","Ratio scale of measurement"],"ans":0,"why":"These are unordered categories-a nominal scale.","src":"2016 · Q1"},{"n":2,"q":"Which scale of measurement has an absolute zero?","o":["Nominal","Ordinal","Interval","Ratio"],"ans":3,"why":"Only the ratio scale has a true zero point.","src":"2016 · Q2"},{"n":3,"q":"The variable which is influenced by the intervention of the researcher is called:","o":["Independent","Dependent","Discrete","Extraneous"],"ans":1,"why":"The outcome influenced by the manipulated variable is the dependent variable.","src":"2016 · Q3"},{"n":4,"q":"The statistical approach which helps the investigator decide whether the outcome of the study is a result of factors planned within the design or determined by chance is called:","o":["Descriptive statistics","Inferential statistics","Normal distribution","Standard deviation"],"ans":1,"why":"Inferential statistics tests whether results are due to design or chance.","src":"2016 · Q4"},{"n":5,"q":"Which of the following methods is a form of graphical presentation of quantitative continuous data?","o":["Line Diagram","Pie diagram","Bar diagram","Histogram"],"ans":3,"why":"A histogram is used for continuous quantitative data.","src":"2016 · Q5"},{"n":6,"q":"All the following are measures of central tendency, except:","o":["Mean","Median","Mode","Variance"],"ans":3,"why":"Variance is a measure of dispersion, not central tendency.","src":"2016 · Q6"},{"n":7,"q":"Which measure of central tendency is influenced by extreme scores and skewed distributions?","o":["Mean","Median","Mode","Range"],"ans":0,"why":"The mean is pulled by outliers/skew.","src":"2016 · Q7"},{"n":8,"q":"A measure of central tendency which is calculated by numbers arranging in numerical order is:","o":["Standard deviation","Range","Median","Mode"],"ans":2,"why":"The median is found by ordering values and taking the middle one.","src":"2016 · Q8"},{"n":9,"q":"The proportion of observations fall above the median is:","o":["68%","50%","75%","95%"],"ans":1,"why":"Half of the observations lie above the median by definition.","src":"2016 · Q9"},{"n":10,"q":"The indices used to measure variation or dispersion among scores are all, except:","o":["Range","Variance","Standard deviation","Mean"],"ans":3,"why":"The mean is a measure of central tendency, not dispersion.","src":"2016 · Q10"},{"n":11,"q":"A measure of dispersion of a set of observations calculated by the difference between the highest and lowest values produced is called:","o":["Standard deviation","Variance","Range","Mode"],"ans":2,"why":"Max minus min defines the range.","src":"2016 · Q11"},{"n":12,"q":"A statistic which describes the interval of scores bounded by the 25th and 75th percentile ranks is:","o":["Inter quartile range","Confidence interval","Standard deviation","Variance"],"ans":0,"why":"The IQR spans the 25th to 75th percentile. S3 IS","src":"2016 · Q12"},{"n":13,"q":"The Median value is the:","o":["25th percentile","50th percentile","75th percentile","95th percentile"],"ans":1,"why":"The median is the 5o th percentile.","src":"2016 · Q13"},{"n":14,"q":"Large standard deviations suggest that:","o":["Scores are probably widely scattered.","There is very little deference among scores.","mean, median and mode are the same","The scores are not normally distributed."],"ans":0,"why":"A large SD means scores are spread far from the mean.","src":"2016 · Q14"},{"n":15,"q":"The formula given below is a computational formula for:","o":["Variance","Mean","Standard deviation","t-statistic"],"ans":0,"why":"Sum of squared deviations over N is the variance formula.","src":"2016 · Q15"},{"n":16,"q":"The square of the standard deviation is the:","o":["Variance.","Standard error","Z-score","Range"],"ans":0,"why":"Squaring SD gives variance by definition.","src":"2016 · Q16"},{"n":17,"q":"Which is NOT a characteristic of normal distribution?","o":["Symmetric","Bell-shaped","Mean=median=mode","Negative skewness"],"ans":3,"why":"A normal distribution has zero skewness.","src":"2016 · Q17"},{"n":18,"q":"Skewness is a measure:","o":["of the asymmetry of the probability distribution","decides the distribution may have high or low variance","of central tendency","None of the above"],"ans":0,"why":"Skewness quantifies distribution asymmetry.","src":"2016 · Q18"},{"n":19,"q":"The formula given below (χ²=Σ[(O-E)²/E]) is used to calculate:","o":["t-test statistic","chi-square statistic","correlation coefficient","Standard deviation"],"ans":1,"why":"This is the chi-square test statistic formula.","src":"2016 · Q19"},{"n":20,"q":"How many degrees of freedom would a table with 3 rows and 2 columns have?","o":["2","1","3","4"],"ans":0,"why":"df=(rows-1)(cols-1)=(3-1)(2-1)=2.","src":"2016 · Q20"},{"n":21,"q":"Following are the characteristics of Normal distribution except:","o":["It is symmetrical","It is bell-shaped","Mean, median and mode take the same position","It is slightly negatively skewed"],"ans":3,"why":"A true normal distribution is not skewed at all.","src":"2016 · Q21"},{"n":22,"q":"When the normal distribution is converted into Z-score, it is called:","o":["Abnormal distribution","Standard normal distribution","Positively skewed distribution","None of the above"],"ans":1,"why":"Converting to Z-scores yields the standard normal distribution.","src":"2016 · Q22"},{"n":23,"q":"The area under the normal curve for Z-value=2.5 is:","o":["0.4938","0.8938","0.5000","0.4945"],"ans":0,"why":"The z-table area for z=2.5 is 0.4938.","src":"2016 · Q23"},{"n":24,"q":"The area under the normal curve between the two -SERIES z-values;z=1.5&z=-1.85 is:","o":["0.8919","0.9890","0.9010","None of the above"],"ans":2,"why":"Area between z=-1.85 and z=+1.5=A (1.85)+A (1.5)= 0.4678+0.4332=0.9010(the two z-values lie on opposite sides of the mean, so the areas are added)","src":"2016 · Q24"},{"n":25,"q":"Area under the normal curve beyond the z-value when z =2.5 is:","o":["0.3949","0.0062","0.0662","0.0045"],"ans":1,"why":"0.5 minus the table area (0.4938) leaves about 0.0062.","src":"2016 · Q25"},{"n":26,"q":"IQ scenario (mean=85, SD=10):percentage of students whose IQ is atleast 75?","o":["84.13%","86.13%","87.13%","88.34%"],"ans":0,"why":"Z=-1 gives an area of 0.8413, i.e.84.13%.","src":"2016 · Q26"},{"n":27,"q":"What will be the percentile for the score 75?","o":["Approximately 14th percentile","Approximately 16th percentile","Approximately 18th percentile","Approximately 2o th percentile"],"ans":1,"why":"A score atz=-1 sits at roughly the 16th percentile.","src":"2016 · Q27"},{"n":28,"q":"What will be the z-score on the 5o th percentile?","o":["0.1","0.2","0.0","0.5"],"ans":2,"why":"The 5O th percentile is exactly at the mean, soZ=0.","src":"2016 · Q28"},{"n":29,"q":"What will be the percentage of those students whose IQ is at most 75?","o":["Approximately 16%","Approximately 18%","Approximately 20%","Approximately 22%"],"ans":0,"why":"This is the complement of the≥75 calculation, about 15.87%= 16%.","src":"2016 · Q29"},{"n":30,"q":"What will be the percentage of those students whose IQ is between 75 and 95?","o":["66.26%","68.26%","70.26%","All of the above"],"ans":1,"why":"Within ones D of the mean covers about 68.26% of scores.","src":"2016 · Q30"},{"n":31,"q":"Although the population is not normally distributed, the Grand mean of the sample means will always equal:","o":["The sample mean","The population mean","Will be normally distributed","None of the above"],"ans":1,"why":"By the Central Limit Theorem, the mean of sample means equals the population mean.","src":"2016 · Q31"},{"n":32,"q":"Systolic BP grouped data:the standard deviation calculated for the above data is:","o":["Approximately 16 mmHg","Approximately 18 mmHg","Approximately 20 mmHg","Approximately 23 mmHg"],"ans":3,"why":"Standard deviation of the grouped data works out to about 23 mmHg (variance about 527, as used in Q34-Q35).","src":"2016 · Q32"},{"n":33,"q":"lf you calculate the mean for the above data, it will be approximately equal to:","o":["109 mmHg","110 mmHg","111 mmHg","112 mmHg"],"ans":0,"why":"∑Fx/ZF=4245/39=109 mmHg.","src":"2016 · Q33"},{"n":34,"q":"The variance for the above data will be:","o":["310","527","321","322"],"ans":1,"why":"Variance=SD squared=(about 23)², which is about 527 for the grouped data.","src":"2016 · Q34"},{"n":35,"q":"Coefficient of variation for the above data set will be equal to:","o":["Approximately 16%","Approximately 18%","Approximately 21%","Approximately 25%"],"ans":2,"why":"CV=SD/mean x100=23/109x100=21%.","src":"2016 · Q35"},{"n":36,"q":"Ina data set, C.Vis calculated:","o":["To see the spread in a data set","To see for consistency in a data","To compare the two datasets for variability","All of the above"],"ans":3,"why":"The coefficient of variation serves all of these comparison/consistency purposes.","src":"2016 · Q36"},{"n":37,"q":"Continuous probability is also known as:","o":["Standard deviation","Variance","C.O.V","Z-score"],"ans":3,"why":"Of the options, only the Z-score belongs to a continuous (normal) probability distribution;SD, variance and CV are measures of spread.","src":"2016 · Q37"},{"n":38,"q":"The area beyond the z-score (-1.22) is:","o":["0.1112","0.1113","0.1114","0.1115"],"ans":0,"why":"Area beyond z=1.22=0.5-0.3888=0.1112(by symmetry, z= -1.22 gives the same tail area).","src":"2016 · Q38"},{"n":39,"q":"Area between z=1.99&z=2.5 is:","o":["0.1171","0.0171","0.0181","0.2171"],"ans":1,"why":"Difference of the two z-table areas gives approximately 0.0171.","src":"2016 · Q39"},{"n":40,"q":"Which one of the following is true for z-score?","o":["Z-score tells us the number of averages","Z-score tells us the number of variation in a data set","Z-score tellus the number of standard deviations from the mean","Z-score tells us the number of means from the actual mean"],"ans":2,"why":"Az-score expresses how many standard deviations a value is from the mean.","src":"2016 · Q40"},{"n":41,"q":"Scores normal with mean 60, SD 5, passat least 50.What percent pass?","o":["97.72%","99.22%","99.72%","100%"],"ans":0,"why":"Z=-2 gives an area of 0.9772, i.e.97.72%.","src":"2016 · Q41"},{"n":42,"q":"What percent of students pass with atleast 65?","o":["14.87%","15.87%","16.87%","17.87%"],"ans":1,"why":"Z=1 gives an upper-tail area of 0.1587, i.e.15.87%.","src":"2016 · Q42"},{"n":43,"q":"What percent of students score between 50 and 75?","o":["Approximately 80.95%","Approximately 82.95%","Approximately 98.95%","Approximately 99.95%"],"ans":2,"why":"Area between z = -2 and z = +3 = 0.4772 + 0.4987 = 0.9759 (about 98%); the closest option is c.","src":"2016 · Q43"},{"n":44,"q":"P-value can be defined as:","o":["The area that falls in the tail beyond the value of the test statistic","The area that falls in the tail inside the value of the test statistic","The area that falls in the tails, the value of the test statistic","The area that falls in the tail outside the curve at the value of the test statistic"],"ans":0,"why":"The p-value is the tail area beyond the observed test statistic","src":"2016 · Q44"},{"n":45,"q":"If the p-value is more than the significance level then:","o":["Accept the null hypothesis","Reject the null hypothesis","Remain constant","Cannot decide"],"ans":0,"why":"Ap-value greater than alpha means we fail to reject (accept) the null.","src":"2016 · Q45"},{"n":46,"q":"Z has a standard normal distribution with mean 50 and SD=5.The 84th percentile:","o":["Z=0.89(x=56)","Z=0.99(x=56)","Z=0.55(x=56)","Z=0.66 (x=56)"],"ans":1,"why":"The 84th percentile corresponds to z of about 0.99 (area 0.8389), so x = 50 + 0.99(5) is about 55. The x-values printed in the options are a misprint; z = 0.99 is the only option matching the 84th percentile.","src":"2016 · Q46"},{"n":47,"q":"V02 uptake scenario (99% Cl, n=64, X=47, S=4.5):upper limit of the interval:","o":["Approx.49","Approx.50","Approx.52","Approx.54"],"ans":0,"why":"Upper limit=X+Z (S/√n)=47+2.576(4.5/8)=47+1.45= about 48.5, nearest option a (approx.49).","src":"2016 · Q47"},{"n":48,"q":"If SD is changed to 8, upper limit of the interval:","o":["48.00","49.58","50.08","52.08"],"ans":1,"why":"47+2.576(8/8)=47+2.576=49.58.","src":"2016 · Q48"},{"n":49,"q":"Approximate lower limit when SD is 4.5:","o":["44.27","45.27","47.27","48.27"],"ans":1,"why":"Lower limit=X-Z (S/√n)=47-2.576(4.5/8)=47-1.45=about 45.55, nearest option b (45.27).","src":"2016 · Q49"},{"n":50,"q":"DVT/APT T scenario:critical region/value for the test:","o":["1.28","1.96","1.65","2.58"],"ans":1,"why":"A two-tailed test at 5% uses the critical value 1.96.","src":"2016 · Q50"},{"n":51,"q":"The Z-calculated value for the above scenario is:","o":["2.99","2.98","2.85","-3.00"],"ans":3,"why":"Z=(52-55)/(10/10)=-3.00.","src":"2016 · Q51"},{"n":52,"q":"What is the standard error in this case?","o":["1.00","1.82","1.92","1.45"],"ans":0,"why":"SE=10/√100=1.00.","src":"2016 · Q52"},{"n":53,"q":"The calculated p-value in this case is:","o":["P=0.001","P=0.001","P=0.003","P=0.002"],"ans":2,"why":"Two-tailed p for Z=-3.00 is 2x0.00135=about 0.003(a two-tailed test was used, critical value 1.96).Options a and bare identical in the paper.","src":"2016 · Q53"},{"n":54,"q":"Smoking/Ml table:what is the expected frequency of non-smokers who did not get Ml?","o":["120","130","160","190"],"ans":3,"why":"Expected=(row total x column total)/grand total= (300x380)/600=190.","src":"2016 · Q54"},{"n":55,"q":"The Chi-square tabulated value in this case is:","o":["1.421","3.461","3.821","3.841"],"ans":3,"why":"The tabulated chi-square value at df=1, a=0.05 is 3.841.","src":"2016 · Q55"},{"n":56,"q":"The Chi-square calculated in this case is:","o":["2.88","1.88","1.00","3.84"],"ans":0,"why":"Chi-square calculated=E (O-E)²/E over the four cells=2.88.","src":"2016 · Q56"},{"n":57,"q":"Your conclusion in this case is:","o":["There is no association between smoking and MI","There is weak association between smoking and MI","There is strong association between smoking and MI","There is moderate association between smoking and MI"],"ans":0,"why":"Calculated chi-square (2.88) is less than the tabulated value (3.841) at df=1, a=0.05, soH 0 is not rejected:there is no significant association between smoking and Ml.","src":"2016 · Q57"},{"n":58,"q":"Paired reading data (mean difference=1.1):what statistical testis applicable?","o":["One sample T-Test","MANOVA","A NOVA","Paired T-Test"],"ans":3,"why":"Comparing the same subjects before/after calls for a paired t-test.","src":"2016 · Q58"},{"n":59,"q":"The standard deviation for the above data is:","o":["1.00","1.66","2.89","2.55"],"ans":1,"why":"From the original paper's data — paired differences [3,4,2,0,0,1,2,−1,−1,1], Σ(d−d̄)²=24.9, s=√(24.9/9)=1.66. (Third pass: original paper re-read; recomputed.)","src":"2016 · Q59"},{"n":60,"q":"The T calculated for the above data is:","o":["1.13","2.09","4.94","5.94"],"ans":1,"why":"t = d̄/SE = 1.1/0.53 = 2.09, from the original paper's data (SD 1.66, n = 10). (Third pass: original paper re-read; recomputed.)","src":"2016 · Q60"},{"n":61,"q":"The T tabulated in this case if the research hypothesis is \"μ>8\":","o":["1.933","1.833","1.593","2.833"],"ans":1,"why":"Tabulated t for a one-tailed test at a=0.05 with df=9 is 1.833.","src":"2016 · Q61"},{"n":62,"q":"Your conclusion would be:","o":["The intervention was effective","The intervention was not effective","Accepted the null hypothesis","None of the above"],"ans":0,"why":"t-calculated 2.32 (Q60, fixed) exceeds t-tabulated 1.833 (Q61), so the null hypothesis is rejected — the intervention was effective. (Second pass: follows from the already-approved Q60 fix.)","src":"2016 · Q62"},{"n":63,"q":"The standard error in this case is:","o":["0.53","0.815","0.697","0.997"],"ans":0,"why":"SE = s/√n = 1.66/√10 = 0.53, from the original paper's data. (Third pass: original paper re-read; recomputed.)","src":"2016 · Q63"},{"n":64,"q":"The level of significance in this case is if one tailed:","o":["α= 0.01","α= 0.025","α= 0.05","α= 0.10"],"ans":2,"why":"A one-tailed 5% test uses α=0.05.","src":"2016 · Q64"},{"n":65,"q":"The formula for calculating paired t-testis:","o":["Mean Difference over standard error","Mean Difference over standard deviation","Mean difference over sample size","None of the above"],"ans":0,"why":"Paired t = mean difference / standard error of the differences (SE = SD / √n).","src":"2016 · Q65"},{"n":66,"q":"Z-testis applied when we have:","o":["Known standard deviation","Sample size is less than 30","Sample size is equal to or more than 30","Both a & c"],"ans":3,"why":"Z-test applies with known SD and/or large samples (n≥30).","src":"2016 · Q66"},{"n":67,"q":"In one of the elements of hypothesis testing, \"assumption\"means:","o":["Calculated value","Assumed values","Critical values","P-values"],"ans":1,"why":"The\"assumption\"element refers to assumed/given values.","src":"2016 · Q67"},{"n":68,"q":"Critical region is also known as:","o":["Acceptance region","Rejection region","Both a & b","None of the above"],"ans":1,"why":"The critical region is where the null hypothesis is rejected.","src":"2016 · Q68"},{"n":69,"q":"A contingency table (2x2) is used to calculate:","o":["t-statistic","chi-square statistic","correlation coefficient","variance"],"ans":1,"why":"A 2x2 contingency table is analyzed with the chi-square statistic.","src":"2016 · Q69"},{"n":70,"q":"In Chi-square distribution hypothesis testing is:","o":["One tailed","Two tailed","Slightly negatively skewed","None of the above"],"ans":0,"why":"Chi-square tests are one-tailed (based on squared deviations).","src":"2016 · Q70"}]},{"id":"ch2","num":2,"name":"Spring 2017 Paper","label":"Ch 2 · Spring 2017 Paper","weeks":"","questions":[{"n":1,"q":"Random sampling or probability sampling includes all the following techniques, except:","o":["Simple random sampling","Stratified random Sampling","Cluster sampling","Pur po sive Sampling"],"ans":3,"why":"Pur po sive sampling is an on-probability technique.","src":"2017 · Q1"},{"n":2,"q":"Gender, age-class, religion, type of disease, and blood group are measured on:","o":["Nominal scale of measurement","Ordinal scale of measurement","Interval scale of measurement","Ratio scale of measurement"],"ans":0,"why":"These are unordered categories-a nominal scale","src":"2017 · Q2"},{"n":3,"q":"Which scale of measurement has an absolute (true) zero?","o":["Nominal","Ordinal","Interval","Ratio"],"ans":3,"why":"Only the ratio scale has a true, non-arbitrary zero point.","src":"2017 · Q3"},{"n":4,"q":"The variable which is changed or controlled by the researcher in an experiment is called:","o":["Independent","Dependent","Discrete","Extraneous"],"ans":0,"why":"The manipulated variable in an experiment is the independent variable.","src":"2017 · Q4"},{"n":5,"q":"Which one of the following is a dichotomous variable?","o":["You rid Card number","Gender in male/female","Number of books in library","All of the above"],"ans":1,"why":"A dichotomous variable has exactly two categories, like male/female.","src":"2017 · Q5"},{"n":6,"q":"Which of the following methods is a form of graphical presentation of quantitative continuous data?","o":["Line Diagram","Pie diagram","Bar diagram","Histogram"],"ans":3,"why":"A histogram is used for continuous quantitative data.","src":"2017 · Q6"},{"n":7,"q":"Results of an examination recorded as pass/fail.Which of the following scales is being used?","o":["Interval","Nominal","Ordinal","Ratio"],"ans":1,"why":"Pass/fail is an unordered two-category (nominal) classification.","src":"2017 · Q7"},{"n":8,"q":"Which measure of central tendency is influenced by extreme scores and skewed distributions?","o":["Mean","Median","Mode","Range"],"ans":0,"why":"The mean is pulled by outliers/skew, unlike the median or mode. TA'SERIES","src":"2017 · Q8"},{"n":9,"q":"A measure of central tendency which is calculated by numbers arranging in numerical order is:","o":["Standard deviation","Range","Median","Mode"],"ans":2,"why":"The median is found by ordering values and taking the middle one.","src":"2017 · Q9"},{"n":10,"q":"The proportion of observations fall above the median is:","o":["68%","50%","75%","95%"],"ans":1,"why":"By definition, half of the observations lie above the median.","src":"2017 · Q10"},{"n":11,"q":"The indices used to measure variation or dispersion among scores are all, except:","o":["Range","Variance","Standard deviation","Mean"],"ans":3,"why":"The mean is a measure of central tendency, not dispersion.","src":"2017 · Q11"},{"n":12,"q":"A measure of dispersion of a set of observations which it is calculated by the difference between the highest and lowest values produced is called:","o":["Standard deviation","Variance","Range","Mode"],"ans":2,"why":"Max minus min defines the range.","src":"2017 · Q12"},{"n":13,"q":"A statistic which describes the interval of scores bounded 价 by the 25th and 75th percentile ranks is:","o":["Interquartile range","Confidence Interval","Standard deviation","Variance"],"ans":0,"why":"The IQR spans the 25th to 75th percentile.","src":"2017 · Q13"},{"n":14,"q":"The Median value is the:","o":["25th percentile","50th percentile","75th percentile","95th percentile d"],"ans":1,"why":"The median is the 5o th percentile.","src":"2017 · Q14"},{"n":15,"q":"Large standard deviations suggest that:","o":["Scores are probably widely scattered.","There is very little deference among scores.","mean, median and mode are the same","The scores are not normally distributed."],"ans":0,"why":"A large SD means scores are spread far from the mean.","src":"2017 · Q15"},{"n":16,"q":"The formula given below (s²=E (x-x)²/N) isa computational formula for:","o":["Variance","Mean","Standard deviation","t-statistic"],"ans":0,"why":"Sum of squared deviations over N is the variance formula.","src":"2017 · Q16"},{"n":17,"q":"The under root of the variance is:","o":["Variance.","Standard error/S.D","Z-score","T-distribution"],"ans":1,"why":"The square root of variance is the standard deviation.","src":"2017 · Q17"},{"n":18,"q":"Which is Not a characteristic of normal distribution?","o":["Symmetric","Bell-shaped","Mean=median=mode","Negative skewness"],"ans":3,"why":"A normal distribution has zero skewness, not negative skewness.","src":"2017 · Q18"},{"n":19,"q":"Skewness is a measure:","o":["of the asymmetry of the probability distribution","decides the distribution may have high or low variance","of central tendency","None of the above"],"ans":0,"why":"Skewness quantifies distribution a symmetry. 出 出","src":"2017 · Q19"},{"n":20,"q":"The degree of flatness of a graph of a frequency distribution is termed as:","o":["standard deviation","kurtosis","skewness","mode"],"ans":1,"why":"Kurt os is describes the peaked ness/flatness of a distribution.","src":"2017 · Q20"},{"n":21,"q":"In a negatively skewed distribution, the mean generally falls to:","o":["The left of the median and the median usually lies to the left of the mode.","The right of the median and the median usually lies to the right of the mode.","The middle of median and mode.","The Centre of the distribution."],"ans":0,"why":"In negative skew, mean<median<mode.","src":"2017 · Q21"},{"n":22,"q":"Class intervals are made when:","o":["The data are complicated","The data are scattered and huge (continuous)","The data are small but having no meaning","The data are for some specific purpose"],"ans":1,"why":"Class intervals group large, spread-out continuous data.","src":"2017 · Q22"},{"n":23,"q":"Weight loss data set (n=15):the mean for the above data is:","o":["Approximately 5","Approximately 6","Approximately 8","Approximately 7"],"ans":3,"why":"Sum 104 divided by 15 gives approximately 6.9, rounding to 7.","src":"2017 · Q23"},{"n":24,"q":"Mode for the above data is:","o":["7","8","9","10"],"ans":1,"why":"The value 8 occurs most often (three times) in the data set.","src":"2017 · Q24"},{"n":25,"q":"The Range for the above data is:","o":["1","11","9","12"],"ans":1,"why":"Range=max (12)-min (1)=11.","src":"2017 · Q25"},{"n":26,"q":"Standard deviation can be defined as:","o":["The average distance of a value from the mean","The average distance of all the values from the mean","The average distance of negative values from the mean","All of the above"],"ans":1,"why":"Standard deviation is the typical (root-mean-square) distance of all values from the mean — the only defensible option; 'All of the above' is wrong because options (a) and (c) are false (verified online: Merriam-Webster / standard definitions).","src":"2017 · Q26"},{"n":27,"q":"Large dispersion would be found in a data set when:","o":["The standard deviation is large","The standard deviation is small","The standard deviation is medium","Both a & b"],"ans":0,"why":"A large standard deviation indicates large dispersion.","src":"2017 · Q27"},{"n":28,"q":"Z-score is also known as:","o":["Standard score","Z-table","A NOVA","Binomial probability"],"ans":0,"why":"A z-score is a standardised value — a standard score — not a probability (verified online from standard definitions; source URL re-check pending after the search rate limit).","src":"2017 · Q28"},{"n":29,"q":"The area beyond the z-score (-1.22) is:","o":["0.1121","0.113","0.114","0.115"],"ans":0,"why":"Area beyond z=1.22=0.5-0.3888=0.1112;the nearest option is a (printed as 0.1121).","src":"2017 · Q29"},{"n":30,"q":"Area between z=1.99&z=2.5 is:","o":["0.1171","0.0171","0.0181","0.2171"],"ans":1,"why":"Difference of the two z-table areas gives approximately 0.0171.","src":"2017 · Q30"},{"n":31,"q":"Which one of the following is true for z-score?","o":["Z-score tells us the number of averages","Z-score tells us the number of variation in a data set","Z-score tellus the number of standard deviations from the mean","Z-score tells us the number of means from the actual mean"],"ans":2,"why":"Az-score expresses how many standard deviations a value is from the mean. -10-","src":"2017 · Q31"},{"n":32,"q":"Scores normal with mean 70, SD 5, passat least 60.What percent pass?","o":["96.22%","99.22%","97.72%","100%"],"ans":2,"why":"Z=-2 gives an area of 0.9772, i.e.97.72%.","src":"2017 · Q32"},{"n":33,"q":"What percent of students pass with atleast 65?","o":["80.13%","82.13%","84.13%","86.13%"],"ans":2,"why":"Z=-1 gives an area of 0.8413, i.e.84.13%.","src":"2017 · Q33"},{"n":34,"q":"P-value can be defined as:","o":["The area that falls in the tail beyond the value of the test statistic","The area that falls in the tail inside the value of the test statistic","The area that falls in the tails, the value of the test statistic","The area that falls in the tail outside the curve at value of the test statistic"],"ans":0,"why":"The p-value is the tail area beyond the observed test statistic.","src":"2017 · Q34"},{"n":35,"q":"If the p-value is more than the significance level then:","o":["Accept the null hypothesis","Reject the null hypothesis","Remain constant","Cannot decide"],"ans":0,"why":"A large p-value (>alpha) means we fail to reject (accept) the null.","src":"2017 · Q35"},{"n":36,"q":"If the P-value is<0.001, what does it mean?","o":["The testis significant (mild)","The testis moderately significant","The testis highly significant (more effective)","None of the above"],"ans":2,"why":"A very small p-value indicates a highly significant result.","src":"2017 · Q36"},{"n":37,"q":"If the p-value is≤a, you can reject the:","o":["Null hypothesis","Alternate hypothesis","Both a & b","All of the above"],"ans":0,"why":"p≤alpha leads to rejecting the null hypothesis.","src":"2017 · Q37"},{"n":38,"q":"Z has a standard normal distribution with mean 50 and SD=5.The 84th percentile of this distribution is:","o":["52","55","60","62"],"ans":1,"why":"84th percentile corresponds to Z=1, so 50+5=55.","src":"2017 · Q38"},{"n":39,"q":"The process of using sample information to draw conclusion about the value of a population parameter is known as:","o":["Estimation","Point estimate","Interval estimate","P-value"],"ans":0,"why":"This is the general process of statistical estimation.","src":"2017 · Q39"},{"n":40,"q":"A specific numerical (single) value which is estimate of a parameter is called:","o":["Interval estimate","Point estimate","Estimation process","Estimator"],"ans":1,"why":"A single-value estimate is a point estimate.","src":"2017 · Q40"},{"n":41,"q":"v02 uptake scenario (95% Cl, n=49, X=47, S=5):upper limit of the interval for the population mean is:","o":["Approximately 47","Approximately 48","Approximately 49","Approximately 50"],"ans":1,"why":"47+1.96(5/7)=48.","src":"2017 · Q41"},{"n":42,"q":"Approximate lower limit of the same interval:","o":["44.6","45.6","46.6","47.6"],"ans":1,"why":"47-1.96(5/7)=45.6.","src":"2017 · Q42"},{"n":43,"q":"If SD is changed to 7, upper limit of the interval:","o":["Approximately 47","Approximately 48","Approximately 49","Approximately 55"],"ans":2,"why":"47+1.96(7/7)=47+1.96=49.","src":"2017 · Q43"},{"n":44,"q":"Lower limit when SD is 7:","o":["Approximately 45","Approximately 46","Approximately 47","Approximately 48"],"ans":0,"why":"47-1.96(7/7)= 45.","src":"2017 · Q44"},{"n":45,"q":"DVT/APT T scenario:critical region/value for the test:","o":["1.28","1.96","1.65","2.58"],"ans":1,"why":"A two-tailed test at 5% uses the critical value 1.96. 出 11-","src":"2017 · Q45"},{"n":46,"q":"The a value in the above scenario is:","o":["0.025","0.05","0.001","None of the above"],"ans":1,"why":"The stated 5% significance level is a=0.05.","src":"2017 · Q46"},{"n":47,"q":"The Z-calculated value for the above scenario is:","o":["3.005","2.502","3.497","4.889"],"ans":2,"why":"Z=(55-60)/(10/7)=-3.5, matching magnitude 3.497.","src":"2017 · Q47"},{"n":48,"q":"What is the standard error in this case?","o":["1.43","1.53","1.63","1.73"],"ans":0,"why":"SE=10/√49=1.43.","src":"2017 · Q48"},{"n":49,"q":"The calculated p-value in this case is:","o":["P<0.003","P<0.001","P>0.002","P>0.001"],"ans":1,"why":"AZ of about-3.5 is extreme, giving p<0.001.","src":"2017 · Q49"},{"n":50,"q":"The formula given below (x²=E[(o-E)²/E]) is used to calculate:","o":["t-test statistic","chi-square statistic","correlation coefficient","Standard deviation"],"ans":1,"why":"This is the chi-square test statistic formula","src":"2017 · Q50"},{"n":51,"q":"How many degrees of freedom would a table with 3 rows and 2 columns have?","o":["2","1","3","4"],"ans":0,"why":"df=(rows-1)(cols-1)=(3-1)(2-1)=2.","src":"2017 · Q51"},{"n":52,"q":"Degrees of Freedom for a2X2 contingency table for Chi-square distribution is:","o":["4","2","0.05","1"],"ans":3,"why":"df=(2-1)(2-1)=1.","src":"2017 · Q52"},{"n":53,"q":"Measles vaccination scenario:the significance level is:","o":["2%","5%","10%","20%"],"ans":1,"why":"The stated significance level is 5%.","src":"2017 · Q53"},{"n":54,"q":"The Chi-square tabulated value in this case is:","o":["1.421","3.461","3.821","3.841"],"ans":3,"why":"The tabulated chi-square value at df=1, a=0.05 is 3.841.","src":"2017 · Q54"},{"n":55,"q":"The Chi-square calculated in this case is:","o":["1.347","2.555","3.777","4.787"],"ans":0,"why":"From the original paper's table [[50,70],[40,40]], expected [[54,66],[36,44]], χ² = 1.347. (Third pass: original paper re-read; recomputed.)","src":"2017 · Q55"},{"n":56,"q":"Your conclusion in this case is:","o":["The vaccine is moderately effective against measles","The vaccine is not effective against measles","Both a & b","None of the above"],"ans":1,"why":"Calculated chi-square (1.446) is below the tabulated value, so the null of no association is not rejected.","src":"2017 · Q56"},{"n":57,"q":"Hypothesis testing is done in:","o":["Survey","Descriptive statistics","Inferential statistics","All of the above"],"ans":2,"why":"Hypothesis testing is a core inferential statistics procedure.","src":"2017 · Q57"},{"n":58,"q":"InT-distribution, the shape of the curve varies with:","o":["D.F","Sample size","Standard deviation s","Both a & b"],"ans":3,"why":"The shape of the t-curve depends on the degrees of freedom (df=n-1), which in turn depend on the sample size, so both a and bare correct.","src":"2017 · Q58"},{"n":59,"q":"The degree of freedom in independents amplest-testis:","o":["D.f=n-1","D.f = n-2","D.f=n1+n2-2","None of the above"],"ans":2,"why":"Independent-sample st-test df=n1+n2-2.","src":"2017 · Q59"},{"n":60,"q":"chi-square testis applied on:","o":["Quantitative variable","Continuous variable","Categorical variable","Discrete variable"],"ans":2,"why":"Chi-square tests are used for categorical data.","src":"2017 · Q60"},{"n":61,"q":"If we have more than two columns and two rows then the d.f would be?","o":["Number of columns minus one","Number of categories minus one","Both a & b","None of the above"],"ans":3,"why":"Degrees of freedom for a contingency table are (rows - 1) x (columns - 1) — neither option (a) nor (b) alone is right, so 'None of the above' (verified online from standard definitions).","src":"2017 · Q61"},{"n":62,"q":"Paired t-testis applied on a data set when:","o":["We want to see the difference before and after the interventions in a single sample","We want to see the difference in two independent samples","We have a categorical data","None of the above"],"ans":0,"why":"Paired t-test compares before/after measurements in the same sample.","src":"2017 · Q62"},{"n":63,"q":"Confidence interval (95%, 99%) in hypothesis testing is known as:","o":["Critical region","Acceptance region","Calculated region","P-value"],"ans":1,"why":"The confidence interval corresponds to the acceptance region.","src":"2017 · Q63"},{"n":64,"q":"The formula for calculating paired t-testis:","o":["Mean Difference over standard error","Mean Difference over standard deviation","Mean difference over sample size","None of the above"],"ans":0,"why":"Paired t=mean difference divided by the standard error of the difference.","src":"2017 · Q64"},{"n":65,"q":"Z-testis applied when we have:","o":["Known standard deviation","Sample size is less than 30","Sample size is equal to or more than 30","Both a & c"],"ans":3,"why":"The Z-testis used when the populations D is known and/or the sample is large (n≥30), so both a and c apply. -12-","src":"2017 · Q65"},{"n":66,"q":"In one of the elements of hypothesis testing, \"assumption\"means:","o":["Calculated value","Assumed values","Critical values","P-values"],"ans":1,"why":"The\"assumption\"element refers to assumed/given values used in the test.","src":"2017 · Q66"},{"n":67,"q":"Critical region is also known as:","o":["Acceptance region","Rejection region","Both a & b","None of the above"],"ans":1,"why":"The critical region is where the null hypothesis is rejected.","src":"2017 · Q67"},{"n":68,"q":"A contingency table (2x2) is used to calculate:","o":["t-statistic","correlation coefficient","variance","chi-square test of independence"],"ans":3,"why":"A2x2 contingency table is analyzed with the chi-square test of independence.","src":"2017 · Q68"},{"n":69,"q":"In Chi-square distribution hypothesis testing is:","o":["One tailed","Two tailed","Slightly negatively skewed","None of the above"],"ans":0,"why":"Chi-square tests are one-tailed (based on squared deviations).","src":"2017 · Q69"},{"n":70,"q":"The calculated value of Chi-square statistic is always:","o":["Positive","Negative","Mixed","None of the above"],"ans":0,"why":"Chi-square values are sums of squared terms, so always non-negative.","src":"2017 · Q70"}]},{"id":"ch3","num":3,"name":"Spring 2022 Paper","label":"Ch 3 · Spring 2022 Paper","weeks":"","questions":[{"n":1,"q":"The under root of the variance is:","o":["Variance","Standard Deviation","Z-score","T-distribution"],"ans":1,"why":"The square root of variance is the standard deviation.","src":"2022 · Q1"},{"n":2,"q":"In simple regression equation, the number of variables involved are:","o":["0","2","1","3"],"ans":1,"why":"Simple regression involves one dependent and one independent variable, i.e.2.","src":"2022 · Q2"},{"n":3,"q":"lf regression line of X ony is Y=5, the value of regression coefficient of Yon X is:","o":["0","0.5","1","%"],"ans":0,"why":"A regression line Y=5 is horizontal (Y does not change with x), so the slope, i.e.the regression coefficient, is 0(andr=0).","src":"2022 · Q3"},{"n":4,"q":"The variable which is changed or controlled by the researcher in an experiment is called:","o":["Independent","Dependent","Discrete","Extraneous"],"ans":0,"why":"The manipulated variable in an experiment is the independent variable.","src":"2022 · Q4"},{"n":5,"q":"For degree of freedom = 2, the chi-square tabulated value is:","o":["3.84","5.99","5.99","9.9"],"ans":1,"why":"The chi-square critical value at df=2, α=0.05 is 5.99.","src":"2022 · Q5"},{"n":6,"q":"Best fit line drawn between two quantitative variables when correlation exists is done by:","o":["Correlation","Regression","A NOVA","Chi-square"],"ans":1,"why":"Regression fits the best-fit line describing the relationship. -15-","src":"2022 · Q6"},{"n":7,"q":"The Student'st testis:","o":["a parametric test","a test for comparing averages","a test for comparing variances","an on parametric test"],"ans":1,"why":"The Student'st-testis a parametric test whose purpose is to compare averages (means).","src":"2022 · Q7"},{"n":8,"q":"If you want to see difference in the mean l Q level of twins, what test would you apply?","o":["T-test simple","Independent sample T-test","paired sample st-test","Chi-square test"],"ans":2,"why":"Twin pairs are related/matched data, calling for a paired t-test.","src":"2022 · Q8"},{"n":9,"q":"Which among the following statement is true about sampling distribution?","o":["The mean of possible sample means will be approximately equal to population mean","We use parameters in sampling distributions are and","Standard deviation in sampling is population standard deviation","Sampling distribution of population mean is not normally distributed even if population is normally distributed"],"ans":0,"why":"By the Central Limit Theorem, the mean of sample means approximates the population mean. -SERIES","src":"2022 · Q9"},{"n":10,"q":"Which of the following is not the measure of central tendency?","o":["Mean","Standard deviation","Mode","Median"],"ans":1,"why":"Standard deviation measures dispersion, not central tendency.","src":"2022 · Q10"},{"n":11,"q":"What is the alternative name for a repeated measures t-test?","o":["Unrelated t-test","related t-test","a paired sample st-test","unpaired sample t-test"],"ans":2,"why":"A repeated-measure st-testis the same as the paired-samples (related/dependent) t-test;'unpaired'refers to independent samples","src":"2022 · Q11"},{"n":12,"q":"Which of the following is the most suitable alternative hypothesis to correspond to Null hypothesis Ho:μ=8?","o":["Ha:μ=8","Ha:μ≠8","Ha:μ=8","Ha:μ>8"],"ans":1,"why":"For H0: μ = 8 the default (two-sided) alternative is Ha: μ ≠ 8; a directional alternative such as μ > 8 is used only when the research question states a direction. Options a and c are identical.","src":"2022 · Q12"},{"n":13,"q":"If the average of a series of values is 10 and their variance is 4, then the coefficient of variation is:","o":["40%","20%","80%","10%"],"ans":1,"why":"SD=√variance=√4=2;CV=(SD/mean)×100=(2/10) x 100 = 20%.","src":"2022 · Q13"},{"n":14,"q":"If the p-value is=alpha you can reject the:","o":["Null hypothesis","Alternate hypothesis","Both a & b","All of the above"],"ans":0,"why":"p=alpha is the threshold at which the null hypothesis is rejected.","src":"2022 · Q14"},{"n":15,"q":"When explaining the direction of the linear association between two numerical paired variables, a positive correlation is stated when:","o":["One variable increases and the other decreases or viceversa","dependent variable increases and independent variable decreases","Both variables increase and decrease at the sametime","Correlation coefficient is stated close to 0"],"ans":2,"why":"A positive correlation means both variables move in the same direction.","src":"2022 · Q15"},{"n":16,"q":"When a researcher is interested to apply hypothesis testing, the researcher tests which of the following hypothesis?","o":["Alternative hypothesis","Null hypothesis","Both null and alternative hypothesis","Either null or alternative hypothesis"],"ans":1,"why":"Hypothesis tests formally evaluate the null hypothesis.","src":"2022 · Q16"},{"n":17,"q":"Percentile is a measure of:","o":["Dispersion","Measure of center","Measure of position","All of the above"],"ans":2,"why":"A percentile indicates a value's relative position in a data set.","src":"2022 · Q17"},{"n":18,"q":"For a r x c contingency table the Chi Square has df:","o":["cxr","(c-1)(r-1)","(c-1)+(r-1)","r-1"],"ans":1,"why":"Chi-square degrees of freedom for an r xc table is (r-1)(c-1).","src":"2022 · Q18"},{"n":19,"q":"Population proportion can be estimated on the basis of which one of the following?","o":["Sample Prevalence","Sample Incidence","Sample Proportion","Both a & c"],"ans":3,"why":"Population proportion can be estimated from either sample prevalence or sample proportion.","src":"2022 · Q19"},{"n":20,"q":"If a series of values consists of 21 numbers, then for finding the median, we order the series ascending and use:","o":["The 11th value in the ordered series","The mean between the 10th and 11th values","The mean between the 11th and 12th values","The 10th value in the ordered series"],"ans":0,"why":"With 21(odd) values, the median is the middle, 11th value.","src":"2022 · Q20"},{"n":21,"q":"Mean deviation can be defined as:","o":["A statistical measure used to calculate the average distance from the mean value of a data set","The average distance at one side of the mean for a given data set","The average distance of negative values from the mean","All of the above"],"ans":0,"why":"Mean deviation is the mean of the absolute deviations from the mean — the average distance from the mean, both sides. Options (b) and (c) are false, so 'All of the above' is wrong (verified online: Wikipedia / Mean absolute deviation).","src":"2022 · Q21"},{"n":22,"q":"Critical region is also known as:","o":["Rejection region","Acceptance region","Both a & b","None of the above"],"ans":0,"why":"The critical region is where the null hypothesis is rejected.","src":"2022 · Q22"},{"n":23,"q":"Student t-test is used to test population mean when population variance is always unknown and the sample size is:","o":["Any sized","More than 30","Less than 30","None of them"],"ans":2,"why":"The t-testis used specifically for small samples (n<30) with unknown variance.","src":"2022 · Q23"},{"n":24,"q":"If all the actual and estimated values of Y are same on the regression line, the sum of squares of error will be:","o":["Zero","Maximum","Minimum","Unknown"],"ans":0,"why":"Perfect prediction means no residual error, so the sum of squared errors is zero.","src":"2022 · Q24"},{"n":25,"q":"When a=0 and b=2, what will be the predicted value of y when X=10?","o":["10","15","20","30"],"ans":2,"why":"y=a+bx=0+2(10)=20.","src":"2022 · Q25"},{"n":26,"q":"Formula for calculating F coefficient is:","o":["MS B divided by MST","MS B divided by MS W","MST divided by MS W","None of the above"],"ans":1,"why":"F=mean square between groups divided by mean square within groups.","src":"2022 · Q26"},{"n":27,"q":"Three groups of subjects followed over five years comparing 15 treatments for side rob last ic anemia.Most appropriate statistical analysis is a (n):","o":["T-test","A NOVA","Correlation analysis","Chi-square test"],"ans":1,"why":"Comparing more than two group means calls for Anova.","src":"2022 · Q27"},{"n":28,"q":"Which of the following contains unnecessary information?","o":["Primary data","Tertiary data","Secondary data","All of these"],"ans":2,"why":"Secondary data are collected for another purpose and may therefore contain information that is unnecessary for the present study; primary data are collected for the study itself.","src":"2022 · Q28"},{"n":29,"q":"A large collection of data maybe condensed by constructing:","o":["classes","a frequency polygon","class limits","a frequency distribution"],"ans":3,"why":"A frequency distribution condenses raw data into organized counts.","src":"2022 · Q29"},{"n":30,"q":"The area beyond the z-score of 2.5 is:","o":["0.0071 出","0.0700","0.0062","0.9998"],"ans":2,"why":"0.5 minus the table area for z=2.5(0.4938) leaves 0.0062. -17-","src":"2022 · Q30"},{"n":31,"q":"ANOVA is:","o":["One tail test","Two tail test","Both a & b","Half tail"],"ans":0,"why":"F-test/Anova is inherently one-tailed since F is based on squared deviations.","src":"2022 · Q31"},{"n":32,"q":"In regression analysis if a=54, what will be its interpretation?","o":["With every one unit change in x, 54 units change will occur in y","With every one unit change in y, 54 units change will occur in x","This means that when y is 0, x is 54","This means that when x is 0, y is 54"],"ans":3,"why":"The intercept 'a' is the predicted y-value when x=0.","src":"2022 · Q32"},{"n":33,"q":"Which one of the following is not a probability sampling technique?","o":["Simple random sampling","Stratified random Sampling","Cluster sampling","Pur po sive Sampling"],"ans":3,"why":"Pur po sive sampling is an on-probability technique.","src":"2022 · Q33"},{"n":34,"q":"For small sample size say less than 30 which one of the following distributions is used?","o":["Z distribution","T-distribution","Both at the same time","None of the above"],"ans":1,"why":"Small samples with unknown variance use the t-distribution. sum of squares measures the variability of the","src":"2022 · Q34"},{"n":35,"q":"The sample treatment means around the overall mean.","o":["Error","Total","Treatment","none"],"ans":2,"why":"Treatment sum of squares captures between-group variability.","src":"2022 · Q35"},{"n":36,"q":"Gender, age-class, religion, type of disease, and blood group are measured on:","o":["Nominal scale of measurement","Ordinal scale of measurement","Interval scale of measurement","Ratio scale of measurement"],"ans":0,"why":"These are unordered categories-a nominal scale.","src":"2022 · Q36"},{"n":37,"q":"Co-efficient of Variance is used to compare variables when:","o":["values are large","variables are dependent","Variables are independent","units of variables are different"],"ans":3,"why":"CV is unit-free, making it useful for comparing variables with different units.","src":"2022 · Q37"},{"n":38,"q":"Which one is true regarding sample?","o":["A portion or subset taken from entire population","A portion or subset taken from study population","Both a & b","None of the above"],"ans":2,"why":"A sample can be a subset of either the entire population or the study population.","src":"2022 · Q38"},{"n":39,"q":"The purpose of data organization is to:","o":["Conveniently display the data","To reduce large data into small summary","To eliminate mental strain","All of the above"],"ans":3,"why":"Data organization serves display, sum mari z ation, and ease-of-use purposes together.","src":"2022 · Q39"},{"n":40,"q":"According to the empirical rule the area between +2 and -2 standard deviations is:","o":["68%","95%","99%","100%"],"ans":1,"why":"Within 2 SD of the mean captures about 95% of a normal distribution.","src":"2022 · Q40"},{"n":41,"q":"Which of the following methods is a form of graphical presentation of quantitative data?","o":["Line Diagram","Pie diagram","Bar diagram","Histogram"],"ans":3,"why":"A histogram is the standard graphical form for quantitative continuous data.","src":"2022 · Q41"},{"n":42,"q":"lf, after performing a Student t-test for comparison of means, we obtain p=0.0256, then:","o":["We reject HO and accept H1","We accept HO","We reject H1","We cannot decide"],"ans":0,"why":"p=0.0256 is below the typical 0.05 threshold, so we reject the null.","src":"2022 · Q42"},{"n":43,"q":"For a clinical trial, the Sensitivity issn=0.562 and Specificity is Sp=0.893.This means that:","o":["The testis a valuable test because both indicators are more than 50%","The testis a worthless test, since it gives errors when detecting both sick and healthy subjects","The testis a worthless test, because the sensitivity is too low (lower than 75%)","a perfect test"],"ans":2,"why":"Low sensitivity (56%) means the test misses many true cases, limiting its value.","src":"2022 · Q43"},{"n":44,"q":"lf the test statistic is 3.5 and the critical value is 1.645, what will be the p-value?","o":["P<0.05","P<0.001","P>0.05","P>0.10"],"ans":1,"why":"A test statistic far beyond the critical value corresponds to a very small p-value.","src":"2022 · Q44"},{"n":45,"q":"If a data set has a variance of 9, what is the standard deviation?","o":["3","82","18","91"],"ans":0,"why":"SD=√variance=√9=3.","src":"2022 · Q45"},{"n":46,"q":"The proportion of observations that fall within one standard deviation of the mean is:","o":["68.26%","50.25%","75.75%","95.70%"],"ans":0,"why":"About 68.26% of a normal distribution lies within ± 1 SD.","src":"2022 · Q46"},{"n":47,"q":"All of the following are advantages of a diagram except:","o":["Are attractive","Are readily intelligible","Facilitate comparison","Shows approximate result"],"ans":3,"why":"Diagrams giving only approximate results is a limitation, not an advantage.","src":"2022 · Q47"},{"n":48,"q":"Confidence Level (95%, 99%) in hypothesis testing is also known as:","o":["Critical region","Acceptance region","Calculated region","P-value"],"ans":1,"why":"The confidence level corresponds to the acceptance region.","src":"2022 · Q48"},{"n":49,"q":"Standard Deviation:","o":["is the square root of variance","is measured using the unit of the variable","is measured using the squared unit of the variable","Has values generally comparable with the average value"],"ans":0,"why":"SD is defined as the square root of the variance.","src":"2022 · Q49"},{"n":50,"q":"Ifx2=5.8 and df=1 then we make the following decision at @0.05:","o":["we reject H0 at@0.05","We reject H0 at @0.01","We accept H0 at@0.05","We reject H1 at @0.01"],"ans":0,"why":"5.8 exceeds the critical value (3.84) at df=1, a=0.05, soH 0 is rejected.","src":"2022 · Q50"},{"n":51,"q":"Which is the only average to be used while dealing with qualitative data that cannot be measured quantitatively but still can be arranged in ascending or descending order of magnitude?","o":["Geometric mean","Mode","Median","Arithmetic Mean"],"ans":2,"why":"Median works for ordinal (ranked) qualitative data.","src":"2022 · Q51"},{"n":52,"q":"Level of significance always determines:","o":["Probability of type l error","Probability of type ll error","Power","Point estimation"],"ans":0,"why":"The significance level (alpha) is the probability of a Type l error.","src":"2022 · Q52"},{"n":53,"q":"The gap between the two categories of the ordinal variable is:","o":["Quite meaningful","Less meaningful","Meaningless","Stable"],"ans":2,"why":"On an ordinal scale, differences between values have no numerical meaning at all — the gap is meaningless (verified online: standard measurement-scale definitions).","src":"2022 · Q53"},{"n":54,"q":"A sample null hypothesis for chi-square test maybe:","o":["The two variables are independent","The two variables are associated","The two variables are not independent","All of the above"],"ans":0,"why":"The null hypothesis of the chi-square test of independence S3S states that the two variables are independent (no association); associated'and'not independent'describe the alternative.","src":"2022 · Q54"},{"n":55,"q":"Sign of Rhode notes the nature of:","o":["Association or correlation","Regression or correlation","Causal relationship or regression","None of the above"],"ans":0,"why":"The sign of the correlation coefficient (rho) shows the direction of association.","src":"2022 · Q55"},{"n":56,"q":"In regression equation\"a\"denotes which of the following?","o":["Slope","Intercept","Both a & b","All of these"],"ans":1,"why":"'a'is they-intercept in the regression equation.","src":"2022 · Q56"},{"n":57,"q":"The median of a series of numerical values is:","o":["A value for which half the values are higher and half lower","The value located exactly midway between the minimum and maximum","The most commonly encountered value among the series","A measure of the eccentricity of the series"],"ans":0,"why":"The median splits an ordered series into two equal halves.","src":"2022 · Q57"},{"n":58,"q":"A relationship where the flow of the data points is best represented by a curve is called:","o":["Linear Relationship","Nonlinear relationship","Linear Positive","Linear Negative"],"ans":1,"why":"A curved data pattern indicates a nonlinear relationship.","src":"2022 · Q58"},{"n":59,"q":"In testing of hypothesis in order to test the equality of more than two population means at a time, the_method is used.","o":["Analysis of variance","student t-test","Chi-square test","none of these"],"ans":0,"why":"Anova is designed to compare more than two group means simultaneously.","src":"2022 · Q59"},{"n":60,"q":"In a two-tail test for the population mean, if the null hypothesis is rejected when the alternative is true, then:","o":["Type l error is committed","Type ll error is committed","correct decision is made","a one-tail test should be used instead of a two-tail test"],"ans":2,"why":"Correctly rejecting a false null hypothesis is the correct decision. -19-","src":"2022 · Q60"},{"n":61,"q":"Standard deviation tells us about:","o":["dispersion in the data set","closeness in the data set","closeness to the mean","closeness to the median"],"ans":0,"why":"SD is fundamentally a measure of dispersion/spread.","src":"2022 · Q61"},{"n":62,"q":"Skewness is a measure:","o":["of the asymmetry of the probability distribution","decides the distribution may have high or low variance","of central tendency","None of the above"],"ans":0,"why":"Skewness quantifies distribution asymmetry.","src":"2022 · Q62"},{"n":63,"q":"Weight loss data set (n=15):the mode for the above data is:","o":["7 SERIL","8","9","10"],"ans":1,"why":"The value 8 occurs most often in the data set.","src":"2022 · Q63"},{"n":64,"q":"When the standard deviation is divided by the square root of sample size, it is called:","o":["Variance","Standard error","Z-score","Variance"],"ans":1,"why":"SD/√n defines the standard error of the mean.","src":"2022 · Q64"},{"n":65,"q":"A correlation between zero and 0.25 indicates:","o":["Intermediate correlation","Strong correlation","Weak correlation","All of the above"],"ans":2,"why":"A correlation that low is considered weak.","src":"2022 · Q65"},{"n":66,"q":"Large dispersion would be found in a data set when:","o":["The standard deviation is large","The standard deviation is small","The standard deviation is medium","Both a & b"],"ans":0,"why":"A large SD indicates a large dispersion.","src":"2022 · Q66"},{"n":67,"q":"lf one regression coefficient is greater than one, then the other will be:","o":["More than one","Equal to one","Less than one","Equal to minus one"],"ans":2,"why":"The product of the two regression coefficients cannot exceed 1, so if one is>1, the other is<1.","src":"2022 · Q67"},{"n":68,"q":"If the chances of raining are eighty percent (80%), the value of correlation coefficient will be:","o":["Closer to one","Closer to zero","Closer to 0.25","None of the above"],"ans":3,"why":"An 80% chance of rain is a probability, not a correlation coefficient — no value of r follows from it (verified online from standard definitions; source URL re-check pending after the search rate limit).","src":"2022 · Q68"},{"n":69,"q":"Association is a measure of the strength of the relationship between:","o":["Variables","Constants","Attributes","None of these"],"ans":0,"why":"Association describes the strength of the relationship between variables.","src":"2022 · Q69"},{"n":70,"q":"Formula for calculating mean is:","o":["Individual observation over number of observations","All observation over individual observation","Sum of all observation over number of observations","Total observation over sum of observations"],"ans":2,"why":"The mean is the sum of all observations divided by their count. TA'SERIES","src":"2022 · Q70"}]},{"id":"ch4","num":4,"name":"Spring 2023 Paper","label":"Ch 4 · Spring 2023 Paper","weeks":"","questions":[{"n":1,"q":"During 3 hours at Heathrow airport, 55 aircrafts arrived late;the number of minutes late is shown in a grouped frequency table.Identify the median class.","o":["1-10","11-20","21-30","None of the above"],"ans":1,"why":"The median class is the class containing the (n +1)/2=28th value in the cumulative frequency, i.e.11-20.","src":"2023 · Q1"},{"n":2,"q":"The median of the data 1, 2, 4, 6, 8, 10, 11, 13 is?","o":["6","8","7","10"],"ans":2,"why":"With 8 values the median is the average of the 4th and 5th values:(6+8)/2=7.","src":"2023 · Q2"},{"n":3,"q":"Household survey of 10 families:ages of heads of families are 32, 34, 35, 36, 36, 42, 44, 46, 48, 52.The mean age of heads of families is:","o":["36","38","40","40.5"],"ans":3,"why":"Sum of ages (405) divided by 10 gives 40.5.","src":"2023 · Q3"},{"n":4,"q":"The systolic blood pressures of 15 stroke patients are recorded.The mean of this data is:","o":["140","156","164","171"],"ans":3,"why":"Mean=Ex/n=(sum of the 15 readings)/15=about 171.","src":"2023 · Q4"},{"n":5,"q":"Which one of the following is true for z-score?","o":["Z-score tells us the number of averages","Z-score tells us the number of variation in a data set","Z-score tells us the number of variances from the mean","None of the above"],"ans":3,"why":"Az-score gives the number of standard deviations a value lies from the mean.Option c says'variances', son one of the options is correct.","src":"2023 · Q5"},{"n":6,"q":"Heights of 18-year-old males have abell-shaped distribution with mean 69.6 inches and SD 1.4 inches.About what proportion of such men are 66.8 to 72.4 inches tall?","o":["50%","68%","95%","99.7%"],"ans":2,"why":"66.8 to 72.4 spans mean ± 2 SD, which covers about 95% by the empirical rule.","src":"2023 · Q6"},{"n":7,"q":"How will you interpret ap-value=0.001?","o":["Mild statistical significance","Moderate statistical significance","High statistical significance","No statistical significance"],"ans":2,"why":"A very small p-value indicates high statistical significance.","src":"2023 · Q7"},{"n":8,"q":"DVT/APT T scenario (1% significance level):the critical region/value is:","o":["1.28","1.96","1.65","2.58"],"ans":3,"why":"A two-tailed test at the 1% level uses the critical value 2.58.","src":"2023 · Q8"},{"n":9,"q":"Standard error in the above scenario is:","o":["1","2","3","4"],"ans":0,"why":"SE=SD/√n=10/√100=1.","src":"2023 · Q9"},{"n":10,"q":"If the standard deviation is 5 then the standard error would be:","o":["1.00","1.15","0.05","2.25"],"ans":0,"why":"SE=SD/√n=5/√25=1.00.","src":"2023 · Q10"},{"n":11,"q":"The calculated p-value in this case is:","o":["P<0.001","P≤0.001","P≥0.001","None"],"ans":0,"why":"A calculated Z far beyond the critical value ( ± 2.58) gives a very small p-value, p<0.001.","src":"2023 · Q11"},{"n":12,"q":"A testis highly significant when the P-value is:","o":["<0.01","<0.04",">0.04","None of the above"],"ans":0,"why":"Ap-value below O.01 is considered highly significant.","src":"2023 · Q12"},{"n":13,"q":"Sample means of a skewed distribution will tend to:","o":["Follow exactly normal curve","Follow normal curve","Never follow normal curve","Somewhat follow normal curve"],"ans":1,"why":"The Central Limit Theorem means sample means approximate a normal curve even from a skewed population.","src":"2023 · Q13"},{"n":14,"q":"The measures of variability of the sample means is always:","o":["Less than population measures of variability","More than population measures of variability","Equal to population measures of variability","All of the above"],"ans":0,"why":"The standard error of the mean is always smaller than the population SD.","src":"2023 · Q14"},{"n":15,"q":"The process of using sample information to draw conclusion about the value of a population parameter is known as:","o":["Estimation","Point estimate","Interval estimate","P-value"],"ans":0,"why":"This is the general process of statistical estimation.","src":"2023 · Q15"},{"n":16,"q":"A specific numerical (single) value which is estimate of a parameter is called:","o":["Interval estimate","Point estimate","Estimation process","Estimator"],"ans":1,"why":"A single-value estimate is a point estimate.","src":"2023 · Q16"},{"n":17,"q":"A machine is designed to fill toothpaste tubes with 5.8 ounces of toothpaste.The manufacturer claims tubes are overly filled.The correct hypothesis is:","o":["H0:μ≤5.8, Ha:μ>5.8","HO: μ≥5.8, Ha:μ<5.8","HO:μ≤5.8, Ha:μ>5.8","HO: μ>5.8, Ha: μ>5.8"],"ans":0,"why":"A claim that the tubes are over filled (u>5.8) is the alternative, soH 0:μ≤5.8 and Ha:μ>5.8(option c is a duplicate of option a).","src":"2023 · Q17"},{"n":18,"q":"Testing that the population mean is greater than 65, n=50, alpha=.05, critical value is:","o":["1.645","-1.645","1.96","-1.96"],"ans":0,"why":"A right-tailed test at 5% uses the positive critical value 1.645.","src":"2023 · Q18"},{"n":19,"q":"Cholesterol levels:population mean μ=100, SD o=24, n=10 individuals, sample mean x=70.The z-score is:","o":["-3.75","-2.50","-0.83","-3.95"],"ans":3,"why":"Z=(70-100)/(24/√10)=-3.95.","src":"2023 · Q19"},{"n":20,"q":"The significance level is the risk of:","o":["Type l error","Type ll error","Making a correct decision","None of the above"],"ans":0,"why":"Significance level (alpha) is the probability of a Type I error.","src":"2023 · Q20"},{"n":21,"q":"If you do not reject the null hypothesis when it is, in fact, false, you are committing:","o":["Type 1 error","Type 2 error","Both a and b","None of the above"],"ans":1,"why":"Failing to reject a false null hypothesis is a Type ll error.","src":"2023 · Q21"},{"n":22,"q":"A household survey claims average monthly rent for a 1-bedroom apartment in a Chattanooga area is$7o0;new sample data suggests a downturn.The correct hypotheses are:","o":["H0:μ≥$700, Ha:μ<$700","HO:μ≤ $700, Ha:μ > $5700","H0:μ>$700, Ha:μ>$700","HO: μ> $700, Ha: μ > $700"],"ans":0,"why":"The claimμ=$7 oo is tested against evidence of a decrease: HO:μ≥$700, Ha:μ<$700(left-tailed test).","src":"2023 · Q22"},{"n":23,"q":"In testing hypotheses, the researcher initially assumes:","o":["the alternative hypothesis is true","the null hypothesis is true","errors cannot be made","none of the above"],"ans":1,"why":"Hypothesis testing starts from the presumption that the null hypothesis is true.","src":"2023 · Q23"},{"n":24,"q":"Givenμ0=130, μ=150, o=25 and n=4, what test statistic is appropriate?","o":["T test","Z test","x² test","F test"],"ans":1,"why":"With a known population standard deviation, the Z-test applies even for small n.","src":"2023 · Q24"},{"n":25,"q":"The dividing point between the region where the null hypothesis is rejected and the region where it is not rejected is called:","o":["Critical region","Critical value","Acceptance region","Significant region"],"ans":1,"why":"The critical value is the boundary point of the rejection region.","src":"2023 · Q25"},{"n":26,"q":"When there is a5% chance of rejecting the null hypothesis when it is actually true, this is called:","o":["Right tail test","False effect","No effect","Significance level"],"ans":3,"why":"A stated 5% chance of wrongly rejecting a true null defines the significance level.","src":"2023 · Q26"},{"n":27,"q":"To test the claim that the mean is greater than 87, you would use a:","o":["Right tail test","Left tail test","Two tail test","None of the above"],"ans":0,"why":"Testing for\"greater than\"uses a right-tailed test.","src":"2023 · Q27"},{"n":28,"q":"Student t-testis used to test population mean when population variance is always unknown and the sample size is:","o":["Any sized","More than 30","Less than 30","None of them"],"ans":2,"why":"The t-test applies specifically to small samples (n<30) with unknown variance.","src":"2023 · Q28"},{"n":29,"q":"Paired t-testis applied on a data set when:","o":["We want to see the difference before and after the interventions in a single sample","We want to see the difference between the readings of two dependent samples","We want to see the difference of twin pairs readings","All of the above"],"ans":3,"why":"Before/after, matched-pair, and twin data are all paired-sample scenarios.","src":"2023 · Q29"},{"n":30,"q":"Givenμ0=130, μ=150, o=25 and n=4, what test statistic is appropriate?","o":["T test","Z test","x² test","F test"],"ans":1,"why":"With a known population standard deviation, the Z-test applies even for small n.","src":"2023 · Q30"},{"n":31,"q":"Confidence interval (99%, 95%) in hypothesis testing is known as:","o":["Critical region","Acceptance region","Calculated region","P-value"],"ans":1,"why":"The confidence interval corresponds to the acceptance region.","src":"2023 · Q31"},{"n":32,"q":"The formula for calculating paired t-testis:","o":["Mean Difference over standard error","Mean Difference over standard deviation","Mean difference over sample size","None of the above"],"ans":0,"why":"Paired t=mean difference divided by the standard error of the difference.","src":"2023 · Q32"},{"n":33,"q":"Which of the following techniques analyzes the relationship between two variables to help provide a prediction mechanism?","o":["Standard error","Correlation","Regression","None of the above"],"ans":2,"why":"Regression is specifically used for prediction based on relationships between variables.","src":"2023 · Q33"},{"n":34,"q":"The equation of the regression line is written as:","o":["E=Rt*CI/Gt","X=a+by","a=x+by","y=a+bx"],"ans":3,"why":"The standard simple linear regression equation is y=a+bx.","src":"2023 · Q34"},{"n":35,"q":"In regression analysis if a=54, what will be its interpretation?","o":["With everyone unit change in x, 54 units change will occur in y","With everyone unit change iny, 54 units change will occur in x","This means that when y is 0, xis54","This means that when x is 0, yis54"],"ans":3,"why":"The intercept 'a' is the predicted y-value when x=0. 24-","src":"2023 · Q35"},{"n":36,"q":"When explaining the direction of the linear association between two numerical paired variables, a positive correlation is stated when:","o":["One variable increases and the other decreases or viceversa","dependent variable increases and independent variable decreases","Both variables increase and decrease at the sametime","Correlation coefficient is stated close to 0"],"ans":2,"why":"A positive correlation means both variables move in the same direction.","src":"2023 · Q36"},{"n":37,"q":"The correlation coefficient is stated to determine:","o":["A specific value of they-variable given a specific value of the x-variable","A specific value of the x-variable given a specific value of the y-variable","The strength of the relationship between the x andy variables","None of the above"],"ans":2,"why":"The correlation coefficient quantifies relationship strength, not specific predicted values.","src":"2023 · Q37"},{"n":38,"q":"A type of graphical presentation used to explain the correlation between a dependent and an independent variable is:","o":["Histogram","Frequency polygon","Frequency curve","Scatterplot"],"ans":3,"why":"A scatterplot visually shows the correlation between two variables.","src":"2023 · Q38"},{"n":39,"q":"Correlation coefficient ranges from:","o":["0.01 to 0.05","0 to 1","-1 to +1","-3 to +3"],"ans":2,"why":"The correlation coefficient's range is bounded between-1 and +1.","src":"2023 · Q39"},{"n":40,"q":"The minimum size of a contingency table is:","o":["1x1","2x2","10×10","No minimum size"],"ans":1,"why":"A contingency table needs atleast two categories per variable, i.e.2x2. -25-","src":"2023 · Q40"},{"n":41,"q":"Icecream flavor preference survey by gender:is favorite flavor independent of gender at a=0.05?","o":["Yes, independent","No, associated","Cannot be determined","Need more data"],"ans":0,"why":"χ² = 1.26 < 5.991 (critical value at α = 0.05, df = 2), so flavour is independent of gender. (Third pass: original paper re-read; recomputed.)","src":"2023 · Q41"},{"n":42,"q":"Calculate the expected frequency force llc.","o":["45","87","90","None"],"ans":3,"why":"Expected frequency for cell C (Male × Strawberry) = 8.64, which is not among the options. (Third pass: original paper re-read; recomputed.)","src":"2023 · Q42"},{"n":43,"q":"Calculate the expected frequency for cell F.","o":["90","160","200","None"],"ans":3,"why":"Expected frequency for cell F (Female × Strawberry) = 7.36, which is not among the options. (Third pass: original paper re-read; recomputed.)","src":"2023 · Q43"},{"n":44,"q":"In testing hypothesis in order to test the equality of more than two population means at a time, the_method is used.","o":["Analysis of variance","student t-test","Chi-square","none of these"],"ans":0,"why":"Anova compares more than two population means at once.","src":"2023 · Q44"},{"n":45,"q":"Temperature is measured on:","o":["Nominal scale of measurement","Ordinal scale of measurement","Interval scale of measurement","Ratio scale of measurement"],"ans":2,"why":"Temperature (Celsius/Fahrenheit) has no true zero, making it an interval scale.","src":"2023 · Q45"},{"n":46,"q":"Which of the following sampling techniques is used when there is no sampling frame and when the population is quite large or involves subjects residing in a large geographic area?","o":["Random sampling","Systematic sampling","Stratified sampling","Cluster sampling"],"ans":3,"why":"Cluster sampling works well for large, geographically spread populations without a full frame.","src":"2023 · Q46"},{"n":47,"q":"National census conducted by the U.s.government every 10 years is an example of:","o":["Descriptive statistics","Inferential statistics","Both a and b","None of the above"],"ans":0,"why":"A census describes the entire population directly, making it descriptive statistics.","src":"2023 · Q47"},{"n":48,"q":"There are 6 red, 5 green, and 4 yellow marbles in a bag.If Joe picks 2 marbles one after the other without replacement, the probability both are red is:","o":["1/7","2/15","1/21","4/25"],"ans":0,"why":"P=(6/15)(5/14)=30/210=1/7.","src":"2023 · Q48"},{"n":49,"q":"Diet high in fruits/vegetables lowers blood pressure, and ear shape relates to aggression—these two research statements primarily use:","o":["Descriptive statistics","Inferential statistics","Both a and b","None of the above"],"ans":1,"why":"Statements that generali sea relationship (diet and blood pressure, ear shape and aggression) beyond the people studied reston inferential statistics, not on mere description of the data.","src":"2023 · Q49"},{"n":50,"q":"If there is no proper sampling frame then the following error is more likely to be introduced in your study:","o":["Coverage error","Response error","Estimation error","Processing error"],"ans":0,"why":"A poor/missing sampling frame directly causes coverage error.","src":"2023 · Q50"},{"n":51,"q":"The number of dermatologists, surgeons, GPs, psychiatrists, and orthopedic specialists on a hospital staff (4, 7, 5, 3, 3=22 total).If a doctor is selected at random, find the probability a psychiatrist, surgeon, or dermatologist is found.","o":["1/2","6/11","7/11","11/22"],"ans":2,"why":"(3+7+4)/22=14/22=7/11.","src":"2023 · Q51"},{"n":52,"q":"Time to run a marathon and weights of lobsters in a tank are examples of:","o":["Qualitative variable","Quantitative variable","Both a and b","None of the above"],"ans":1,"why":"Both time and weight are numerically measured, i.e. quantitative variables.","src":"2023 · Q52"},{"n":53,"q":"Appropriate graph to display marital status (Married, Unmarried, Divorced, Widow) is:","o":["Frequency polygon","Scatterplot","Pie chart","Histogram"],"ans":2,"why":"Marital status is categorical, best shown with a pie chart or bar diagram.","src":"2023 · Q53"},{"n":54,"q":"The best way to display age is to draw:","o":["Line diagram","Bar chart","Both a & b","None of these"],"ans":1,"why":"Age groups (categorical bins) are typically shown with a bar chart.","src":"2023 · Q54"},{"n":55,"q":"Which of the following is a form of graphical presentation of primary continuous data?","o":["Line Diagram","Pie diagram","Bar diagram","Histogram"],"ans":3,"why":"A histogram is the standard graphical form for continuous data.","src":"2023 · Q55"},{"n":56,"q":"Generally, the number of ranges suggested for a class interval is:","o":["5-15","10-15","15-20","20-25"],"ans":0,"why":"The typical rule-of-thumb range is 5 to 15 classes.","src":"2023 · Q56"},{"n":57,"q":"Class intervals are made when:","o":["The data are complicated","The data are scattered and huge","The data are small but having no meaning","The data are for some specific purpose"],"ans":1,"why":"Class intervals group large, spread-out continuous data.","src":"2023 · Q57"},{"n":58,"q":"Description of characteristics of data is called:","o":["Descriptive statistics","Inferential statistics","Hypothesis testing","Calculation p-value"],"ans":0,"why":"Descriptive statistics summarizes data characteristics. -26-","src":"2023 · Q58"},{"n":59,"q":"Find the class boundary, midpoint, and width for the class 895-904.","o":["894.5-905.5, 900, 10","894.5-905.5, 900, 11","895.5-905.5, 900, 11","None of the above"],"ans":3,"why":"Class limits 895-904 give class boundaries 894.5-904.5, midpoint (895+904)/2=899.5 and width 10;none of options a-c gives all three values.","src":"2023 · Q59"},{"n":60,"q":"Number of meteorites found in 10 states of the Us (89, 47, 184, 296, 30, 215, 138, 78, 48, 39).al cu late the median.","o":["78.5","83.5","85.6","None"],"ans":1,"why":"Ordering the 10 values, the median is the average of the 5th and 6th (78, 89)=83.5.","src":"2023 · Q60"},{"n":61,"q":"What is the value of the mode when all values in the data set are different?","o":["There is no mode","The mode is the mean","There is more than one mode","It cannot be determined"],"ans":0,"why":"With no repeated values, no mode exists.","src":"2023 · Q61"},{"n":62,"q":"Which measure of central tendency is not influenced by extreme or skewed distributions scores?","o":["Mean","Median","Mode","Range"],"ans":1,"why":"The median resists the pull of outliers, unlike the mean.","src":"2023 · Q62"},{"n":63,"q":"Large standard deviations suggest that:","o":["Scores are probably widely scattered.","There is very little difference among scores.","mean, median and mode are the same","The scores are not normally distributed."],"ans":0,"why":"A large SD means scores are spread far from the mean.","src":"2023 · Q63"},{"n":64,"q":"The formula given below (s²=Σ(X-X̄)²/N) is a computational formula for:","o":["Variance","Mean","Standard deviation","t-statistic"],"ans":0,"why":"Sum of squared deviations over N is the variance formula.","src":"2023 · Q64"},{"n":65,"q":"The under root of the variance is:","o":["Variance","Standard Deviation","Z-score","T-distribution"],"ans":1,"why":"The square root of variance is the standard deviation.","src":"2023 · Q65"},{"n":66,"q":"A statistic that tells the number of standard deviations a data value is above or below the mean is called:","o":["Inter-quartile Range","Co-efficient of variation","Mean Deviation","Z-score"],"ans":3,"why":"This is the definition of az-score.","src":"2023 · Q66"},{"n":67,"q":"Sample standard deviation for European auto sales (in millions of dollars:11.2, 11.9, 12.0, 12.8, 13.4, 14.3, variance = 1.28).","o":["0.5","0.6","0.8","None of the above"],"ans":3,"why":"Mean=12.6;sum of (x-mean)²=6.38;s²=6.38/5=1.28;s= √1.28= about 1.13, which is not among options a-c.","src":"2023 · Q67"},{"n":68,"q":"Calculate the range for the following set of data: 4, 4.2, 5, 3, 4.3, 1, 1.2, 2, 1.2, 1.1, 1.26, 6.7, 5.7, 5.5, 6.","o":["5","6","7","None of the above"],"ans":3,"why":"Range=maximum-minimum=6.7-1.0=5.7, which is not exactly 5, 6 or 7, son one of the above.","src":"2023 · Q68"},{"n":69,"q":"The number of rooms in the seven hotels in downtown Pittsburgh is 713, 300, 618, 595, 311, 401, and 292.Find the median.","o":["311","401","595","None"],"ans":1,"why":"Ordering the seven values, the middle (4th) value is 401.","src":"2023 · Q69"}]},{"id":"ch5","num":5,"name":"Spring 2024 Paper","label":"Ch 5 · Spring 2024 Paper","weeks":"","questions":[{"n":1,"q":"Association is a measure of the strength of the relationship between","o":["Variables","Constants","Attributes","None of these"],"ans":0,"why":"Association measures the strength of relationship between variables.","src":"2024 · Q1"},{"n":2,"q":"For a skewed data the best measure of dispersion to be reported is:","o":["mean","median","IQR","SIQR"],"ans":2,"why":"IQR is robust to skew, making it the best dispersion measure for skewed data.","src":"2024 · Q2"},{"n":3,"q":"A household survey of 10 families was conducted by students of 4th year Bsn.In the collected data, the ages of heads of families were:32, 34, 35, 36, 36, 42, 44, 46, 48, and 52.The mean age of heads of families is","o":["36","38","40","40.5"],"ans":3,"why":"Sum of ages (405) divided by 10 gives 40.5.","src":"2024 · Q3"},{"n":4,"q":"The straight line graph of linear equation Y=a+bX, slope is horizontal if:","o":["b=0","b≠0","b=1","a=b"],"ans":0,"why":"A horizontal line has zero slope, i.e.b=o","src":"2024 · Q4"},{"n":5,"q":"The value of Za/2 for 90% Confidence level is","o":["1.96","1.64","2.57","2.96"],"ans":1,"why":"The critical Z value for a90% confidence interval is approximately 1.64. -29-","src":"2024 · Q5"},{"n":6,"q":"Which of the following techniques is an analysis of the relationship between two variables to help provide the prediction mechanism?","o":["Standard error","Correlation","Regression","None of the above"],"ans":2,"why":"Regression is used specifically for prediction based on relationships between variables.","src":"2024 · Q6"},{"n":7,"q":"Which of the following is not the measure of central tendency?","o":["Mean","Standard deviation","Mode","Median"],"ans":1,"why":"Standard deviation measures dispersion, not central tendency. SERII","src":"2024 · Q7"},{"n":8,"q":"What test will be applied to see association between two categorical nominal variables if the frequencies in cells are less than 5 in more than 20% of the cells?","o":["A NOVA","Chi-square test","Fisher's exact test","Paired t-test"],"ans":2,"why":"Fisher's exact testis used when expected cell counts are too small for chi-square.","src":"2024 · Q8"},{"n":9,"q":"Which of the following is used for presentation of continuous data?","o":["Pie Chart","Bar chart","Histogram","Both b & c"],"ans":2,"why":"A histogram is the standard graphical form for continuous data.","src":"2024 · Q9"},{"n":10,"q":"The measure of spread in the distribution of sample means is","o":["Stander d Deviation","Stander d error","Systematic error","Variance"],"ans":1,"why":"The spread of sample means is described by the standard error.","src":"2024 · Q10"},{"n":11,"q":"If a data set is having a variance 9 what will be the standard deviation:","o":["6","2","5","3"],"ans":3,"why":"SD=√9=3.","src":"2024 · Q11"},{"n":12,"q":"Which scale of measurement has an absolute zero?","o":["Nominal SERII","Ordinal","Interval","Ratio"],"ans":3,"why":"Only the ratio scale has a true, non-arbitrary zero point.","src":"2024 · Q12"},{"n":13,"q":"Which testis used if population Stander d Deviation is unknown and sample size is less than 30?","o":["Z-Test","T-Test","An nova","Fisher exact Test"],"ans":1,"why":"The t-testis used for small samples with unknown population SD.","src":"2024 · Q13"},{"n":14,"q":"The entire group of interest for which a statistical conclusion is drawn from the eligible participants is called.","o":["data","information","population","sample"],"ans":2,"why":"The entire group of interest is the population.","src":"2024 · Q14"},{"n":15,"q":"The mean serum creatinine level is measured in 13 white women who received a newly proposed antibiotic was 1.2 mg/dland the standard deviation was 0.6 mg/dl.Another sample of 12 black women who have received an old antibiotic have mean serum creatinine level of 1.0 mg/dl with standard deviation of 0.4 mg/dl, which test will be the most appropriate to find out the difference in creatinine level of these two groups","o":["Fisher's exact test","T test for two independent sample","T test for two dependent sample","Simple T test"],"ans":1,"why":"Comparing two separate (unmatched) groups calls for the independent-sample st-test.","src":"2024 · Q15"},{"n":16,"q":"Failing to reject How henin fact it is false Error","o":["Type l error","Type ll error","No Error","Stander d error"],"ans":1,"why":"Failing to reject a false null hypothesis is a Type ll error.","src":"2024 · Q16"},{"n":17,"q":"Paired t-testis applied on a data set when:","o":["We want to see the difference before and after the interventions in a single sample","We want to see the difference in two independent samples","We have a categorical data for analysis","None of these"],"ans":0,"why":"Paired t-test compares before/after measurements in the same sample.","src":"2024 · Q17"},{"n":18,"q":"Formula for calculating mean is:","o":["Individual observation over number of observation","All observation over individual observation","Sum of all observation over number of observations","Total observation over sum of observations"],"ans":2,"why":"The mean is the sum of all observations divided by their count.","src":"2024 · Q18"},{"n":19,"q":"A relationship where the flow of the data points is best represented by a curve is called:","o":["Linear Relationship","Nonlinear relationship","Linear Positive","Linear Negative"],"ans":1,"why":"A curved data pattern indicates a nonlinear relationship.","src":"2024 · Q19"},{"n":20,"q":"The variable which is influenced by the intervention of the researcher is called:","o":["Dependent","Independent","Discrete","Extraneous"],"ans":0,"why":"The outcome influenced by the manipulated variable is the dependent variable.","src":"2024 · Q20"},{"n":21,"q":"The median is simply another name for the","o":["50th percentile","10th percentile","100th percentile","None"],"ans":0,"why":"The median is the 5o th percentile.","src":"2024 · Q21"},{"n":22,"q":"A NOVA is:","o":["One tail test","Two tail test","Both a & b","Half tail"],"ans":0,"why":"F-test/Anova is inherently one-tailed since F is based on squared deviations.","src":"2024 · Q22"},{"n":23,"q":"Suppose there is no confidence interval or level of confidence in a scenario to estimate the population mean.It is understood that it will be equal to:","o":["98%","99%","95%","90%"],"ans":2,"why":"95% is the conventional default confidence level.","src":"2024 · Q23"},{"n":24,"q":"Chi-square testis applied when:","o":["Tow variables are continuous","Tow variables are quantitative","Two variables are Categorical","All of these"],"ans":2,"why":"Chi-square tests are used for categorical data.","src":"2024 · Q24"},{"n":25,"q":"A process by which we estimate the value of dependent variable on the basis of one or more independent variables is called:","o":["Correlation","Regression","Residual","Slope"],"ans":1,"why":"Estimating a dependent variable from independent variables is regression.","src":"2024 · Q25"},{"n":26,"q":"If, after performing a Student test for comparison of means, we obtain p=0.0256, then:","o":["We reject HO and accept H1","We accept HO","We reject H1","We cannot decide"],"ans":0,"why":"p=0.0256 is below the typical 0.05 threshold, so we reject the null.","src":"2024 · Q26"},{"n":27,"q":"The sample data set is the age of Bsn students.What is the Mode of data set?","o":["24","26","27","29"],"ans":1,"why":"26 is the most frequently occurring value in this data set.","src":"2024 · Q27"},{"n":28,"q":"The under root of the variance is:","o":["Variance.","Standard Deviation","Z-score","T-distribution"],"ans":1,"why":"The square root of variance is the standard deviation.","src":"2024 · Q28"},{"n":29,"q":"Skewness is a measure:","o":["of the asymmetry of the probability distribution","decides the distribution may have high or low variance","of central tendency","None of the above"],"ans":0,"why":"Skewness quantifies distribution asymmetry.","src":"2024 · Q29"},{"n":30,"q":"Critical region is also known as:","o":["Rejection region","Acceptance region","Both a & b","None of the above"],"ans":0,"why":"The critical region is where the null hypothesis is rejected.","src":"2024 · Q30"},{"n":31,"q":"Which scale of measurement has a false (arbitrary) zero?","o":["Nominal","Ordinal","Interval","Ratio"],"ans":2,"why":"The interval scale has an arbitrary (false\") zero point, unlike ratio.","src":"2024 · Q31"},{"n":32,"q":"A researcher collected the data about the age, weight and height of n=60o0 from different schoolchildren randomly to calculate B Ml.The researcher intended to test the hypothesis that the type of food utilized by school children has no effect on B Ml.Which among the given approaches may be best to test this hypothesis.","o":["Descriptive statistics","Calculating central tendency","Inferential statistics","Calculating measure of dispersion"],"ans":2,"why":"Testing a hypothesis about an effect calls for inferential statistics.","src":"2024 · Q32"},{"n":33,"q":"A data set of 20 values has a sum of 468 what is mean?","o":["23.4","43.4","20.4","33.4"],"ans":0,"why":"468/20=23.4.","src":"2024 · Q33"},{"n":34,"q":"Which among the following information is not required for Z-test?","o":["Population mean","Population standard deviation","Sample mean","Sample standard deviation"],"ans":3,"why":"The Z-test uses the population (not sample) standard deviation.","src":"2024 · Q34"},{"n":35,"q":"If a series of values consists of 21 numbers, then, for finding the median, we ordered the series ascending and we use:","o":["The 11th value in the ordered series","The mean between the 10th and 11th values","The mean between the 11th and 12th values","The 10th value in the ordered series"],"ans":0,"why":"With 21(odd) values, the median is the middle, 11th value.","src":"2024 · Q35"},{"n":57,"q":"A large collection of data maybe condensed by constructing","o":["classes","a frequency polygon","class limits","a frequency distribution"],"ans":3,"why":"A frequency distribution condenses raw data into organized counts.","src":"2024 · Q57"},{"n":58,"q":"Data will be considered as consistent data when:","o":["The standard deviation is large","The standard deviation is small","The standard deviation is medium","Both a & b"],"ans":1,"why":"Consistent data has low variability, i.e.a small standard deviation.","src":"2024 · Q58"},{"n":59,"q":"The straight line graph of the linear equation Y=a+bx, slope will be downward if:","o":["b>0","b<0","b=0","b#0"],"ans":1,"why":"A downward-sloping line has a negative slope, i.e.b<0.","src":"2024 · Q59"},{"n":60,"q":"If all the actual and estimated values of Yare same on the regression line, the sum of squares of error will be","o":["Zero","Maximum","Minimum","Unknown"],"ans":0,"why":"Perfect prediction means no residual error, so the sum of squared errors is zero.","src":"2024 · Q60"},{"n":61,"q":"Correlation coefficient is also called:","o":["Pearson correlation coefficient","Coefficient of determination","A NOVA","All of these"],"ans":0,"why":"The correlation coefficient is also known as Pearson's correlation coefficient.","src":"2024 · Q61"},{"n":62,"q":"A contingency table (2x2) is used to calculate:","o":["t-statistic","correlation coefficient","A NOVA","chi-squire statistic"],"ans":3,"why":"A2x2 contingency table is analyzed with the chi-square statistic. -32-","src":"2024 · Q62"},{"n":63,"q":"A measure of central tendency which is calculated by numbers arranging in numerical order is:","o":["Standard deviation","Range","Median","Mode"],"ans":2,"why":"The median is found by ordering values and taking the middle one.","src":"2024 · Q63"},{"n":64,"q":"In take of Vit-C and lifespan:Vit-C is an example of:","o":["Dependent","Intermediate","Independent","Extraneous"],"ans":2,"why":"Vitamin C in take is the manipulated/independent variable in this example.","src":"2024 · Q64"},{"n":65,"q":"The sample data set is the age of BSN students (32, 24, 26, 26, 27, 28, 33, 35).What is the Mean of data set?","o":["27","28","29","30"],"ans":2,"why":"Sum (231) divided by 8 gives approximately 29.","src":"2024 · Q65"},{"n":66,"q":"The variable which is changed or controlled by the researcher in an experiment is called:","o":["Independent","Dependent","Discrete","Extraneous"],"ans":0,"why":"The manipulated variable in an experiment is the independent variable.","src":"2024 · Q66"},{"n":67,"q":"The alternative hypothesis is also called hypothesis.","o":["Statistical","research","Simple","variable"],"ans":1,"why":"The alternative hypothesis is also known as the research hypothesis.","src":"2024 · Q67"},{"n":68,"q":"In Regression Equation the value of Y when X is Zero is known as","o":["Slope","Intercept","predictor","dividend"],"ans":1,"why":"The value of Y when X=Ois the intercept.","src":"2024 · Q68"},{"n":69,"q":"The proportion of observations fall above the median is:","o":["68%","50%","75%","95%"],"ans":1,"why":"By definition, half of the observations lie above the median.","src":"2024 · Q69"},{"n":70,"q":"Appropriate graph to display percentages of marital status (Married, Unmarried, Divorced, widow) is;","o":["Frequency polygon","Scatter plot","Pie chart","Histogram"],"ans":2,"why":"Categorical proportions like marital status are best shown with a pie chart.","src":"2024 · Q70"}]},{"id":"ch6","num":6,"name":"Spring 2025 Paper","label":"Ch 6 · Spring 2025 Paper","weeks":"","questions":[{"n":1,"q":"The degrees of freedom for a one-sample t-test with n observations are:","o":["n-1","n + 1","2n-2","n"],"ans":0,"why":"A one-sample t-test hasn-1 degrees of freedom.","src":"2025-Malakand · Q1"},{"n":2,"q":"Any Subset of a Population is Called:","o":["Data","Variable","Sample","Constant"],"ans":2,"why":"A subset of a population is called a sample.","src":"2025-Malakand · Q2"},{"n":3,"q":"What is the Mean of the given data:22, 21, 28, 24, 25.0","o":["16.8","20","17.0","24"],"ans":3,"why":"Mean = (22 + 21 + 28 + 24 + 25) / 5 = 120 / 5 = 24.","src":"2025-Malakand · Q3"},{"n":4,"q":"P (Z>2.0) is:","o":["99.87%","0.9772","0.0228","0.1587"],"ans":2,"why":"0.5 minus the table area for z=2.0(0.4772) leaves 0.0228.","src":"2025-Malakand · Q4"},{"n":5,"q":"What is the main advantage of a large sample size in statistical analysis?","o":["lt guarantees the data will be normally distributed","Reduces variability & allows better approximation to true population parameter","It simplifies data collection","It guarantees more significant results"],"ans":1,"why":"Larger samples reduce variability and better approximate the true population parameter.","src":"2025-Malakand · Q5"},{"n":6,"q":"What is the most common significance level used in hypothesis testing?","o":["0.1","0.05","0.1","0.01"],"ans":1,"why":"0.05 is the conventional standard significance level.","src":"2025-Malakand · Q6"},{"n":7,"q":"The area between +2 Zand +3Z is equal to:","o":["0.0215","0.0017","0.975","0.0228"],"ans":0,"why":"P (Z<3)-P (Z<2)=0.9987-0.9772=0.0215.","src":"2025-Malakand · Q7"},{"n":8,"q":"Color of a Flower is Variable","o":["Discrete","Nominal","Ordinal","Continuous"],"ans":1,"why":"Flower color is an unordered category, i.e.nominal.","src":"2025-Malakand · Q8"},{"n":9,"q":"According to a data, gestation time follows a normal distribution with mean of 266 days and SD of 16.What percent of babies have gestation time greater than 282 days?","o":["0.16","0.84","0.34","0.5"],"ans":0,"why":"Z=(282-266)/16=1.0, P (Z>1)=0.1587=0.16. Variable","src":"2025-Malakand · Q9"},{"n":10,"q":"Medical Record number is","o":["Ordinal","Continuous","Nominal","Discrete"],"ans":2,"why":"An MR number is just an identifier label, i.e.nominal","src":"2025-Malakand · Q10"},{"n":11,"q":"The Variance of a population of 1, 2, 3, 4, 5 is:","o":["1","zero","3","2"],"ans":3,"why":"Mean=3;sum of squared deviations=10;population variance=10/5=2.","src":"2025-Malakand · Q11"},{"n":12,"q":"Which statistical measure divides a data distribution into two equal parts?","o":["Mode","Mean","Variance","Median"],"ans":3,"why":"The median splits a distribution into two equal halves.","src":"2025-Malakand · Q12"},{"n":13,"q":"The measure of spread in the distribution of sample means is:","o":["Decision Error","Standard error","Standard deviation","Sampling Error"],"ans":1,"why":"The spread of sample means is described by the standard error.","src":"2025-Malakand · Q13"},{"n":14,"q":"The variance for the given data (8, 8, 8, 8, 8) is:","o":["8","4","√8","zero"],"ans":3,"why":"Identical values have zero variance.","src":"2025-Malakand · Q14"},{"n":15,"q":"P (Z< 2.0) is:","o":["0.1587","0.0228","99.87%","0.9772"],"ans":3,"why":"The cumulative area up to z=2.0 is 0.9772.","src":"2025-Malakand · Q15"},{"n":16,"q":"Which of the following denotes a negatively skewed distribution?","o":["Mode>Median>Mean","Mean=Median=Mode","Mode<Median<Mean","Mean>Median>Mode"],"ans":0,"why":"In negative skew, values order as Mode>Median>Mean.","src":"2025-Malakand · Q16"},{"n":17,"q":"The F-test in ANOVA compares:","o":["Correlation coefficients","Means of two groups","Variances across multiple groups","Distribution shapes 文"],"ans":2,"why":"A NovA'sF-test compares variances across multiple groups.","src":"2025-Malakand · Q17"},{"n":18,"q":"While constructing confidence interval, narrow width is desirable.All of the following narrows the width of confidence interval except:","o":["Smaller Variation","Higher Confidence level","Larger Sample Size","Smaller Confidence level"],"ans":1,"why":"A higher confidence level widens, rather than narrows, the interval.","src":"2025-Malakand · Q18"},{"n":19,"q":"All of the following are properties of Normal Distribution Except:","o":["Area under the Curve is 1","Symmetrical about the Mean","Mean, Median, Mode are Equal","Extent from O to+Infinity"],"ans":3,"why":"The normal distribution extends from-infinity to+infinity, not just from o.","src":"2025-Malakand · Q19"},{"n":20,"q":"If 0<r<0.25, then what will be the strength of correlation?","o":["Intermediate Correlation","Strong Correlation","Perfect Correlation","Weak Correlation"],"ans":3,"why":"A correlation that low is considered weak.","src":"2025-Malakand · Q20"},{"n":21,"q":"If the test statistic of Z test gives a value of 2.3 and the critical value is 1.96.What will be your decision regarding the Null Hypothesis?","o":["Reject HO","Not sure to Reject or Fail to reject HO","Accept HO","Fail to Reject HO"],"ans":0,"why":"The test statistic (2.3) exceeds the critical value (1.96), so reject HO.","src":"2025-Malakand · Q21"},{"n":22,"q":"Types of personality is an example of","o":["Nominal","Interval","Ratio","Ordinal"],"ans":0,"why":"Personality types are unordered categories, i.e.nominal.","src":"2025-Malakand · Q22"},{"n":23,"q":"In Regression Equation The value of Y when X is Zero is Known as:","o":["Slope","Predictor","Intercept","Indicator"],"ans":2,"why":"The value of Y when X=Ois the intercept.","src":"2025-Malakand · Q23"},{"n":24,"q":"P (-1<Z<+1)","o":["0.68","0.95","0.99","1"],"ans":0,"why":"About 68% of a normal distribution lies within ± 1 SD.","src":"2025-Malakand · Q24"},{"n":25,"q":"The degree of freedom for achi-square distribution have 3 columns and 2 rows will be:","o":["4","2","3","1"],"ans":1,"why":"df=(rows-1)(cols-1)=(2-1)(3-1)=2.","src":"2025-Malakand · Q25"},{"n":26,"q":"The Central Limit Theorem states that as the sample size increases, the distribution of the sample mean:","o":["Becomes skewed","Becomes less reliable","Approaches a normal distribution","Approaches a binomial distribution"],"ans":2,"why":"The Central Limit Theorem states sample means approach a normal distribution as n grows.","src":"2025-Malakand · Q26"},{"n":27,"q":"The median is simply another name for:","o":["None","50th percentile","10th percentile","100th percentile"],"ans":1,"why":"The median is the 5o th percentile.","src":"2025-Malakand · Q27"},{"n":28,"q":"The degree of freedom for an Independent T Testis given by:","o":["n1+n2-2","n1-1, n2-1","n-1","n1+n2-1"],"ans":0,"why":"Independent-sample st-test df=n1+n2-2.","src":"2025-Malakand · Q28"},{"n":29,"q":"Type 1 Error means:","o":["HO is wrongly Accepted","Ho is wrongly rejected","None","Ha is wrongly rejected"],"ans":1,"why":"A Type I error is wrongly rejecting a true null hypothesis.","src":"2025-Malakand · Q29"},{"n":30,"q":"A psychologist claims that the average IQ of a sample of 50 children is significantly above the normal l Q of 100 is Hypothesis.","o":["Both A & C","Directional","Non-directional","Two-tail"],"ans":1,"why":"A claim of“above\"a value is a directional (one-tailed) hypothesis. TA-SERIES","src":"2025-Malakand · Q30"},{"n":31,"q":"The process of selecting a sample from a population is known as:","o":["Random iz ation","Testing","Sampling","Probability"],"ans":2,"why":"Selecting a sample from a population is sampling.","src":"2025-Malakand · Q31"},{"n":32,"q":"Which of the following is TRUE about ap-value in hypothesis testing?","o":["Small p-value indicates strong evidence against the null hypothesis","The p-value is always between O and 10","Large p-value indicates strong evidence against null hypothesis","P-value measures the probability that the null hypothesis is true"],"ans":0,"why":"A small p-value is strong evidence against the null hypothesis.","src":"2025-Malakand · Q32"},{"n":33,"q":"The sample data set is the age of BSN students (32, 24, 26, 26, 27, 29, 33, 35).What is the Mode of data set?","o":["27","29","26","28"],"ans":2,"why":"26 occurs twice, more than any other value, making it the mode.","src":"2025-Malakand · Q33"},{"n":34,"q":"All of the following are properties of Normal Distribution Except:","o":["Symmetrical about the Mean","Area under the Curve is 1","Extent from O to+Infinity","Mean, Median, Mode are Equal"],"ans":2,"why":"The normal distribution extends from-infinity to+infinity, not just from 0.","src":"2025-Malakand · Q34"},{"n":35,"q":"When assessing the variability of a data set, which statistic is most commonly used?","o":["Standard deviation","Mode","Mean","Median"],"ans":0,"why":"Standard deviation is the most common measure of variability.","src":"2025-Malakand · Q35"},{"n":36,"q":"The Degree of Freedom For Numerator in Anova is Given by:","o":["N+K","N-K","N+K-1","K-1"],"ans":3,"why":"The numerator (between-groups) df in Anova is k-1. -37-","src":"2025-Malakand · Q36"},{"n":37,"q":"The process of predicting variable Y using variable X:","o":["Chi-Square Test","Correlation","A NOVA","Regression"],"ans":3,"why":"Predicting one variable from another is regression.","src":"2025-Malakand · Q37"},{"n":38,"q":"The standard deviation of a population of 1, 2, 3, 4, 5 is:","o":["√3","v0","√2","√1"],"ans":2,"why":"Population variance is 2, so SD=√2.","src":"2025-Malakand · Q38"},{"n":39,"q":"Which of the following denotes a negatively skewed distribution?","o":["Mean=Median=Mode","Mode>Median>Mean","Mode<Median<Mean","Mean>Median>Mode"],"ans":1,"why":"In negative skew, values order as Mode>Median>Mean.","src":"2025-Malakand · Q39"},{"n":40,"q":"When the p-value of at-testis less than the significance level (e.g., 0.05):","o":["Reject the null hypothesis","Accept the null hypothesis","Cannot conclude anything about the null hypothesis","Fail to reject the null hypothesis"],"ans":0,"why":"Ap-value below the significance level leads to rejecting the null hypothesis.","src":"2025-Malakand · Q40"},{"n":41,"q":"Which of the following is used for presentation of continuous data? 1","o":["Both A & B","Pie Chart","Histograms","Bar Chart"],"ans":2,"why":"A histogram is the standard graphical form for continuous data.","src":"2025-Malakand · Q41"},{"n":42,"q":"Which testis used if ois unknown and sample size is less than 30?","o":["Chi-Square Test","F-Test","T-Test","Z-Test"],"ans":2,"why":"The t-testis used for small samples with unknown population SD. -38-","src":"2025-Malakand · Q42"},{"n":43,"q":"The variable which is influenced by the intervention of the researcher is called:","o":["Discrete","Confounding","Independent","Dependent"],"ans":3,"why":"The outcome influenced by the manipulated variable is the dependent variable.","src":"2025-Malakand · Q43"},{"n":44,"q":"Failing to reject Ho when in fact it is false is Error.","o":["Type-1 Error","No Error","Type-2 Error","Alpha Error"],"ans":2,"why":"Failing to reject a false null hypothesis is a Type ll error","src":"2025-Malakand · Q44"},{"n":45,"q":"Which of the following is Probability Sampling Technique?","o":["Simple Random Sampling","Network Sampling","Convenient Sampling","Quota Sampling"],"ans":0,"why":"Simple random sampling is a probability sampling technique.","src":"2025-Malakand · Q45"},{"n":46,"q":"If we want to determine whether there is a significant association between the two categorical variables from a single population, which test will be used?","o":["Chi-Square Test","T-Test","F-Test","Z-Test"],"ans":0,"why":"Association between categorical variables is tested with chi-square.","src":"2025-Malakand · Q46"},{"n":47,"q":"The sample data set is the age of BSN students.(32, 24, 26, 26, 27, 29, 33, 35) What is the Median of data set?","o":["30","27","29","28"],"ans":3,"why":"rde red:24, 26, 26, 27, 29, 32, 33, 35; median=avg (4th, 5th)=(27+29)/2=28.","src":"2025-Malakand · Q47"},{"n":48,"q":"The critical value of t with degree of freedom 19 and α = 0.01 (two tail) is:","o":["1.73","2.86","2.54","2.09"],"ans":1,"why":"The two-tailed critical t at df=19, α=0.01 is approximately 2.86.","src":"2025-Malakand · Q48"},{"n":49,"q":"Which sampling method is most commonly used for statistical analysis?","o":["Random sampling","Judgment sampling","Snowball sampling","Convenience sampling"],"ans":0,"why":"Random sampling is the most commonly used method for statistical analysis.","src":"2025-Malakand · Q49"},{"n":50,"q":"If the Median is greater than the mean, the distribution will be","o":["Negatively skewed","Positively skewed","Symmetrical","None"],"ans":0,"why":"Median exceeding the mean indicates a negatively skewed distribution.","src":"2025-Malakand · Q50"},{"n":51,"q":"Quantitative variables that can only take specific, separate values are called:","o":["Qualitative variables","Continuous variables","Discrete variables","Attribute variables"],"ans":2,"why":"Countable, separate-value quantitative variables are discrete variables.","src":"2025-Malakand · Q51"},{"n":52,"q":"The Pvalue for a test having calculated value of Z=2 and a=0.05(one tail) will be:","o":["0.05","0.01","0.02","0.04"],"ans":2,"why":"The one-tailed p-value for Z=2 is approximately 0.02.","src":"2025-Malakand · Q52"},{"n":53,"q":"What is the primary purpose of a one-sample t-test?","o":["To compare the mean of a sample to a known population mean","To test the association between two variables","To assess the variance within a sample","To compare the means of two independent groups"],"ans":0,"why":"A one-sample t-test compares a sample mean to a known population mean.","src":"2025-Malakand · Q53"},{"n":54,"q":"Which of the following is measure of Dispersion?","o":["Median","Mean","Standard Deviation","Mode"],"ans":2,"why":"Standard deviation is a measure of dispersion.","src":"2025-Malakand · Q54"},{"n":55,"q":"The Chi-square test of independence assesses:","o":["The difference between observed and expected frequencies in a single category","Whether two categorical variables are associated","Whether a sample mean differs from a hypothesized value","The correlation between two continuous variables"],"ans":1,"why":"The chi-square test of independence checks whether two categorical variables are associated.","src":"2025-Malakand · Q55"},{"n":56,"q":"The sampling distribution of the mean becomes approximately normal when:","o":["Population is normal, regardless of sample size","Sample size is sufficiently large","Sample size is very small","Data is categorical"],"ans":1,"why":"By the C LT, sample means approach normality as sample size grows large.","src":"2025-Malakand · Q56"},{"n":57,"q":"A random sample of 36 student having mean height of 160 cm with standard deviation of 6 cm. what will be 99% confidence interval?","o":["158.04 -------- 161.96","157.425 -------- 162.575","155.25 -------- 164.75","158.355 -------- 161.645"],"ans":1,"why":"SE=6/6=1, margin=2.576(1)=2.576, giving 157.425 to 162.575.","src":"2025-Malakand · Q57"},{"n":58,"q":"The most suitable graph used for presenting continuous data:","o":["Histogram","Bar chart","Pie chart","Scattered plot"],"ans":0,"why":"A histogram is the standard graphical form for continuous data.","src":"2025-Malakand · Q58"},{"n":59,"q":"The value of Za/2 for 95% Confidence level is:","o":["1.96","2.84","1.64","2.57"],"ans":0,"why":"The critical Z value for a95% confidence interval is 1.96.","src":"2025-Malakand · Q59"},{"n":60,"q":"Which of the following increases the width of interval?","o":["Smaller confidence level","Small variation","Higher Confidence level","Large Sample Size"],"ans":2,"why":"A higher confidence level widens the confidence interval.","src":"2025-Malakand · Q60"},{"n":61,"q":"What is the mode of given data:2, 6, 2, 6, 2, 2, 6, 3, 3, 3, 4, 4, 4, 6, 5, 6, 5, 6, 5, 6","o":["5","3","6","2"],"ans":2,"why":"The value 6 appears most often (7 times) in this data set.","src":"2025-Malakand · Q61"},{"n":62,"q":"The term\"parameter\"refers to a characteristic of:","o":["The sampling method","A statistical test","A sample","The population"],"ans":3,"why":"A parameter describes a characteristic of the population.","src":"2025-Malakand · Q62"},{"n":63,"q":"Measure of central tendency which is not affected by extreme values:","o":["Mean","Mode","Variance","Median"],"ans":3,"why":"The median resists the pull of outliers, unlike the mean.","src":"2025-Malakand · Q63"},{"n":64,"q":"P (-1<Z<+2)","o":["0.0228","0.1359","0.8185","0.1587"],"ans":2,"why":"P (Z<2)-P (Z<-1)=0.9772-0.1587=0.8185","src":"2025-Malakand · Q64"},{"n":65,"q":"Which of the following is an example of a qualitative variable?","o":["Length of a steel bar","Weight of a person","Time taken to complete a task","Color of a product"],"ans":3,"why":"Color is a categorical (qualitative) variable.","src":"2025-Malakand · Q65"},{"n":66,"q":"The power of a test depends on the probability of committing a type ll error (β).lf a test hasβ=0.25, then the power of the test will be:","o":["0.5","100%","0.75","0.25"],"ans":2,"why":"Power=1-β=1-0.25=0.75. -40-","src":"2025-Malakand · Q66"},{"n":67,"q":"The sample data set is the age of BSN students.(32, 24, 26, 26, 27, 29, 33, 35) What is the Mean of data set?","o":["30","27","29","28"],"ans":2,"why":"Sum is 232;232/8=29.","src":"2025-Malakand · Q67"},{"n":68,"q":"The critical value for right tail test with 5% a:","o":["2.84","2.57","1.96","1.64"],"ans":3,"why":"A one-tailed 5% critical value is 1.64.","src":"2025-Malakand · Q68"},{"n":69,"q":"The Difference between the maximum & Minimum Value of any Data Set is:","o":["Standard Deviation","Range","Variance","Coefficient of Variation"],"ans":1,"why":"Max minus min defines the range.","src":"2025-Malakand · Q69"},{"n":70,"q":"If a teacher is trying to prove that a new method of teaching mathis more effective than traditional one, he/she will conduct a","o":["One-tailed test","Point estimate of the population parameter","Two-tailed test","Confidence interval"],"ans":0,"why":"Testing for a directional improvement (\"more effective\") calls for a one-tailed test.","src":"2025-Malakand · Q70"}]}],"combined":[{"t":"Critical region is also known as:","c":4},{"t":"Skewness is a measure:","c":4},{"t":"The under root of the variance is:","c":4},{"t":"A contingency table (2x2) is used to calculate:","c":3},{"t":"A measure of central tendency which is calculated by numbers arranging in numerical order is:","c":3},{"t":"Gender, age-class, religion, type of disease, and blood group are measured on:","c":3},{"t":"Large standard deviations suggest that:","c":3},{"t":"Paired t-testis applied on a data set when:","c":3},{"t":"The calculated p-value in this case is:","c":3},{"t":"The formula for calculating paired t-testis:","c":3},{"t":"The proportion of observations fall above the median is:","c":3},{"t":"The variable which is changed or controlled by the researcher in an experiment is called:","c":3},{"t":"The variable which is influenced by the intervention of the researcher is called:","c":3},{"t":"Which one of the following is true for z-score?","c":3},{"t":"A large collection of data maybe condensed by constructing","c":2},{"t":"A relationship where the flow of the data points is best represented by a curve is called:","c":2},{"t":"A specific numerical (single) value which is estimate of a parameter is called:","c":2},{"t":"A statistic which describes the interval of scores bounded by the 25th and 75th percentile ranks is:","c":2},{"t":"Area between z=1.99&z=2.5 is:","c":2},{"t":"Association is a measure of the strength of the relationship between","c":2},{"t":"Class intervals are made when:","c":2},{"t":"DVT/APT T scenario:critical region/value for the test:","c":2},{"t":"Formula for calculating mean is:","c":2},{"t":"How many degrees of freedom would a table with 3 rows and 2 columns have?","c":2},{"t":"If the p-value is more than the significance level then:","c":2},{"t":"In Chi-square distribution hypothesis testing is:","c":2},{"t":"In Regression Equation the value of Y when X is Zero is known as","c":2},{"t":"In one of the elements of hypothesis testing, \"assumption\"means:","c":2},{"t":"In regression analysis if a=54, what will be its interpretation?","c":2},{"t":"Large dispersion would be found in a data set when:","c":2},{"t":"P-value can be defined as:","c":2},{"t":"The Chi-square calculated in this case is:","c":2},{"t":"The Chi-square tabulated value in this case is:","c":2},{"t":"The Median value is the:","c":2},{"t":"The Z-calculated value for the above scenario is:","c":2},{"t":"The area beyond the z-score (-1.22) is:","c":2},{"t":"The indices used to measure variation or dispersion among scores are all, except:","c":2},{"t":"The measure of spread in the distribution of sample means is","c":2},{"t":"The process of using sample information to draw conclusion about the value of a population parameter is known as:","c":2},{"t":"What is the standard error in this case?","c":2},{"t":"What percent of students pass with atleast 65?","c":2},{"t":"When explaining the direction of the linear association between two numerical paired variables, a positive correlation is stated when:","c":2},{"t":"Which is NOT a characteristic of normal distribution?","c":2},{"t":"Which measure of central tendency is influenced by extreme scores and skewed distributions?","c":2},{"t":"Which of the following is not the measure of central tendency?","c":2},{"t":"Which of the following methods is a form of graphical presentation of quantitative continuous data?","c":2},{"t":"Which scale of measurement has an absolute zero?","c":2},{"t":"Your conclusion in this case is:","c":2},{"t":"Z-testis applied when we have:","c":2}]};
+var LETTERS = ['A','B','C','D','E'];
+var viewEl = document.getElementById('view');
+var searchEl = document.getElementById('q');
+var clearBtn = document.getElementById('clear-btn');
+var state = { view:'home', paper:-1, showAnswers:false, picked:{}, term:'' };
+function saveProgress(){
+  try{
+    localStorage.setItem('bio-picked', JSON.stringify(state.picked));
+    localStorage.setItem('bio-showAnswers', state.showAnswers ? '1' : '0');
+  }catch(e){}
+}
+function loadProgress(){
+  try{
+    var pk = localStorage.getItem('bio-picked');
+    if(pk){ var parsed = JSON.parse(pk); if(parsed && typeof parsed==='object') state.picked = parsed; }
+    /* Test mode: the page always opens with answers hidden, even if a
+       previous visit left the Answers toggle On for revision. */
+    state.showAnswers = false;
+    try{ localStorage.setItem('bio-showAnswers','0'); }catch(e){}
+  }catch(e){}
+}
+loadProgress();
+var bookmarks = {};
+function saveBookmarks(){ try{ localStorage.setItem('bio-bookmarks', JSON.stringify(bookmarks)); }catch(e){} }
+function loadBookmarks(){ try{ var b = JSON.parse(localStorage.getItem('bio-bookmarks') || '{}'); if(b && typeof b === 'object') bookmarks = b; }catch(e){} }
+function bookmarkCount(){ var n = 0; for(var k in bookmarks){ if(bookmarks[k]) n++; } return n; }
+loadBookmarks();
+function normStem(s){ return String(s).toLowerCase().replace(/\s+/g,' ').trim(); }
+var REPEAT_MAP = {};
+(function(){
+  var m = {};
+  BOOK.papers.forEach(function(p){
+    p.questions.forEach(function(q){
+      var k = normStem(q.q);
+      if(!m[k]) m[k] = [];
+      m[k].push({cid:p.id, n:q.n, src:q.src});
+    });
+  });
+  Object.keys(m).forEach(function(k){ if(m[k].length > 1) REPEAT_MAP[k] = m[k]; });
+})();
+function repeatOthers(cid, q){
+  var occ = REPEAT_MAP[normStem(q.q)];
+  if(!occ) return null;
+  var others = occ.filter(function(o){ return !(o.cid === cid && o.n === q.n); });
+  return others.length ? others : null;
+}
+function srcsText(others){
+  var s = others.map(function(o){ return o.src; });
+  if(s.length === 1) return s[0];
+  return s.slice(0,-1).join(', ') + ' and ' + s[s.length-1];
+}
+function paperById(id){
+  for(var i=0;i<BOOK.papers.length;i++){ if(BOOK.papers[i].id === String(id)) return BOOK.papers[i]; }
+  return null;
+}
+function chapterIndexById(id){
+  for(var i=0;i<BOOK.papers.length;i++){ if(BOOK.papers[i].id === String(id)) return i; }
+  return -1;
+}
+
+function esc(x){return String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function hl(text, term){
+  var s = esc(text);
+  if(!term) return s;
+  var t = term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  try { return s.replace(new RegExp('('+t+')','gi'), '<mark>$1</mark>'); } catch(e){ return s; }
+}
+function totalQ(){ var n=0; BOOK.papers.forEach(function(p){ n+=p.questions.length; }); return n; }
+
+function topicsHTML(list, basedLine){
+  if(!list || !list.length) return '';
+  var max = 0; list.forEach(function(t){ if(t.c>max) max=t.c; });
+  var LIM = 8, html = '';
+  list.forEach(function(t,i){
+    var pct = max ? Math.round(t.c/max*100) : 0;
+    html += '<div class="topic-row'+(i>=LIM?' t-extra':'')+'" data-topic="'+esc(t.t)+'" role="button" tabindex="0" aria-label="Practise this repeated question"'+(i>=LIM?' hidden':'')+'>'
+      +'<span class="trank">'+(i+1)+'</span>'
+      +'<span class="tname">'+esc(t.t)+'</span>'
+      +'<span class="tcount">Asked '+t.c+'×</span>'
+      +'<span class="tbar"><span class="tfill" style="display:block;width:'+pct+'%"></span></span></div>';
+  });
+  if(list.length>LIM) html += '<button type="button" class="t-more" id="t-more">Show all '+list.length+' repeated questions</button>';
+  return html + (basedLine ? '<p class="t-note">'+esc(basedLine)+'</p>' : '');
+}
+
+function chapterProgress(p){
+  var attempted = 0, correct = 0;
+  p.questions.forEach(function(q){
+    if(q.bad) return;
+    var pk = state.picked[p.id+'-'+q.n];
+    if(pk !== undefined){ attempted++; if(pk === q.ans) correct++; }
+  });
+  return {attempted:attempted, correct:correct};
+}
+function showRoot(fromPop){
+  stopQuiz();
+  state.view='root'; state.paper=-1; state.term='';
+  searchEl.value=''; clearBtn.classList.remove('show');
+  var total = 0;
+  BOOK.papers.forEach(function(pp){ total += pp.questions.length; });
+  var html = '';
+  html += '<div class="sec-head"><h2>Practice Tests</h2></div>';
+  html += '<p style="font-size:14px;color:var(--muted);margin:0 0 8px">Open a subject folder to see its chapters.</p>';
+  html += '<button type="button" class="row" id="open-book"><span class="fico">BS</span><span class="body"><b>Biostatistics (Biostatistics)</b><span>Semester 6 · NU-352 · '+BOOK.papers.length+' chapters</span></span><span class="count">'+total+' MCQs</span><span class="chev">›</span></button>';
+  viewEl.innerHTML = html;
+  document.getElementById('open-book').addEventListener('click', function(){ showHome(); });
+  if(!fromPop){ try{ history.pushState({view:'root', paper:-1}, ''); }catch(e){} }
+  window.scrollTo(0,0);
+}
+
+function showHome(fromPop){
+  stopQuiz();
+  state.view='home'; state.paper=-1; state.term='';
+  searchEl.value=''; clearBtn.classList.remove('show');
+  var html = '<div class="sec-label">Chapters — tap to open</div>';
+  html += '<p style="font-size:14px;color:var(--muted);margin:0 0 8px">Open a chapter to practise it one question at a time. Answers stay hidden until you tap an option.</p>';
+  html += '<button type="button" class="row" id="open-papers"><span class="fico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></span><span class="body"><b>Past Papers</b><span>Pick a year — 2016 to 2025 · practise one full paper</span></span><span class="count">6 papers</span><span class="chev">›</span></button>';
+  BOOK.papers.forEach(function(p,i){
+    var prog = chapterProgress(p);
+    var progText = prog.attempted ? ('Attempted '+prog.attempted+' · Correct '+prog.correct) : 'Not attempted yet';
+    html += '<button type="button" class="row" data-chapter="'+i+'"><span class="fico">'+('0'+(i+1)).slice(-2)+'</span><span class="body"><b>'+esc(p.name)+'</b><span>'+(p.weeks?esc(p.weeks)+' · ':'')+'NU-352</span><span class="prog-line">'+progText+'</span></span><span class="count">'+p.questions.length+' MCQs</span><span class="chev">›</span></button>';
+  });
+  var bmTotal = bookmarkCount();
+  if(bmTotal){ html += '<button type="button" class="row" id="open-bookmarks"><span class="fico">★</span><span class="body"><b>Bookmarked questions</b><span>Your saved questions — tap to practise them</span></span><span class="count">'+bmTotal+' saved</span><span class="chev">›</span></button>'; }
+  html += '<div class="sec-head"><h2>Most repeated questions</h2></div>';
+  html += '<div class="panel">'+topicsHTML(BOOK.combined, 'Questions the examiners asked again in later papers, counted across all 6 chapters. Tap one to practise it.')+'</div>';
+  viewEl.innerHTML = html;
+  var tm = document.getElementById('t-more');
+  if(tm) tm.addEventListener('click', function(){
+    var ex = viewEl.querySelectorAll('.t-extra'), open = tm.getAttribute('data-open') !== '1';
+    for(var i=0;i<ex.length;i++) ex[i].hidden = !open;
+    tm.setAttribute('data-open', open ? '1' : '0');
+    tm.textContent = open ? 'Show top 8 only' : 'Show all topics';
+  });
+  var trows = viewEl.querySelectorAll('.topic-row');
+  for(var ti=0; ti<trows.length; ti++){
+    trows[ti].addEventListener('click', function(){ startTopicPractice(this.getAttribute('data-topic')); });
+    trows[ti].addEventListener('keydown', function(ev){ if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); startTopicPractice(this.getAttribute('data-topic')); } });
+  }
+  var obm = document.getElementById('open-bookmarks');
+  if(obm) obm.addEventListener('click', function(){ startBookmarksPractice(); });
+  document.getElementById('open-papers').addEventListener('click', function(){ renderPaperPicker(); });
+  var crows = viewEl.querySelectorAll('[data-chapter]');
+  for(var cj=0;cj<crows.length;cj++){
+    crows[cj].addEventListener('click', function(){ startChapterPractice(parseInt(this.getAttribute('data-chapter'),10)); });
+  }
+  if(!fromPop){ try{ history.pushState({view:'home', paper:-1}, ''); }catch(e){} }
+  window.scrollTo(0,0);
+}
+
+function qcardHTML(p, qi, term){
+  var q = p.questions[qi];
+  var key = p.id+'-'+q.n;
+  var picked = state.picked[key];
+  var html = '<article class="qcard" id="q-'+p.id+'-'+q.n+'">';
+  html += '<div class="qtop"><span class="qno">Q'+q.n+'</span><span class="qpaper">'+esc(p.label)+'</span><button type="button" class="star-btn'+(bookmarks[key]?' on':'')+'" data-bm="'+esc(key)+'" aria-pressed="'+(bookmarks[key]?'true':'false')+'" aria-label="Save this question">'+(bookmarks[key]?'★':'☆')+'</button></div>';
+  html += '<div><span class="repeat-badge">'+esc(q.src)+'</span></div>';
+  var ro = repeatOthers(p.id, q);
+  if(ro) html += '<div><span class="repeat-badge">Also asked: '+esc(srcsText(ro))+'</span></div>';
+  html += '<p class="qtext">'+hl(q.q, term)+'</p>';
+  if(q.bad){
+    if(q.o.length){
+      html += '<div class="opts">';
+      q.o.forEach(function(opt, oi){
+        html += '<div class="opt"><span class="ol">'+LETTERS[oi]+'</span><span class="ot">'+hl(opt, term)+'</span></div>';
+      });
+      html += '</div>';
+    }
+    html += '<div class="note-box">Options cut off in the scan — this question cannot be answered.</div>';
+    html += '<div class="why"><b>Why:</b> '+hl(q.why, term)+'</div>';
+  } else {
+    html += '<div class="opts">';
+    q.o.forEach(function(opt, oi){
+      var cls = 'opt';
+      if(state.showAnswers){
+        if(oi===q.ans) cls += ' correct';
+      } else {
+        if(picked !== undefined){
+          if(oi===q.ans && picked===oi) cls += ' correct';
+          else if(oi===picked) cls += ' wrong';
+          else if(oi===q.ans && picked!==undefined) cls += ' correct';
+        }
+      }
+      html += '<button type="button" class="'+cls+'" data-qkey="'+esc(key)+'" data-oi="'+oi+'" data-pi="'+p.id+'" data-qi="'+qi+'"><span class="ol">'+LETTERS[oi]+'</span><span class="ot">'+hl(opt, term)+'</span>'+(cls.indexOf('correct')>-1?'<span class="tick">✓</span>':'')+'</button>';
+    });
+    html += '</div>';
+    var showWhy = state.showAnswers || picked !== undefined;
+    if(showWhy){
+      html += '<div class="why"><b>Why:</b> '+hl(q.why, term)+'</div>';
+    }
+  }
+  html += '<a class="report-link" href="https://wa.me/923055959410?text='+encodeURIComponent('Biostatistics, '+p.label+', Q'+q.n)+'" target="_blank" rel="noopener">Report a mistake</a>';
+  html += '</article>';
+  return html;
+}
+
+function bindCard(card){
+  var star0 = card.querySelector('[data-bm]');
+  if(star0){ star0.addEventListener('click', function(ev){ ev.stopPropagation(); var k = this.getAttribute('data-bm'); var on = !bookmarks[k]; if(on){ bookmarks[k] = true; } else { delete bookmarks[k]; } saveBookmarks(); this.classList.toggle('on', on); this.textContent = on ? '★' : '☆'; this.setAttribute('aria-pressed', on ? 'true' : 'false'); }); }
+  var opts = card.querySelectorAll('.opt');
+  for(var k=0;k<opts.length;k++){
+    opts[k].addEventListener('click', function(){
+      if(state.showAnswers) return;
+      var key = this.getAttribute('data-qkey');
+      if(state.picked[key] !== undefined) return;
+      state.picked[key] = parseInt(this.getAttribute('data-oi'),10);
+      saveProgress();
+      var p = paperById(this.getAttribute('data-pi'));
+      var qi = parseInt(this.getAttribute('data-qi'),10);
+      if(!p) return;
+      var old = this.closest('.qcard');
+      if(!old) return;
+      var tmp = document.createElement('div');
+      tmp.innerHTML = qcardHTML(p, qi, state.term || '');
+      var fresh = tmp.firstChild;
+      old.parentNode.replaceChild(fresh, old);
+      bindCard(fresh);
+    });
+  }
+}
+function bindOptions(){
+  var cards = viewEl.querySelectorAll('.qcard');
+  for(var k=0;k<cards.length;k++) bindCard(cards[k]);
+}
+
+function backFromSearch(){
+  if(state.returnView==='root'){ showRoot(); }
+  else { showHome(); }
+}
+function doSearch(){
+  var term = searchEl.value.trim();
+  clearBtn.classList.toggle('show', term.length>0);
+  if(term.length < 2){
+    if(state.view==='search'){ backFromSearch(); }
+    return;
+  }
+  if(state.view!=='search'){ state.returnView = state.view; state.returnPaper = state.paper; }
+  state.view='search'; state.term=term;
+  var low = term.toLowerCase();
+  var results = [];
+  BOOK.papers.forEach(function(p){
+    p.questions.forEach(function(q, qi){
+      var hay = (q.q+' '+q.o.join(' ')+' '+q.why+' '+q.src).toLowerCase();
+      if(hay.indexOf(low) > -1) results.push({p:p, qi:qi});
+    });
+  });
+  var html = '<p class="count-line" aria-live="polite">'+results.length+' result'+(results.length===1?'':'s')+' for “'+esc(term)+'” in the whole book</p>';
+  if(!results.length){
+    html += '<div class="empty"><b>No match found</b><p>Try a shorter word — for example “fracture”, “seizure” or “diabetes”.</p></div>';
+  } else {
+    var cap = results.slice(0, 80);
+    cap.forEach(function(r){ html += qcardHTML(r.p, r.qi, term); });
+    if(results.length > 80) html += '<p class="count-line">Showing the first 80 results — type a longer word to narrow it down.</p>';
+    html += '<p style="font-size:12px;color:var(--muted);margin-top:10px">Clear the search to go back to the folder list.</p>';
+  }
+  viewEl.innerHTML = html;
+  bindOptions();
+}
+
+
+/* ================= v22 quiz engine, adapted to Biostatistics chapter data =================
+   No splash, no book-opening overlay: every entry goes straight to its
+   setup or straight into the questions. */
+var ALLQ = [];
+BOOK.papers.forEach(function(p){
+  p.questions.forEach(function(q){
+    ALLQ.push({cid:p.id, label:p.label, name:p.name, n:q.n, q:q.q, o:q.o, ans:q.ans, why:q.why, src:q.src, bad:!!q.bad, tag:q.src});
+  });
+});
+var ANSWERABLE = ALLQ.filter(function(q){ return !q.bad; });
+var TOPIC_QS = {};
+(function(){
+  var byStem = {};
+  ALLQ.forEach(function(q){
+    var k = normStem(q.q);
+    if(!byStem[k]) byStem[k] = [];
+    byStem[k].push(q);
+  });
+  BOOK.combined.forEach(function(t){ TOPIC_QS[t.t] = (byStem[normStem(t.t)] || []).slice(); });
+})();
+function startChapterPractice(ci){
+  var p = BOOK.papers[ci];
+  if(!p) return;
+  var list = ALLQ.filter(function(q){ return q.cid === p.id; });
+  if(!list.length) return;
+  if(qzTimerId){ clearInterval(qzTimerId); qzTimerId = null; }
+  quiz = {list:list, idx:0, score:0, title:p.label+' — Practice', mode:'chapter', bestKey:'chapter-'+p.id, setup:null, timeLimit:null, startTime:Date.now(), qStart:Date.now(), fast:0, wrong:[], answers:[], paperIndex:-1, chapter:ci};
+  streak = 0; state.view = 'quiz'; pushHomeState(); renderQuiz();
+}
+function startTopicPractice(name){
+  var list = (TOPIC_QS[name] || []).slice();
+  if(!list.length) return;
+  if(qzTimerId){ clearInterval(qzTimerId); qzTimerId = null; }
+  quiz = {list:list, idx:0, score:0, title:'Repeated Question — Practice', mode:'topic', bestKey:'topic', setup:null, timeLimit:null, startTime:Date.now(), qStart:Date.now(), fast:0, wrong:[], answers:[], paperIndex:-1, topic:name};
+  streak = 0; state.view = 'quiz'; pushHomeState(); renderQuiz();
+}
+function startBookmarksPractice(){
+  var list = ALLQ.filter(function(q){ return !!bookmarks[q.cid+'-'+q.n]; });
+  if(!list.length) return;
+  if(qzTimerId){ clearInterval(qzTimerId); qzTimerId = null; }
+  quiz = {list:list, idx:0, score:0, title:'Bookmarked Questions', mode:'bookmarks', bestKey:'bookmarks', setup:null, timeLimit:null, startTime:Date.now(), qStart:Date.now(), fast:0, wrong:[], answers:[], paperIndex:-1};
+  streak = 0; state.view = 'quiz'; pushHomeState(); renderQuiz();
+}
+function srcQnum(src){ var m = /Q(\d+)\s*$/.exec(src || ''); return m ? parseInt(m[1], 10) : 0; }
+function paperGroups(){
+  var defs = [
+    {key:'2016', label:'2016'},
+    {key:'2017', label:'2017'},
+    {key:'2022', label:'2022'},
+    {key:'2023', label:'2023'},
+    {key:'2024', label:'2024'},
+    {key:'2025-Malakand', label:'2025 (Malakand)'}
+  ];
+  var groups = [];
+  defs.forEach(function(d){
+    var list = ALLQ.filter(function(q){ return q.src && q.src.split(' · ')[0] === d.key; });
+    list.sort(function(a, b){ return srcQnum(a.src) - srcQnum(b.src); });
+    if(list.length) groups.push({key:d.key, label:d.label, list:list});
+  });
+  return groups;
+}
+function renderPaperPicker(){
+  stopQuiz();
+  state.view = 'papers'; state.paper = -1; state.term = '';
+  searchEl.value = ''; clearBtn.classList.remove('show');
+  var groups = paperGroups();
+  var html = '<div class="sec-label">Past Papers — pick a year</div>';
+  html += '<p style="font-size:14px;color:var(--muted);margin:0 0 8px">Practise one full KMU paper at a time, in the paper\'s own question order. Answers stay hidden until you tap an option.</p>';
+  groups.forEach(function(g, i){
+    html += '<button type="button" class="row" data-year="'+i+'"><span class="fico">'+esc(g.key.slice(0,4))+'</span><span class="body"><b>'+esc(g.label)+'</b><span>KMU past paper · Biostatistics</span></span><span class="count">'+g.list.length+' MCQs</span><span class="chev">›</span></button>';
+  });
+  html += '<button type="button" class="qbtn plain" id="papers-back">← Back to chapters</button>';
+  viewEl.innerHTML = html;
+  var yrows = viewEl.querySelectorAll('[data-year]');
+  for(var yj=0; yj<yrows.length; yj++){
+    yrows[yj].addEventListener('click', function(){ startPaperPractice(groups[parseInt(this.getAttribute('data-year'),10)].key); });
+  }
+  document.getElementById('papers-back').addEventListener('click', function(){ showHome(); });
+  pushHomeState();
+  window.scrollTo(0,0);
+}
+function startPaperPractice(key){
+  var groups = paperGroups();
+  var g = null;
+  groups.forEach(function(x){ if(x.key === key) g = x; });
+  if(!g || !g.list.length) return;
+  if(qzTimerId){ clearInterval(qzTimerId); qzTimerId = null; }
+  quiz = {list:g.list.slice(), idx:0, score:0, title:'Past Paper '+g.label, mode:'paper', bestKey:'paper-'+g.key, setup:null, timeLimit:null, startTime:Date.now(), qStart:Date.now(), fast:0, wrong:[], answers:[], paperIndex:-1, paperKey:g.key};
+  streak = 0; state.view = 'quiz'; pushHomeState(); renderQuiz();
+}
+function startReviewWrong(list){
+  if(!list || !list.length) return;
+  if(qzTimerId){ clearInterval(qzTimerId); qzTimerId = null; }
+  quiz = {list:list.slice(), idx:0, score:0, title:'Review — Wrong Answers', mode:'review', bestKey:'review', setup:null, timeLimit:null, startTime:Date.now(), qStart:Date.now(), fast:0, wrong:[], answers:[], paperIndex:-1, reviewList:list.slice()};
+  streak = 0; state.view = 'quiz'; pushHomeState(); renderQuiz();
+}
+var quiz = null, qzTimerId = null, soundOn = true, streak = 0;
+var mockSetup = {mode:'real', chapter:'all', shuffle:false};
+var paperSetup = {chapter:0};
+function qzBest(key){
+  try{ var b = JSON.parse(localStorage.getItem('bio-best')||'{}'); return (b[key]===undefined?null:b[key]); }catch(e){ return null; }
+}
+function qzSaveBest(key, pct){
+  try{ var b = JSON.parse(localStorage.getItem('bio-best')||'{}'); if(b[key]===undefined || pct > b[key]){ b[key]=pct; localStorage.setItem('bio-best', JSON.stringify(b)); } }catch(e){}
+}
+function stopQuiz(){
+  if(qzTimerId){ clearInterval(qzTimerId); qzTimerId = null; }
+  quiz = null;
+}
+function fmtTime(s){ var m=Math.floor(s/60), r=s%60; return String(m).padStart(2,'0')+':'+String(r).padStart(2,'0'); }
+function beep(ok){
+  if(!soundOn) return;
+  try{
+    var Ctx = window.AudioContext || window.webkitAudioContext; if(!Ctx) return;
+    var c = new Ctx(), o = c.createOscillator(), g = c.createGain();
+    o.connect(g); g.connect(c.destination);
+    o.frequency.value = ok ? 880 : 220; g.gain.value = .06;
+    o.start(); o.stop(c.currentTime + .16);
+    setTimeout(function(){ try{ c.close(); }catch(e){} }, 250);
+  }catch(e){}
+}
+function toggleSound(){ soundOn = !soundOn; var b = document.getElementById('sndbtn'); if(b) b.textContent = soundOn ? 'Sound on' : 'Sound off'; }
+function pickFrom(pool, want, fallback, shuffle){
+  var list = pool.slice();
+  if(shuffle) list.sort(function(){ return Math.random() - .5; });
+  if(want === 'all') return list;
+  want = +want;
+  if(list.length >= want) return list.slice(0, want);
+  var rest = fallback.filter(function(q){ return list.indexOf(q) === -1; });
+  rest.sort(function(){ return Math.random() - .5; });
+  return list.concat(rest.slice(0, want - list.length));
+}
+function chipsHTML(label, group, opts, curVal){
+  var h = '<div class="optlabel">'+esc(label)+'</div><div class="optrows">';
+  opts.forEach(function(o){
+    var on = String(o[0]) === String(curVal);
+    h += '<button type="button" class="optrow'+(on?' on':'')+'" data-group="'+esc(group)+'" data-val="'+esc(o[0])+'"><span>'+esc(o[1])+'</span><span class="radio">'+(on?'✓':'')+'</span></button>';
+  });
+  return h + '</div>';
+}
+function bindSetupRows(){
+  var rows = viewEl.querySelectorAll('.optrow');
+  for(var k=0;k<rows.length;k++){
+    rows[k].addEventListener('click', function(){
+      var g = this.getAttribute('data-group'), v = this.getAttribute('data-val');
+      if(g === 'mock-mode'){ mockSetup.mode = v; renderMockSetup(true); }
+      else if(g === 'mock-chapter'){ mockSetup.chapter = v; renderMockSetup(true); }
+      else if(g === 'mock-shuffle'){ mockSetup.shuffle = !mockSetup.shuffle; renderMockSetup(true); }
+      else if(g === 'paper-chapter'){ paperSetup.chapter = parseInt(v,10); renderPaperSetup(true); }
+    });
+  }
+}
+function pushHomeState(){
+  try{ history.pushState({view:'home', paper:-1}, ''); }catch(e){}
+}
+function renderMockSetup(keep){
+  stopQuiz();
+  state.view = 'setup'; state.paper = -1;
+  var b = qzBest('mock');
+  var pool = ANSWERABLE.filter(function(q){ return mockSetup.chapter === 'all' || q.cid === mockSetup.chapter; });
+  var want = mockSetup.mode === 'real' ? Math.min(70, pool.length) : mockSetup.mode === 'quick' ? Math.min(20, pool.length) : pool.length;
+  var chOpts = [['all','All chapters']].concat(BOOK.papers.map(function(p){ return [p.id, p.label]; }));
+  var html = '<div class="qzwrap"><div class="intro glass"><div class="eyebrow">TA SERIES • Biostatistics</div>'
+    + '<div class="setup-ico" style="margin-top:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></div>'
+    + '<h2>Exam Mode</h2>'
+    + '<p>All 398 solved MCQs from KMU past papers 2016–2025, arranged in 6 chapters.'+(b!=null?' Your best mock score is '+b+'%.':'')+'</p>'
+    + chipsHTML('CHOOSE YOUR TEST', 'mock-mode', [['real','Real Paper — 70 MCQs · 90 min'],['quick','Quick — 20 MCQs'],['full','Full — all questions in the book']], mockSetup.mode)
+    + chipsHTML('WHICH CHAPTER?', 'mock-chapter', chOpts, mockSetup.chapter)
+    + '<div class="optlabel">SHUFFLE</div><div class="optrows"><button type="button" class="optrow'+(mockSetup.shuffle?' on':'')+'" data-group="mock-shuffle" data-val="1"><span>Shuffle questions · '+(mockSetup.shuffle?'On':'Off')+'</span><span class="radio">'+(mockSetup.shuffle?'✓':'')+'</span></button></div>'
+    + '<div class="setupinfo">You will get <b>'+want+' questions</b>'+(mockSetup.mode==='real'?' · <b>90 minutes</b> on the clock, just like your real paper':'')+'</div>'
+    + '<button type="button" class="qbtn grad" id="start-mock">Start Exam Mode →</button>'
+    + '<button type="button" class="qbtn plain" id="setup-back">← Back</button>'
+    + '</div></div>';
+  viewEl.innerHTML = html;
+  bindSetupRows();
+  document.getElementById('start-mock').addEventListener('click', startMock);
+  document.getElementById('setup-back').addEventListener('click', function(){ showHome(); });
+  if(!keep) pushHomeState();
+  window.scrollTo(0,0);
+}
+function renderPaperSetup(keep){
+  stopQuiz();
+  state.view = 'setup'; state.paper = -1;
+  var p = BOOK.papers[paperSetup.chapter];
+  var b = qzBest('chapter-'+p.id);
+  var chOpts = BOOK.papers.map(function(pp, i){ return [String(i), pp.label+' — '+pp.questions.length+' MCQs']; });
+  var html = '<div class="qzwrap"><div class="intro glass"><div class="eyebrow">TA SERIES • Biostatistics</div>'
+    + '<div class="setup-ico" style="margin-top:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></div>'
+    + '<h2>Past Papers</h2>'
+    + '<p>These papers are arranged chapter-wise. Pick a chapter and practise its real past-paper questions.'+(b!=null?' Your best score in this chapter is '+b+'%.':'')+'</p>'
+    + chipsHTML('WHICH CHAPTER?', 'paper-chapter', chOpts, String(paperSetup.chapter))
+    + '<div class="setupinfo">You will get <b>'+p.questions.length+' questions</b> from <b>'+esc(p.name)+'</b>'+(p.weeks?' ('+esc(p.weeks)+')':'')+' · <b>no time limit</b> — practise at your own pace.</div>'
+    + '<button type="button" class="qbtn grad" id="start-paper-practice">Start Chapter →</button>'
+    + '<button type="button" class="qbtn plain" id="setup-back">← Back</button>'
+    + '</div></div>';
+  viewEl.innerHTML = html;
+  bindSetupRows();
+  document.getElementById('start-paper-practice').addEventListener('click', function(){ startChapterPractice(paperSetup.chapter); });
+  document.getElementById('setup-back').addEventListener('click', function(){ showHome(); });
+  if(!keep) pushHomeState();
+  window.scrollTo(0,0);
+}
+function startMock(){
+  var s = mockSetup;
+  var pool = ANSWERABLE.filter(function(q){ return s.chapter === 'all' || q.cid === s.chapter; });
+  var want = s.mode === 'real' ? 70 : s.mode === 'quick' ? 20 : 'all';
+  var list = pickFrom(pool, want, ANSWERABLE, s.shuffle);
+  quiz = {list:list, idx:0, score:0, title:'Exam Mode', mode:'mock', bestKey:'mock', setup:{mode:s.mode, chapter:s.chapter, shuffle:s.shuffle},
+    timeLimit: s.mode === 'real' ? 90*60 : null, startTime:Date.now(), qStart:Date.now(), fast:0, wrong:[], answers:[], paperIndex:-1};
+  streak = 0;
+  pushHomeState();
+  renderQuiz();
+}
+function exitQuiz(){ stopQuiz(); showHome(); }
+function renderQuiz(){
+  if(qzTimerId){ clearInterval(qzTimerId); qzTimerId = null; }
+  state.view = 'quiz';
+  var q = quiz.list[quiz.idx];
+  var html = '<div class="qzwrap">'
+    + '<div class="qtopbar"><button type="button" class="backbtn" id="qz-back">‹ Back</button>'
+    + '<div class="qtop-spacer"></div>'
+    + '<div class="scorepill"><span id="qz-timer">⏱ '+(quiz.timeLimit ? fmtTime(quiz.timeLimit) : '00:00')+'</span> · <span id="qz-score">Score <b>'+quiz.score+'</b>'+(streak>1?' &nbsp;· Streak '+streak:'')+'</span></div>'
+    + '<button type="button" class="backbtn" id="sndbtn" aria-label="Sound on or off">'+(soundOn?'Sound on':'Sound off')+'</button></div>'
+    + '<div class="qtitle">'+esc(quiz.title)+'</div>'
+    + '<div class="prog"><i id="qz-prog" style="width:'+Math.round(quiz.idx/quiz.list.length*100)+'%"></i></div>'
+    + '<div class="qzcard glass">'
+    + '<span class="qztag">'+esc(q.tag)+' &nbsp;•&nbsp; Q '+(quiz.idx+1)+' of '+quiz.list.length+'</span>';
+  html += '<button type="button" class="star-btn qz-star'+(bookmarks[q.cid+'-'+q.n]?' on':'')+'" id="qz-star" aria-pressed="'+(bookmarks[q.cid+'-'+q.n]?'true':'false')+'" aria-label="Save this question">'+(bookmarks[q.cid+'-'+q.n]?'★':'☆')+'</button>';
+  var ro = repeatOthers(q.cid, q);
+  if(ro) html += '<div><span class="repeat-badge">Also asked: '+esc(srcsText(ro))+'</span></div>';
+  html += '<div class="qztext">'+esc(q.q)+'</div>';
+  if(q.bad){
+    if(q.o.length){
+      html += '<div class="qzopts">';
+      q.o.forEach(function(o, oi){
+        html += '<div class="qzopt" style="pointer-events:none"><span class="letter">'+LETTERS[oi]+'</span><span>'+esc(o)+'</span><span class="qzmark"></span></div>';
+      });
+      html += '</div>';
+    }
+    html += '<div class="note-box" style="margin-top:16px">Options cut off in the scan — this question cannot be answered.</div>'
+      + '<div class="qzwhy show"><b>Why?</b><p>'+esc(q.why)+'</p></div>'
+      + '<button type="button" class="qznext show" id="qz-next">'+(quiz.idx+1 === quiz.list.length ? 'See My Result →' : 'Next Question →')+'</button>';
+  } else {
+    html += '<div class="qzopts" id="qz-opts">';
+    q.o.forEach(function(o, oi){
+      html += '<button type="button" class="qzopt" style="animation-delay:'+(oi*0.09)+'s" data-oi="'+oi+'"><span class="letter">'+LETTERS[oi]+'</span><span>'+esc(o)+'</span><span class="qzmark"></span></button>';
+    });
+    html += '</div>'
+      + '<div class="qzwhy" id="qz-why"><b>Why?</b><p id="qz-whytext"></p></div>'
+      + '<button type="button" class="qznext" id="qz-next">'+(quiz.idx+1 === quiz.list.length ? 'See My Result →' : 'Next Question →')+'</button>';
+  }
+  html += '<a class="report-link" href="https://wa.me/923055959410?text='+encodeURIComponent('Biostatistics, '+q.label+', Q'+q.n)+'" target="_blank" rel="noopener">Report a mistake</a>'
+    + '</div></div>';
+  viewEl.innerHTML = html;
+  document.getElementById('qz-back').addEventListener('click', exitQuiz);
+  document.getElementById('sndbtn').addEventListener('click', toggleSound);
+  var qzStar = document.getElementById('qz-star');
+  if(qzStar) qzStar.addEventListener('click', function(){ var qq = quiz.list[quiz.idx]; var k = qq.cid+'-'+qq.n; var on = !bookmarks[k]; if(on){ bookmarks[k] = true; } else { delete bookmarks[k]; } saveBookmarks(); this.classList.toggle('on', on); this.textContent = on ? '★' : '☆'; this.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+  document.getElementById('qz-next').addEventListener('click', qzNext);
+  var opts = viewEl.querySelectorAll('.qzopt[data-oi]');
+  for(var k=0;k<opts.length;k++){
+    opts[k].addEventListener('click', function(){ qzAnswer(parseInt(this.getAttribute('data-oi'),10), this); });
+  }
+  window.scrollTo(0,0);
+  quiz.qStart = Date.now();
+  qzTimerId = setInterval(function(){
+    var el = document.getElementById('qz-timer');
+    if(!el || !quiz){ if(qzTimerId){ clearInterval(qzTimerId); qzTimerId = null; } return; }
+    if(quiz.timeLimit){
+      var left = quiz.timeLimit - Math.floor((Date.now() - quiz.startTime)/1000);
+      if(left <= 0){ el.textContent = '⏱ 00:00'; renderResult(true); return; }
+      el.textContent = '⏱ ' + fmtTime(left);
+    } else {
+      el.textContent = '⏱ ' + fmtTime(Math.floor((Date.now() - quiz.startTime)/1000));
+    }
+  }, 1000);
+}
+function qzAnswer(i, btn){
+  var box = document.getElementById('qz-opts');
+  if(!box || box.getAttribute('data-done')) return;
+  box.setAttribute('data-done', '1');
+  var q = quiz.list[quiz.idx];
+  var opts = viewEl.querySelectorAll('.qzopt');
+  var correct = i === q.ans;
+  var dt = Math.round((Date.now() - quiz.qStart)/1000);
+  if(dt <= 10) quiz.fast++;
+  quiz.answers.push({q:q, picked:i, ok:correct, dt:dt});
+  if(quiz.mode === 'chapter' || quiz.mode === 'topic' || quiz.mode === 'review' || quiz.mode === 'bookmarks' || quiz.mode === 'paper'){ state.picked[q.cid+'-'+q.n] = i; saveProgress(); }
+  opts.forEach(function(o){ o.style.pointerEvents = 'none'; });
+  if(correct){
+    streak++; quiz.score++; beep(true);
+    opts.forEach(function(o, j){
+      if(j === q.ans){ o.classList.add('correct'); o.querySelector('.qzmark').textContent = '✓'; }
+      else { o.style.transitionDelay = (0.08*(j+1))+'s'; o.classList.add('gone'); }
+    });
+    document.getElementById('qz-whytext').textContent = (dt <= 10 ? 'Fast answer — '+dt+'s! ' : '') + 'Correct! ' + q.why;
+  } else {
+    streak = 0; beep(false);
+    quiz.wrong.push({q:q, picked:i});
+    opts.forEach(function(o, j){
+      if(j === q.ans){ o.classList.add('correct'); o.querySelector('.qzmark').textContent = '✓'; }
+      else if(j === i){ o.classList.add('wrong'); o.querySelector('.qzmark').textContent = '✗'; }
+      else o.classList.add('dim');
+    });
+    document.getElementById('qz-whytext').textContent = 'Not quite. The correct answer is ' + LETTERS[q.ans] + '. ' + q.why;
+  }
+  document.getElementById('qz-score').innerHTML = 'Score <b>'+quiz.score+'</b>'+(streak>1?' &nbsp;· Streak '+streak:'');
+  var bar = document.getElementById('qz-prog');
+  if(bar) bar.style.width = Math.round((quiz.idx+1)/quiz.list.length*100) + '%';
+  document.getElementById('qz-why').classList.add('show');
+  document.getElementById('qz-next').classList.add('show');
+  setTimeout(function(){ var n = document.getElementById('qz-next'); if(n && n.scrollIntoView) n.scrollIntoView({block:'nearest'}); }, 300);
+}
+function qzNext(){
+  if(!quiz) return;
+  quiz.idx++;
+  if(quiz.idx >= quiz.list.length) renderResult(false);
+  else renderQuiz();
+}
+function renderResult(timeUp){
+  if(qzTimerId){ clearInterval(qzTimerId); qzTimerId = null; }
+  state.view = 'result';
+  var total = quiz.list.filter(function(q){ return !q.bad; }).length, pct = total ? Math.round(quiz.score/total*100) : 0;
+  qzSaveBest(quiz.bestKey, pct);
+  var secs = Math.round((Date.now() - quiz.startTime)/1000);
+  var avg = Math.round(secs/Math.max(1,total));
+  var msg, emoji;
+  if(pct >= 80){ msg = 'Excellent! You really know this. Keep it up.'; emoji = '★'; }
+  else if(pct >= 60){ msg = 'Good work! A little more reading and you will be excellent.'; emoji = '★'; }
+  else if(pct >= 40){ msg = "It's okay. You just haven't read this part properly yet. Read it once, then try again — you will do better."; emoji = '↺'; }
+  else { msg = "Don't worry at all. It only means you haven't read this yet. Read the chapter once, then come back — you will see the difference."; emoji = '↺'; }
+  if(timeUp) msg = 'Time is up — the 90 minutes ended. ' + msg;
+  var byCh = {};
+  quiz.answers.forEach(function(a){
+    if(!byCh[a.q.cid]) byCh[a.q.cid] = {name:a.q.name, total:0, correct:0};
+    byCh[a.q.cid].total++;
+    if(a.ok) byCh[a.q.cid].correct++;
+  });
+  var cids = Object.keys(byCh);
+  var weakest = null, weakestPct = 101;
+  cids.forEach(function(c){
+    var pp = Math.round(byCh[c].correct/byCh[c].total*100);
+    if(pp < weakestPct){ weakestPct = pp; weakest = c; }
+  });
+  var rows = '';
+  cids.forEach(function(c){
+    var st = byCh[c], pp = Math.round(st.correct/st.total*100);
+    var weak = c === weakest && pp < 60;
+    rows += '<button type="button" class="chrow" data-ch="'+esc(c)+'"><span><b>'+esc(st.name)+'</b><br>'+st.total+' MCQs came · '+st.correct+' correct · '+pp+'%'+(weak?' <span class="weak">· Read this chapter again</span>':'')+'</span><span>›</span></button><div class="chdetail" id="chd-'+esc(c)+'" style="display:none"></div>';
+  });
+  var C = (2*Math.PI*54).toFixed(1);
+  var arc = ((pct/100)*2*Math.PI*54).toFixed(1);
+  var html = '<div class="qzwrap">'
+    + '<div style="padding:16px 0 0;text-align:left"><div class="eyebrow">TA SERIES • Biostatistics</div></div>'
+    + '<div class="result glass"><div class="res-ico">'+emoji+'</div><h2>'+esc(quiz.title)+'</h2>'
+    + '<div class="ring-wrap"><svg width="150" height="150" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="none" stroke="#E3F0F2" stroke-width="11"/><circle cx="60" cy="60" r="54" fill="none" stroke="#0E7C86" stroke-width="11" stroke-linecap="round" stroke-dasharray="'+arc+' '+C+'"/></svg><div class="ring-num"><b>'+pct+'%</b><span>'+quiz.score+' of '+total+' correct</span></div></div>'
+    + '<p>'+esc(msg)+'</p>'
+    + '<div class="statgrid">'
+    + '<div class="stat">⏱ Time<b>'+fmtTime(secs)+'</b></div>'
+    + '<div class="stat">Fast answers<b>'+quiz.fast+'</b></div>'
+    + '<div class="stat">Avg / question<b>'+avg+'s</b></div>'
+    + '<div class="stat">Wrong<b>'+quiz.wrong.length+'</b></div>'
+    + '</div>'
+    + (weakest != null && weakestPct < 60 ? '<p style="margin-top:14px"><b>Weakest chapter: '+esc(byCh[weakest].name)+'</b> — only '+weakestPct+'% correct. Read it again first.</p>' : '')
+    + '<div style="text-align:left;margin-top:16px"><div class="optlabel" style="margin-top:0">YOUR CHAPTERS — TAP TO SEE THE MCQS</div>'+rows+'</div>'
+    + (quiz.wrong.length ? '<button type="button" class="qbtn outline" id="qz-review">Review wrong answers ('+quiz.wrong.length+')</button>' : '')
+    + '<button type="button" class="qbtn grad" id="qz-retry">Try Again</button>'
+    + '<button type="button" class="qbtn plain" id="qz-home">Back</button>'
+    + '</div></div>';
+  viewEl.innerHTML = html;
+  document.getElementById('qz-retry').addEventListener('click', qzRetry);
+  var rvBtn = document.getElementById('qz-review');
+  if(rvBtn) rvBtn.addEventListener('click', function(){ var wl = quiz.wrong.map(function(w){ return w.q; }); startReviewWrong(wl); });
+  document.getElementById('qz-home').addEventListener('click', function(){ stopQuiz(); showHome(); });
+  var chrows = viewEl.querySelectorAll('.chrow');
+  for(var k=0;k<chrows.length;k++){
+    chrows[k].addEventListener('click', function(){ toggleChapterRow(this.getAttribute('data-ch')); });
+  }
+  window.scrollTo(0,0);
+}
+function toggleChapterRow(c){
+  var d = document.getElementById('chd-'+c);
+  if(!d) return;
+  if(!d.getAttribute('data-built')){
+    var list = quiz.answers.filter(function(a){ return a.q.cid === c; });
+    d.innerHTML = list.map(function(a){
+      return '<div class="revq"><div class="rq">'+esc(a.q.q)+'</div>'
+        + '<div class="'+(a.ok?'rc':'ry')+'">'+(a.ok?'✓ Your answer: ':'✗ Your answer: ')+esc(a.q.o[a.picked])+'</div>'
+        + (a.ok ? '' : '<div class="rc">Correct answer: '+esc(a.q.o[a.q.ans])+'</div>')
+        + '<div class="rr">Why? '+esc(a.q.why)+'</div></div>';
+    }).join('');
+    d.setAttribute('data-built', '1');
+  }
+  d.style.display = d.style.display === 'none' ? 'block' : 'none';
+}
+function qzRetry(){
+  if(!quiz) return;
+  if(quiz.mode === 'mock'){ mockSetup = quiz.setup; startMock(); }
+  else if(quiz.mode === 'topic'){ startTopicPractice(quiz.topic); }
+  else if(quiz.mode === 'chapter'){ startChapterPractice(quiz.chapter); }
+  else if(quiz.mode === 'bookmarks'){ startBookmarksPractice(); }
+  else if(quiz.mode === 'paper'){ startPaperPractice(quiz.paperKey); }
+  else if(quiz.mode === 'review'){ startReviewWrong(quiz.reviewList); }
+  else { startChapterPractice(0); }
+}
+
+var searchTimer = null;
+searchEl.addEventListener('input', function(){
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(doSearch, 180);
+});
+clearBtn.addEventListener('click', function(){
+  searchEl.value=''; clearBtn.classList.remove('show');
+  if(state.view==='search'){ backFromSearch(); } else { showRoot(); }
+  searchEl.focus();
+});
+document.getElementById('menu-btn').addEventListener('click', function(){
+  var nav = document.getElementById('site-nav');
+  var open = nav.classList.toggle('open');
+  this.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+/* Android / browser Back returns to the chapter list instead of leaving the book */
+window.addEventListener('popstate', function(e){
+  var s = e.state;
+  if(s && s.view === 'home'){
+    showHome(true);
+  } else {
+    showRoot(true);
+  }
+});
+try{ history.replaceState({view:'root', paper:-1}, ''); }catch(e){}
+showRoot(true);
+
+</script>
+</body>
+</html>

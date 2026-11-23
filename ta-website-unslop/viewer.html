@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://taseries.goatcounter.com; connect-src 'self' https://taseries.goatcounter.com; frame-src https://drive.google.com https://docs.google.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<title>View File — TA SERIES Official</title>
+<meta name="description" content="Read a TA SERIES study file on the website, then download it if you like.">
+<link rel="canonical" href="https://taseries.pages.dev/viewer.html">
+<link rel="stylesheet" href="style.css">
+<style>
+.viewer-frame{width:100%;height:72vh;min-height:420px;border:0;border-radius:6px;background:#fff;box-shadow:var(--shadow)}
+.viewer-note{background:#EAF6F7;border:1px solid #0E7C86;color:#0E7C86;border-radius:6px;padding:16px 18px;font-size:15px;line-height:1.6;margin:18px 0}
+.viewer-actions{display:flex;flex-direction:column;gap:12px;margin:18px 0 8px}
+.viewer-open{text-align:left;font-size:14px;color:var(--muted)}
+.viewer-open a{color:var(--teal);font-weight:700}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E7C86'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+<script src="app-mode.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-in">
+    <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
+    <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="material.html" class="active">Study Materials</a>
+    <a href="mega.html">Past Papers</a>
+    <a href="mock-tests.html">Practice Tests</a>
+    <a href="results.html">Examination</a>
+    <a href="gpa-calculator.html">GPA &amp; CGPA Calculator</a>
+  </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <button type="button" class="up-btn" id="back-btn">&uarr; Back to Study Materials</button>
+    <div class="page-head">
+      <h1 id="file-name">View File</h1>
+      <p id="file-sub">Read it here on the website. Download it below if you like it.</p>
+    </div>
+
+    <div id="viewer-wrap">
+      <iframe id="viewer-frame" class="viewer-frame" title="File preview" allowfullscreen></iframe>
+    </div>
+
+    <div id="no-preview" class="viewer-note hidden">
+      This file cannot be previewed here. Tap Open to view it.
+    </div>
+
+    <div class="viewer-actions">
+      <a id="dl-btn" class="btn btn-teal btn-block" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
+        Download
+      </a>
+      <a id="open-btn" class="btn btn-outline btn-block" href="#" target="_blank" rel="noopener">Open directly</a>
+    </div>
+    <p class="viewer-open">If the file does not load above, use <a id="open-link" href="#" target="_blank" rel="noopener">Open directly</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="site-footer-in">
+  <div class="foot-top">
+    <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
+    <nav class="foot-links" aria-label="Footer"><a href="about.html">About</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></nav>
+    <div class="foot-social">
+      <a href="https://wa.me/923055959410" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg></a>
+      <a href="https://whatsapp.com/channel/0029VbDcAC81HsppHdpHvj3p" aria-label="TA SERIES WhatsApp Channel" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg></a>
+    </div>
+  </div>
+  <div class="foot-close">
+    <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
+    <p>Contact: WhatsApp <a href="https://wa.me/923055959410">+92 305 5959410</a> &middot; Email <a href="mailto:nurseofuture@gmail.com">nurseofuture@gmail.com</a></p>
+    <p>&copy; 2026 TA SERIES. All rights reserved.</p>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  "use strict";
+  function getParam(name){
+    var m=new RegExp('[?&]'+name+'=([^&]*)').exec(location.search);
+    return m ? decodeURIComponent(m[1].replace(/\+/g,' ')) : '';
+  }
+  function esc(x){return String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function cleanName(name){return String(name).replace(/\.(pdf|docx|pptx|ppt|zip|xlsx?|mp4)$/i,'');}
+  function driveInfo(u){
+    var m;
+    m=/drive\.google\.com\/file\/d\/([A-Za-z0-9_-]+)/.exec(u);
+    if(m) return {kind:'drive', id:m[1]};
+    m=/docs\.google\.com\/document\/d\/([A-Za-z0-9_-]+)/.exec(u);
+    if(m) return {kind:'doc', id:m[1]};
+    m=/docs\.google\.com\/presentation\/d\/([A-Za-z0-9_-]+)/.exec(u);
+    if(m) return {kind:'slides', id:m[1]};
+    return null;
+  }
+  var url=getParam('u'), name=getParam('n');
+  var nameEl=document.getElementById('file-name'),
+      frame=document.getElementById('viewer-frame'),
+      wrap=document.getElementById('viewer-wrap'),
+      noPrev=document.getElementById('no-preview'),
+      dlBtn=document.getElementById('dl-btn'),
+      openBtn=document.getElementById('open-btn'),
+      openLink=document.getElementById('open-link');
+  if(!url){
+    nameEl.textContent='No file selected';
+    document.getElementById('file-sub').textContent='Go back and tap a file to read it here.';
+    wrap.classList.add('hidden');
+    dlBtn.classList.add('hidden');
+    openBtn.classList.add('hidden');
+    noPrev.classList.remove('hidden');
+    noPrev.textContent='No file was selected. Go back to Study Materials and tap a file.';
+    return;
+  }
+  nameEl.textContent=cleanName(name||'View File');
+  var info=driveInfo(url), previewUrl=null, downloadUrl=url;
+  if(info){
+    if(info.kind==='drive'){
+      previewUrl='https://drive.google.com/file/d/'+info.id+'/preview';
+      downloadUrl='https://drive.google.com/uc?export=download&id='+info.id;
+    }else if(info.kind==='doc'){
+      previewUrl='https://docs.google.com/document/d/'+info.id+'/preview';
+      downloadUrl='https://docs.google.com/document/d/'+info.id+'/export?format=pdf';
+    }else if(info.kind==='slides'){
+      previewUrl='https://docs.google.com/presentation/d/'+info.id+'/preview';
+      downloadUrl='https://docs.google.com/presentation/d/'+info.id+'/export/pdf';
+    }
+  }
+  if(previewUrl){
+    frame.src=previewUrl;
+  }else{
+    wrap.classList.add('hidden');
+    noPrev.classList.remove('hidden');
+  }
+  dlBtn.href=downloadUrl;
+  openBtn.href=url;
+  openLink.href=url;
+  dlBtn.addEventListener('click', function(){
+    try{
+      var arr=JSON.parse(localStorage.getItem('ta-downloaded')||'[]');
+      if(arr.indexOf(url)===-1){ arr.push(url); localStorage.setItem('ta-downloaded', JSON.stringify(arr)); }
+    }catch(e){}
+  });
+  document.getElementById('back-btn').addEventListener('click', function(){
+    if(document.referrer && document.referrer.indexOf(location.host)!==-1){ history.back(); }
+    else{ location.href='material.html'; }
+  });
+  (function(){
+    var btn=document.getElementById('menu-btn'), nav=document.getElementById('site-nav');
+    if(!btn||!nav) return;
+    function setOpen(open){
+      nav.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open?'true':'false');
+    }
+    btn.addEventListener('click', function(){ setOpen(!nav.classList.contains('open')); });
+    nav.addEventListener('click', function(e){ if(e.target.closest('a')){ setOpen(false); } });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && nav.classList.contains('open')){ setOpen(false); btn.focus(); } });
+  })();
+})();
+</script>
+<script data-goatcounter="https://taseries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
