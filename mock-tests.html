@@ -35,7 +35,7 @@
     <a href="material.html">Study Materials</a>
     <a href="mega.html">Past Papers</a>
     <a href="mock-tests.html" class="active">Practice Tests</a>
-    <a href="results.html">Examination Results</a>
+    <a href="results.html">Examination</a>
     <a href="gpa-calculator.html">GPA &amp; CGPA Calculator</a>
   </nav>
   </div>
@@ -312,6 +312,7 @@
   </div>
   <div class="foot-close">
     <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
+    <p>Contact: WhatsApp <a href="https://wa.me/923055959410">+92 305 5959410</a> &middot; Email <a href="mailto:nurseofuture@gmail.com">nurseofuture@gmail.com</a></p>
     <p>&copy; 2026 TA SERIES. All rights reserved.</p>
   </div>
 </div></footer>
@@ -362,33 +363,17 @@
   render();
 })();
 </script>
-<script>
-(function(){
-  /* Live countdowns (Asia/Karachi). Semester 8: Mon 23 Nov 2026 21:00. */
-  var targets={
-    'sem8': new Date('2026-11-23T21:00:00+05:00')
-  };
-  function pad(n){ return (n<10?'0':'')+n; }
-  function up(){
-    var now=new Date();
-    Object.keys(targets).forEach(function(key){
-      var diff=targets[key]-now, text;
-      if(diff<=0){
-        text='Live now';
-        /* Countdown over: reveal the gated subjects, hide the "check back then" notes. */
-        document.querySelectorAll('[data-gate="'+key+'"]').forEach(function(el){ el.classList.remove('hidden'); });
-        document.querySelectorAll('[data-gate-note="'+key+'"]').forEach(function(el){ el.classList.add('hidden'); });
-      }
-      else{
-        var s=Math.floor(diff/1000), d=Math.floor(s/86400), h=Math.floor(s%86400/3600), m=Math.floor(s%3600/60), sec=s%60;
-        text=(d>0?d+'d ':'')+h+'h '+pad(m)+'m '+pad(sec)+'s';
-      }
-      document.querySelectorAll('[data-cd="'+key+'"]').forEach(function(el){ el.textContent=text; });
-    });
+<script> (function(){
+  /* Static date, no ticking countdown. Semester 8: Mon 23 Nov 2026, 9:00 PM Pakistan time. */
+  var target = new Date('2026-11-23T21:00:00+05:00');
+  if (new Date() >= target) {
+    document.querySelectorAll('[data-gate="sem8"]').forEach(function(el){ el.classList.remove('hidden'); });
+    document.querySelectorAll('[data-gate-note="sem8"]').forEach(function(el){ el.classList.add('hidden'); });
+    document.querySelectorAll('[data-cd="sem8"]').forEach(function(el){ el.textContent = 'Live now'; });
+  } else {
+    document.querySelectorAll('[data-cd="sem8"]').forEach(function(el){ el.textContent = 'Goes live on Monday 23 November 2026, 9:00 PM Pakistan time.'; });
   }
-  up(); setInterval(up,1000);
-})();
-</script>
+})(); </script>
 <script data-goatcounter="https://taseries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

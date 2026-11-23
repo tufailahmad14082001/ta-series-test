@@ -12,7 +12,7 @@
 <style>
 /* Locked folder (Slides Book under maintenance): matches site theme (teal), no blinking. */
 .row.locked{cursor:not-allowed;background:#EAF6F7;border:1.5px solid #0E7C86}
-.row.locked .maint-dot{width:10px;height:10px;border-radius:50%;background:#0E7C86;flex:none;display:inline-block;vertical-align:-1px;margin-right:6px}
+.row.locked .maint-dot{width:10px;height:10px;border-radius:6px;background:#0E7C86;flex:none;display:inline-block;vertical-align:-1px;margin-right:6px}
 .btn-sm{min-height:36px;padding:8px 14px;font-size:13px;white-space:nowrap;flex:none}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E7C86'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
@@ -32,7 +32,7 @@
     <a href="material.html" class="active">Study Materials</a>
     <a href="mega.html">Past Papers</a>
     <a href="mock-tests.html">Practice Tests</a>
-    <a href="results.html">Examination Results</a>
+    <a href="results.html">Examination</a>
     <a href="gpa-calculator.html">GPA &amp; CGPA Calculator</a>
   </nav>
   </div>
@@ -68,6 +68,7 @@
   </div>
   <div class="foot-close">
     <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
+    <p>Contact: WhatsApp <a href="https://wa.me/923055959410">+92 305 5959410</a> &middot; Email <a href="mailto:nurseofuture@gmail.com">nurseofuture@gmail.com</a></p>
     <p>&copy; 2026 TA SERIES. All rights reserved.</p>
   </div>
 </div></footer>
@@ -178,7 +179,7 @@
     });
     files.slice(0,shown).forEach(function(f){ html+=fileRow(f,path); });
     if(files.length>shown){
-      html+='<div style="text-align:center;margin-top:16px"><button class="btn btn-teal" id="more-btn" type="button">Show '+(files.length-shown)+' more</button></div>';
+      html+='<div style="text-align:left;margin-top:16px"><button class="btn btn-teal" id="more-btn" type="button">Show '+(files.length-shown)+' more</button></div>';
     }
     if(!total) html='<div class="empty"><b>Nothing here</b><p>This folder is empty.</p></div>';
     list.innerHTML=html;
