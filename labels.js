@@ -55,26 +55,26 @@
   /* One folder colour per semester (spec section 3). Subfolders keep
      the semester colour, one shade lighter. */
   var COLORS = {
-    "TA SERIES Slides Book": "#0F766E",
-    "Semester 1": "#0F766E",
-    "Semester 2": "#0F766E",
-    "Semester 3": "#0F766E",
-    "Semester 4": "#0F766E",
-    "Semester 5": "#0F766E",
-    "Semester 6": "#0F766E",
-    "Semester 7": "#0F766E",
-    "Semester 8": "#0F766E"
+    "TA SERIES Slides Book": "#E0A030",
+    "Semester 1": "#0E7C86",
+    "Semester 2": "#3C6FB0",
+    "Semester 3": "#7A5BB0",
+    "Semester 4": "#B5543C",
+    "Semester 5": "#3E8E5A",
+    "Semester 6": "#D08A2E",
+    "Semester 7": "#B04A6A",
+    "Semester 8": "#2F4B7A"
   };
   var LIGHTER = {
-    "TA SERIES Slides Book": "#0F766E",
-    "Semester 1": "#0F766E",
-    "Semester 2": "#0F766E",
-    "Semester 3": "#0F766E",
-    "Semester 4": "#0F766E",
-    "Semester 5": "#0F766E",
-    "Semester 6": "#0F766E",
-    "Semester 7": "#0F766E",
-    "Semester 8": "#0F766E"
+    "TA SERIES Slides Book": "#E8B95A",
+    "Semester 1": "#35A9B3",
+    "Semester 2": "#6B93C4",
+    "Semester 3": "#9A7FC4",
+    "Semester 4": "#C97A63",
+    "Semester 5": "#63AC7C",
+    "Semester 6": "#DEA654",
+    "Semester 7": "#C4748C",
+    "Semester 8": "#5A6E96"
   };
   window.TA_FOLDER_COLORS = COLORS;
   window.taFolderColor = function (name, topName) {
@@ -86,6 +86,6 @@
     var m = /Semester\s*([1-8])/.exec(top || n);
     if (m) return LIGHTER["Semester " + m[1]];
     if (/slides book/i.test(top || n)) return LIGHTER["TA SERIES Slides Book"];
-    return "#0F766E";
+    return "#0E7C86";
   };
 })();

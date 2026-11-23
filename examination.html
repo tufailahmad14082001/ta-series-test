@@ -19,15 +19,17 @@
 <style>
 /* ============================================================
    TA SERIES — Website Design System (teal design)
-   Base #F5F7FA · Card #FFFFFF · Brand teal #0F766E ·
-   Accent #0B5E57 · Text navy #10243A · Muted #475569 ·
-   Border #E2E8F0. Light mode only.
+   Base #E9EEF3 · Card #FFFFFF · Brand teal #0E7C86 ·
+   Accent #0B6B75 · Text navy #12304A · Muted #566676 ·
+   Border #D5DDE5. Light mode only.
    Soft realistic neumorphism: raised cards use
-   #FFFFFF with shadows
-   6px 6px 14px #CBD5E1, -6px -6px 14px #FFF; sunken search
-   boxes use inset shadows on #EDF1F5. System fonts only —
+   linear-gradient(145deg,#F6F9FB,#E1E8EE) with shadows
+   6px 6px 14px #C2CBD5, -6px -6px 14px #FFF; sunken search
+   boxes use inset shadows on #E4EAF0. System fonts only —
    no Google Fonts, no external files. No gradients on text.
-   Folder colours: all teal (see labels.js).
+   Folder colours, one per semester (see labels.js):
+   Slides Book gold #986D21, S1 teal, S2 blue, S3 purple,
+   S4 terracotta, S5 green, S6 amber, S7 rose, S8 navy.
    CSP meta tag (kept verbatim from the live site) is in each
    HTML file — never remove it.
    App mode: app-mode.js (one mechanism) adds .in-app to
@@ -36,45 +38,45 @@
    footer are hidden, so the app home is the one home.
    ============================================================ */
 :root{
-  --base:#F5F7FA;
+  --base:#E9EEF3;
   --card:#FFFFFF;
-  --teal:#0F766E;
-  --teal-dark:#0B5E57;
-  --teal-soft:#E6F2F0;
-  --teal-light:#2DD4BF;
-  --ink:#10243A;
-  --muted:#475569;
-  --muted-2:#475569;
-  --border:#E2E8F0;
-  --line:#E2E8F0;
-  --paper:#F8FAFC;
-  --sunken:#EDF1F5;
-  --shadow-d:#CBD5E1;
+  --teal:#0E7C86;
+  --teal-dark:#0B6B75;
+  --teal-soft:#E3F0F2;
+  --teal-light:#35A9B3;
+  --ink:#12304A;
+  --muted:#566676;
+  --muted-2:#566676;
+  --border:#D5DDE5;
+  --line:#D5DDE5;
+  --paper:#F6F9FB;
+  --sunken:#E4EAF0;
+  --shadow-d:#C2CBD5;
   --red:#CE4145;
   --red-soft:#FDECEC;
-  --orange:#0F766E;
-  --orange-soft:#E6F2F0;
-  --blue:#0F766E;
-  --blue-soft:#E6F2F0;
+  --orange:#AF6021;
+  --orange-soft:#FDF0E3;
+  --blue:#2F6FED;
+  --blue-soft:#E8EFFE;
   --green:#1A8447;
   --green-soft:#E3F5E9;
-  --amber:#0F766E;
-  --amber-soft:#E6F2F0;
-  --purple:#0F766E;
-  --purple-soft:#E6F2F0;
-  --gold:#0F766E;
-  --r-lg:14px;
-  --r-md:12px;
-  --pill:6px;
-  --btn-h:48px;
-  --raise:#FFFFFF;
-  --shadow:0 2px 8px rgba(16,36,58,.08);
-  --shadow-sm:0 1px 4px rgba(16,36,58,.08);
-  --sunken-shadow:none;
+  --amber:#996A00;
+  --amber-soft:#FDF3D7;
+  --purple:#7758F5;
+  --purple-soft:#EFEBFF;
+  --gold:#986D21;
+  --r-lg:20px;
+  --r-md:16px;
+  --pill:999px;
+  --btn-h:52px;
+  --raise:linear-gradient(145deg,#F6F9FB,#E1E8EE);
+  --shadow:6px 6px 14px #C2CBD5,-6px -6px 14px #FFF;
+  --shadow-sm:4px 4px 10px #C2CBD5,-4px -4px 10px #FFF;
+  --sunken-shadow:inset 3px 3px 7px #C2CBD5,inset -3px -3px 7px #FFF;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--base);color:var(--ink);font-size:16px;line-height:1.5}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--base);color:var(--ink);font-size:16px;line-height:1.5}
 a{color:inherit}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
 input,select{font:inherit;color:inherit}
@@ -85,23 +87,23 @@ p{margin:0}
 
 /* ---------- neumorphism helpers ---------- */
 .raise{background:var(--raise);box-shadow:var(--shadow);border-radius:var(--r-lg)}
-.sunk{background:var(--sunken);box-shadow:var(--sunken-shadow);border-radius:6px}
+.sunk{background:var(--sunken);box-shadow:var(--sunken-shadow);border-radius:16px}
 
 /* ---------- site header (white, raised) ---------- */
-.site-header{background:var(--card);color:var(--ink);position:sticky;top:0;z-index:40;box-shadow:0 4px 14px rgba(16,36,58,.08)}
+.site-header{background:var(--card);color:var(--ink);position:sticky;top:0;z-index:40;box-shadow:0 4px 14px rgba(18,48,74,.08)}
 .site-header-in{max-width:1080px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;gap:14px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand-mark{width:40px;height:40px;border-radius:6px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;flex:none}
+.brand-mark{width:40px;height:40px;border-radius:12px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;flex:none}
 .brand-name{font-weight:800;font-size:19px;letter-spacing:.02em;white-space:nowrap;color:var(--ink)}
 .brand-name em{font-style:normal;color:var(--teal)}
 .site-nav{margin-left:auto;display:flex;gap:4px}
-.site-nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;padding:8px 11px;border-radius:6px;white-space:nowrap}
+.site-nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;padding:8px 11px;border-radius:10px;white-space:nowrap}
 .site-nav a:hover{background:var(--teal-soft);color:var(--teal-dark)}
 .site-nav a.active{color:var(--teal-dark);background:var(--teal-soft)}
-.menu-btn{display:none;width:44px;height:44px;border-radius:6px;place-items:center;color:var(--ink);margin-left:auto}
+.menu-btn{display:none;width:44px;height:44px;border-radius:50%;place-items:center;color:var(--ink);margin-left:auto}
 .menu-btn svg{width:22px;height:22px}
 @media (max-width:1060px){
-  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--card);flex-direction:column;padding:10px 16px 16px;gap:2px;box-shadow:0 12px 24px rgba(16,36,58,.12)}
+  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--card);flex-direction:column;padding:10px 16px 16px;gap:2px;box-shadow:0 12px 24px rgba(18,48,74,.12)}
   .site-nav.open{display:flex}
   .menu-btn{display:grid}
 }
@@ -109,23 +111,23 @@ p{margin:0}
 /* ---------- hero (light base, teal accent) ---------- */
 .hero{background:var(--base);color:var(--ink);position:relative;overflow:hidden}
 .hero-in{max-width:1080px;margin:0 auto;padding:56px 20px 110px;position:relative}
-.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:none;color:var(--teal-dark)}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal-dark)}
 .hero-kicker::before{content:"";width:24px;height:2px;background:var(--teal);border-radius:2px}
-.hero h1{font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:16px 0 16px;max-width:640px;color:var(--ink)}
+.hero h1{font-size:56px;font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:16px 0 16px;max-width:640px;color:var(--ink)}
 .hero p{font-size:17px;line-height:1.65;color:var(--muted);max-width:520px}
-.hero-cta{display:inline-flex;align-items:center;gap:11px;min-height:48px;margin-top:26px;padding:0 26px;border-radius:var(--pill);background:var(--teal);color:#fff;font-size:16px;font-weight:800;text-decoration:none;box-shadow:0 10px 24px rgba(16,36,58,.12)}
+.hero-cta{display:inline-flex;align-items:center;gap:11px;min-height:56px;margin-top:26px;padding:0 26px;border-radius:var(--pill);background:var(--teal);color:#fff;font-size:16px;font-weight:800;text-decoration:none;box-shadow:0 10px 24px rgba(14,124,134,.35)}
 .hero-cta svg{width:22px;height:22px}
 .hero-arcs{position:absolute;right:-40px;top:10px;width:340px;height:340px;pointer-events:none}
 @media (max-width:640px){
   .hero-in{padding:38px 20px 96px}
-  .hero h1{font-size:28px}
+  .hero h1{font-size:38px}
   .hero-arcs{display:none}
 }
 
 /* ---------- stats card (white, overlaps hero) ---------- */
 .stats-card{max-width:1080px;margin:-58px auto 0;padding:0 20px;position:relative;z-index:2}
-.stats-in{background:var(--raise);box-shadow:var(--shadow);border-radius:var(--r-lg);padding:20px;display:grid;grid-template-columns:repeat(2,1fr);color:var(--ink)}
-.stat{padding:8px;text-align:left}
+.stats-in{background:var(--raise);box-shadow:var(--shadow);border-radius:var(--r-lg);padding:20px;display:grid;grid-template-columns:repeat(4,1fr);color:var(--ink)}
+.stat{padding:8px;text-align:center}
 .stat + .stat{border-left:1px solid var(--border)}
 .stat .ic{width:36px;height:36px;margin:0 auto 6px;color:var(--teal)}
 .stat .ic svg{width:36px;height:36px}
@@ -144,12 +146,12 @@ p{margin:0}
 .sec-head h2{font-size:24px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
 .sec-head h2::before{content:"";display:inline-block;width:4px;height:22px;border-radius:2px;background:var(--teal);margin-right:9px;vertical-align:-3px}
 .sec-link{font-size:14px;font-weight:700;color:var(--teal-dark);text-decoration:none;white-space:nowrap}
-.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media (max-width:860px){.card-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.card-grid{grid-template-columns:1fr}}
 .card{background:var(--raise);box-shadow:var(--shadow);border-radius:var(--r-lg);padding:22px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column}
-.card:hover{box-shadow:0 2px 8px rgba(16,36,58,.12)}
-.card .tile{width:56px;height:56px;border-radius:6px;display:grid;place-items:center;color:#fff;margin-bottom:14px}
+.card:hover{box-shadow:6px 6px 18px #B4BECB,-6px -6px 18px #FFF}
+.card .tile{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;color:#fff;margin-bottom:14px}
 .card .tile svg{width:28px;height:28px}
 .tile.pdf{background:var(--red)} .tile.quiz{background:var(--blue)}
 .tile.tool{background:var(--green)} .tile.amber{background:var(--amber)}
@@ -161,18 +163,18 @@ p{margin:0}
 .card .meta .go{margin-left:auto;font-size:19px;color:var(--teal)}
 .row{display:flex;align-items:center;gap:10px;background:var(--raise);box-shadow:var(--shadow-sm);border-radius:var(--r-md);padding:12px 14px;text-decoration:none;color:var(--ink)}
 .row + .row{margin-top:10px}
-.row:hover{box-shadow:0 2px 8px rgba(16,36,58,.12)}
-.row .tile{width:52px;height:52px;border-radius:6px;display:grid;place-items:center;flex:none;font-weight:800;font-size:12px;color:#fff}
+.row:hover{box-shadow:6px 6px 14px #B4BECB,-6px -6px 14px #FFF}
+.row .tile{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;flex:none;font-weight:800;font-size:12px;color:#fff}
 .row .tile svg{width:26px;height:26px}
 .row .body{flex:1;min-width:0}
 .row .body b{display:block;font-size:14px;font-weight:700;line-height:1.35;overflow-wrap:anywhere}
 .row .body span{display:block;font-size:12px;color:var(--muted);margin-top:2px;line-height:1.45}
 .row .dl{flex:none;display:flex;flex-direction:column;gap:6px;width:104px}
-.dl-text-btn{display:block;text-align:left;font-size:12px;font-weight:800;padding:9px 6px;border-radius:6px;text-decoration:none;white-space:nowrap}
+.dl-text-btn{display:block;text-align:center;font-size:12px;font-weight:800;padding:9px 6px;border-radius:10px;text-decoration:none;white-space:nowrap}
 .dl-fast{background:var(--teal);color:#fff}
 .dl-slow{background:#fff;color:var(--teal-dark);border:1.5px solid var(--teal)}
 .row .count{flex:none;font-size:13px;font-weight:700;background:var(--sunken);box-shadow:var(--sunken-shadow);border-radius:var(--pill);padding:4px 11px;color:var(--ink)}
-.badge{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:24px;padding:0 9px;border-radius:6px;font-size:12px;font-weight:800;letter-spacing:.04em;color:#fff;flex:none}
+.badge{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:24px;padding:0 9px;border-radius:7px;font-size:12px;font-weight:800;letter-spacing:.04em;color:#fff;flex:none}
 .badge.pdf{background:var(--red)} .badge.quiz{background:var(--blue)} .badge.tool{background:var(--green)}
 .badge.free{background:var(--teal);color:#fff} .badge.new{background:var(--teal);color:#fff}
 .mini-ic{width:30px;height:30px;flex:none;display:grid;place-items:center}
@@ -187,19 +189,26 @@ p{margin:0}
 .row .folder-ico svg{width:44px;height:37px}
 
 /* ---------- file rows (material page, spec section 3) ---------- */
-.file-badge{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:24px;padding:0 8px;border-radius:6px;font-size:12px;font-weight:800;letter-spacing:.04em;color:#fff;flex:none}
+.file-badge{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:24px;padding:0 8px;border-radius:7px;font-size:12px;font-weight:800;letter-spacing:.04em;color:#fff;flex:none}
 .file-badge.pdf{background:var(--red)}
 .file-badge.ppt{background:var(--orange)}
 .file-badge.doc{background:var(--blue)}
 .fname{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:16px;font-weight:700;line-height:1.35;overflow-wrap:anywhere}
-.dl-btn{flex:none;width:44px;height:44px;border-radius:6px;display:grid;place-items:center;background:var(--teal);color:#fff;box-shadow:0 4px 10px rgba(16,36,58,.12);text-decoration:none}
+.dl-btn{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--teal);color:#fff;box-shadow:0 4px 10px rgba(14,124,134,.35);text-decoration:none}
 .dl-btn svg{width:20px;height:20px}
 .dl-btn.done{background:var(--green);box-shadow:0 4px 10px rgba(31,157,85,.35)}
+.fav-btn{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--sunken);box-shadow:var(--sunken-shadow);color:#9AA7B4}
+.fav-btn svg{width:20px;height:20px}
+.fav-btn.on{color:var(--gold)}
+.fav-btn.on svg{fill:currentColor}
+.fav-toggle{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 18px;border-radius:var(--pill);background:var(--raise);box-shadow:var(--shadow-sm);font-size:14px;font-weight:700;color:var(--ink)}
+.fav-toggle.on{background:var(--teal);color:#fff;box-shadow:0 4px 10px rgba(14,124,134,.35)}
+.fav-toggle svg{width:18px;height:18px}
 
 /* ---------- buttons ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:var(--btn-h);border-radius:var(--pill);font-size:16px;font-weight:700;text-decoration:none;padding:12px 24px;border:0;cursor:pointer}
-.btn-teal{background:var(--teal);color:#fff;box-shadow:0 8px 20px rgba(16,36,58,.12)}
-.btn-white{background:#fff;color:var(--teal-dark);box-shadow:0 8px 20px rgba(16,36,58,.18)}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 8px 20px rgba(14,124,134,.30)}
+.btn-white{background:#fff;color:var(--teal-dark);box-shadow:0 8px 20px rgba(18,48,74,.18)}
 .btn-ghost{background:var(--teal-soft);color:var(--teal-dark)}
 .btn-outline{background:#fff;color:var(--teal-dark);border:1.5px solid var(--teal)}
 .btn-block{width:100%}
@@ -211,16 +220,16 @@ p{margin:0}
 .search svg{width:20px;height:20px;color:var(--muted);flex:none}
 .search input{border:0;outline:0;background:none;flex:1;font-size:16px;min-width:0;color:var(--ink)}
 .search input::placeholder{color:var(--muted-2)}
-.filters{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+.filters{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
 @media (max-width:760px){.filters{grid-template-columns:1fr 1fr}}
 .filters label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:6px}
-.filters select{width:100%;min-height:48px;border:1.5px solid var(--border);border-radius:6px;background:#fff;padding:0 11px;font-size:14px;font-weight:600;color:var(--ink)}
+.filters select{width:100%;min-height:48px;border:1.5px solid var(--border);border-radius:12px;background:#fff;padding:0 11px;font-size:14px;font-weight:600;color:var(--ink)}
 .crumbs{font-size:14px;color:var(--muted);margin:18px 0 4px}
 .crumbs a{color:var(--teal-dark);font-weight:700;text-decoration:none}
 .up-btn{display:inline-flex;align-items:center;gap:7px;margin:10px 0 2px;padding:8px 14px;min-height:44px;border-radius:var(--pill);background:var(--teal);color:#fff;font-size:14px;font-weight:700}
 /* Filter bottom sheet (results page, spec section 4) */
-.sheet-backdrop{position:fixed;inset:0;background:rgba(16,36,58,.45);z-index:60}
-.sheet{position:fixed;left:0;right:0;bottom:0;z-index:61;background:var(--base);border-radius:6px 6px 0 0;box-shadow:0 -10px 30px rgba(16,36,58,.25);padding:14px 20px 28px;max-width:640px;margin:0 auto}
+.sheet-backdrop{position:fixed;inset:0;background:rgba(18,48,74,.45);z-index:60}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:61;background:var(--base);border-radius:24px 24px 0 0;box-shadow:0 -10px 30px rgba(18,48,74,.25);padding:14px 20px 28px;max-width:640px;margin:0 auto}
 .sheet::before{content:"";display:block;width:44px;height:5px;border-radius:3px;background:#B9C4CF;margin:0 auto 14px}
 .sheet h2{font-size:19px;font-weight:800;color:var(--ink)}
 .sheet .filters{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
@@ -252,7 +261,7 @@ p{margin:0}
   .foot-links a{padding:3px 8px;min-height:44px}
   .foot-social{margin-left:0}
   .foot-social a{width:44px;height:44px}
-  .foot-close{margin-top:8px;padding-top:8px;text-align:left}
+  .foot-close{margin-top:8px;padding-top:8px;text-align:center}
 }
 
 /* ---------- app mode: one home only ---------- */
@@ -262,7 +271,7 @@ p{margin:0}
 
 /* ---------- misc ---------- */
 .page-head{padding:18px 0 6px}
-.page-head h1{font-size:32px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.page-head h1{font-size:34px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
 .page-head p{font-size:16px;color:var(--muted);line-height:1.65;margin-top:10px;max-width:640px}
 .panel{background:var(--raise);box-shadow:var(--shadow-sm);border-radius:var(--r-lg);padding:22px;color:var(--ink)}
 .panel h2{font-size:19px;font-weight:800;margin-bottom:10px;color:var(--ink)}
@@ -274,7 +283,7 @@ p{margin:0}
 .chip.teal{background:var(--teal);color:#fff;box-shadow:none}
 .chip.light{background:#fff;color:var(--teal-dark);box-shadow:none}
 .hidden{display:none!important}
-.empty{text-align:left;padding:32px 18px 20px;color:var(--muted)}
+.empty{text-align:center;padding:32px 18px 20px;color:var(--muted)}
 .empty b{display:block;font-size:17px;color:var(--ink)}
 .empty p{font-size:14px;margin-top:7px;line-height:1.6}
 .spin{width:20px;height:20px;border-radius:50%;border:3px solid rgba(14,124,134,.18);border-top-color:var(--teal);animation:ta-spin .8s linear infinite;flex:none}
@@ -286,7 +295,7 @@ p{margin:0}
 /* ---------- tools page ---------- */
 .tools-list{display:flex;flex-direction:column;gap:12px;margin-top:18px;padding-bottom:40px}
 .tool-row{display:flex;align-items:center;gap:14px;background:var(--raise);box-shadow:var(--shadow-sm);border-radius:var(--r-md);padding:16px;text-decoration:none;color:var(--ink);width:100%;text-align:left}
-.tool-row .tile{width:52px;height:52px;border-radius:6px;display:grid;place-items:center;flex:none;color:#fff}
+.tool-row .tile{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;flex:none;color:#fff}
 .tool-row .tile svg{width:26px;height:26px}
 .tool-row .body{flex:1;min-width:0}
 .tool-row .body b{display:block;font-size:16px;font-weight:700}
@@ -299,26 +308,26 @@ p{margin:0}
    Content is always visible, never hidden behind an animation. */
 .fz-page{background:var(--base);color:var(--ink)}
 .fz-page-in{max-width:1080px;margin:0 auto;padding:20px 20px 64px}
-.fz-eyebrow{color:var(--teal-dark);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:none}
+.fz-eyebrow{color:var(--teal-dark);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .fz-page-head h1{font-size:clamp(28px,4.5vw,40px);font-weight:800;line-height:1.2;color:var(--ink);margin-top:8px}
 .fz-sub{color:var(--muted);font-size:15px;margin-top:10px;max-width:62ch;line-height:1.6}
 .fz-sub a{color:var(--teal-dark);text-decoration:underline}
 .fz-policy{margin-top:24px}
-.fz-white-card{background:#fff;border-radius:6px;padding:24px 22px;color:var(--ink);box-shadow:var(--shadow-sm);margin-top:16px;line-height:1.65}
+.fz-white-card{background:#fff;border-radius:16px;padding:24px 22px;color:var(--ink);box-shadow:var(--shadow-sm);margin-top:16px;line-height:1.65}
 .fz-policy>.fz-white-card{margin-top:0}
 .fz-white-card h2{font-size:20px;font-weight:800;color:var(--ink);margin:22px 0 8px}
 .fz-white-card h2:first-child{margin-top:0}
-.fz-white-card p{font-size:15px;color:#10243A;margin:0 0 12px}
+.fz-white-card p{font-size:15px;color:#33415E;margin:0 0 12px}
 .fz-white-card p:last-child{margin-bottom:0}
-.fz-white-card ul{margin:0 0 12px 20px;font-size:15px;color:#10243A}
+.fz-white-card ul{margin:0 0 12px 20px;font-size:15px;color:#33415E}
 .fz-white-card li{margin-bottom:6px}
 .fz-white-card a{color:var(--teal-dark);font-weight:600}
-.fz-white-card blockquote{margin:16px 0 12px;padding:14px 18px;background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 6px 6px 0;font-size:15px;color:#10243A}
+.fz-white-card blockquote{margin:16px 0 12px;padding:14px 18px;background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 12px 12px 0;font-size:15px;color:#33415E}
 .fz-white-card .fz-white-card{background:var(--paper);box-shadow:none;border:1px solid var(--border);margin-top:14px}
-.fz-founder-mark{width:56px;height:56px;border-radius:6px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:22px}
+.fz-founder-mark{width:56px;height:56px;border-radius:14px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:22px}
 .fz-grid{margin-top:16px;display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
 .fz-grid .fz-white-card{margin-top:0}
-.fz-btn{display:inline-block;padding:12px 22px;border-radius:6px;background:var(--teal);color:#fff!important;text-decoration:none;font-weight:700;font-size:14px}
+.fz-btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--teal);color:#fff!important;text-decoration:none;font-weight:700;font-size:14px}
 .fz-btn-ghost{background:#fff;color:var(--ink)!important;border:1.5px solid var(--ink)}
 .rv{opacity:1;transform:none}
 @media(min-width:720px){.fz-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -326,14 +335,14 @@ p{margin:0}
 .fz-sec{background:var(--base);color:var(--ink)}
 .fz-sec-in{max-width:1080px;margin:0 auto;padding:20px 20px 64px}
 .fz-h1{font-size:clamp(28px,4.5vw,40px);font-weight:800;line-height:1.2;color:var(--ink);margin-top:8px}
-.fz-panel{background:#fff;border-radius:6px;padding:24px 22px;color:var(--ink);margin-top:24px;line-height:1.65}
+.fz-panel{background:#fff;border-radius:16px;padding:24px 22px;color:var(--ink);margin-top:24px;line-height:1.65}
 .fz-panel h2{font-size:20px;font-weight:800;color:var(--ink);margin:0 0 8px}
-.fz-panel p{font-size:15px;color:#10243A;margin:0 0 12px}
-.fz-tag{display:inline-block;padding:7px 14px;border-radius:6px;background:var(--teal);color:#fff;font-size:12px;font-weight:800}
+.fz-panel p{font-size:15px;color:#33415E;margin:0 0 12px}
+.fz-tag{display:inline-block;padding:7px 14px;border-radius:999px;background:var(--teal);color:#fff;font-size:12px;font-weight:800}
 .fz-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 /* footer social links, kept from the live site */
 .foot-social{display:flex;gap:6px;margin-left:12px}
-.foot-social a{display:grid;place-items:center;width:44px;height:44px;border-radius:6px;background:var(--sunken);box-shadow:var(--sunken-shadow);color:var(--teal-dark)}
+.foot-social a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--sunken);box-shadow:var(--sunken-shadow);color:var(--teal-dark)}
 .foot-social svg{width:20px;height:20px;fill:currentColor}
 
 </style><script>
@@ -549,7 +558,7 @@ const RESULTS = [
 .foot-links a{padding:3px 8px;font-size:12px;min-height:44px;display:inline-flex;align-items:center}
 .foot-social{margin-left:auto}
 .foot-social a{width:44px;height:44px}
-.foot-close{margin-top:8px;padding-top:8px;text-align:left;font-size:12px;line-height:1.6}
+.foot-close{margin-top:8px;padding-top:8px;text-align:center;font-size:12px;line-height:1.6}
 
 /* ---- Mobile font scale (ChatGPT mobile audit, 20 Nov 2026) ----
    One scale for all text (12/14/16/18) + fluid page titles that
@@ -558,7 +567,7 @@ const RESULTS = [
  --fs-xs:12px; --fs-sm:14px; --fs-md:16px; --fs-lg:18px;
  --fs-h2:clamp(21px,5.5vw,24px);
  --fs-h1:clamp(26px,7.5vw,34px);
- --fs-hero:clamp(26px,7vw,32px);
+ --fs-hero:clamp(30px,9vw,40px);
 }
 .page-head h1{font-size:var(--fs-h1);line-height:1.15;text-wrap:balance}
 .hero h1{font-size:var(--fs-hero)}
@@ -570,62 +579,62 @@ const RESULTS = [
 .foot-links a{font-size:var(--fs-sm);padding:10px}
 </style><style>
 /* GPA calculator styles, scoped to its tab (shared base comes from the Results CSS above). */
-#tab-gpa .hero h1{font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:16px 0 16px;max-width:640px;color:var(--ink)}
+#tab-gpa .hero h1{font-size:56px;font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:16px 0 16px;max-width:640px;color:var(--ink)}
 #tab-gpa .sec-head h2{font-size:24px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
 #tab-gpa .row{display:flex;align-items:center;gap:13px;background:var(--raise);box-shadow:var(--shadow-sm);border-radius:var(--r-md);padding:14px 16px;text-decoration:none;color:var(--ink)}
 #tab-gpa .row .body b{display:block;font-size:16px;font-weight:700;line-height:1.35;overflow-wrap:anywhere}
 #tab-gpa .row .body span{display:block;font-size:13px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #tab-gpa .row .chev{font-size:22px;font-weight:700;color:var(--muted-2);flex:none}
-#tab-gpa .badge{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:24px;padding:0 9px;border-radius:6px;font-size:12px;font-weight:800;letter-spacing:.04em;color:#fff;flex:none}
-#tab-gpa .file-badge{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:24px;padding:0 8px;border-radius:6px;font-size:12px;font-weight:800;letter-spacing:.04em;color:#fff;flex:none}
+#tab-gpa .badge{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:24px;padding:0 9px;border-radius:7px;font-size:12px;font-weight:800;letter-spacing:.04em;color:#fff;flex:none}
+#tab-gpa .file-badge{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:24px;padding:0 8px;border-radius:7px;font-size:12px;font-weight:800;letter-spacing:.04em;color:#fff;flex:none}
 #tab-gpa .site-footer{background:var(--card);color:var(--ink);margin-top:56px;border-top:1px solid var(--border)}
 #tab-gpa .site-footer-in{max-width:1080px;margin:0 auto;padding:36px 20px 30px}
 #tab-gpa .foot-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 #tab-gpa .foot-links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
 #tab-gpa .foot-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;padding:8px 10px;min-height:44px;display:inline-flex;align-items:center}
 #tab-gpa .foot-close{margin-top:22px;padding-top:20px;border-top:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.9}
-#tab-gpa .page-head h1{font-size:32px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+#tab-gpa .page-head h1{font-size:34px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
 #tab-gpa .foot-social{display:flex;gap:6px;margin-left:12px}
-#tab-gpa .foot-social a{display:grid;place-items:center;width:44px;height:44px;border-radius:6px;background:var(--sunken);box-shadow:var(--sunken-shadow);color:var(--teal-dark)}
+#tab-gpa .foot-social a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--sunken);box-shadow:var(--sunken-shadow);color:var(--teal-dark)}
 #tab-gpa </style>
 
 <style>
 
 button.row{width:100%;text-align:left}
-#tab-gpa .folder-bar{display:block;height:6px;background:#E2E8F0;border-radius:6px;overflow:hidden;margin-top:8px}
-#tab-gpa .folder-bar i{display:block;height:100%;width:0;background:var(--teal);border-radius:6px}
-#tab-gpa .subj{background:#fff;border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin-top:8px}
+#tab-gpa .folder-bar{display:block;height:6px;background:#D5DDE5;border-radius:9px;overflow:hidden;margin-top:8px}
+#tab-gpa .folder-bar i{display:block;height:100%;width:0;background:var(--teal);border-radius:9px}
+#tab-gpa .subj{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin-top:8px}
 #tab-gpa .subj .top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
 #tab-gpa .subj b{font-size:14px;color:var(--ink)}
 #tab-gpa .subj .ch{font-size:12px;color:var(--muted);font-weight:700;white-space:nowrap}
 #tab-gpa .subj .row2{display:flex;gap:8px;margin-top:8px;align-items:center}
-#tab-gpa .subj input[type=number]{flex:1;min-width:0;min-height:44px;border:1.5px solid var(--line);border-radius:6px;padding:0 11px;font-size:15px;font-weight:700;color:var(--ink);background:#fff}
+#tab-gpa .subj input[type=number]{flex:1;min-width:0;min-height:44px;border:1.5px solid var(--line);border-radius:10px;padding:0 11px;font-size:15px;font-weight:700;color:var(--ink);background:#fff}
 #tab-gpa .subj input[type=number]:focus{outline:2px solid var(--teal);border-color:var(--teal)}
 #tab-gpa .subj .out{font-size:12px;color:var(--muted);margin-top:6px}
 #tab-gpa .subj .out.err{color:var(--red)}
-#tab-gpa .grade-pill{flex:none;min-width:56px;text-align:left;padding:7px 8px;border-radius:6px;background:var(--paper);border:1px solid var(--line);font-weight:800;font-size:13px;color:var(--ink)}
+#tab-gpa .grade-pill{flex:none;min-width:56px;text-align:center;padding:7px 8px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-weight:800;font-size:13px;color:var(--ink)}
 #tab-gpa .grade-pill.f{background:var(--red-soft);border-color:var(--red);color:#8A1F24}
-#tab-gpa .result-card{background:var(--teal);color:#fff;border-radius:6px;padding:16px 14px;text-align:left;margin-top:18px;border:1px solid var(--border)}
-#tab-gpa .result-card .gpa{font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1}
+#tab-gpa .result-card{background:var(--teal);color:#fff;border-radius:22px;padding:16px 14px;text-align:center;margin-top:18px;border:1px solid var(--border)}
+#tab-gpa .result-card .gpa{font-size:40px;font-weight:800;letter-spacing:-.02em;line-height:1}
 #tab-gpa .result-card .gpa small{font-size:15px;color:rgba(255,255,255,.85)}
 #tab-gpa .result-card p{font-size:13px;color:rgba(255,255,255,.7);margin-top:6px;line-height:1.6}
 #tab-gpa .cgpa-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
 #tab-gpa .cgpa-row label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:6px}
-#tab-gpa .cgpa-row input{width:100%;min-height:50px;border:1.5px solid var(--line);border-radius:6px;padding:0 13px;font-size:16px;font-weight:700;color:var(--ink);background:#fff}
+#tab-gpa .cgpa-row input{width:100%;min-height:50px;border:1.5px solid var(--line);border-radius:12px;padding:0 13px;font-size:16px;font-weight:700;color:var(--ink);background:#fff}
 #tab-gpa .cgpa-row input:focus{outline:2px solid var(--teal);border-color:var(--teal)}
-#tab-gpa .btn-line{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;border-radius:6px;font-weight:700;font-size:15px;background:#fff;color:var(--teal);border:1.5px solid var(--teal);cursor:pointer;margin-top:16px}
+#tab-gpa .btn-line{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;border-radius:999px;font-weight:700;font-size:15px;background:#fff;color:var(--teal);border:1.5px solid var(--teal);cursor:pointer;margin-top:16px}
 #tab-gpa .scale-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
 #tab-gpa .scale-table td{padding:9px 4px;border-bottom:1px solid var(--line);text-align:left}
 #tab-gpa .scale-table th{padding:9px 4px;border-bottom:1px solid var(--line);text-align:left}
-#tab-gpa .scale-table th{font-size:12px;color:var(--muted);text-transform:none;letter-spacing:.05em}
+#tab-gpa .scale-table th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
 #tab-gpa .scale-table td:last-child{text-align:right}
 #tab-gpa .scale-table th:last-child{text-align:right}
 #tab-gpa #count{font-size:14px;color:var(--muted);font-weight:700;margin:10px 0 2px}
 #tab-gpa .card-fields{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
 #tab-gpa .card-fields label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:6px}
-#tab-gpa .card-fields input{width:100%;min-height:50px;border:1.5px solid var(--line);border-radius:6px;padding:0 13px;font-size:16px;font-weight:700;color:var(--ink);background:#fff}
+#tab-gpa .card-fields input{width:100%;min-height:50px;border:1.5px solid var(--line);border-radius:12px;padding:0 13px;font-size:16px;font-weight:700;color:var(--ink);background:#fff}
 #tab-gpa .card-fields input:focus{outline:2px solid var(--teal);border-color:var(--teal)}
-#tab-gpa .btn-solid{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 20px;border-radius:6px;font-weight:700;font-size:14px;background:var(--teal);color:#fff;border:1.5px solid var(--teal);cursor:pointer;margin-top:16px}
+#tab-gpa .btn-solid{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 20px;border-radius:999px;font-weight:700;font-size:14px;background:var(--teal);color:#fff;border:1.5px solid var(--teal);cursor:pointer;margin-top:16px}
 #tab-gpa .btn-solid:disabled{opacity:.5;cursor:not-allowed}
 #tab-gpa .btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 #tab-gpa .btn-row .btn-solid{flex:1 1 200px;margin-top:0}
@@ -635,9 +644,9 @@ button.row{width:100%;text-align:left}
 #tab-gpa .card-note{font-size:14px;color:var(--muted);margin-top:12px}
 #tab-gpa #result-card-panel{scroll-margin-top:76px}
 #tab-gpa #view .panel{scroll-margin-top:76px}
-#tab-gpa .card-preview{margin-top:16px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+#tab-gpa .card-preview{margin-top:16px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
 #tab-gpa .pv-head{background:var(--teal);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:10px}
-#tab-gpa .pv-logo{flex:none;width:34px;height:34px;border-radius:6px;background:#fff;color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+#tab-gpa .pv-logo{flex:none;width:34px;height:34px;border-radius:9px;background:#fff;color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
 #tab-gpa .pv-title b{display:block;font-size:16px}
 #tab-gpa .pv-title span{font-size:12px;opacity:.85}
 #tab-gpa .pv-doc{margin-left:auto;font-size:12px;font-weight:700;opacity:.9;white-space:nowrap}
@@ -649,11 +658,11 @@ button.row{width:100%;text-align:left}
 #tab-gpa .pv-table th{background:var(--teal);color:#fff;font-size:12px}
 #tab-gpa .pv-table td:last-child{text-align:right}
 #tab-gpa .pv-table th:last-child{text-align:right}
-#tab-gpa .pv-gpa{background:var(--teal);color:#fff;text-align:left;font-weight:800;font-size:18px;padding:12px 10px;margin:10px 16px 0;border-radius:6px}
-#tab-gpa .pv-sum{text-align:left;font-size:14px;color:var(--muted);padding:10px 16px 0}
+#tab-gpa .pv-gpa{background:var(--teal);color:#fff;text-align:center;font-weight:800;font-size:18px;padding:12px 10px;margin:10px 16px 0;border-radius:12px}
+#tab-gpa .pv-sum{text-align:center;font-size:14px;color:var(--muted);padding:10px 16px 0}
 #tab-gpa .pv-pass{color:var(--teal)}
 #tab-gpa .pv-fail{color:#8A1F24}
-#tab-gpa .pv-foot{padding:12px 16px 14px;font-size:12px;color:var(--muted);text-align:left;line-height:1.6}
+#tab-gpa .pv-foot{padding:12px 16px 14px;font-size:12px;color:var(--muted);text-align:center;line-height:1.6}
 #tab-gpa .pv-foot b{color:var(--teal)}
 #tab-gpa .page-head h1{font-size:var(--fs-h1);line-height:1.15;text-wrap:balance}
 #tab-gpa .hero h1{font-size:var(--fs-hero)}
@@ -682,17 +691,10 @@ button.row{width:100%;text-align:left}
 .tr-list li{margin-bottom:6px}
 .tr-steps{counter-reset:step;list-style:none;margin:10px 0 0;padding:0}
 .tr-steps li{counter-increment:step;position:relative;padding-left:34px;margin-bottom:10px;font-size:15px;line-height:1.6;color:var(--ink)}
-.tr-steps li::before{content:counter(step);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:6px;background:var(--teal);color:#fff;font-size:13px;font-weight:800;display:grid;place-items:center}
+.tr-steps li::before{content:counter(step);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-size:13px;font-weight:800;display:grid;place-items:center}
 .tr-acct{font-size:18px;font-weight:800;letter-spacing:.02em;color:var(--ink)}
-:focus-visible{outline:3px solid #0F766E;outline-offset:2px}
-.search input:focus-visible{outline:3px solid #0F766E;outline-offset:2px}
-<style>
-/* Premium additions (Modern Academic Technology): sub-navigation + section labels */
-.subnav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 4px}
-.subnav a{display:inline-flex;align-items:center;min-height:46px;padding:10px 16px;border-radius:6px;background:#fff;border:1.5px solid var(--border);color:var(--ink);font-size:14px;font-weight:700;text-decoration:none}
-.subnav a:hover{border-color:var(--teal);color:var(--teal-dark)}
-.exam-kicker{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-dark);margin:0 0 10px}
-.counts-line{font-size:13px;color:var(--muted);margin:12px 0 0}
+:focus-visible{outline:3px solid #0E7C86;outline-offset:2px}
+.search input:focus-visible{outline:3px solid #0E7C86;outline-offset:2px}
 </style></head>
 <body><header class="site-header">
   <div class="site-header-in">
@@ -716,12 +718,8 @@ button.row{width:100%;text-align:left}
       <h1>Examination</h1>
       <p>Results, transcript and GPA calculator for KMU BS Nursing students, in one place.</p>
     </div>
-    <nav class="subnav" aria-label="Examination sections">
-      <a href="#results">Examination results</a>
-      <a href="#transcript">Transcript application</a>
-      <a href="#gpa">GPA &amp; CGPA</a>
-      <a href="#gpa" data-exam-scroll="result-card-panel">Academic performance PDF</a>
-      <a href="#gpa" data-exam-scroll="grading-scale-panel">Grading scale</a>
+    <nav class="panel" aria-label="Sections" style="margin-top:16px">
+      <a href="#results">Examination results</a> &middot; <a href="#transcript">Transcript application</a> &middot; <a href="#gpa">GPA &amp; CGPA</a> &middot; <a href="#gpa" data-scrollto="result-card-panel">Academic performance PDF</a> &middot; <a href="#gpa" data-scrollto="grading-scale-panel">Grading scale</a>
     </nav>
     <div id="exam-list">
       <button type="button" class="row" id="row-results"><span class="tile teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg></span><span class="body"><b>Examination Results</b><span>171 KMU result PDFs &middot; search by region, semester and batch</span></span><span class="chev">&rsaquo;</span></button>
@@ -730,7 +728,7 @@ button.row{width:100%;text-align:left}
     </div>
     <button type="button" class="up-btn hidden" id="exam-back">&uarr; Up one level</button>
     <div id="tab-results" class="tab-panel">
-      <p class="exam-kicker">Section 1 · Examination results and filters</p>
+      <p style="font-size:13px;font-weight:700;color:var(--muted)">Section 1 &middot; Examination results and filters</p>
       <p>KMU BS Nursing result PDFs by region, semester and batch.</p>
     <p style="margin-top:6px;font-size:12px;color:var(--muted)">With thanks to Noman Ahmad · Admin Professor Nurse, KMU IHS Peshawar</p>
     <label class="search" style="margin-top:18px">
@@ -761,7 +759,7 @@ button.row{width:100%;text-align:left}
     <div id="empty-state" class="empty"><b>Search or choose a filter to see results</b><p>171 results are ready — type a word above, or choose a region, semester, batch or session.</p></div>
     </div>
     <div id="tab-transcript" class="tab-panel" hidden>
-      <p class="exam-kicker">Section 2 · Transcript application</p>
+      <p style="font-size:13px;font-weight:700;color:var(--muted)">Section 2 &middot; Transcript application</p>
     <div class="panel">
       <h2>Apply for a KMU Transcript (Semester System)</h2>
       <p>For BS Nursing students. Use the official KMU transcript form and the MCB fee slip below.</p>
@@ -801,7 +799,7 @@ button.row{width:100%;text-align:left}
       </div>
     </div>    </div>
     <div id="tab-gpa" class="tab-panel" hidden>
-      <p class="exam-kicker">Section 3 · GPA and CGPA calculations</p>
+      <p style="font-size:13px;font-weight:700;color:var(--muted)">Section 3 &middot; GPA and CGPA calculations</p>
       <div class="narrow">
       <div class="page-head">
       <h2>GPA &amp; CGPA Calculator</h2>
@@ -816,7 +814,7 @@ button.row{width:100%;text-align:left}
     <div id="view"></div>
 
     <div style="height:28px"></div>
-    <p class="exam-kicker">Section 4 · Academic performance PDF</p>
+    <p style="font-size:13px;font-weight:700;color:var(--muted)">Section 4 &middot; Academic performance PDF</p>
     <div class="panel" id="result-card-panel">
       <h2>Generate Your Academic Performance Summary</h2>
       <p>Download a clean PDF summary — only your name and institution are used.</p>
@@ -833,7 +831,7 @@ button.row{width:100%;text-align:left}
       <button type="button" class="btn-line hidden" id="recalc-btn">Calculate again</button>
       <p class="card-note" id="card-note" aria-live="polite">Enter your subject marks in the calculator above first. Once your GPA/CGPA is calculated, your PDF download button will activate automatically.</p>
     </div>
-    <p class="exam-kicker">Section 5 · Grading scale</p>
+    <p style="font-size:13px;font-weight:700;color:var(--muted)">Section 5 &middot; Grading scale</p>
     <div class="panel" id="grading-scale-panel">
       <h2>Grading Scale</h2>
       <p>This is the KMU BSN grading scale, verified from one KMU BSN result sheet — Final Result of B.Sc. Nursing Generic, 8th Semester Spring 2024, dated 28.01.2025.</p>
@@ -867,7 +865,7 @@ button.row{width:100%;text-align:left}
   <div class="foot-close">
     <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
     <p>Contact: WhatsApp <a href="https://wa.me/923055959410">+92 305 5959410</a> &middot; Email <a href="mailto:nurseofuture@gmail.com">nurseofuture@gmail.com</a></p>
-    <p class="counts-line">1,083 study files · 171 results · 17 past-paper books</p>
+    <p>1,083 study files &middot; 171 results &middot; 17 past-paper books</p>
     <p>&copy; 2026 TA SERIES. All rights reserved.</p>
   </div>
 </div></footer><script>
@@ -2157,23 +2155,16 @@ $("recalc-btn").addEventListener("click",expandEntry);
   });
   show(currentSection(),false);
 })();
-</script><script>
+</script><script data-goatcounter="https://taseries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
 (function(){
-  "use strict";
-  /* Sub-navigation: "Academic performance PDF" and "Grading scale" live
-     inside the GPA tab, so open that tab first, then scroll to the panel. */
-  document.querySelectorAll('[data-exam-scroll]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      e.preventDefault();
-      var target = a.getAttribute('data-exam-scroll');
-      if (window.location.hash !== '#gpa') window.location.hash = '#gpa';
-      setTimeout(function(){
-        var el = document.getElementById(target);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 60);
+  document.querySelectorAll('[data-scrollto]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var id=a.getAttribute('data-scrollto');
+      setTimeout(function(){ var el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth', block:'start'}); }, 150);
     });
   });
 })();
 </script>
-<script data-goatcounter="https://taseries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body>
+</body>
 </html>

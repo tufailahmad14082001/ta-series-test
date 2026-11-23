@@ -17,7 +17,7 @@
 <meta property="og:image:height" content="1280">
 <meta property="og:image:alt" content="TA SERIES — open book with stethoscope">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F766E'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E7C86'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
 <script src="app-mode.js"></script>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -40,14 +40,13 @@
 </header>
 
 <main><section class="fz-page"><div class="fz-page-in">
-<nav class="info-nav" aria-label="About this site"><a href="about.html" class="active">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="copyright.html">Copyright</a></nav>
-
 <div class="fz-page-head">
 <p class="fz-eyebrow">TA SERIES</p>
 <h1>About TA SERIES</h1>
 <p class="fz-sub">TA SERIES is an independent educational resource platform created to help BS Nursing students find academic material more easily. The platform brings study resources, examination results and revision publications together in one organised place.</p>
 </div>
 
+<p style="margin:0 0 18px;font-size:14px;font-weight:700"><b>About</b> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="copyright.html">Copyright</a></p>
 <div class="fz-policy">
 <div class="fz-white-card rv">
 <h2>What TA SERIES is</h2>
@@ -60,7 +59,7 @@
 <p>The platform serves BS Nursing students across all eight semesters, from Semester 1 to Semester 8.</p>
 
 <h2>Types of resources</h2>
-<p>The site holds three collections — <span id="about-total"></span>:</p>
+<p>The site holds three collections — 1,083 study files, 171 examination results and 17 past-paper books:</p>
 <ul>
 <li><strong>Study Resources (<span id="about-material"></span> files)</strong> — lecture slides, books, MCQs, syllabus, study notes and past papers for semesters 1 to 8, including the 36-file TA SERIES Slides Book.</li>
 <li><strong>Examination Results (<span id="about-results"></span> files)</strong> — BS Nursing exam results by region, semester, batch and examination session.</li>
@@ -82,7 +81,7 @@
 </div>
 
 <h2>The Story Behind TA SERIES</h2>
-<p>Tufail Ahmad founded TA SERIES after experiencing firsthand the challenges of finding quality study materials during his BS Nursing journey. What started with a single collection of lecture slides gradually grew into a free academic library of <span id="about-total-2"></span> covering all eight semesters of BS Nursing.</p>
+<p>Tufail Ahmad founded TA SERIES after experiencing firsthand the challenges of finding quality study materials during his BS Nursing journey. What started with a single collection of lecture slides gradually grew into a free academic library of 1,083 study files covering all eight semesters of BS Nursing.</p>
 <p>Built through dedication and a student-first vision, TA SERIES aims to make nursing education more accessible by ensuring students can find the resources they need, when they need them.</p>
 <p>Our mission is simple: Making Nursing Simple. Making Students Strong.</p>
 
@@ -114,7 +113,7 @@
   <div class="foot-close">
     <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
     <p>Contact: WhatsApp <a href="https://wa.me/923055959410">+92 305 5959410</a> &middot; Email <a href="mailto:nurseofuture@gmail.com">nurseofuture@gmail.com</a></p>
-    <p class="counts-line">1,083 study files · 171 results · 17 past-paper books</p>
+    <p>1,083 study files &middot; 171 results &middot; 17 past-paper books</p>
     <p>&copy; 2026 TA SERIES. All rights reserved.</p>
   </div>
 </div></footer>
@@ -123,18 +122,11 @@
 (function(){
   "use strict";
   // Collection counts are computed from data.js (the single source), never typed here.
-  var total = (typeof RESULTS !== "undefined" ? RESULTS.length : 0)
-    + (typeof MATERIAL !== "undefined" ? MATERIAL.length : 0)
-    + (typeof MEGA !== "undefined" ? MEGA.length : 0);
   function fmt(n){ return n.toLocaleString("en-US"); }
   function set(id, v){ var e = document.getElementById(id); if(e) e.textContent = v; }
-  // One source (data.js): 1,083 study files (including the 36-file Slides
-  // Book) and 171 results. Books are the 17 listed on the Past Papers page.
-  set("about-total", "1,083 study files, 171 examination results and 17 past-paper books");
   set("about-material", fmt(typeof MATERIAL !== "undefined" ? MATERIAL.length : 0));
   set("about-results", fmt(typeof RESULTS !== "undefined" ? RESULTS.length : 0));
-  set("about-mega", "17");
-  set("about-total-2", "1,083 study files");
+  set("about-mega", "17"); /* the page curates 17 books */
 })();
 </script>
 <script>

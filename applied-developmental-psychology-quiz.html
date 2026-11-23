@@ -14,7 +14,7 @@
    Dark teal #0B6B75 · Light teal #E3F0F2 · Ink #12304A ·
    Muted #566676 · Border #D5DDE5. Light mode only.
    System fonts only — no Google Fonts, no external files.
-   Raised cards: #FFFFFF
+   Raised cards: linear-gradient(145deg,#F6F9FB,#E1E8EE)
    with shadows 6px 6px 14px #C2CBD5, -6px -6px 14px #FFF.
    Correct = website green #1A8447 · Wrong = website red #CE4145.
    ============================================================ */
@@ -25,12 +25,12 @@
   --sunken:#E4EAF0; --shadow-d:#C2CBD5;
   --green:#1A8447; --green-soft:#E3F5E9; --green-ink:#14532d;
   --red:#CE4145; --red-soft:#FDECEC; --red-ink:#7F1D1D;
-  --blue:#0E7C86; --amber:#0E7C86;
-  --r-lg:6px; --r-md:6px; --pill:6px;
-  --raise:#FFFFFF;
-  --shadow:0 2px 8px rgba(18,48,74,.08);
-  --shadow-sm:0 1px 4px rgba(18,48,74,.08);
-  --sunken-shadow:none;
+  --blue:#2F6FED; --amber:#B45309;
+  --r-lg:20px; --r-md:16px; --pill:999px;
+  --raise:linear-gradient(145deg,#F6F9FB,#E1E8EE);
+  --shadow:6px 6px 14px #C2CBD5,-6px -6px 14px #FFF;
+  --shadow-sm:4px 4px 10px #C2CBD5,-4px -4px 10px #FFF;
+  --sunken-shadow:inset 3px 3px 7px #C2CBD5,inset -3px -3px 7px #FFF;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;min-height:100vh;background:var(--base);color:var(--ink);font-size:16px;line-height:1.5}
@@ -49,15 +49,15 @@ a{color:inherit}
 .site-header{background:var(--card);color:var(--ink);position:sticky;top:0;z-index:40;box-shadow:0 4px 14px rgba(18,48,74,.08)}
 .site-header-in{max-width:520px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:10px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand-mark{width:40px;height:40px;border-radius:6px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;flex:none}
+.brand-mark{width:40px;height:40px;border-radius:12px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;flex:none}
 .brand-name{font-weight:800;font-size:19px;letter-spacing:.02em;white-space:nowrap;color:var(--ink)}
 .brand-name em{font-style:normal;color:var(--teal)}
 .menu{margin-left:auto;position:relative}
-.menu-btn{display:grid;place-items:center;width:44px;height:44px;border-radius:6px;color:var(--ink);cursor:pointer;list-style:none}
+.menu-btn{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;color:var(--ink);cursor:pointer;list-style:none}
 .menu-btn::-webkit-details-marker{display:none}
 .menu-btn svg{width:22px;height:22px}
-.menu-list{position:absolute;top:calc(100% + 8px);right:0;background:var(--card);border-radius:6px;box-shadow:0 12px 24px rgba(18,48,74,.16);padding:8px;display:flex;flex-direction:column;min-width:220px;z-index:60}
-.menu-list a{color:var(--ink);text-decoration:none;font-size:15px;font-weight:700;padding:11px 12px;border-radius:6px}
+.menu-list{position:absolute;top:calc(100% + 8px);right:0;background:var(--card);border-radius:16px;box-shadow:0 12px 24px rgba(18,48,74,.16);padding:8px;display:flex;flex-direction:column;min-width:220px;z-index:60}
+.menu-list a{color:var(--ink);text-decoration:none;font-size:15px;font-weight:700;padding:11px 12px;border-radius:10px}
 .menu-list a:hover{background:var(--teal-soft);color:var(--teal-dark)}
 /* ---------- site footer (website footer) ---------- */
 .site-footer{background:var(--card);color:var(--ink);margin-top:48px;border-top:1px solid var(--border)}
@@ -69,17 +69,17 @@ a{color:inherit}
 .foot-close{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.9}
 .foot-close .tagline{color:var(--teal-dark);font-weight:700}
 /* ---------- splash / intro ---------- */
-#splash{position:absolute;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:left;padding:30px;background:#FFFFFF;color:#fff;transition:opacity .6s,transform .6s}
+#splash{position:absolute;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;background:linear-gradient(180deg,#0B6B75,#0E7C86 55%,#0A5A63);color:#fff;transition:opacity .6s,transform .6s}
 #splash.gone{opacity:0;transform:scale(1.06);pointer-events:none}
-.cross{width:92px;height:92px;border-radius:6px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font-size:32px;animation:pulse 1.8s ease-in-out infinite}
-70%{box-shadow:0 0 0 22px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+.cross{width:92px;height:92px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font-size:44px;animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.28)}70%{box-shadow:0 0 0 22px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
 .ecg{width:240px;height:56px;margin-top:26px}
 .ecg path{stroke:#E3F0F2;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:340;stroke-dashoffset:340;animation:draw 1.6s ease forwards .2s}
 @keyframes draw{to{stroke-dashoffset:0}}
-#splash h1{font-weight:800;font-size:28px;margin-top:22px;line-height:1.2;color:#fff}
+#splash h1{font-weight:800;font-size:38px;margin-top:22px;line-height:1.2;color:#fff}
 #splash h1 span{color:#E3F0F2}
 #splash p{color:rgba(255,255,255,.85);font-size:14px;line-height:1.7;margin-top:12px}
-.enter{margin-top:30px;padding:15px 40px;border-radius:6px;border:none;background:#fff;color:var(--teal-dark);font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 10px 24px rgba(0,0,0,.25);animation:bob 1.6s ease-in-out infinite}
+.enter{margin-top:30px;padding:15px 40px;border-radius:999px;border:none;background:#fff;color:var(--teal-dark);font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 10px 24px rgba(0,0,0,.25);animation:bob 1.6s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .flo{position:absolute;font-size:26px;pointer-events:none;color:rgba(255,255,255,.35);animation:orbFloat 4s ease-in-out infinite}
 .f1{top:13%;left:11%}
@@ -87,54 +87,54 @@ a{color:inherit}
 .f3{bottom:19%;left:17%;animation-delay:2.2s}
 @keyframes orbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
 .minibook{width:126px;height:88px;position:relative;margin-top:26px;perspective:700px}
-.mb-cover{position:absolute;inset:-7px -9px;background:#FFFFFF;border:2px solid #12304A;border-radius:6px;box-shadow:0 16px 34px rgba(0,0,0,.4)}
-.mb-page{position:absolute;top:0;width:63px;height:88px;background:#FFFFFF;box-shadow:0 8px 18px rgba(0,0,0,.3)}
-.mb-page.right{right:0;border-radius:3px 6px 6px 3px;background:#E9EEF3}
-.mb-page.left{left:0;border-radius:6px 3px 3px 6px;transform-origin:right center;animation:mbturn 2s ease-in-out infinite}
+.mb-cover{position:absolute;inset:-7px -9px;background:linear-gradient(135deg,#0E7C86,#0B6B75);border:2px solid #12304A;border-radius:10px;box-shadow:0 16px 34px rgba(0,0,0,.4)}
+.mb-page{position:absolute;top:0;width:63px;height:88px;background:#fffdf4;box-shadow:0 8px 18px rgba(0,0,0,.3)}
+.mb-page.right{right:0;border-radius:3px 9px 9px 3px;background:#f4efdb}
+.mb-page.left{left:0;border-radius:9px 3px 3px 9px;transform-origin:right center;animation:mbturn 2s ease-in-out infinite}
 @keyframes mbturn{0%,30%{transform:rotateY(0)}60%,100%{transform:rotateY(-168deg)}}
-.loadbar{width:150px;height:5px;border-radius:6px;background:rgba(255,255,255,.25);margin-top:22px;overflow:hidden}
-.loadbar i{display:block;height:100%;width:0;border-radius:6px;background:#FFFFFF;animation:load 1.8s ease forwards}
+.loadbar{width:150px;height:5px;border-radius:99px;background:rgba(255,255,255,.25);margin-top:22px;overflow:hidden}
+.loadbar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#fff,#E3F0F2);animation:load 1.8s ease forwards}
 @keyframes load{to{width:100%}}
 #splash h1{animation:fadeUp .8s ease both .1s}
 #splash p{animation:fadeUp .8s ease both .25s}
 #splash .enter{animation:fadeUp .8s ease both .45s,bob 1.6s ease-in-out .9s infinite}
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 /* ---------- clean top ---------- */
-.cover{position:relative;z-index:2;padding:34px 22px 4px;text-align:left}
+.cover{position:relative;z-index:2;padding:34px 22px 4px;text-align:center}
 .eyebrow{font-size:12px;letter-spacing:5px;color:var(--muted);font-weight:700}
-h1.big{font-weight:800;font-size:32px;line-height:1.08;margin-top:12px;color:var(--ink)}
+h1.big{font-weight:800;font-size:42px;line-height:1.08;margin-top:12px;color:var(--ink)}
 h1.big em{font-style:normal;color:var(--teal)}
 .sub{font-size:14px;color:var(--muted);line-height:1.6;margin-top:10px}
 .pills{display:flex;gap:8px;justify-content:center;margin-top:16px}
-.pill{padding:8px 14px;border-radius:6px;font-size:12px;font-weight:700;color:var(--muted);background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.pill{padding:8px 14px;border-radius:999px;font-size:12px;font-weight:700;color:var(--muted);background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
 .pill b{color:var(--teal-dark)}
 /* ---------- chapter cards (website rows) ---------- */
 .grid{display:flex;flex-direction:column;gap:10px;margin:18px 16px 0;position:relative;z-index:2}
-.foot{text-align:left;color:var(--muted);font-size:12px;padding:10px 22px 28px;line-height:1.6;position:relative;z-index:2}
+.foot{text-align:center;color:var(--muted);font-size:12px;padding:10px 22px 28px;line-height:1.6;position:relative;z-index:2}
 .optrows{display:flex;flex-direction:column;gap:9px;margin-top:10px}
-.optrow{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--border);border-radius:6px;padding:13px 15px;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;transition:box-shadow .25s,background .25s,transform .15s}
+.optrow{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:13px 15px;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;transition:box-shadow .25s,background .25s,transform .15s}
 .optrow:active{transform:scale(.98)}
-.optrow .radio{flex:0 0 24px;height:24px;border-radius:6px;background:var(--sunken);box-shadow:var(--sunken-shadow);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800}
+.optrow .radio{flex:0 0 24px;height:24px;border-radius:50%;background:var(--sunken);box-shadow:var(--sunken-shadow);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800}
 .optrow.on{background:var(--teal-soft);border-color:var(--teal);box-shadow:none}
 .optrow.on .radio{background:var(--teal);color:#fff;box-shadow:0 3px 8px rgba(14,124,134,.4)}
 .liquid{position:relative;overflow:hidden;isolation:isolate}
 .liquid:active{transform:scale(.97)}
 .btn.outline{background:var(--card);border:1.5px solid var(--teal);color:var(--teal-dark)}
 .optlabel{font-size:12px;letter-spacing:3px;color:var(--muted);font-weight:700;margin-top:18px}
-.setupinfo{font-size:14px;color:var(--muted);margin-top:16px;line-height:1.6;background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:12px 14px}
+.setupinfo{font-size:14px;color:var(--muted);margin-top:16px;line-height:1.6;background:var(--paper);border:1px solid var(--border);border-radius:16px;padding:12px 14px}
 .setupnote{font-size:12px;color:var(--muted-2);margin-top:8px;line-height:1.5}
 .topbar .scorepill{padding:7px 9px;font-size:12px}
-.chrow{display:flex;justify-content:space-between;gap:10px;text-align:left;width:100%;background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:13px 15px;margin-top:9px;cursor:pointer;font-size:14px;line-height:1.45;color:var(--muted)}
+.chrow{display:flex;justify-content:space-between;gap:10px;text-align:left;width:100%;background:var(--paper);border:1px solid var(--border);border-radius:16px;padding:13px 15px;margin-top:9px;cursor:pointer;font-size:14px;line-height:1.45;color:var(--muted)}
 .chrow b{color:var(--ink)}
 .chrow .weak{color:var(--amber);font-weight:700}
 .chdetail{text-align:left;margin-top:8px}
-.revq{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:12px;margin-top:8px;font-size:14px;line-height:1.5}
+.revq{background:var(--paper);border:1px solid var(--border);border-radius:14px;padding:12px;margin-top:8px;font-size:14px;line-height:1.5}
 .revq .rq{font-weight:700;color:var(--ink)}
 .revq .ry{color:var(--red);margin-top:5px}
 .revq .rc{color:var(--green);margin-top:3px}
 .revq .rr{color:var(--muted);margin-top:5px;font-size:14px}
 .statgrid{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap}
-.stat{padding:10px 13px;border-radius:6px;background:var(--paper);border:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.5}
+.stat{padding:10px 13px;border-radius:16px;background:var(--paper);border:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.5}
 .stat b{display:block;font-size:16px;color:var(--ink)}
 .wm{position:absolute;top:50%;z-index:1;writing-mode:vertical-rl;font-size:22px;letter-spacing:8px;font-weight:800;color:rgba(18,48,74,.06);pointer-events:none;white-space:nowrap}
 .wm-l{left:3px;transform:translateY(-50%) rotate(180deg)}
@@ -145,34 +145,34 @@ h1.big em{font-style:normal;color:var(--teal)}
 #opener.show{display:flex}
 .openbook{width:250px;height:330px;position:relative;perspective:1200px;animation:zoomin .5s ease}
 @keyframes zoomin{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
-.openbook .pg{position:absolute;inset:0;border-radius:6px 6px 6px 6px;background:#FFFFFF;box-shadow:0 24px 50px rgba(0,0,0,.45);transform-origin:left center;animation:pageturn 1s ease .35s forwards}
+.openbook .pg{position:absolute;inset:0;border-radius:8px 18px 18px 8px;background:#fffdf4;box-shadow:0 24px 50px rgba(0,0,0,.45);transform-origin:left center;animation:pageturn 1s ease .35s forwards}
 @keyframes pageturn{from{transform:rotateY(0)}to{transform:rotateY(-178deg)}}
-.openbook .cov{position:absolute;inset:0;border-radius:6px 6px 6px 6px;background:#FFFFFF;border:2px solid #12304A;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:left;padding:18px}
+.openbook .cov{position:absolute;inset:0;border-radius:8px 18px 18px 8px;background:linear-gradient(135deg,#0E7C86,#0B6B75);border:2px solid #12304A;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:18px}
 .openbook .cov h3{font-weight:800;font-size:21px;line-height:1.3;margin-top:10px}
 .openbook .cov p{font-size:12px;letter-spacing:3px;color:#E3F0F2;margin-top:10px}
 /* ---------- chapter intro page ---------- */
-.intro{margin:26px 16px;padding:34px 22px;text-align:left;position:relative;z-index:2;animation:pagein .5s ease}
-.intro .big-no{font-weight:800;font-size:32px;line-height:1;color:var(--teal)}
+.intro{margin:26px 16px;padding:34px 22px;text-align:center;position:relative;z-index:2;animation:pagein .5s ease}
+.intro .big-no{font-weight:800;font-size:74px;line-height:1;color:var(--teal)}
 .intro h2{font-weight:800;font-size:26px;margin-top:12px;line-height:1.3;color:var(--ink)}
 .intro p{color:var(--muted);line-height:1.65;margin-top:10px;font-size:15px}
 /* ---------- quiz ---------- */
 .topbar{display:flex;align-items:center;gap:10px;padding:18px 16px 8px;position:relative;z-index:2}
-.backbtn{background:var(--card);color:var(--ink);border:1px solid var(--border);border-radius:6px;padding:8px 14px;font-size:14px;cursor:pointer;box-shadow:var(--shadow-sm)}
-.chip{flex:1;text-align:left;font-size:12px;color:var(--muted);line-height:1.4}
+.backbtn{background:var(--card);color:var(--ink);border:1px solid var(--border);border-radius:999px;padding:8px 14px;font-size:14px;cursor:pointer;box-shadow:var(--shadow-sm)}
+.chip{flex:1;text-align:center;font-size:12px;color:var(--muted);line-height:1.4}
 .chip b{color:var(--ink)}
-.scorepill{background:var(--card);border:1px solid var(--border);color:var(--ink);border-radius:6px;padding:7px 12px;font-size:13px;white-space:nowrap;box-shadow:var(--shadow-sm)}
+.scorepill{background:var(--card);border:1px solid var(--border);color:var(--ink);border-radius:999px;padding:7px 12px;font-size:13px;white-space:nowrap;box-shadow:var(--shadow-sm)}
 .scorepill b{color:var(--teal-dark)}
-.prog{height:6px;background:var(--border);border-radius:6px;margin:8px 20px 16px;overflow:hidden;position:relative;z-index:2}
-.prog i{display:block;height:100%;background:var(--teal);border-radius:6px;transition:width .4s}
+.prog{height:6px;background:var(--border);border-radius:20px;margin:8px 20px 16px;overflow:hidden;position:relative;z-index:2}
+.prog i{display:block;height:100%;background:var(--teal);border-radius:20px;transition:width .4s}
 .qcard{margin:2px 16px 18px;padding:22px 18px;position:relative;z-index:2;animation:pagein .45s ease;border-top:4px solid var(--teal)}
 @keyframes pagein{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-.qtag{display:inline-block;background:var(--teal-soft);color:var(--teal-dark);font-size:12px;font-weight:700;padding:6px 11px;border-radius:6px;margin-bottom:13px}
+.qtag{display:inline-block;background:var(--teal-soft);color:var(--teal-dark);font-size:12px;font-weight:700;padding:6px 11px;border-radius:999px;margin-bottom:13px}
 .qtext{font-weight:700;font-size:20px;line-height:1.55;color:var(--ink)}
 .opts{margin-top:18px;display:flex;flex-direction:column;gap:11px}
-.opt{display:flex;align-items:flex-start;gap:11px;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--border);border-radius:6px;padding:14px;font-size:16px;line-height:1.45;cursor:pointer;color:var(--ink);transition:transform .45s,opacity .45s,background .25s,border-color .25s,box-shadow .25s;animation:optin .45s ease both}
+.opt{display:flex;align-items:flex-start;gap:11px;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:14px;font-size:16px;line-height:1.45;cursor:pointer;color:var(--ink);transition:transform .45s,opacity .45s,background .25s,border-color .25s,box-shadow .25s;animation:optin .45s ease both}
 @keyframes optin{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .opt:active{transform:scale(.98)}
-.opt .letter{flex:0 0 30px;height:30px;border-radius:6px;background:var(--teal-soft);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--teal-dark);font-size:14px}
+.opt .letter{flex:0 0 30px;height:30px;border-radius:50%;background:var(--teal-soft);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--teal-dark);font-size:14px}
 .opt.correct{background:var(--green-soft);border-color:var(--green);box-shadow:0 0 0 3px rgba(31,157,85,.25),0 12px 26px rgba(31,157,85,.3);animation:win .55s ease}
 .opt.correct .letter{background:var(--green);color:#fff}
 .opt.wrong{background:var(--red-soft);border-color:var(--red);animation:shake .35s ease}
@@ -183,59 +183,59 @@ h1.big em{font-style:normal;color:var(--teal)}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
 .mark{margin-left:auto;font-size:19px;font-weight:800}
 .correct .mark{color:var(--green)}.wrong .mark{color:var(--red)}
-.why{margin-top:16px;background:var(--teal-soft);border:1px solid #B9D9DE;border-radius:6px;padding:14px;display:none}
+.why{margin-top:16px;background:var(--teal-soft);border:1px solid #B9D9DE;border-radius:14px;padding:14px;display:none}
 .why.show{display:block;animation:pagein .35s ease}
 .why b{color:var(--teal-dark);font-size:14px}
 .why p{margin-top:6px;font-size:15px;line-height:1.6;color:var(--ink)}
-.next{width:100%;margin-top:16px;padding:15px;border:none;border-radius:6px;background:var(--teal);color:#fff;font-size:16px;font-weight:700;cursor:pointer;display:none;box-shadow:0 10px 24px rgba(18,48,74,.12)}
+.next{width:100%;margin-top:16px;padding:15px;border:none;border-radius:999px;background:var(--teal);color:#fff;font-size:16px;font-weight:700;cursor:pointer;display:none;box-shadow:0 10px 24px rgba(14,124,134,.35)}
 .next.show{display:block}
-.result{margin:22px 16px;padding:30px 22px;text-align:left;position:relative;z-index:2;animation:pagein .45s ease}
+.result{margin:22px 16px;padding:30px 22px;text-align:center;position:relative;z-index:2;animation:pagein .45s ease}
 .result h2{font-weight:800;font-size:25px;margin-top:8px;line-height:1.35;color:var(--ink)}
-.result .pct{font-size:32px;font-weight:800;margin-top:12px;color:var(--teal)}
+.result .pct{font-size:46px;font-weight:800;margin-top:12px;color:var(--teal)}
 .result p{color:var(--muted);line-height:1.65;margin-top:9px;font-size:15px}
-.btn{display:block;width:100%;padding:15px;border:none;border-radius:6px;font-size:16px;font-weight:700;cursor:pointer;margin-top:12px}
-.btn.grad{background:var(--teal);color:#fff;box-shadow:0 10px 24px rgba(18,48,74,.12)}
+.btn{display:block;width:100%;padding:15px;border:none;border-radius:999px;font-size:16px;font-weight:700;cursor:pointer;margin-top:12px}
+.btn.grad{background:var(--teal);color:#fff;box-shadow:0 10px 24px rgba(14,124,134,.35)}
 .btn.plain{background:var(--card);color:var(--ink);border:1px solid var(--border)}
 /* ---------- cover: top bar, hero, stats, cards ---------- */
 .topbar2{display:flex;align-items:center;gap:10px;padding:6px 16px 14px}
-.logo{width:44px;height:44px;border-radius:6px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;flex:none}
+.logo{width:44px;height:44px;border-radius:12px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;flex:none}
 .brand{font-size:20px;font-weight:900;color:var(--ink);letter-spacing:.02em}
-.brand-pill{margin-left:auto;background:var(--teal);color:#fff;font-size:12px;font-weight:800;letter-spacing:.08em;padding:6px 10px;border-radius:6px}
+.brand-pill{margin-left:auto;background:var(--teal);color:#fff;font-size:12px;font-weight:800;letter-spacing:.08em;padding:6px 10px;border-radius:999px}
 .hero{padding:10px 20px 0;position:relative;z-index:2}
-.hero-badge{display:inline-block;background:var(--card);border:1px solid var(--border);color:var(--teal-dark);font-size:12px;font-weight:800;padding:7px 12px;border-radius:6px;box-shadow:var(--shadow-sm)}
-.hero-h{font-size:32px;line-height:1.05;font-weight:900;margin:14px 0 10px;color:var(--ink)}
+.hero-badge{display:inline-block;background:var(--card);border:1px solid var(--border);color:var(--teal-dark);font-size:12px;font-weight:800;padding:7px 12px;border-radius:999px;box-shadow:var(--shadow-sm)}
+.hero-h{font-size:40px;line-height:1.05;font-weight:900;margin:14px 0 10px;color:var(--ink)}
 .hero-h .b{color:var(--ink)}
 .hero-h .n{color:var(--teal)}
 .hero p{color:var(--muted);font-size:15px;line-height:1.55}
 .hero-btns{display:flex;gap:10px;margin-top:16px}
-.hero-btns .b-cta{flex:1;padding:13px 10px;border:none;border-radius:6px;background:var(--teal);color:#fff;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 8px 20px rgba(18,48,74,.12);white-space:nowrap}
+.hero-btns .b-cta{flex:1;padding:13px 10px;border:none;border-radius:999px;background:var(--teal);color:#fff;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 8px 20px rgba(14,124,134,.35);white-space:nowrap}
 .hero-btns .b-cta:active{transform:translateY(2px)}
-.hero-btns .b-ghost{flex:1;padding:13px 10px;border:1.5px solid var(--border);background:var(--card);color:var(--ink);font-size:14px;font-weight:800;border-radius:6px;cursor:pointer;white-space:nowrap}
-.stats{display:flex;background:var(--card);border:1px solid var(--border);border-radius:6px;box-shadow:var(--shadow-sm);margin:18px 16px 6px;padding:14px 6px}
-.stat2{flex:1;text-align:left}
+.hero-btns .b-ghost{flex:1;padding:13px 10px;border:1.5px solid var(--border);background:var(--card);color:var(--ink);font-size:14px;font-weight:800;border-radius:999px;cursor:pointer;white-space:nowrap}
+.stats{display:flex;background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow-sm);margin:18px 16px 6px;padding:14px 6px}
+.stat2{flex:1;text-align:center}
 .stat2 .ic{display:block;font-size:18px;margin-bottom:2px}
 .stat2 b{display:block;font-size:22px;color:var(--ink)}
 .stat2 span{font-size:12px;color:var(--muted);font-weight:700}
 .stat2 + .stat2{border-left:1px solid var(--border)}
-.sec-label{margin:18px 16px 2px;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--teal-dark);text-transform:none}
-.fcard{display:flex;align-items:center;gap:14px;text-align:left;background:var(--card);border:1px solid var(--border);border-radius:6px;box-shadow:var(--shadow-sm);padding:14px 16px;cursor:pointer;width:100%}
+.sec-label{margin:18px 16px 2px;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--teal-dark);text-transform:uppercase}
+.fcard{display:flex;align-items:center;gap:14px;text-align:left;background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow-sm);padding:14px 16px;cursor:pointer;width:100%}
 .fcard:active{transform:scale(.98)}
-.f-ico{flex:0 0 auto;width:52px;height:52px;border-radius:6px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800}
+.f-ico{flex:0 0 auto;width:52px;height:52px;border-radius:14px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800}
 .fcard.mock .f-ico{background:var(--blue)}
 .fcard.kmu .f-ico{background:var(--green)}
 .f-body{flex:1;min-width:0}
-.f-tag{display:block;font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--teal-dark);text-transform:none}
+.f-tag{display:block;font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--teal-dark);text-transform:uppercase}
 .f-title{display:block;color:var(--ink);font-size:16px;font-weight:800;line-height:1.25}
 .f-sub{display:block;color:var(--muted);font-size:13px}
 .f-go{color:var(--muted-2);font-size:22px;flex:none}
-.navfoot{margin-top:22px;background:var(--card);border:1px solid var(--border);border-radius:6px;padding:16px;color:var(--ink);display:flex;align-items:center;gap:10px}
-.navfoot .logo{width:36px;height:36px;font-size:15px;border-radius:6px}
+.navfoot{margin-top:22px;background:var(--card);border:1px solid var(--border);border-radius:18px;padding:16px;color:var(--ink);display:flex;align-items:center;gap:10px}
+.navfoot .logo{width:36px;height:36px;font-size:15px;border-radius:9px}
 .navfoot b{font-size:15px}
 .navfoot span{margin-left:auto;font-size:12px;color:var(--muted)}
 .ring-wrap{position:relative;width:max-content;margin:10px auto 4px}
 .ring-wrap svg{transform:rotate(-90deg);display:block}
-.ring-num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:left}
-.ring-num b{font-size:32px;color:var(--teal-dark)}
+.ring-num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.ring-num b{font-size:36px;color:var(--teal-dark)}
 .ring-num span{font-size:12px;color:var(--muted);font-weight:700}
 
 /* ---- Mobile font scale (ChatGPT mobile audit, 20 Nov 2026) ----
@@ -246,7 +246,7 @@ h1.big em{font-style:normal;color:var(--teal)}
  --fs-xs:12px; --fs-sm:14px; --fs-md:16px; --fs-lg:18px;
  --fs-h2:clamp(21px,5.5vw,24px);
  --fs-h1:clamp(26px,7.5vw,34px);
- --fs-hero:clamp(26px,7vw,32px);
+ --fs-hero:clamp(30px,9vw,40px);
 }
 #splash h1{font-size:clamp(26px,7.5vw,38px);line-height:1.15;text-wrap:balance}
 
@@ -257,12 +257,12 @@ h1.big em{font-style:normal;color:var(--teal)}
   <header class="site-header"><div class="site-header-in">
     <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
     <details class="menu"><summary class="menu-btn" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
-    <nav class="menu-list" aria-label="Site menu"><a href="index.html">Home</a><a href="material.html">Study Materials</a><a href="mega.html">Past Papers</a><a href="mock-tests.html">Practice Tests</a><a href="results.html">Examination Results</a><a href="gpa-calculator.html">GPA &amp; CGPA Calculator</a></nav></details>
+    <nav class="menu-list" aria-label="Site menu"><a href="index.html">Home</a><a href="material.html">Study Materials</a><a href="mega.html">Past Papers</a><a href="mock-tests.html">Practice Tests</a><a href="results.html">Examination</a><a href="gpa-calculator.html">GPA &amp; CGPA Calculator</a></nav></details>
   </div></header>
-  
+  <span class="plus p1">✚</span><span class="plus p2">♥</span><span class="plus p3">✚</span><span class="plus p4">♥</span>
   <span class="wm wm-l">TA SERIES</span><span class="wm wm-r">TA SERIES</span>
   <div id="splash">
-    
+    <span class="flo f1">✚</span><span class="flo f2">♥</span><span class="flo f3">✚</span>
     <span class="wm wm-l">TA SERIES</span><span class="wm wm-r">TA SERIES</span>
     <div class="cross">✚</div>
     <svg class="ecg" viewBox="0 0 240 56"><path d="M0 28 H60 L72 28 L80 10 L92 46 L100 22 L108 28 H150 L160 28 L168 14 L178 42 L186 28 H240"/></svg>
@@ -272,7 +272,7 @@ h1.big em{font-style:normal;color:var(--teal)}
     <button class="enter" onclick="enterApp()">Tap to Enter →</button>
     <div class="loadbar"><i></i></div>
   </div>
-  <div id="opener"><div class="openbook"><div class="cov"><div style="font-size:28px">📖</div><h3 id="openerTitle"></h3><p>TA SERIES • OPENING</p></div><div class="pg"></div></div></div>
+  <div id="opener"><div class="openbook"><div class="cov"><div style="font-size:38px">📖</div><h3 id="openerTitle"></h3><p>TA SERIES • OPENING</p></div><div class="pg"></div></div></div>
   <div id="view"></div>
   <footer class="site-footer"><div class="site-footer-in">
     <div class="foot-top">
@@ -282,7 +282,8 @@ h1.big em{font-style:normal;color:var(--teal)}
     <div class="foot-close">
       <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
       <p>Contact: WhatsApp <a href="https://wa.me/923055959410">+92 305 5959410</a> &middot; Email <a href="mailto:nurseofuture@gmail.com">nurseofuture@gmail.com</a></p>
-    <p>&copy; 2026 TA SERIES. All rights reserved.</p>
+      <p>1,083 study files &middot; 171 results &middot; 17 past-paper books</p>
+      <p>&copy; 2026 TA SERIES. All rights reserved.</p>
     </div>
   </div></footer>
 </div>
@@ -299,12 +300,12 @@ function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').rep
 function beep(ok){ if(!soundOn) return; try{ const c=new (window.AudioContext||window.webkitAudioContext)(); const o=c.createOscillator(), g=c.createGain(); o.connect(g); g.connect(c.destination); o.frequency.value= ok?880:220; g.gain.value=.06; o.start(); o.stop(c.currentTime+.16); setTimeout(()=>c.close(),250);}catch(e){} }
 function enterApp(){ if(entered) return; entered=true; document.getElementById('splash').classList.add('gone'); renderCover(); }
 function renderCover(){
-  const ICONS={};
+  const ICONS={1:'🧠',2:'🌱',3:'👶',4:'🧒',5:'🎒',6:'🧑',7:'👨‍💼',8:'👴',9:'😊',10:'💭',11:'📚',12:'💡',13:'🔥'};
   const card=(c)=>{
     const b=best(c.mock?'mock':c.paper?'paper':c.n);
     const act=c.mock?'openMock()':c.paper?'openPaper()':'openChapter('+c.n+')';
     const tag=c.mock?'EXAM MODE':c.paper?'PRACTISE PAST PAPERS':'CHAPTER '+c.n;
-    const ico=c.mock?'Exam':c.paper?'Paper':c.n;
+    const ico=c.mock?'🎯':c.paper?'📝':(ICONS[c.n]||c.n);
     const sub=c.mock?'All 490 MCQs · Real Paper 70 in 90 min':c.paper?'70 MCQs · 90 minutes':c.count+' MCQs'+(b!=null?' · Best '+b+'%':'');
     return `<button class="fcard${c.mock?' mock':''}${c.paper?' kmu':''}" onclick="${act}">
     <span class="f-ico">${ico}</span>
@@ -316,11 +317,11 @@ function renderCover(){
   const chs=CHAPTERS.map(card).join('');
   const kmu=card(SHELF[0]), mock=card(SHELF[SHELF.length-1]);
   document.getElementById('view').innerHTML = `
-  <div class="hero"><span class="hero-badge">Study Resources for BSN Students</span>
+  <div class="hero"><span class="hero-badge">🎓 Study Resources for BSN Students</span>
   <h1 class="hero-h"><span class="b">Developmental</span><br><span class="n">Psychology</span></h1>
   <p>Study smarter. Prepare better. Excel in your journey.</p>
-  <div class="hero-btns"><button class="b-cta" onclick="openMock()">Exam Mode</button><button class="b-ghost" onclick="openPaper()">📝 Practise Past Papers</button></div></div>
-  <div class="stats"><div class="stat2"><b>490</b><span>MCQs</span></div><div class="stat2"><b>13</b><span>Chapters</span></div><div class="stat2"><b>7</b><span>Years</span></div><div class="stat2"><b>70</b><span>Mock MCQs</span></div></div>
+  <div class="hero-btns"><button class="b-cta" onclick="openMock()">🎯 Exam Mode →</button><button class="b-ghost" onclick="openPaper()">📝 Practise Past Papers</button></div></div>
+  <div class="stats"><div class="stat2"><span class="ic">📚</span><b>490</b><span>MCQs</span></div><div class="stat2"><span class="ic">📖</span><b>13</b><span>Chapters</span></div><div class="stat2"><span class="ic">📅</span><b>7</b><span>Years</span></div><div class="stat2"><span class="ic">🎯</span><b>70</b><span>Mock MCQs</span></div></div>
   <div class="sec-label">KMU PAPER &amp; EXAM MODE</div>
   <div class="grid">${kmu}${mock}</div>
   <div class="sec-label">CHAPTERS — TAP TO OPEN</div>
@@ -361,8 +362,8 @@ function renderChapterChoice(n){
   <div class="big-no">${String(n).padStart(2,'0')}</div>
   <h2>${esc(c.title)}</h2>
   <p>${c.count} solved MCQs from past papers 2017–2025.${b!=null?' Your best score here is '+b+'%.':''}</p>
-  <button class="btn grad liquid fill" onclick="startChapterDirect(${n})" style="margin-top:20px">Start Chapter — All ${c.count} MCQs</button>
-  <button class="btn outline liquid" onclick="renderChapterSetup(${n})" style="margin-top:12px">Customise Test</button>
+  <button class="btn grad liquid fill" onclick="startChapterDirect(${n})" style="margin-top:20px">📖 Start Chapter — All ${c.count} MCQs</button>
+  <button class="btn outline liquid" onclick="renderChapterSetup(${n})" style="margin-top:12px">⚙️ Customise Test</button>
   <button class="btn plain" onclick="renderCover()">← Back</button></div>`;
   window.scrollTo(0,0);
 }
@@ -394,7 +395,7 @@ function renderMockSetup(){
   const want=mockSetup.mode==='real'?70:mockSetup.mode==='quick'?20:pool.length;
   document.getElementById('view').innerHTML = `
   <div class="intro glass"><div class="eyebrow">TA SERIES • NU254</div>
-  
+  <div style="font-size:52px;margin-top:8px">🎯</div>
   <h2>Full Exam Mode</h2>
   <p>All 490 solved MCQs from past papers 2017–2025.${b!=null?' Your best mock score is '+b+'%.':''}</p>
   ${chips('CHOOSE YOUR TEST', 'mode', [['real','Real Paper — 70 MCQs · 90 min'],['quick','Quick — 20 MCQs'],['full','Full — all 490 MCQs']], mockSetup.mode, 'setMock')}
@@ -420,7 +421,7 @@ function renderPaperSetup(){
   const yearCount=paperSetup.mode==='year'?QS.filter(q=>(q.tag||'').startsWith(paperSetup.year)).length:490;
   document.getElementById('view').innerHTML = `
   <div class="intro glass"><div class="eyebrow">TA SERIES • NU254</div>
-  
+  <div style="font-size:52px;margin-top:8px">📝</div>
   <h2>KMU Practise Past Papers</h2>
   <p>Your real paper, online. 70 MCQs in 90 minutes.${b!=null?' Your best paper score is '+b+'%.':''}</p>
   ${chips('HOW DO YOU WANT IT?', 'mode', [['year','One full year'],['all','Shuffle all years']], paperSetup.mode, 'setPaper')}
@@ -462,15 +463,15 @@ function startMock(){
   renderQuiz();
 }
 function exitQuiz(){ if(cur&&cur.timerId) clearInterval(cur.timerId); renderCover(); }
-function toggleSound(){ soundOn=!soundOn; const b=document.getElementById('sndbtn'); if(b) b.textContent=soundOn?'Sound on':'Sound off'; }
+function toggleSound(){ soundOn=!soundOn; const b=document.getElementById('sndbtn'); if(b) b.textContent=soundOn?'🔊':'🔇'; }
 function renderQuiz(){
   if(cur.timerId) clearInterval(cur.timerId);
   const q=cur.list[cur.idx], letters=['A','B','C','D','E'];
   document.getElementById('view').innerHTML = `
   <div class="topbar"><button class="backbtn" onclick="exitQuiz()">‹ Back</button>
   <div class="chip"><b>${esc(cur.title)}</b><br><span style="font-size:12px;letter-spacing:2px">TA SERIES • NU254</span></div>
-  <div class="scorepill"><span id="timer">⏱ 00:00</span> · <span id="scorepill">Score <b>${cur.score}</b>${streak>1?' &nbsp;Streak '+streak:''}</span></div>
-  <button class="backbtn" id="sndbtn" onclick="toggleSound()">${soundOn?'Sound on':'Sound off'}</button></div>
+  <div class="scorepill"><span id="timer">⏱ 00:00</span> · <span id="scorepill">Score <b>${cur.score}</b>${streak>1?' &nbsp;🔥'+streak:''}</span></div>
+  <button class="backbtn" id="sndbtn" onclick="toggleSound()">${soundOn?'🔊':'🔇'}</button></div>
   <div class="prog"><i style="width:${Math.round(cur.idx/cur.list.length*100)}%"></i></div>
   <div class="qcard glass">
     <span class="qtag">${esc(q.tag||'Past Paper')} &nbsp;•&nbsp; Q ${cur.idx+1} of ${cur.list.length}</span>
@@ -511,7 +512,7 @@ function answer(i,btn){
       if(j===q.answer){ o.classList.add('correct'); o.querySelector('.mark').textContent='✓'; }
       else { o.style.transitionDelay=(0.08*(j+1))+'s'; o.classList.add('gone'); }
     });
-    document.getElementById('whytext').textContent=(dt<=10?'Fast answer — '+dt+'s! ':'')+'Correct! '+q.rationale;
+    document.getElementById('whytext').textContent=(dt<=10?'⚡ Fast answer — '+dt+'s! ':'')+'Correct! '+q.rationale;
   } else {
     streak=0; beep(false);
     cur.wrong.push({q,picked:i});
@@ -522,7 +523,7 @@ function answer(i,btn){
     });
     document.getElementById('whytext').textContent='Not quite. The correct answer is '+['A','B','C','D','E'][q.answer]+'. '+q.rationale;
   }
-  document.getElementById('scorepill').innerHTML='Score <b>'+cur.score+'</b>'+(streak>1?' &nbsp;Streak '+streak:'');
+  document.getElementById('scorepill').innerHTML='Score <b>'+cur.score+'</b>'+(streak>1?' &nbsp;🔥'+streak:'');
   document.querySelector('.prog i').style.width=Math.round((cur.idx+1)/cur.list.length*100)+'%';
   document.getElementById('why').classList.add('show');
   document.getElementById('nextbtn').classList.add('show');
@@ -536,10 +537,10 @@ function renderResult(timeUp){
   const secs=Math.round((Date.now()-cur.startTime)/1000);
   const avg=Math.round(secs/Math.max(1,total));
   let msg, emoji;
-  if(pct>=80){ msg='Excellent! You really know this. Keep it up.'; emoji=''; }
-  else if(pct>=60){ msg='Good work! A little more reading and you will be excellent.'; emoji=''; }
-  else if(pct>=40){ msg="It's okay. You just haven't read this part properly yet. Read it once, then try again — you will do better."; emoji=''; }
-  else { msg="Don't worry at all. It only means you haven't read this yet. Read the chapter once, then come back — you will see the difference."; emoji=''; }
+  if(pct>=80){ msg='Excellent! You really know this. Keep it up.'; emoji='🏆'; }
+  else if(pct>=60){ msg='Good work! A little more reading and you will be excellent.'; emoji='🌟'; }
+  else if(pct>=40){ msg="It's okay. You just haven't read this part properly yet. Read it once, then try again — you will do better."; emoji='📖'; }
+  else { msg="Don't worry at all. It only means you haven't read this yet. Read the chapter once, then come back — you will see the difference."; emoji='💪'; }
   if(timeUp) msg='Time is up — the 90 minutes ended. '+msg;
   const byCh={};
   cur.answers.forEach(a=>{ const c=a.q.chapter; if(!byCh[c]) byCh[c]={total:0,correct:0}; byCh[c].total++; if(a.ok) byCh[c].correct++; });
@@ -550,22 +551,22 @@ function renderResult(timeUp){
     const st=byCh[c], p=Math.round(st.correct/st.total*100);
     const title=CHAPTERS.find(x=>x.n===c).title;
     const weak=c===weakest&&p<60;
-    return `<div class="chrow" onclick="toggleChRow(${c})"><span><b>Chapter ${c} — ${esc(title)}</b><br>${st.total} MCQs came · ${st.correct} correct · ${p}% ${weak?'<span class="weak">· Read this chapter again</span>':''}</span><span>›</span></div><div class="chdetail" id="chd${c}" style="display:none"></div>`;
+    return `<div class="chrow" onclick="toggleChRow(${c})"><span><b>Chapter ${c} — ${esc(title)}</b><br>${st.total} MCQs came · ${st.correct} correct · ${p}% ${weak?'<span class="weak">· 📖 Read this chapter again</span>':''}</span><span>›</span></div><div class="chdetail" id="chd${c}" style="display:none"></div>`;
   }).join('');
   const C=(2*Math.PI*72).toFixed(1);
   const arc=((pct/100)*2*Math.PI*72).toFixed(1);
   document.getElementById('view').innerHTML = `
-  <div style="padding:30px 0 0;text-align:left;position:relative;z-index:2"><div class="eyebrow">TA SERIES • NU254</div></div>
-  <div class="result glass"><div style="font-size:32px">${emoji}</div><h2>${esc(cur.title)}</h2>
+  <div style="padding:30px 0 0;text-align:center;position:relative;z-index:2"><div class="eyebrow">TA SERIES • NU254</div></div>
+  <div class="result glass"><div style="font-size:56px">${emoji}</div><h2>${esc(cur.title)}</h2>
   <div class="ring-wrap"><svg width="180" height="180" viewBox="0 0 160 160"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0E7C86"/><stop offset="100%" stop-color="#0B6B75"/></linearGradient></defs><circle cx="80" cy="80" r="72" fill="none" stroke="#E3F0F2" stroke-width="12"/><circle cx="80" cy="80" r="72" fill="none" stroke="url(#rg)" stroke-width="12" stroke-linecap="round" stroke-dasharray="${arc} ${C}"/></svg><div class="ring-num"><b>${pct}%</b><span>${cur.score} of ${total} correct</span></div></div>
   <p>${msg}</p>
   <div class="statgrid">
     <div class="stat">⏱ Time<b>${fmtTime(secs)}</b></div>
-    <div class="stat">Fast answers<b>${cur.fast}</b></div>
+    <div class="stat">⚡ Fast answers<b>${cur.fast}</b></div>
     <div class="stat">Avg / question<b>${avg}s</b></div>
     <div class="stat">Wrong<b>${cur.wrong.length}</b></div>
   </div>
-  ${weakest!=null&&weakestPct<60?`<p style="margin-top:14px"><b>Weakest chapter: Chapter ${weakest}</b> — only ${weakestPct}% correct. Read it again first.</p>`:''}
+  ${weakest!=null&&weakestPct<60?`<p style="margin-top:14px"><b>📖 Weakest chapter: Chapter ${weakest}</b> — only ${weakestPct}% correct. Read it again first.</p>`:''}
   <div style="text-align:left;margin-top:16px"><div class="optlabel" style="margin-top:0">YOUR CHAPTERS — TAP TO SEE THE MCQs</div>${rows}</div>
   <button class="btn grad liquid fill" onclick="retry()">Try Again</button>
   <button class="btn plain" onclick="renderCover()">Back</button>
