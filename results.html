@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://taseries.goatcounter.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'">
-<title>KMU Results — TA SERIES Official</title>
-<meta name="description" content="KMU BS Nursing result PDFs by region, semester, batch and session.">
+<title>Examination Results — TA SERIES Official</title>
+<meta name="description" content="KMU BSN examination results — 144 result PDFs by region, semester, batch and session. Regular, Summer, Winter and Makeup.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E7C86'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
 <script src="data.js?v=9"></script>
@@ -15,16 +15,19 @@
 <header class="site-header">
   <div class="site-header-in">
     <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
-    <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="menu-label">Menu</span>
+    <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="material.html">Study Materials</a>
-      <a href="mock-tests.html">Practice Tests</a>
-      <a href="mega.html">Past Papers</a>
-      <a href="examination.html" class="active">Examination</a>
-      <a href="gpa-calculator.html">GPA &amp; CGPA Calculator</a>
+      <a href="results.html" class="active">Results</a>
+      <a href="mega.html">Mega Series</a>
+      <a href="mock-tests.html">Mock Tests</a>
+      <a href="gpa-calculator.html">GPA Calculator</a>
+      <a href="tools.html">Tools</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -32,13 +35,12 @@
 <main>
   <div class="container">
     <div class="page-head">
-      <h1>KMU Results</h1>
-      <p>BS Nursing result PDFs by region, semester, batch and session.</p>
-    <p style="margin-top:8px;font-size:14px;color:var(--muted)">Results shared with thanks to Noman Ahmad, Admin Professor Nurse, KMU IHS Peshawar.</p>
+      <h1>Examination Results</h1>
+      <p>144 KMU result PDFs. Search or choose a filter to see results — by region, semester, batch and examination session.</p>
     </div>
     <label class="search" style="margin-top:18px">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
-      <input id="q" type="search" placeholder="Search, e.g. BSN 4th 22-26" aria-label="Search results">
+      <input id="q" type="search" placeholder="Search results, e.g. BSN 4th 22-26&hellip;" aria-label="Search results">
     </label>
     <div style="display:flex;gap:10px;margin-top:18px;align-items:center;flex-wrap:wrap">
       <button type="button" class="btn btn-teal" id="filter-btn" aria-haspopup="dialog" style="min-height:48px">Filters <span id="filter-count"></span></button>
@@ -55,14 +57,14 @@
       </div>
       <div class="sheet-actions">
         <button type="button" class="btn btn-teal" id="sheet-apply">Show results</button>
-        <button type="button" class="btn btn-outline" id="sheet-clear">Clear filters</button>
+        <button type="button" class="btn btn-outline" id="sheet-clear">Clear all</button>
       </div>
     </div>
-    <p style="margin-top:14px;font-size:13.5px;color:var(--muted)"><span id="total-line"></span></p>
+    <p style="margin-top:14px;font-size:13.5px;color:var(--muted)"><a href="#" id="reset" style="color:var(--teal);font-weight:700">Reset filters</a> &middot; <span id="total-line"></span></p>
 
     <div id="empty-state" class="empty" style="padding:48px 18px">
-      <b id="empty-count"></b>
-      <p>Search, or choose a filter to narrow them down.</p>
+      <b>Search or choose a filter to see results</b>
+      <p>144 results are ready — type a word above, or pick a region, semester, batch or session.</p>
     </div>
 
     <div id="results-wrap" class="hidden" style="padding-bottom:40px">
@@ -70,9 +72,7 @@
       <div id="regular"></div>
       <div class="sec-head" style="margin-top:30px"><h2>Special Results</h2><span id="spc-count" style="font-size:13.5px;color:var(--muted);font-weight:700"></span></div>
       <div id="special"></div>
-      <p id="no-match" class="empty hidden"><b>No results match</b><br>Try a different word or filter, or clear the filters above.</p>
-      <p style="margin-top:18px;font-size:14px;color:var(--muted)">If Download does not open, use the Alternative link.</p>
-      <p style="margin-top:8px;font-size:14px;color:var(--muted)">TA SERIES is independent. Please confirm your result with KMU or your college.</p>
+      <p id="no-match" class="empty hidden"><b>No results match</b><br>Try a different word or filter, or reset the filters above.</p>
     </div>
   </div>
 </main>
@@ -80,13 +80,15 @@
 <footer class="site-footer"><div class="site-footer-in">
   <div class="foot-top">
     <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
-    <nav class="foot-links" aria-label="Footer"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="copyright.html">Copyright</a><a href="contact.html">Give feedback</a></nav>
-    <a class="channel-link" href="https://whatsapp.com/channel/0029VbDcAC81HsppHdpHvj3p" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>WhatsApp channel</a>
+    <nav class="foot-links" aria-label="Footer"><a href="about.html">About</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a><a href="tools.html">Tools</a></nav>
+    <div class="foot-social">
+      <a href="https://wa.me/923055959410" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg></a>
+      <a href="https://whatsapp.com/channel/0029VbDcAC81HsppHdpHvj3p" aria-label="TA SERIES WhatsApp Channel" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg></a>
+    </div>
   </div>
   <div class="foot-close">
-    <p class="foot-note">TA SERIES is independent and not affiliated with any university or examination board.</p>
-    <p class="tagline">Making Nursing Simple. Making Students Strong.</p>
-    <p>&copy; 2026 TA SERIES.</p>
+    <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
+    <p>&copy; 2026 TA SERIES. All rights reserved.</p>
   </div>
 </div></footer>
 
@@ -100,11 +102,9 @@
   var regions=[...new Set(RESULTS.map(function(r){return r.region;}).filter(Boolean))].sort();
   var regionSel=document.getElementById('f-region');
   regions.forEach(function(r){
-    if(r==='All Regions') return; /* the first option is already "All Regions" (no filter) */
     var o=document.createElement('option'); o.textContent=r; regionSel.appendChild(o);
   });
   document.getElementById('total-line').textContent=RESULTS.length+' results in total';
-  document.getElementById('empty-count').textContent=RESULTS.length+' results available.';
   var q=document.getElementById('q'),
       fRegion=regionSel, fSem=document.getElementById('f-sem'),
       fBatch=document.getElementById('f-batch'), fSession=document.getElementById('f-session'),
@@ -112,55 +112,12 @@
       regEl=document.getElementById('regular'), spcEl=document.getElementById('special'),
       noMatch=document.getElementById('no-match');
 
-  function ordinal(s){ return {1:'1st',2:'2nd',3:'3rd',4:'4th',5:'5th',6:'6th',7:'7th',8:'8th'}[s]||s+'th'; }
-  function sessionLabel(r){
-    /* The card shows the real session: Normal is the regular session. */
-    if(r.type==='Normal') return 'Regular session';
-    if(r.type==='Fall') return 'Fall session';
-    if(r.type==='Spring') return 'Spring session';
-    if(r.type==='Makeup') return 'Makeup session';
-    if(r.type==='Summer') return 'Summer session';
-    if(r.type==='Winter') return 'Winter session';
-    return r.type+' session';
-  }
-  function qualifier(r){
-    var n=r.name||'';
-    if(/REVISED/.test(n)||/\(R\)/.test(n)) return 'Revised';
-    if(/RE-?APPEAR/.test(n)) return 'Re-appear';
-    if(/\bP-?1\b/.test(n)) return 'Part 1';
-    if(/\bP-?2\b/.test(n)) return 'Part 2';
-    if(/\bP-?3\b/.test(n)) return 'Part 3';
-    if(/\bP-?4\b/.test(n)) return 'Part 4';
-    if(/NEW GRADING/.test(n)) return 'New grading';
-    if(/OLD-GRADING/.test(n)||/OLD GRADING/.test(n)) return 'Old grading';
-    if(/NO-OSPE/.test(n)||/NO OSPE/.test(n)) return 'No OSPE';
-    if(/SIGNED/.test(n)) return 'Signed';
-    if(/STAMPED/.test(n)) return 'Stamped';
-    if(/ONLY PHARMA/.test(n)) return 'Only Pharma';
-    if(/KURRAM/.test(n)) return 'Kurram';
-    if(/UFM/.test(n)) return 'UFM';
-    return '';
-  }
-  function cardTitle(r){
-    var sems=r.semesters||[];
-    var semText=sems.length===1 ? ordinal(sems[0])+' semester' : sems.map(ordinal).join(', ')+' semesters';
-    var parts=['BSN '+semText];
-    if(r.batch) parts.push('Batch '+String(r.batch).replace('-','\u2013'));
-    parts.push(r.region||'All Regions');
-    parts.push(sessionLabel(r));
-    var q=qualifier(r);
-    if(q) parts.push(q);
-    return parts.join(' \u00b7 ');
-  }
   function row(r){
-    var btns='<span class="dl">'+
-      '<a class="dl-text-btn dl-fast" href="'+r.url+'" target="_blank" rel="noopener">Download</a>';
-    if(r.gofile){ btns+='<a class="dl-text-btn dl-slow" href="'+r.gofile+'" target="_blank" rel="noopener">Alternative link</a>'; }
-    btns+='</span>';
-    return '<div class="row">'+
+    var sems=(r.semesters||[]).map(function(s){return s+'th';}).join(', ');
+    return '<a class="row" href="'+r.url+'" target="_blank" rel="noopener">'+
       '<span class="mini-ic amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a2 2 0 0 0 2 4h1M17 6h3a2 2 0 0 1-2 4h-1"/></svg></span>'+
-      '<span class="body"><b>'+cardTitle(r)+'</b><span>PDF &middot; '+r.size+'</span></span>'+
-      btns+'</div>';
+      '<span class="body"><b>'+r.name+'</b><span>'+sessionOf(r)+' &middot; '+(r.region||'All Regions')+' &middot; '+(sems||'—')+' Semester &middot; Batch '+r.batch+' &middot; '+r.size+'</span></span>'+
+      '<span class="badge pdf">PDF</span><span class="chev">&rsaquo;</span></a>';
   }
   function active(){
     return q.value.trim()!==''||fRegion.value||fSem.value||fBatch.value||fSession.value;
@@ -179,6 +136,8 @@
     });
     var reg=list.filter(function(r){return REGULAR_TYPES[r.type];});
     var spc=list.filter(function(r){return !REGULAR_TYPES[r.type];});
+    document.getElementById('reg-count').textContent=reg.length+' results';
+    document.getElementById('spc-count').textContent=spc.length+' results';
     regEl.innerHTML=reg.map(row).join('')||'<p class="kbd-note" style="color:var(--muted)">No regular results match.</p>';
     spcEl.innerHTML=spc.map(row).join('')||'<p class="kbd-note" style="color:var(--muted)">No special results match.</p>';
     noMatch.classList.toggle('hidden', list.length>0);
@@ -218,10 +177,15 @@
   document.getElementById('filter-btn').addEventListener('click',openSheet);
   document.getElementById('sheet-apply').addEventListener('click',function(){closeSheet();apply();});
   document.getElementById('sheet-clear').addEventListener('click',function(){
-    q.value=''; fRegion.value='';fSem.value='';fBatch.value='';fSession.value='';apply();
+    fRegion.value='';fSem.value='';fBatch.value='';fSession.value='';apply();
   });
   backdrop.addEventListener('click',closeSheet);
   [q,fRegion,fSem,fBatch,fSession].forEach(function(el){el.addEventListener('input',apply);el.addEventListener('change',apply);});
+  document.getElementById('reset').addEventListener('click',function(e){
+    e.preventDefault();
+    q.value=''; fRegion.value=''; fSem.value=''; fBatch.value=''; fSession.value='';
+    apply();
+  });
   var btn=document.getElementById('menu-btn'), nav=document.getElementById('site-nav');
   btn.addEventListener('click',function(){nav.classList.toggle('open');});
 })();

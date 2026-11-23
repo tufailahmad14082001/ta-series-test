@@ -14,7 +14,7 @@
   --ink:#12304A; --muted:#64748B; --muted-2:#64748B; --border:#E2E8F0; --line:#E2E8F0; --paper:#EEF2F6; --sunken:#E4EAF0;
   --shadow-d:#C2CBD5; --red:#CE4145; --red-soft:#FDECEC; --orange:#AF6021; --blue:#2F6FED; --green:#1A8447; --green-soft:#E3F5E9;
   --amber:#996A00; --gold:#986D21; --s6:#D08A2E; --why:#DCE9EC;
-  --r-lg:20px; --r-md:16px; --pill:999px; --btn-h:48px;
+  --r-lg:20px; --r-md:16px; --pill:999px; --btn-h:52px;
   --raise:#FFFFFF;
   --shadow:0 8px 24px rgba(15,42,68,.08);
   --shadow-sm:0 4px 14px rgba(15,42,68,.08);
@@ -42,9 +42,8 @@ p{margin:0}
 .site-nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;padding:8px 11px;border-radius:10px;white-space:nowrap;min-height:36px;display:inline-flex;align-items:center}
 .site-nav a:hover{background:var(--teal-soft);color:var(--teal-dark)}
 .site-nav a.active{color:var(--teal-dark);background:var(--teal-soft)}
-.menu-btn{display:none;min-width:44px;height:44px;border-radius:999px;place-items:center;gap:6px;padding:0 14px;color:var(--ink);margin-left:auto}
+.menu-btn{display:none;width:44px;height:44px;border-radius:50%;place-items:center;color:var(--ink);margin-left:auto}
 .menu-btn svg{width:22px;height:22px}
-.menu-btn .menu-label{font-size:14px;font-weight:700}
 @media (max-width:1060px){
   .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--card);flex-direction:column;padding:8px 16px 12px;gap:2px;box-shadow:0 12px 24px rgba(18,48,74,.12)}
   .site-nav.open{display:flex}
@@ -117,7 +116,7 @@ p{margin:0}
 .qtop{display:flex;align-items:center;gap:9px}
 .qno{flex:none;display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:26px;padding:0 9px;border-radius:8px;background:var(--teal);color:#fff;font-size:12px;font-weight:800}
 .repeat-badge{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;color:var(--teal-dark);background:var(--teal-soft);padding:3px 9px;border-radius:var(--pill)}
-.report-link{display:inline-block;margin-top:12px;padding:10px 18px;min-height:44px;border:1.5px solid var(--teal);border-radius:999px;background:#fff;color:var(--teal-dark);font-size:14px;font-weight:700;text-decoration:none;text-align:center}
+.report-link{display:inline-block;margin-top:10px;font-size:12px;color:var(--muted);text-decoration:underline}
 .qpaper{font-size:12px;font-weight:700;color:var(--muted)}
 .qtext{font-size:16px;font-weight:600;line-height:1.55;margin-top:8px;overflow-wrap:anywhere}
 .opts{margin-top:10px;display:grid;gap:7px}
@@ -178,9 +177,6 @@ mark{background:#BFE6EA;border-radius:3px;padding:0 1px;color:inherit}
 .foot-links a:hover{color:var(--teal-dark)}
 .foot-close{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.8}
 .foot-close .tagline{color:var(--teal-dark);font-weight:700}
-.foot-note{margin:0 0 2px}
-.channel-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--teal-dark);text-decoration:none;min-height:44px}
-.channel-link svg{width:18px;height:18px;fill:var(--teal);flex:none}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
 /* ---------- v22 quiz design (hero, stats, setups, quiz, result) — website sizes 12/14/16/18 only ---------- */
@@ -271,17 +267,15 @@ mark{background:#BFE6EA;border-radius:3px;padding:0 1px;color:inherit}
 <body>
 <header class="site-header">
   <div class="site-header-in">
-    <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
-    <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="menu-label">Menu</span>
-    </button>
+    <a class="brand" href="https://taseries.pages.dev/"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
+    <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="material.html">Study Materials</a>
-      <a href="mock-tests.html" class="active">Practice Tests</a>
-      <a href="mega.html">Past Papers</a>
-      <a href="examination.html">Examination</a>
-      <a href="gpa-calculator.html">GPA &amp; CGPA Calculator</a>
+      <a href="https://taseries.pages.dev/">Home</a>
+      <a href="https://taseries.pages.dev/material">Study Materials</a>
+      <a href="https://taseries.pages.dev/mega">Past Papers</a>
+      <a href="https://taseries.pages.dev/mock-tests" class="active">Practice Tests</a>
+      <a href="https://taseries.pages.dev/results">Examination Results</a>
+      <a href="https://taseries.pages.dev/gpa-calculator">GPA &amp; CGPA Calculator</a>
     </nav>
   </div>
 </header>
@@ -289,12 +283,11 @@ mark{background:#BFE6EA;border-radius:3px;padding:0 1px;color:inherit}
 <main>
   <div class="container">
     <div class="page-head">
-      <h1>Applied Nutrition</h1>
+      <h1>Applied Nutrition — Practice Test</h1>
       <div class="chip-row">
+        <span class="chip teal">Applied Nutrition · NU-154</span>
         <span class="chip">Semester 2</span>
-        <span class="chip">NU-154</span>
-        <span class="chip">14 chapters</span>
-        <span class="chip">272 MCQs</span>
+        <span class="chip">14 chapters · 272 MCQs</span>
       </div>
     </div>
 
@@ -312,14 +305,20 @@ mark{background:#BFE6EA;border-radius:3px;padding:0 1px;color:inherit}
 
 <footer class="site-footer"><div class="site-footer-in">
   <div class="foot-top">
-    <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
-    <nav class="foot-links" aria-label="Footer"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="copyright.html">Copyright</a><a href="contact.html">Give feedback</a></nav>
-    <a class="channel-link" href="https://whatsapp.com/channel/0029VbDcAC81HsppHdpHvj3p" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>WhatsApp channel</a>
+    <a class="brand" href="https://taseries.pages.dev/"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="https://taseries.pages.dev/about">About</a>
+      <a href="https://taseries.pages.dev/terms">Terms</a>
+      <a href="https://taseries.pages.dev/privacy">Privacy</a>
+      <a href="https://taseries.pages.dev/copyright">Copyright</a>
+      <a href="https://taseries.pages.dev/contact">Contact</a>
+      <a href="https://taseries.pages.dev/app-support">App Support</a>
+      <a href="https://taseries.pages.dev/give-feedback">Give Feedback</a>
+    </nav>
   </div>
   <div class="foot-close">
-    <p class="foot-note">TA SERIES is independent and not affiliated with any university or examination board.</p>
-    <p class="tagline">Making Nursing Simple. Making Students Strong.</p>
-    <p>&copy; 2026 TA SERIES.</p>
+    <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
+    <p>© 2026 TA SERIES. All rights reserved.</p>
   </div>
 </div></footer>
 <script>
@@ -420,15 +419,23 @@ function chapterProgress(p){
   return {attempted:attempted, correct:correct};
 }
 function showRoot(fromPop){
-  /* Subject page opens straight on the chapter list: no repeated
-     "Practice Tests" heading and no single subject-folder card. */
-  showHome(fromPop);
+  stopQuiz();
+  state.view='root'; state.paper=-1; state.term='';
+  searchEl.value=''; clearBtn.classList.remove('show');
+  var total = 0;
+  BOOK.papers.forEach(function(pp){ total += pp.questions.length; });
+  var html = '';
+  html += '<div class="sec-head"><h2>Practice Tests</h2></div>';
+  html += '<p style="font-size:14px;color:var(--muted);margin:0 0 8px">Open a subject folder to see its chapters.</p>';
+  html += '<button type="button" class="row" id="open-book"><span class="fico">AN</span><span class="body"><b>Applied Nutrition (Applied Nutrition)</b><span>Semester 2 · NU-154 · '+BOOK.papers.length+' chapters</span></span><span class="count">'+total+' MCQs</span><span class="chev">›</span></button>';
+  viewEl.innerHTML = html;
+  document.getElementById('open-book').addEventListener('click', function(){ showHome(); });
+  if(!fromPop){ try{ history.pushState({view:'root', paper:-1}, ''); }catch(e){} }
+  window.scrollTo(0,0);
 }
 
 function showHome(fromPop){
   stopQuiz();
-  var _ph=document.querySelector('.page-head'); if(_ph) _ph.classList.remove('hidden');
-  var _tb=document.querySelector('.toolbar'); if(_tb) _tb.style.display='';
   state.view='home'; state.paper=-1; state.term='';
   searchEl.value=''; clearBtn.classList.remove('show');
   var html = '<div class="sec-label">Chapters — tap to open</div>';
@@ -791,8 +798,6 @@ function startMock(){
 function exitQuiz(){ stopQuiz(); showHome(); }
 function renderQuiz(){
   if(qzTimerId){ clearInterval(qzTimerId); qzTimerId = null; }
-  var _ph=document.querySelector('.page-head'); if(_ph) _ph.classList.add('hidden');
-  var _tb=document.querySelector('.toolbar'); if(_tb) _tb.style.display='none';
   state.view = 'quiz';
   var q = quiz.list[quiz.idx];
   var html = '<div class="qzwrap">'
@@ -803,7 +808,7 @@ function renderQuiz(){
     + '<div class="qtitle">'+esc(quiz.title)+'</div>'
     + '<div class="prog"><i id="qz-prog" style="width:'+Math.round(quiz.idx/quiz.list.length*100)+'%"></i></div>'
     + '<div class="qzcard glass">'
-    + '<span class="qztag">'+esc(q.tag)+' &nbsp;•&nbsp; Question '+(quiz.idx+1)+' of '+quiz.list.length+'</span>';
+    + '<span class="qztag">'+esc(q.tag)+' &nbsp;•&nbsp; Q '+(quiz.idx+1)+' of '+quiz.list.length+'</span>';
   html += '<button type="button" class="star-btn qz-star'+(bookmarks[q.cid+'-'+q.n]?' on':'')+'" id="qz-star" aria-pressed="'+(bookmarks[q.cid+'-'+q.n]?'true':'false')+'" aria-label="Save this question">'+(bookmarks[q.cid+'-'+q.n]?'★':'☆')+'</button>';
   var ro = repeatOthers(q.cid, q);
   if(ro) html += '<div><span class="repeat-badge">Also asked: '+esc(srcsText(ro))+'</span></div>';
@@ -872,7 +877,7 @@ function qzAnswer(i, btn){
       if(j === q.ans){ o.classList.add('correct'); o.querySelector('.qzmark').textContent = '✓'; }
       else { o.style.transitionDelay = (0.08*(j+1))+'s'; o.classList.add('gone'); }
     });
-    document.getElementById('qz-whytext').textContent = 'Correct! ' + q.why;
+    document.getElementById('qz-whytext').textContent = (dt <= 10 ? 'Fast answer — '+dt+'s! ' : '') + 'Correct! ' + q.why;
   } else {
     streak = 0; beep(false);
     quiz.wrong.push({q:q, picked:i});
@@ -936,6 +941,7 @@ function renderResult(timeUp){
     + '<p>'+esc(msg)+'</p>'
     + '<div class="statgrid">'
     + '<div class="stat">⏱ Time<b>'+fmtTime(secs)+'</b></div>'
+    + '<div class="stat">Fast answers<b>'+quiz.fast+'</b></div>'
     + '<div class="stat">Avg / question<b>'+avg+'s</b></div>'
     + '<div class="stat">Wrong<b>'+quiz.wrong.length+'</b></div>'
     + '</div>'

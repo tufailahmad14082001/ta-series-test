@@ -13,13 +13,6 @@
 /* Locked folder (Slides Book under maintenance): matches site theme (teal), no blinking. */
 .row.locked{cursor:not-allowed;background:#EAF6F7;border:1.5px solid #0E7C86}
 .row.locked .maint-dot{width:10px;height:10px;border-radius:50%;background:#0E7C86;flex:none;display:inline-block;vertical-align:-1px;margin-right:6px}
-/* Slides Book card (Final Plan 5.2): separate full-width card at the top of Study Materials. */
-.slides-book-card{display:flex;align-items:center;gap:13px;background:#fff;border:1.5px solid #0E7C86;border-radius:16px;padding:16px;text-decoration:none;color:var(--ink);margin-bottom:12px}
-.slides-book-card .body{flex:1;min-width:0}
-.slides-book-card .body b{display:block;font-size:17px;font-weight:800}
-.slides-book-card .body span{display:block;font-size:14px;color:var(--muted);margin-top:2px}
-.slides-book-card .count{flex:none;font-size:13px;font-weight:700;background:var(--sunken);box-shadow:var(--sunken-shadow);border-radius:999px;padding:4px 11px;color:var(--ink)}
-.slides-book-card .chev{font-size:22px;font-weight:700;color:var(--muted-2);flex:none}
 .btn-sm{min-height:36px;padding:8px 14px;font-size:13px;white-space:nowrap;flex:none}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E7C86'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
@@ -32,16 +25,16 @@
   <div class="site-header-in">
     <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
     <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="menu-label">Menu</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="material.html" class="active">Study Materials</a>
-      <a href="mock-tests.html">Practice Tests</a>
-      <a href="mega.html">Past Papers</a>
-      <a href="examination.html">Examination</a>
-      <a href="gpa-calculator.html">GPA &amp; CGPA Calculator</a>
-    </nav>
+    <a href="index.html">Home</a>
+    <a href="material.html" class="active">Study Materials</a>
+    <a href="mega.html">Past Papers</a>
+    <a href="mock-tests.html">Practice Tests</a>
+    <a href="results.html">Examination Results</a>
+    <a href="gpa-calculator.html">GPA &amp; CGPA Calculator</a>
+  </nav>
   </div>
 </header>
 
@@ -49,13 +42,14 @@
   <div class="container">
     <div class="page-head">
       <h1>Study Materials</h1>
-      <p>Slides, syllabus and MCQ files for each semester. Choose your semester to begin.</p>
+      <p>Notes, slides and books for all 8 semesters.</p>
     </div>
-    <p class="update-note" style="background:#EAF6F7;border:1px solid #0E7C86;color:#0E7C86;border-radius:8px;padding:10px 14px;margin:14px 0 0;font-size:14px;font-weight:600">Some download links are being moved, one semester at a time. If a file does not open, try again later or message us.</p>
+    <p class="update-note" style="background:#EAF6F7;border:1px solid #0E7C86;color:#0E7C86;border-radius:8px;padding:10px 14px;margin:14px 0 0;font-size:14px;font-weight:600">Updating &mdash; study material links are moving to MEGA, one semester at a time.</p>
     <label class="search" style="margin-top:18px">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
       <input id="q" type="search" placeholder="Search 1,083 files&hellip;" aria-label="Search study materials">
     </label>
+    <div style="margin-top:14px"><button type="button" class="fav-toggle" id="fav-toggle" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9L6.6 20l1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg> Favourites <span id="fav-count"></span></button></div>
     <p class="crumbs" id="crumbs"><a href="index.html">Home</a> &rsaquo; Study Materials</p>
     <button type="button" class="up-btn hidden" id="up-btn">&uarr; Up one level</button>
     <p id="count" style="font-size:14px;color:var(--muted);font-weight:700;margin:10px 0 2px" aria-live="polite"></p>
@@ -66,13 +60,15 @@
 <footer class="site-footer"><div class="site-footer-in">
   <div class="foot-top">
     <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
-    <nav class="foot-links" aria-label="Footer"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="copyright.html">Copyright</a><a href="contact.html">Give feedback</a></nav>
-    <a class="channel-link" href="https://whatsapp.com/channel/0029VbDcAC81HsppHdpHvj3p" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>WhatsApp channel</a>
+    <nav class="foot-links" aria-label="Footer"><a href="about.html">About</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></nav>
+    <div class="foot-social">
+      <a href="https://wa.me/923055959410" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg></a>
+      <a href="https://whatsapp.com/channel/0029VbDcAC81HsppHdpHvj3p" aria-label="TA SERIES WhatsApp Channel" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg></a>
+    </div>
   </div>
   <div class="foot-close">
-    <p class="foot-note">TA SERIES is independent and not affiliated with any university or examination board.</p>
-    <p class="tagline">Making Nursing Simple. Making Students Strong.</p>
-    <p>&copy; 2026 TA SERIES.</p>
+    <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
+    <p>&copy; 2026 TA SERIES. All rights reserved.</p>
   </div>
 </div></footer>
 
@@ -84,19 +80,21 @@
      type badge (PDF red, PPT orange, DOC blue), a name on max 2 lines
      without the extension, a meta line "Semester X · Folder · size",
      a download button that becomes a check mark (remembered in
-     localStorage). */
+     localStorage) and a favourites star (also localStorage). */
   var list=document.getElementById('list'), crumbs=document.getElementById('crumbs'),
       upBtn=document.getElementById('up-btn'), countEl=document.getElementById('count'),
-      q=document.getElementById('q'), path=[], shown=8;
+      q=document.getElementById('q'), favToggle=document.getElementById('fav-toggle'),
+      favCount=document.getElementById('fav-count'), path=[], shown=8, favOnly=false;
   var label=window.taLabel||function(n){return String(n);};
   var folderColor=window.taFolderColor||function(){return '#0E7C86';};
   var FOLDER_SVG='<svg viewBox="0 0 48 40" aria-hidden="true"><path d="M3 8a4 4 0 0 1 4-4h10l4 4h20a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z" fill="currentColor" opacity=".72"/><path d="M3 15a4 4 0 0 1 4-4h34a4 4 0 0 1 4 4v19a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z" fill="currentColor"/><path d="M3 15a4 4 0 0 1 4-4h34a4 4 0 0 1 4 4v6H3z" fill="#fff" opacity=".28"/></svg>';
   var DL_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>';
   var CHECK_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>';
+  var STAR_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9L6.6 20l1-6.1L3.2 9.5l6.1-.9L12 3z"/></svg>';
   function esc(x){return String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
   function loadStore(key){try{return JSON.parse(localStorage.getItem(key)||'[]');}catch(e){return [];}}
   function saveStore(key,arr){try{localStorage.setItem(key,JSON.stringify(arr));}catch(e){}}
-  var downloaded=loadStore('ta-downloaded');
+  var downloaded=loadStore('ta-downloaded'), favourites=loadStore('ta-favourites');
   function has(arr,v){return arr.indexOf(v)>-1;}
   function cleanName(name){return String(name).replace(/\.(pdf|docx|pptx|ppt|zip|xlsx?|mp4)$/i,"");}
   function typeOf(f){
@@ -114,28 +112,9 @@
     for(i=0;i<trail.length;i++){if(/slides book/i.test(trail[i]))return 'Slides Book';}
     return '';
   }
-  function isLockedFolder(name){return /^semester 1$/i.test(name||'');}
-  /* Final Plan 5.2: skip levels that only wrap other folders — a folder
-     with no files of its own and exactly one child folder, or a
-     folder called ALL. Its children are shown in its place. */
-  function isSkipFolder(f){
-    if((f.f||[]).length>0) return false;
-    var kids=(f.d||[]).length;
-    if(kids===1) return true;
-    if(/^ALL$/i.test(f.n||'')) return true;
-    return false;
-  }
-  /* Final Plan 5.2 folder names, at semester level only: the generic
-     categories read Syllabus / MCQs (past papers) / Slides. Subject
-     folders and year splits keep their own names. */
-  function folderDisplayName(name, atSemesterLevel){
-    if(!atSemesterLevel) return label(name);
-    var base=String(name||'').replace(/^\d+\.\s*/,'');
-    if(/syllabus|course grid/i.test(base)) return 'Syllabus';
-    if(/^mcqs?\b/i.test(base)) return 'MCQs (past papers)';
-    if(/^slides$/i.test(base)) return 'Slides';
-    return label(name);
-  }
+  var SLIDES_UNLOCK=new Date('2026-11-22T17:00:00+05:00').getTime();
+  function slidesCountdown(){var ms=SLIDES_UNLOCK-Date.now();if(ms<=0)return 'Live now';var s=Math.floor(ms/1000),m=Math.floor(s/60),h=Math.floor(m/60);s=s%60;m=m%60;return h+'h '+m+'m '+s+'s';}
+  function isLockedFolder(name){if(/^semester 1$/i.test(name||''))return true;if(Date.now()>=SLIDES_UNLOCK)return false;return /slides book/i.test(name||'');}
   function viewerLink(f){
     return 'viewer.html?u='+encodeURIComponent(f.u)+'&n='+encodeURIComponent(f.n);
   }
@@ -164,7 +143,10 @@
     return node;
   }
   function countFiles(node){var n=(node.f||[]).length;(node.d||[]).forEach(function(c){n+=countFiles(c);});return n;}
+  function updateFavCount(){favCount.textContent=favourites.length?'('+favourites.length+')':'';}
   function render(){
+    favOnly=false;
+    favToggle.classList.remove('on'); favToggle.setAttribute('aria-pressed','false');
     document.body.classList.toggle('in-folder', path.length>0);
     var node=current(), html='';
     var folders=node.d||[], files=node.f||[];
@@ -174,47 +156,24 @@
     var allFiles=countFiles(node);
     if(path.some(isLockedFolder)){
       countEl.textContent='Under maintenance';
-      list.innerHTML='<div class="empty"><b>Semester 1 \u2013 Being updated.</b><p>Files will return soon.</p></div>';
+      var inSem1=path.some(function(n){return /^semester 1$/i.test(n||'');});
+      list.innerHTML='<div class="empty"><b>Making it better.</b><p>'+(inSem1?'Back soon.':'Back soon in <span class="slides-cd">'+esc(slidesCountdown())+'</span>.')+'</p></div>';
       bindList();
       return;
     }
-    /* Folders shown as rows: the Slides Book is a separate card at the
-       top level, and skip-level folders are replaced by their children. */
-    var displayFolders=[];
-    folders.forEach(function(f){
-      if(path.length===0 && /^TA SERIES Slides Book$/i.test(f.n||'')) return;
-      if(isSkipFolder(f)){
-        (f.d||[]).forEach(function(c){ displayFolders.push({node:c, via:f.n}); });
-        return;
-      }
-      displayFolders.push({node:f, via:null});
-    });
-    var totalFiles=countFiles({d:TREE,f:[]});
     countEl.textContent = path.length===0
-      ? displayFolders.length+' folders · '+totalFiles.toLocaleString('en-US')+' files'
-      : (displayFolders.length? displayFolders.length+' folder'+(displayFolders.length>1?'s':'')+' · ':'') + allFiles+' file'+(allFiles===1?'':'s');
-    /* Slides Book: separate full-width card (Final Plan 5.2). */
-    if(path.length===0){
-      var sb=folders.filter(function(f){ return /^TA SERIES Slides Book$/i.test(f.n||''); })[0];
-      if(sb){
-        html+='<a class="slides-book-card" href="#'+encodeURIComponent(sb.n)+'" data-folder="'+esc(sb.n)+'">'+folderIcon(sb.n,sb.n)+
-          '<span class="body"><b>TA SERIES Slides Books</b><span>Slides books for each semester</span></span>'+
-          '<span class="count">'+sb.c+' files</span><span class="chev">&rsaquo;</span></a>';
-      }
-    }
-    displayFolders.forEach(function(item){
-      var f=item.node;
+      ? '9 folders · 1,083 files'
+      : (folders.length? folders.length+' folder'+(folders.length>1?'s':'')+' · ':'') + allFiles+' file'+(allFiles===1?'':'s');
+    folders.forEach(function(f){
       if(isLockedFolder(f.n)){
+        var isSem1=/^semester 1$/i.test(f.n||'');
         html+='<div class="row locked" aria-disabled="true">'+folderIcon(f.n,path.length?path[0]:f.n)+
-          '<span class="body"><b>'+esc(folderDisplayName(f.n, path.length===1))+'</b><span><span class="maint-dot"></span> Semester 1 \u2013 Being updated. Files will return soon.</span></span>'+
-          '<span class="count">Being updated</span></div>';
+          '<span class="body"><b>'+esc(label(f.n))+'</b><span><span class="maint-dot"></span> Making it better. Back soon.</span></span>'+
+          '<span class="count">'+(isSem1?'Maintenance':'<span class="slides-cd">'+esc(slidesCountdown())+'</span>')+'</span></div>';
         return;
       }
-      var metaParts=[];
-      if((f.d||[]).length) metaParts.push(f.d.length+' folder'+(f.d.length>1?'s':''));
-      metaParts.push(f.c+' file'+(f.c===1?'':'s'));
-      html+='<a class="row" href="#'+encodeURIComponent(f.n)+'" data-folder="'+esc(f.n)+'"'+(item.via?' data-via="'+esc(item.via)+'"':'')+'>'+folderIcon(f.n,path.length?path[0]:f.n)+
-        '<span class="body"><b>'+esc(folderDisplayName(f.n, path.length===1))+'</b><span>'+metaParts.join(' · ')+'</span></span>'+
+      html+='<a class="row" href="#'+encodeURIComponent(f.n)+'" data-folder="'+esc(f.n)+'">'+folderIcon(f.n,path.length?path[0]:f.n)+
+        '<span class="body"><b>'+esc(label(f.n))+'</b><span>'+(f.d&&f.d.length? f.d.length+' subfolder'+(f.d.length>1?'s':'')+' · ':'')+f.c+' files</span></span>'+
         '<span class="count">'+f.c+'</span><span class="chev">&rsaquo;</span></a>';
     });
     files.slice(0,shown).forEach(function(f){ html+=fileRow(f,path); });
@@ -229,8 +188,6 @@
     list.querySelectorAll('[data-folder]').forEach(function(a){
       a.addEventListener('click',function(e){
         e.preventDefault();
-        var via=a.getAttribute('data-via');
-        if(via) path.push(via);
         path.push(a.getAttribute('data-folder')); shown=8;
         location.hash=path.map(encodeURIComponent).join('/');
         render(); window.scrollTo({top:0});
@@ -250,7 +207,48 @@
     })(TREE,[]);
     return out;
   }
+  function favFiles(){
+    var out=[];
+    (function walk(nodes, trail){
+      nodes.forEach(function(n){
+        if(isLockedFolder(n.n)) return;
+        (n.f||[]).forEach(function(f){
+          if(has(favourites,f.u)) out.push({f:f,trail:trail.concat(n.n)});
+        });
+        walk(n.d||[], trail.concat(n.n));
+      });
+    })(TREE,[]);
+    return out;
+  }
+  function renderFavs(){
+    favOnly=true;
+    document.body.classList.remove('in-folder');
+    favToggle.classList.add('on'); favToggle.setAttribute('aria-pressed','true');
+    crumbs.innerHTML='<a href="index.html">Home</a> &rsaquo; <a href="material.html">Study Materials</a> &rsaquo; Favourites';
+    upBtn.classList.add('hidden');
+    var hits=favFiles(), html='';
+    countEl.textContent=hits.length+' favourite file'+(hits.length===1?'':'s');
+    hits.forEach(function(h){ html+=fileRow(h.f,h.trail); });
+    if(!hits.length) html='<div class="empty"><b>No favourites yet</b></div>';
+    list.innerHTML=html;
+    bindList();
+  }
   function bindList(){
+    list.querySelectorAll('[data-fav]').forEach(function(b){
+      b.addEventListener('click',function(){
+        var u=b.getAttribute('data-fav');
+        if(has(favourites,u)){favourites=favourites.filter(function(x){return x!==u;});}
+        else{favourites.push(u);}
+        saveStore('ta-favourites',favourites);
+        updateFavCount();
+        if(favOnly){renderFavs();}
+        else{
+          var on=has(favourites,u);
+          b.classList.toggle('on',on);
+          b.setAttribute('aria-pressed',on?'true':'false');
+        }
+      });
+    });
     list.querySelectorAll('[data-dl]').forEach(function(a){
       a.addEventListener('click',function(){
         var u=a.getAttribute('data-dl');
@@ -262,6 +260,7 @@
   }
   q.addEventListener('input',function(){
     var v=q.value.trim().toLowerCase();
+    if(favOnly){favOnly=false;favToggle.classList.remove('on');favToggle.setAttribute('aria-pressed','false');}
     if(!v){ render(); return; }
     var hits=searchAll(v), html='';
     countEl.textContent=hits.length+' result'+(hits.length===1?'':'s')+' for “'+q.value.trim()+'”';
@@ -272,6 +271,10 @@
     list.innerHTML=html;
     bindList();
   });
+  favToggle.addEventListener('click',function(){
+    if(favOnly){render();}
+    else{renderFavs();}
+  });
   upBtn.addEventListener('click',function(){
     path.pop(); shown=8;
     location.hash=path.map(encodeURIComponent).join('/');
@@ -281,8 +284,13 @@
   if(location.hash.length>1){
     path=location.hash.slice(1).split('/').map(decodeURIComponent).filter(Boolean);
   }
-  q.placeholder='Search '+countFiles({d:TREE,f:[]}).toLocaleString('en-US')+' files';
+  updateFavCount();
   render();
+  setInterval(function(){
+    var els=document.querySelectorAll('.slides-cd'), t=slidesCountdown();
+    if(Date.now()>=SLIDES_UNLOCK){ render(); return; }
+    els.forEach(function(el){ el.textContent=t; });
+  },1000);
 (function(){
     var btn=document.getElementById('menu-btn'), nav=document.getElementById('site-nav');
     if(!btn||!nav) return;

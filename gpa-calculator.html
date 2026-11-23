@@ -19,7 +19,6 @@ button.row{width:100%;text-align:left}
 .subj .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
 .subj b{font-size:15.5px;color:var(--ink)}
 .subj .ch{font-size:12.5px;color:var(--muted);font-weight:700;white-space:nowrap}
-.subj label{display:block;font-size:12.5px;font-weight:700;color:var(--muted);margin:10px 0 6px}
 .subj .row2{display:flex;gap:10px;margin-top:11px;align-items:center}
 .subj input[type=number]{flex:1;min-width:0;min-height:50px;border:1.5px solid var(--line);border-radius:12px;padding:0 13px;font-size:16px;font-weight:700;color:var(--ink);background:#fff}
 .subj input[type=number]:focus{outline:2px solid var(--teal);border-color:var(--teal)}
@@ -27,7 +26,7 @@ button.row{width:100%;text-align:left}
 .subj .out.err{color:var(--red)}
 .grade-pill{flex:none;min-width:70px;text-align:center;padding:10px 10px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-weight:800;font-size:14px;color:var(--ink)}
 .grade-pill.f{background:var(--red-soft);border-color:var(--red);color:#8A1F24}
-.result-card{background:var(--teal);color:#fff;border-radius:22px;padding:16px 14px;text-align:center;margin-top:18px;border:1px solid var(--border);position:sticky;bottom:12px;z-index:5}
+.result-card{background:var(--teal);color:#fff;border-radius:22px;padding:16px 14px;text-align:center;margin-top:18px;border:1px solid var(--border)}
 .result-card .gpa{font-size:40px;font-weight:800;letter-spacing:-.02em;line-height:1}
 .result-card .gpa small{font-size:15px;color:rgba(255,255,255,.85)}
 .result-card p{font-size:13px;color:rgba(255,255,255,.7);margin-top:6px;line-height:1.6}
@@ -47,16 +46,19 @@ button.row{width:100%;text-align:left}
 <header class="site-header">
   <div class="site-header-in">
     <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
-    <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="menu-label">Menu</span>
+    <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="material.html">Study Materials</a>
-      <a href="mock-tests.html">Practice Tests</a>
-      <a href="mega.html">Past Papers</a>
-      <a href="examination.html">Examination</a>
-      <a href="gpa-calculator.html" class="active">GPA &amp; CGPA Calculator</a>
+      <a href="results.html">Results</a>
+      <a href="mega.html">Mega Series</a>
+      <a href="mock-tests.html">Mock Tests</a>
+      <a href="gpa-calculator.html" class="active">GPA Calculator</a>
+      <a href="tools.html">Tools</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -65,8 +67,7 @@ button.row{width:100%;text-align:left}
   <div class="container narrow">
     <div class="page-head">
       <h1>GPA &amp; CGPA Calculator</h1>
-      <p>Enter your marks to calculate a semester GPA, or enter your semester GPAs to calculate your CGPA.</p>
-    <p style="margin-top:14px;padding:12px 16px;background:#fff;border:1px solid var(--border);border-radius:12px;font-size:14px;color:var(--ink)">This is an unofficial estimate. Your official GPA is the one on your KMU result or transcript.</p>
+      <p>Calculate semester GPA from subject marks or calculate your CGPA using completed semesters. This calculator follows the KMU BSN old syllabus: 135 credit hours across eight semesters.</p>
     </div>
 
     <p class="crumbs" id="crumbs"><a href="index.html">Home</a> &rsaquo; GPA Calculator</p>
@@ -94,9 +95,6 @@ button.row{width:100%;text-align:left}
       <p>There is no D grade — below 60% is F. GPA = sum of (grade points &times; credit hours) &divide; sum of credit hours, rounded to 2 decimal places.</p>
       <p style="margin-top:8px"><b>Please note:</b> this calculator uses the KMU grading scale verified from one KMU BSN result sheet (8th Semester Spring 2024, dated 28.01.2025). Your official GPA is the one on your KMU result/transcript.</p>
     </div>
-    <details class="panel" style="margin-top:16px"><summary style="font-size:16px;font-weight:800;cursor:pointer">How GPA is calculated</summary>
-      <p style="margin-top:10px">total of (grade points &times; credit hours) &divide; total credit hours. Marks of 60 and above are rounded to the nearest whole number before grading. Below 60 is F. There is no D grade. Source: KMU BS Nursing result sheet, 8th Semester Spring 2024.</p>
-    </details>
     <div style="height:40px"></div>
   </div>
 </main>
@@ -104,13 +102,15 @@ button.row{width:100%;text-align:left}
 <footer class="site-footer"><div class="site-footer-in">
   <div class="foot-top">
     <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
-    <nav class="foot-links" aria-label="Footer"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="copyright.html">Copyright</a><a href="contact.html">Give feedback</a></nav>
-    <a class="channel-link" href="https://whatsapp.com/channel/0029VbDcAC81HsppHdpHvj3p" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>WhatsApp channel</a>
+    <nav class="foot-links" aria-label="Footer"><a href="about.html">About</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a><a href="tools.html">Tools</a></nav>
+    <div class="foot-social">
+      <a href="https://wa.me/923055959410" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg></a>
+      <a href="https://whatsapp.com/channel/0029VbDcAC81HsppHdpHvj3p" aria-label="TA SERIES WhatsApp Channel" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg></a>
+    </div>
   </div>
   <div class="foot-close">
-    <p class="foot-note">TA SERIES is independent and not affiliated with any university or examination board.</p>
-    <p class="tagline">Making Nursing Simple. Making Students Strong.</p>
-    <p>&copy; 2026 TA SERIES.</p>
+    <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
+    <p>&copy; 2026 TA SERIES. All rights reserved.</p>
   </div>
 </div></footer>
 
@@ -146,8 +146,6 @@ function gradeFor(raw){
   if(raw===""||raw===null||raw===undefined)return null;
   var m=Number(raw);
   if(isNaN(m)||m<0||m>100)return null;
-  if(m<60)return["F",0.0]; // below 60 is always F — never rounded up to a pass
-  m=Math.round(m); // round to nearest whole number, 0.5 up (only for 60 and above)
   if(m>=90)return["A+",4.0]; if(m>=80)return["A",4.0]; if(m>=75)return["B+",3.5];
   if(m>=70)return["B",3.0]; if(m>=65)return["C+",2.5]; if(m>=60)return["C",2.0];
   return["F",0.0];
@@ -263,21 +261,18 @@ function updateSemester(n){
     }
   }else{
     num.textContent="—";
-    det.textContent="Enter marks to see your GPA.";
+    det.textContent="Enter marks for at least one subject to calculate your GPA.";
     scrolledFor[n]=false;
   }
 }
 
-function shareGpaText(txt){
-  window.open('https://wa.me/?text='+encodeURIComponent(txt),'_blank');
-}
 function renderSemester(n){
   var sem=SEMESTERS[n-1];
   if(!marks[n])marks[n]=[];
   var view=$("view");
   var panel=el("div","panel");
   panel.appendChild(el("h2",null,"Semester "+n));
-  panel.appendChild(el("p",null,"Enter your marks (%) for each subject. "+sem.ch+" credit hours · KMU BSN old syllabus. A subject left empty is not counted. Subjects with Theory and OSPE are graded separately, as on the KMU result sheet — enter both marks. OSPE (practical exam)."));
+  panel.appendChild(el("p",null,"Enter your marks (%) for each subject. "+sem.ch+" credit hours · KMU BSN old syllabus. A subject left empty is not counted. Subjects with Theory and OSPE are graded separately, as on the KMU result sheet — enter both marks."));
   sem.subjects.forEach(function(sub,idx){
     var id="s"+n+"-"+idx;
     var d=el("div","subj");
@@ -286,7 +281,7 @@ function renderSemester(n){
       if(!Array.isArray(marks[n][idx]))marks[n][idx]=["",""];
       var rows="";
       parts.forEach(function(part,pi){
-        rows+='<label for="'+id+'-'+pi+'">'+part[0]+' marks (out of 100)</label><div class="row2"><input type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="'+part[0]+' marks % (0–100)" aria-label="'+part[0]+' marks in '+sub[1]+', Semester '+n+'"><span class="grade-pill" id="gp-'+idx+'-'+pi+'">—</span></div>'+
+        rows+='<div class="row2"><input type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="'+part[0]+' marks % (0–100)" aria-label="'+part[0]+' marks in '+sub[1]+', Semester '+n+'"><span class="grade-pill" id="gp-'+idx+'-'+pi+'">—</span></div>'+
         '<p class="out" id="'+id+'-'+pi+'-out">Grade: — · Grade points: — · Quality points: —</p>';
       });
       d.innerHTML='<div class="top"><b>'+sub[1]+'</b><span class="ch">'+sub[0]+' · '+sub[2]+' CH</span></div>'+rows+
@@ -300,7 +295,7 @@ function renderSemester(n){
       });
     }else{
       d.innerHTML='<div class="top"><b>'+sub[1]+'</b><span class="ch">'+sub[0]+' · '+sub[2]+' CH</span></div>'+
-        '<label for="'+id+'">Marks (out of 100)</label><div class="row2"><input type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="Marks % (0–100)" aria-label="Marks in '+sub[1]+', Semester '+n+'"><span class="grade-pill" id="gp-'+idx+'">—</span></div>'+
+        '<div class="row2"><input type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="Marks % (0–100)" aria-label="Marks in '+sub[1]+', Semester '+n+'"><span class="grade-pill" id="gp-'+idx+'">—</span></div>'+
         '<p class="out" id="'+id+'-out">Grade: — · Grade points: — · Quality points: —</p>';
       var inp=d.querySelector("input");
       inp.id=id;
@@ -309,17 +304,7 @@ function renderSemester(n){
     }
     panel.appendChild(d);
   });
-  var clearBtn=el("button","btn-line","Clear semester");
-  var clearAllBtn=el("button","btn-line","Clear all");
-  clearAllBtn.type="button";
-  clearAllBtn.addEventListener("click",function(){
-    marks={};
-    sem.subjects.forEach(function(sub,idx){
-      if(sub[3]){var a=$("s"+n+"-"+idx+"-0"),b=$("s"+n+"-"+idx+"-1");if(a)a.value="";if(b)b.value="";}
-      else{var i2=$("s"+n+"-"+idx);if(i2)i2.value="";}
-    });
-    updateSemester(n);
-  });
+  var clearBtn=el("button","btn-line","Clear Semester "+n);
   clearBtn.type="button";
   clearBtn.addEventListener("click",function(){
     marks[n]=[];
@@ -329,22 +314,10 @@ function renderSemester(n){
     });
     updateSemester(n);
   });
-  var btnRow=el("div"); btnRow.style.cssText="display:flex;gap:10px;flex-wrap:wrap";
-  btnRow.appendChild(clearBtn); btnRow.appendChild(clearAllBtn);
-  var pdfBtn=el("button","btn-line","Download PDF");
-  pdfBtn.type="button";
-  pdfBtn.addEventListener("click",function(){ window.print(); });
-  var waBtn=el("button","btn-line","Share on WhatsApp");
-  waBtn.type="button";
-  waBtn.addEventListener("click",function(){
-    var v=(document.getElementById("gpa-num")||{}).textContent||"—";
-    shareGpaText(v==="—" ? "I am calculating my semester GPA with the TA SERIES GPA calculator." : "My Semester "+n+" GPA is "+v+" / 4.00 (TA SERIES GPA calculator).");
-  });
-  btnRow.appendChild(pdfBtn); btnRow.appendChild(waBtn);
-  panel.appendChild(btnRow);
+  panel.appendChild(clearBtn);
   view.appendChild(panel);
   var res=el("div","result-card"); res.id="gpa-result";
-  res.innerHTML='<div class="gpa" style="font-size:20px">Semester GPA: <span id="gpa-num">—</span> / 4.00</div><p id="gpa-detail">Enter marks to see your GPA.</p>';
+  res.innerHTML='<div class="gpa"><span id="gpa-num">—</span><small> / 4.00</small></div><p id="gpa-detail"></p>';
   view.appendChild(res);
   updateSemester(n);
 }
@@ -387,7 +360,7 @@ function renderCGPA(){
     wrap.appendChild(d);
   });
   panel.appendChild(wrap);
-  var clearBtn=el("button","btn-line","Clear all");
+  var clearBtn=el("button","btn-line","Clear CGPA");
   clearBtn.type="button";
   clearBtn.addEventListener("click",function(){
     SEMESTERS.forEach(function(sem){
@@ -398,18 +371,7 @@ function renderCGPA(){
     });
     updateCGPA();
   });
-  var pdfBtn2=el("button","btn-line","Download PDF");
-  pdfBtn2.type="button";
-  pdfBtn2.addEventListener("click",function(){ window.print(); });
-  var waBtn2=el("button","btn-line","Share on WhatsApp");
-  waBtn2.type="button";
-  waBtn2.addEventListener("click",function(){
-    var v=(document.getElementById("cgpa-num")||{}).textContent||"—";
-    shareGpaText(v==="—" ? "I am calculating my CGPA with the TA SERIES GPA calculator." : "My CGPA is "+v+" / 4.00 (TA SERIES GPA calculator).");
-  });
-  var btnRow2=el("div"); btnRow2.style.cssText="display:flex;gap:10px;flex-wrap:wrap";
-  btnRow2.appendChild(clearBtn); btnRow2.appendChild(pdfBtn2); btnRow2.appendChild(waBtn2);
-  panel.appendChild(btnRow2);
+  panel.appendChild(clearBtn);
   view.appendChild(panel);
   var res=el("div","result-card"); res.id="cgpa-result";
   res.innerHTML='<div class="gpa"><span id="cgpa-num">—</span><small> / 4.00</small></div><p id="cgpa-detail"></p>';
@@ -442,7 +404,7 @@ function render(){
       var entered=(marks[sem.n]||[]).filter(function(v,idx){var s2=sem.subjects[idx];if(s2&&s2[3]){return Array.isArray(v)&&v.some(function(r){return gradeFor(r)!==null;});}return gradeFor(v)!==null;}).length;
       foldersEl.appendChild(folderRow(
         "Semester "+sem.n,
-        sem.ch+" credit hours · "+sem.subjects.length+" subjects · "+entered+" of "+sem.subjects.length+" entered",
+        sem.ch+" credit hours · "+entered+" of "+sem.subjects.length+" subjects entered",
         Math.round(entered/sem.subjects.length*100),
         "teal",FOLDER_SVG,
         function(){goTo(["Semester "+sem.n]);}

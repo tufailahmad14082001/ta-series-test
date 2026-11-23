@@ -68,7 +68,7 @@
   --r-lg:20px;
   --r-md:16px;
   --pill:999px;
-  --btn-h:48px;
+  --btn-h:52px;
   --raise:linear-gradient(145deg,#F6F9FB,#E1E8EE);
   --shadow:6px 6px 14px #C2CBD5,-6px -6px 14px #FFF;
   --shadow-sm:4px 4px 10px #C2CBD5,-4px -4px 10px #FFF;
@@ -100,9 +100,8 @@ p{margin:0}
 .site-nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;padding:8px 11px;border-radius:10px;white-space:nowrap}
 .site-nav a:hover{background:var(--teal-soft);color:var(--teal-dark)}
 .site-nav a.active{color:var(--teal-dark);background:var(--teal-soft)}
-.menu-btn{display:none;min-width:44px;height:44px;border-radius:999px;place-items:center;gap:6px;padding:0 14px;color:var(--ink);margin-left:auto}
+.menu-btn{display:none;width:44px;height:44px;border-radius:50%;place-items:center;color:var(--ink);margin-left:auto}
 .menu-btn svg{width:22px;height:22px}
-.menu-btn .menu-label{font-size:14px;font-weight:700}
 @media (max-width:1060px){
   .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--card);flex-direction:column;padding:10px 16px 16px;gap:2px;box-shadow:0 12px 24px rgba(18,48,74,.12)}
   .site-nav.open{display:flex}
@@ -198,6 +197,13 @@ p{margin:0}
 .dl-btn{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--teal);color:#fff;box-shadow:0 4px 10px rgba(14,124,134,.35);text-decoration:none}
 .dl-btn svg{width:20px;height:20px}
 .dl-btn.done{background:var(--green);box-shadow:0 4px 10px rgba(31,157,85,.35)}
+.fav-btn{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--sunken);box-shadow:var(--sunken-shadow);color:#9AA7B4}
+.fav-btn svg{width:20px;height:20px}
+.fav-btn.on{color:var(--gold)}
+.fav-btn.on svg{fill:currentColor}
+.fav-toggle{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 18px;border-radius:var(--pill);background:var(--raise);box-shadow:var(--shadow-sm);font-size:14px;font-weight:700;color:var(--ink)}
+.fav-toggle.on{background:var(--teal);color:#fff;box-shadow:0 4px 10px rgba(14,124,134,.35)}
+.fav-toggle svg{width:18px;height:18px}
 
 /* ---------- buttons ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:var(--btn-h);border-radius:var(--pill);font-size:16px;font-weight:700;text-decoration:none;padding:12px 24px;border:0;cursor:pointer}
@@ -248,9 +254,6 @@ p{margin:0}
 .foot-links a:hover{color:var(--teal-dark)}
 .foot-close{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.6}
 .foot-close .tagline{color:var(--teal-dark);font-weight:700}
-.foot-note{margin:0 0 2px}
-.channel-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--teal-dark);text-decoration:none;min-height:44px}
-.channel-link svg{width:18px;height:18px;fill:var(--teal);flex:none}
 @media (max-width:560px){
   .site-footer-in{padding:12px 16px 10px}
   .foot-top{gap:8px}
@@ -604,7 +607,6 @@ button.row{width:100%;text-align:left}
 #tab-gpa .subj .top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
 #tab-gpa .subj b{font-size:14px;color:var(--ink)}
 #tab-gpa .subj .ch{font-size:12px;color:var(--muted);font-weight:700;white-space:nowrap}
-#tab-gpa .subj label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin:8px 0 5px}
 #tab-gpa .subj .row2{display:flex;gap:8px;margin-top:8px;align-items:center}
 #tab-gpa .subj input[type=number]{flex:1;min-width:0;min-height:44px;border:1.5px solid var(--line);border-radius:10px;padding:0 11px;font-size:15px;font-weight:700;color:var(--ink);background:#fff}
 #tab-gpa .subj input[type=number]:focus{outline:2px solid var(--teal);border-color:var(--teal)}
@@ -612,7 +614,7 @@ button.row{width:100%;text-align:left}
 #tab-gpa .subj .out.err{color:var(--red)}
 #tab-gpa .grade-pill{flex:none;min-width:56px;text-align:center;padding:7px 8px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-weight:800;font-size:13px;color:var(--ink)}
 #tab-gpa .grade-pill.f{background:var(--red-soft);border-color:var(--red);color:#8A1F24}
-#tab-gpa .result-card{background:var(--teal);color:#fff;border-radius:22px;padding:16px 14px;text-align:center;margin-top:18px;border:1px solid var(--border);position:sticky;bottom:12px;z-index:5}
+#tab-gpa .result-card{background:var(--teal);color:#fff;border-radius:22px;padding:16px 14px;text-align:center;margin-top:18px;border:1px solid var(--border)}
 #tab-gpa .result-card .gpa{font-size:40px;font-weight:800;letter-spacing:-.02em;line-height:1}
 #tab-gpa .result-card .gpa small{font-size:15px;color:rgba(255,255,255,.85)}
 #tab-gpa .result-card p{font-size:13px;color:rgba(255,255,255,.7);margin-top:6px;line-height:1.6}
@@ -698,14 +700,14 @@ button.row{width:100%;text-align:left}
   <div class="site-header-in">
     <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
     <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="menu-label">Menu</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="material.html">Study Materials</a>
-      <a href="mock-tests.html">Practice Tests</a>
       <a href="mega.html">Past Papers</a>
-      <a href="examination.html" class="active">Examination</a>
+      <a href="mock-tests.html">Practice Tests</a>
+      <a href="results.html" class="active">Examination Results</a>
       <a href="gpa-calculator.html">GPA &amp; CGPA Calculator</a>
     </nav>
   </div>
@@ -714,20 +716,20 @@ button.row{width:100%;text-align:left}
   <div class="container">
     <div class="page-head">
       <h1>Examination</h1>
-      <p>KMU BS Nursing results, GPA calculator and transcript guide.</p>
+      <p>Results, transcript and GPA calculator for KMU BS Nursing students, in one place.</p>
     </div>
     <div id="exam-list">
-      <button type="button" class="row" id="row-results"><span class="tile teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg></span><span class="body"><b>KMU Results</b><span>Filter by region, semester, batch and session.</span></span><span class="chev">&rsaquo;</span></button>
-      <button type="button" class="row" id="row-gpa"><span class="tile tool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg></span><span class="body"><b>GPA &amp; CGPA Calculator</b><span>Work out your semester GPA or overall CGPA.</span></span><span class="chev">&rsaquo;</span></button>
-      <button type="button" class="row" id="row-transcript"><span class="tile quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg></span><span class="body"><b>Apply for a Transcript</b><span>Steps, requirements and downloadable forms.</span></span><span class="chev">&rsaquo;</span></button>
+      <button type="button" class="row" id="row-results"><span class="tile teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg></span><span class="body"><b>Examination Results</b><span>171 KMU result PDFs &middot; search by region, semester and batch</span></span><span class="chev">&rsaquo;</span></button>
+      <button type="button" class="row" id="row-gpa"><span class="tile tool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg></span><span class="body"><b>GPA &amp; CGPA Calculator</b><span>8 semesters &middot; 1 CGPA calculator &middot; 135 credit hours</span></span><span class="chev">&rsaquo;</span></button>
+      <button type="button" class="row" id="row-transcript"><span class="tile quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg></span><span class="body"><b>Transcript</b><span>Apply for a KMU transcript &middot; form and fee slip</span></span><span class="chev">&rsaquo;</span></button>
     </div>
     <button type="button" class="up-btn hidden" id="exam-back">&uarr; Up one level</button>
     <div id="tab-results" class="tab-panel">
-      <p>BS Nursing result PDFs by region, semester, batch and session.</p>
-    <p style="margin-top:6px;font-size:12px;color:var(--muted)">Results shared with thanks to Noman Ahmad, Admin Professor Nurse, KMU IHS Peshawar.</p>
+      <p>KMU BS Nursing result PDFs by region, semester and batch.</p>
+    <p style="margin-top:6px;font-size:12px;color:var(--muted)">With thanks to Noman Ahmad · Admin Professor Nurse, KMU IHS Peshawar</p>
     <label class="search" style="margin-top:18px">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
-      <input id="q" type="search" placeholder="Search, e.g. BSN 4th 22-26" aria-label="Search results">
+      <input id="q" type="search" placeholder="Search results, e.g. BSN 4th 22-26&hellip;" aria-label="Search results">
     </label>
     <h2 style="font-size:19px;font-weight:800;margin-top:20px">Filter results <span id="filter-count" style="color:var(--teal-dark);font-size:14px;font-weight:700"></span></h2>
     <div class="filters">
@@ -738,7 +740,7 @@ button.row{width:100%;text-align:left}
     </div>
     <div class="sheet-actions">
       <button type="button" class="btn btn-teal" id="sheet-apply">Show results</button>
-      <button type="button" class="btn btn-outline" id="sheet-clear">Clear filters</button>
+      <button type="button" class="btn btn-outline" id="sheet-clear">Clear all</button>
     </div>
     <div class="chip-row" id="chips"></div>
     <p style="margin-top:14px;font-size:14px;color:var(--muted)"><span id="total-line"></span></p>
@@ -748,61 +750,53 @@ button.row{width:100%;text-align:left}
       <div id="regular"></div>
       <div class="sec-head" id="spc-head" style="margin-top:30px"><h2>Special Results</h2><span id="spc-count" style="font-size:14px;color:var(--muted);font-weight:700"></span></div>
       <div id="special"></div>
-      <p id="no-match" class="empty hidden"><b>No results match</b><br>Try a different word or filter, or clear the filters above.</p>
-      <p style="margin-top:18px;font-size:14px;color:var(--muted)">If Download does not open, use the Alternative link.</p>
-      <p style="margin-top:8px;font-size:14px;color:var(--muted)">TA SERIES is independent. Please confirm your result with KMU or your college.</p>
+      <p id="no-match" class="empty hidden"><b>No results match</b><br>Try a different word or filter, or reset the filters above.</p>
     </div>
-    <div id="empty-state" class="empty"><b id="empty-count"></b><p>Search, or choose a filter to narrow them down.</p></div>
+    <div id="empty-state" class="empty"><b>Search or choose a filter to see results</b><p>171 results are ready — type a word above, or choose a region, semester, batch or session.</p></div>
     </div>
-    <div id="tab-transcript" class="tab-panel" hidden>
-    <div class="panel" style="background:#FDF3D7;border:1px solid var(--border)">
-      <p><b>Fees, bank details and procedures can change. Confirm the latest instructions with KMU before you pay. TA SERIES is not the issuing authority.</b></p>
-    </div>
-    <div class="panel">
-      <h2>Downloads</h2>
-      <div class="sheet-actions">
-        <a class="btn btn-teal" href="files/KMU_Transcript_Form.pdf" target="_blank" rel="noopener">Download transcript form (PDF)</a>
-        <a class="btn btn-outline" href="files/MCB_KMU_Bank_Deposit_Slip.pdf" target="_blank" rel="noopener">Download MCB fee slip (PDF)</a>
-      </div>
-    </div>    <div class="panel">
-      <h2>Apply for a KMU Transcript</h2>
-      <p>For BS Nursing students (semester system). Follow these steps, then submit your form at the KMU office in Peshawar.</p>
+    <div id="tab-transcript" class="tab-panel" hidden>    <div class="panel">
+      <h2>Apply for a KMU Transcript (Semester System)</h2>
+      <p>For BS Nursing students. Use the official KMU transcript form and the MCB fee slip below.</p>
     </div>
     <div class="panel">
       <h2>What you need</h2>
       <ol class="tr-list">
-        <li>Form signed and stamped by your Principal.</li>
-        <li>CNIC copy.</li>
-        <li>One passport photo.</li>
-        <li>Fee slip with MCB receipt.</li>
-        <li>Copies of Reappear, Special, Summer or Winter results (if any).</li>
+        <li>Transcript Form, attested by your College/Institute Principal (sign and stamp).</li>
+        <li>CNIC photocopy.</li>
+        <li>Passport size picture.</li>
+        <li>Fee Slip.</li>
+        <li>Only Reappear / Special / Summer or Winter Results are mandatory — attach those result copies.</li>
       </ol>
     </div>
     <div class="panel">
       <h2>How to apply</h2>
       <ol class="tr-steps">
-        <li>Fill in the form (tick BS Nursing).</li>
-        <li>Get it signed and stamped by your Principal.</li>
-        <li>Pay at any MCB branch with the fee slip and keep the receipt.</li>
-        <li>Attach your CNIC copy, photo, receipt and any result copies.</li>
-        <li>Submit at the KMU office, Peshawar. Read the back of the form first.</li>
-        <li>Collect it yourself with the original receipt and your CNIC.</li>
+        <li>Download and fill the transcript form (tick BS Nursing).</li>
+        <li>Get it attested by your Principal (sign and stamp).</li>
+        <li>Attach your CNIC copy, passport photo, fee slip, and your Reappear / Special / Summer / Winter result copies.</li>
+        <li>Pay the fee at any MCB branch with the deposit slip (account below) and attach the bank receipt.</li>
+        <li>Submit the form at the KMU office, Peshawar. Read the instructions on the back of the form first.</li>
+        <li>Collect the transcript yourself — only you can collect it, with the original receipt and your CNIC.</li>
       </ol>
     </div>
     <div class="panel">
       <h2>Fee payment</h2>
       <p>MCB Bank — Khyber Medical University, Affiliated Institutes/Colleges.</p>
-      <p>Account No: <span class="tr-acct" id="tr-acct">0977029551007356</span> <button type="button" class="btn btn-outline" id="copy-acct" style="min-height:44px;padding:8px 16px;font-size:14px" onclick="(function(b){var t='0977029551007356';function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy account number';},2000);}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done);}else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}})(this)">Copy account number</button></p>
+      <p>Account No: <span class="tr-acct">0977029551007356</span></p>
       <p>The fee can be deposited free in any MCB branch. Fill every column in clear handwriting — all columns are mandatory.</p>
-      <p>Last checked: [date]</p>
     </div>
-    </div>
+    <div class="panel">
+      <h2>Downloads</h2>
+      <div class="sheet-actions">
+        <a class="btn btn-teal" href="https://gofile.io/d/qmKeLJ7g" target="_blank" rel="noopener">Download Transcript Form (PDF)</a>
+        <a class="btn btn-outline" href="https://gofile.io/d/AhG3uusn" target="_blank" rel="noopener">Download MCB Fee Slip (PDF)</a>
+      </div>
+    </div>    </div>
     <div id="tab-gpa" class="tab-panel" hidden>
       <div class="narrow">
       <div class="page-head">
       <h2>GPA &amp; CGPA Calculator</h2>
-      <p>Enter your marks to calculate a semester GPA, or enter your semester GPAs to calculate your CGPA.</p>
-      <p style="margin-top:14px;padding:12px 16px;background:#fff;border:1px solid var(--border);border-radius:12px;font-size:14px;color:var(--ink)">This is an unofficial estimate. Your official GPA is the one on your KMU result or transcript.</p>
+      <p>Calculate your semester GPA or CGPA.</p>
     </div>
 
     <p class="crumbs" id="crumbs"><a href="index.html">Home</a> &rsaquo; GPA &amp; CGPA Calculator</p>
@@ -823,7 +817,7 @@ button.row{width:100%;text-align:left}
       </div>
       <div id="card-preview" class="card-preview hidden"></div>
       <div class="btn-row">
-        <button type="button" class="btn-solid" id="download-card-btn" disabled>Download PDF</button>
+        <button type="button" class="btn-solid" id="download-card-btn" disabled>Download Result Card (PDF)</button>
         <button type="button" class="btn-line" id="share-card-btn" disabled>Share on WhatsApp</button>
       </div>
       <button type="button" class="btn-line hidden" id="recalc-btn">Calculate again</button>
@@ -847,9 +841,6 @@ button.row{width:100%;text-align:left}
       <p>Marks of 60 and above are rounded to the nearest whole number (0.5 rounds up) before the grade is applied. A mark below 60 is always F — it is never rounded up to a pass. This calculator follows the KMU old syllabus (135 credit hours). Confirm your GPA with your official KMU result/transcript.</p>
       <p style="margin-top:8px"><b>Please note:</b> this calculator uses the KMU grading scale verified from one KMU BSN result sheet (8th Semester Spring 2024, dated 28.01.2025). Your official GPA is the one on your KMU result/transcript.</p>
     </div>
-    <details class="panel" style="margin-top:16px"><summary style="font-size:16px;font-weight:800;cursor:pointer">How GPA is calculated</summary>
-      <p style="margin-top:10px">total of (grade points &times; credit hours) &divide; total credit hours. Marks of 60 and above are rounded to the nearest whole number before grading. Below 60 is F. There is no D grade. Source: KMU BS Nursing result sheet, 8th Semester Spring 2024.</p>
-    </details>
       </div>
     </div>
   </div>
@@ -857,13 +848,14 @@ button.row{width:100%;text-align:left}
 <footer class="site-footer"><div class="site-footer-in">
   <div class="foot-top">
     <a class="brand" href="index.html"><span class="brand-mark">TA</span><span class="brand-name">TA <em>SERIES</em></span></a>
-    <nav class="foot-links" aria-label="Footer"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="copyright.html">Copyright</a><a href="contact.html">Give feedback</a></nav>
-    <a class="channel-link" href="https://whatsapp.com/channel/0029VbDcAC81HsppHdpHvj3p" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>WhatsApp channel</a>
+    <nav class="foot-links" aria-label="Footer"><a href="about.html">About</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></nav>
+    <div class="foot-social">
+      <a href="https://wa.me/923055959410" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg></a>
+    </div>
   </div>
   <div class="foot-close">
-    <p class="foot-note">TA SERIES is independent and not affiliated with any university or examination board.</p>
-    <p class="tagline">Making Nursing Simple. Making Students Strong.</p>
-    <p>&copy; 2026 TA SERIES.</p>
+    <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
+    <p>&copy; 2026 TA SERIES. All rights reserved.</p>
   </div>
 </div></footer><script>
 (function(){
@@ -875,11 +867,9 @@ button.row{width:100%;text-align:left}
   var regions=[...new Set(RESULTS.map(function(r){return r.region;}).filter(Boolean))].sort();
   var regionSel=document.getElementById('f-region');
   regions.forEach(function(r){
-    if(r==='All Regions') return; /* the first option is already "All Regions" (no filter) */
     var o=document.createElement('option'); o.textContent=r; regionSel.appendChild(o);
   });
   document.getElementById('total-line').textContent=RESULTS.length+' results in total';
-  document.getElementById('empty-count').textContent=RESULTS.length+' results available.';
   var q=document.getElementById('q'),
       fRegion=regionSel, fSem=document.getElementById('f-sem'),
       fBatch=document.getElementById('f-batch'), fSession=document.getElementById('f-session'),
@@ -887,54 +877,14 @@ button.row{width:100%;text-align:left}
       regEl=document.getElementById('regular'), spcEl=document.getElementById('special'),
       noMatch=document.getElementById('no-match');
 
-  function ordinal(s){ return {1:'1st',2:'2nd',3:'3rd',4:'4th',5:'5th',6:'6th',7:'7th',8:'8th'}[s]||s+'th'; }
-  function sessionLabel(r){
-    /* The card shows the real session: Normal is the regular session. */
-    if(r.type==='Normal') return 'Regular session';
-    if(r.type==='Fall') return 'Fall session';
-    if(r.type==='Spring') return 'Spring session';
-    if(r.type==='Makeup') return 'Makeup session';
-    if(r.type==='Summer') return 'Summer session';
-    if(r.type==='Winter') return 'Winter session';
-    return r.type+' session';
-  }
-  function qualifier(r){
-    var n=r.name||'';
-    if(/REVISED/.test(n)||/\(R\)/.test(n)) return 'Revised';
-    if(/RE-?APPEAR/.test(n)) return 'Re-appear';
-    if(/\bP-?1\b/.test(n)) return 'Part 1';
-    if(/\bP-?2\b/.test(n)) return 'Part 2';
-    if(/\bP-?3\b/.test(n)) return 'Part 3';
-    if(/\bP-?4\b/.test(n)) return 'Part 4';
-    if(/NEW GRADING/.test(n)) return 'New grading';
-    if(/OLD-GRADING/.test(n)||/OLD GRADING/.test(n)) return 'Old grading';
-    if(/NO-OSPE/.test(n)||/NO OSPE/.test(n)) return 'No OSPE';
-    if(/SIGNED/.test(n)) return 'Signed';
-    if(/STAMPED/.test(n)) return 'Stamped';
-    if(/ONLY PHARMA/.test(n)) return 'Only Pharma';
-    if(/KURRAM/.test(n)) return 'Kurram';
-    if(/UFM/.test(n)) return 'UFM';
-    return '';
-  }
-  function cardTitle(r){
-    var sems=r.semesters||[];
-    var semText=sems.length===1 ? ordinal(sems[0])+' semester' : sems.map(ordinal).join(', ')+' semesters';
-    var parts=['BSN '+semText];
-    if(r.batch) parts.push('Batch '+String(r.batch).replace('-','\u2013'));
-    parts.push(r.region||'All Regions');
-    parts.push(sessionLabel(r));
-    var q=qualifier(r);
-    if(q) parts.push(q);
-    return parts.join(' \u00b7 ');
-  }
   function row(r){
-    var sub='PDF &middot; '+r.size;
+    var sems=(r.semesters||[]).map(function(s){return s+'th';}).join(', ');
+    var sub=sessionOf(r)+' &middot; '+(r.region||'All Regions')+' &middot; '+(sems||'—')+' Semester &middot; Batch '+r.batch;
     var inner='<span class="mini-ic amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a2 2 0 0 0 2 4h1M17 6h3a2 2 0 0 1-2 4h-1"/></svg></span>'+
-      '<span class="body"><b>'+cardTitle(r)+'</b><span>'+sub+'</span></span>';
+      '<span class="body"><b>'+r.name+'</b><span>'+sub+'</span></span>';
     var btns='<span class="dl">';
-    btns+='<a class="dl-text-btn dl-fast" href="'+r.url+'" target="_blank" rel="noopener">Download</a>';
-    if(r.gofile){ btns+='<a class="dl-text-btn dl-slow" href="'+r.gofile+'" target="_blank" rel="noopener">Alternative link</a>'; }
-    btns+='</span>';
+    if(r.gofile){ btns+='<a class="dl-text-btn dl-fast" href="'+r.gofile+'" target="_blank" rel="noopener">Fast Download</a>'; }
+    btns+='<a class="dl-text-btn dl-slow" href="'+r.url+'" target="_blank" rel="noopener">Slow Download</a></span>';
     return '<div class="row">'+inner+btns+'</div>';
   }
   function active(){
@@ -964,6 +914,8 @@ button.row{width:100%;text-align:left}
     document.getElementById('total-line').textContent=list.length+' result'+(list.length===1?'':'s')+' match';
     var reg=list.filter(function(r){return REGULAR_TYPES[r.type];});
     var spc=list.filter(function(r){return !REGULAR_TYPES[r.type];});
+    document.getElementById('reg-count').textContent=reg.length+' results';
+    document.getElementById('spc-count').textContent=spc.length+' results';
     regEl.innerHTML=reg.map(row).join('')||'<p class="kbd-note" style="color:var(--muted)">No regular results match.</p>';
     spcEl.innerHTML=spc.map(row).join('')||'<p class="kbd-note" style="color:var(--muted)">No special results match.</p>';
     noMatch.classList.toggle('hidden', list.length>0);
@@ -1486,9 +1438,9 @@ function renderCrumbs(){
   var home=el("a",null,"Home"); home.href="index.html"; nav.appendChild(home);
   nav.appendChild(document.createTextNode(" \u203a "));
   if(state.path.length===0){
-    var cur=el("span",null,"GPA &amp; CGPA Calculator"); nav.appendChild(cur); return;
+    var cur=el("span",null,"GPA & CGPA Calculator"); nav.appendChild(cur); return;
   }
-  var calc=el("a",null,"GPA &amp; CGPA Calculator"); calc.href="examination.html#gpa";
+  var calc=el("a",null,"GPA & CGPA Calculator"); calc.href="examination.html#gpa";
   calc.addEventListener("click",function(ev){ev.preventDefault();goTo([]);});
   nav.appendChild(calc);
   nav.appendChild(document.createTextNode(" \u203a "));
@@ -1559,7 +1511,7 @@ function updateSemester(n){
     det.textContent="Semester "+n+" · "+entered+" of "+sem.subjects.length+" subjects entered · "+totalCH+" credit hours counted · Quality points "+totalQP.toFixed(2)+".";
   }else{
     num.textContent="—";
-    det.textContent="Enter marks to see your GPA.";
+    det.textContent="Enter marks for at least one subject to calculate your GPA.";
   }
 }
 
@@ -1569,7 +1521,7 @@ function renderSemester(n){
   var view=$("view");
   var panel=el("div","panel");
   panel.appendChild(el("h2",null,"Semester "+n));
-  panel.appendChild(el("p",null,"Enter your marks (%) for each subject. "+sem.ch+" credit hours · KMU BSN old syllabus. A subject left empty is not counted. Subjects with Theory and OSPE are graded separately, as on the KMU result sheet — enter both marks. OSPE (practical exam)."));
+  panel.appendChild(el("p",null,"Enter your marks (%) for each subject. "+sem.ch+" credit hours · KMU BSN old syllabus. A subject left empty is not counted. Subjects with Theory and OSPE are graded separately, as on the KMU result sheet — enter both marks."));
   sem.subjects.forEach(function(sub,idx){
     var id="s"+n+"-"+idx;
     var d=el("div","subj");
@@ -1578,7 +1530,7 @@ function renderSemester(n){
       if(!Array.isArray(marks[n][idx]))marks[n][idx]=["",""];
       var rows="";
       parts.forEach(function(part,pi){
-        rows+='<label for="'+id+'-'+pi+'">'+part[0]+' marks (out of 100)</label><div class="row2"><input type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="'+part[0]+' marks % (0–100)" aria-label="'+part[0]+' marks in '+sub[1]+', Semester '+n+'"><span class="grade-pill" id="gp-'+idx+'-'+pi+'">—</span></div>'+
+        rows+='<div class="row2"><input type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="'+part[0]+' marks % (0–100)" aria-label="'+part[0]+' marks in '+sub[1]+', Semester '+n+'"><span class="grade-pill" id="gp-'+idx+'-'+pi+'">—</span></div>'+
         '<p class="out" id="'+id+'-'+pi+'-out">Grade: — · Grade points: — · Quality points: —</p>';
       });
       d.innerHTML='<div class="top"><b>'+sub[1]+'</b><span class="ch">'+sub[0]+' · '+sub[2]+' CH</span></div>'+rows+
@@ -1592,7 +1544,7 @@ function renderSemester(n){
       });
     }else{
       d.innerHTML='<div class="top"><b>'+sub[1]+'</b><span class="ch">'+sub[0]+' · '+sub[2]+' CH</span></div>'+
-        '<label for="'+id+'">Marks (out of 100)</label><div class="row2"><input type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="Marks % (0–100)" aria-label="Marks in '+sub[1]+', Semester '+n+'"><span class="grade-pill" id="gp-'+idx+'">—</span></div>'+
+        '<div class="row2"><input type="number" min="0" max="100" step="any" inputmode="decimal" placeholder="Marks % (0–100)" aria-label="Marks in '+sub[1]+', Semester '+n+'"><span class="grade-pill" id="gp-'+idx+'">—</span></div>'+
         '<p class="out" id="'+id+'-out">Grade: — · Grade points: — · Quality points: —</p>';
       var inp=d.querySelector("input");
       inp.id=id;
@@ -1601,17 +1553,7 @@ function renderSemester(n){
     }
     panel.appendChild(d);
   });
-  var clearBtn=el("button","btn-line","Clear semester");
-  var clearAllBtn=el("button","btn-line","Clear all");
-  clearAllBtn.type="button";
-  clearAllBtn.addEventListener("click",function(){
-    marks={};
-    sem.subjects.forEach(function(sub,idx){
-      if(sub[3]){var a=$("s"+n+"-"+idx+"-0"),b=$("s"+n+"-"+idx+"-1");if(a)a.value="";if(b)b.value="";}
-      else{var i2=$("s"+n+"-"+idx);if(i2)i2.value="";}
-    });
-    updateSemester(n);
-  });
+  var clearBtn=el("button","btn-line","Clear Semester "+n);
   clearBtn.type="button";
   clearBtn.addEventListener("click",function(){
     marks[n]=[];
@@ -1621,12 +1563,10 @@ function renderSemester(n){
     });
     updateSemester(n);
   });
-  var btnRow=el("div"); btnRow.style.cssText="display:flex;gap:10px;flex-wrap:wrap";
-  btnRow.appendChild(clearBtn); btnRow.appendChild(clearAllBtn);
-  panel.appendChild(btnRow);
+  panel.appendChild(clearBtn);
   view.appendChild(panel);
   var res=el("div","result-card"); res.id="gpa-result";
-  res.innerHTML='<div class="gpa" style="font-size:20px">Semester GPA: <span id="gpa-num">—</span> / 4.00</div><p id="gpa-detail">Enter marks to see your GPA.</p>';
+  res.innerHTML='<div class="gpa"><span id="gpa-num">—</span><small> / 4.00</small></div><p id="gpa-detail"></p>';
   view.appendChild(res);
   updateSemester(n);
 }
@@ -1670,7 +1610,7 @@ function renderCGPA(){
     wrap.appendChild(d);
   });
   panel.appendChild(wrap);
-  var clearBtn=el("button","btn-line","Clear all");
+  var clearBtn=el("button","btn-line","Clear CGPA");
   clearBtn.type="button";
   clearBtn.addEventListener("click",function(){
     SEMESTERS.forEach(function(sem){
@@ -1714,7 +1654,7 @@ function render(){
       var entered=(marks[sem.n]||[]).filter(function(v,idx){var s2=sem.subjects[idx];if(s2&&s2[3]){return Array.isArray(v)&&v.some(function(r){return gradeFor(r)!==null;});}return gradeFor(v)!==null;}).length;
       foldersEl.appendChild(folderRow(
         "Semester "+sem.n,
-        sem.ch+" credit hours · "+sem.subjects.length+" subjects · "+entered+" of "+sem.subjects.length+" entered",
+        sem.ch+" credit hours · "+entered+" of "+sem.subjects.length+" subjects entered",
         Math.round(entered/sem.subjects.length*100),
         "teal",FOLDER_SVG,
         function(){goTo(["Semester "+sem.n]);}
