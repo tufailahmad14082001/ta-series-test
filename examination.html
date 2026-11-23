@@ -19,13 +19,13 @@
 <style>
 /* ============================================================
    TA SERIES — Website Design System (teal design)
-   Base #E9EEF3 · Card #FFFFFF · Brand teal #0E7C86 ·
-   Accent #0B6B75 · Text navy #12304A · Muted #566676 ·
-   Border #D5DDE5. Light mode only.
+   Base #F5F7FA · Card #FFFFFF · Brand teal #0F766E ·
+   Accent #0B5E57 · Text navy #10243A · Muted #475569 ·
+   Border #E2E8F0. Light mode only.
    Soft realistic neumorphism: raised cards use
    #FFFFFF with shadows
-   6px 6px 14px #C2CBD5, -6px -6px 14px #FFF; sunken search
-   boxes use inset shadows on #E4EAF0. System fonts only —
+   6px 6px 14px #CBD5E1, -6px -6px 14px #FFF; sunken search
+   boxes use inset shadows on #EDF1F5. System fonts only —
    no Google Fonts, no external files. No gradients on text.
    Folder colours: all teal (see labels.js).
    CSP meta tag (kept verbatim from the live site) is in each
@@ -36,45 +36,45 @@
    footer are hidden, so the app home is the one home.
    ============================================================ */
 :root{
-  --base:#E9EEF3;
+  --base:#F5F7FA;
   --card:#FFFFFF;
-  --teal:#0E7C86;
-  --teal-dark:#0B6B75;
-  --teal-soft:#E3F0F2;
-  --teal-light:#35A9B3;
-  --ink:#12304A;
-  --muted:#566676;
-  --muted-2:#566676;
-  --border:#D5DDE5;
-  --line:#D5DDE5;
-  --paper:#F6F9FB;
-  --sunken:#E4EAF0;
-  --shadow-d:#C2CBD5;
+  --teal:#0F766E;
+  --teal-dark:#0B5E57;
+  --teal-soft:#E6F2F0;
+  --teal-light:#2DD4BF;
+  --ink:#10243A;
+  --muted:#475569;
+  --muted-2:#475569;
+  --border:#E2E8F0;
+  --line:#E2E8F0;
+  --paper:#F8FAFC;
+  --sunken:#EDF1F5;
+  --shadow-d:#CBD5E1;
   --red:#CE4145;
   --red-soft:#FDECEC;
-  --orange:#0E7C86;
-  --orange-soft:#E3F0F2;
-  --blue:#0E7C86;
-  --blue-soft:#E3F0F2;
+  --orange:#0F766E;
+  --orange-soft:#E6F2F0;
+  --blue:#0F766E;
+  --blue-soft:#E6F2F0;
   --green:#1A8447;
   --green-soft:#E3F5E9;
-  --amber:#0E7C86;
-  --amber-soft:#E3F0F2;
-  --purple:#0E7C86;
-  --purple-soft:#E3F0F2;
-  --gold:#0E7C86;
-  --r-lg:6px;
-  --r-md:6px;
+  --amber:#0F766E;
+  --amber-soft:#E6F2F0;
+  --purple:#0F766E;
+  --purple-soft:#E6F2F0;
+  --gold:#0F766E;
+  --r-lg:14px;
+  --r-md:12px;
   --pill:6px;
   --btn-h:48px;
   --raise:#FFFFFF;
-  --shadow:0 2px 8px rgba(18,48,74,.08);
-  --shadow-sm:0 1px 4px rgba(18,48,74,.08);
+  --shadow:0 2px 8px rgba(16,36,58,.08);
+  --shadow-sm:0 1px 4px rgba(16,36,58,.08);
   --sunken-shadow:none;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--base);color:var(--ink);font-size:16px;line-height:1.5}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--base);color:var(--ink);font-size:16px;line-height:1.5}
 a{color:inherit}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
 input,select{font:inherit;color:inherit}
@@ -88,7 +88,7 @@ p{margin:0}
 .sunk{background:var(--sunken);box-shadow:var(--sunken-shadow);border-radius:6px}
 
 /* ---------- site header (white, raised) ---------- */
-.site-header{background:var(--card);color:var(--ink);position:sticky;top:0;z-index:40;box-shadow:0 4px 14px rgba(18,48,74,.08)}
+.site-header{background:var(--card);color:var(--ink);position:sticky;top:0;z-index:40;box-shadow:0 4px 14px rgba(16,36,58,.08)}
 .site-header-in{max-width:1080px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;gap:14px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand-mark{width:40px;height:40px;border-radius:6px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;flex:none}
@@ -101,7 +101,7 @@ p{margin:0}
 .menu-btn{display:none;width:44px;height:44px;border-radius:6px;place-items:center;color:var(--ink);margin-left:auto}
 .menu-btn svg{width:22px;height:22px}
 @media (max-width:1060px){
-  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--card);flex-direction:column;padding:10px 16px 16px;gap:2px;box-shadow:0 12px 24px rgba(18,48,74,.12)}
+  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--card);flex-direction:column;padding:10px 16px 16px;gap:2px;box-shadow:0 12px 24px rgba(16,36,58,.12)}
   .site-nav.open{display:flex}
   .menu-btn{display:grid}
 }
@@ -113,7 +113,7 @@ p{margin:0}
 .hero-kicker::before{content:"";width:24px;height:2px;background:var(--teal);border-radius:2px}
 .hero h1{font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:16px 0 16px;max-width:640px;color:var(--ink)}
 .hero p{font-size:17px;line-height:1.65;color:var(--muted);max-width:520px}
-.hero-cta{display:inline-flex;align-items:center;gap:11px;min-height:48px;margin-top:26px;padding:0 26px;border-radius:var(--pill);background:var(--teal);color:#fff;font-size:16px;font-weight:800;text-decoration:none;box-shadow:0 10px 24px rgba(18,48,74,.12)}
+.hero-cta{display:inline-flex;align-items:center;gap:11px;min-height:48px;margin-top:26px;padding:0 26px;border-radius:var(--pill);background:var(--teal);color:#fff;font-size:16px;font-weight:800;text-decoration:none;box-shadow:0 10px 24px rgba(16,36,58,.12)}
 .hero-cta svg{width:22px;height:22px}
 .hero-arcs{position:absolute;right:-40px;top:10px;width:340px;height:340px;pointer-events:none}
 @media (max-width:640px){
@@ -148,7 +148,7 @@ p{margin:0}
 @media (max-width:860px){.card-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.card-grid{grid-template-columns:1fr}}
 .card{background:var(--raise);box-shadow:var(--shadow);border-radius:var(--r-lg);padding:22px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column}
-.card:hover{box-shadow:0 2px 8px rgba(18,48,74,.12)}
+.card:hover{box-shadow:0 2px 8px rgba(16,36,58,.12)}
 .card .tile{width:56px;height:56px;border-radius:6px;display:grid;place-items:center;color:#fff;margin-bottom:14px}
 .card .tile svg{width:28px;height:28px}
 .tile.pdf{background:var(--red)} .tile.quiz{background:var(--blue)}
@@ -161,7 +161,7 @@ p{margin:0}
 .card .meta .go{margin-left:auto;font-size:19px;color:var(--teal)}
 .row{display:flex;align-items:center;gap:10px;background:var(--raise);box-shadow:var(--shadow-sm);border-radius:var(--r-md);padding:12px 14px;text-decoration:none;color:var(--ink)}
 .row + .row{margin-top:10px}
-.row:hover{box-shadow:0 2px 8px rgba(18,48,74,.12)}
+.row:hover{box-shadow:0 2px 8px rgba(16,36,58,.12)}
 .row .tile{width:52px;height:52px;border-radius:6px;display:grid;place-items:center;flex:none;font-weight:800;font-size:12px;color:#fff}
 .row .tile svg{width:26px;height:26px}
 .row .body{flex:1;min-width:0}
@@ -192,14 +192,14 @@ p{margin:0}
 .file-badge.ppt{background:var(--orange)}
 .file-badge.doc{background:var(--blue)}
 .fname{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:16px;font-weight:700;line-height:1.35;overflow-wrap:anywhere}
-.dl-btn{flex:none;width:44px;height:44px;border-radius:6px;display:grid;place-items:center;background:var(--teal);color:#fff;box-shadow:0 4px 10px rgba(18,48,74,.12);text-decoration:none}
+.dl-btn{flex:none;width:44px;height:44px;border-radius:6px;display:grid;place-items:center;background:var(--teal);color:#fff;box-shadow:0 4px 10px rgba(16,36,58,.12);text-decoration:none}
 .dl-btn svg{width:20px;height:20px}
 .dl-btn.done{background:var(--green);box-shadow:0 4px 10px rgba(31,157,85,.35)}
 
 /* ---------- buttons ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:var(--btn-h);border-radius:var(--pill);font-size:16px;font-weight:700;text-decoration:none;padding:12px 24px;border:0;cursor:pointer}
-.btn-teal{background:var(--teal);color:#fff;box-shadow:0 8px 20px rgba(18,48,74,.12)}
-.btn-white{background:#fff;color:var(--teal-dark);box-shadow:0 8px 20px rgba(18,48,74,.18)}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 8px 20px rgba(16,36,58,.12)}
+.btn-white{background:#fff;color:var(--teal-dark);box-shadow:0 8px 20px rgba(16,36,58,.18)}
 .btn-ghost{background:var(--teal-soft);color:var(--teal-dark)}
 .btn-outline{background:#fff;color:var(--teal-dark);border:1.5px solid var(--teal)}
 .btn-block{width:100%}
@@ -219,8 +219,8 @@ p{margin:0}
 .crumbs a{color:var(--teal-dark);font-weight:700;text-decoration:none}
 .up-btn{display:inline-flex;align-items:center;gap:7px;margin:10px 0 2px;padding:8px 14px;min-height:44px;border-radius:var(--pill);background:var(--teal);color:#fff;font-size:14px;font-weight:700}
 /* Filter bottom sheet (results page, spec section 4) */
-.sheet-backdrop{position:fixed;inset:0;background:rgba(18,48,74,.45);z-index:60}
-.sheet{position:fixed;left:0;right:0;bottom:0;z-index:61;background:var(--base);border-radius:6px 6px 0 0;box-shadow:0 -10px 30px rgba(18,48,74,.25);padding:14px 20px 28px;max-width:640px;margin:0 auto}
+.sheet-backdrop{position:fixed;inset:0;background:rgba(16,36,58,.45);z-index:60}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:61;background:var(--base);border-radius:6px 6px 0 0;box-shadow:0 -10px 30px rgba(16,36,58,.25);padding:14px 20px 28px;max-width:640px;margin:0 auto}
 .sheet::before{content:"";display:block;width:44px;height:5px;border-radius:3px;background:#B9C4CF;margin:0 auto 14px}
 .sheet h2{font-size:19px;font-weight:800;color:var(--ink)}
 .sheet .filters{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
@@ -308,12 +308,12 @@ p{margin:0}
 .fz-policy>.fz-white-card{margin-top:0}
 .fz-white-card h2{font-size:20px;font-weight:800;color:var(--ink);margin:22px 0 8px}
 .fz-white-card h2:first-child{margin-top:0}
-.fz-white-card p{font-size:15px;color:#12304A;margin:0 0 12px}
+.fz-white-card p{font-size:15px;color:#10243A;margin:0 0 12px}
 .fz-white-card p:last-child{margin-bottom:0}
-.fz-white-card ul{margin:0 0 12px 20px;font-size:15px;color:#12304A}
+.fz-white-card ul{margin:0 0 12px 20px;font-size:15px;color:#10243A}
 .fz-white-card li{margin-bottom:6px}
 .fz-white-card a{color:var(--teal-dark);font-weight:600}
-.fz-white-card blockquote{margin:16px 0 12px;padding:14px 18px;background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 6px 6px 0;font-size:15px;color:#12304A}
+.fz-white-card blockquote{margin:16px 0 12px;padding:14px 18px;background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:0 6px 6px 0;font-size:15px;color:#10243A}
 .fz-white-card .fz-white-card{background:var(--paper);box-shadow:none;border:1px solid var(--border);margin-top:14px}
 .fz-founder-mark{width:56px;height:56px;border-radius:6px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:22px}
 .fz-grid{margin-top:16px;display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
@@ -328,7 +328,7 @@ p{margin:0}
 .fz-h1{font-size:clamp(28px,4.5vw,40px);font-weight:800;line-height:1.2;color:var(--ink);margin-top:8px}
 .fz-panel{background:#fff;border-radius:6px;padding:24px 22px;color:var(--ink);margin-top:24px;line-height:1.65}
 .fz-panel h2{font-size:20px;font-weight:800;color:var(--ink);margin:0 0 8px}
-.fz-panel p{font-size:15px;color:#12304A;margin:0 0 12px}
+.fz-panel p{font-size:15px;color:#10243A;margin:0 0 12px}
 .fz-tag{display:inline-block;padding:7px 14px;border-radius:6px;background:var(--teal);color:#fff;font-size:12px;font-weight:800}
 .fz-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 /* footer social links, kept from the live site */
@@ -592,7 +592,7 @@ const RESULTS = [
 <style>
 
 button.row{width:100%;text-align:left}
-#tab-gpa .folder-bar{display:block;height:6px;background:#D5DDE5;border-radius:6px;overflow:hidden;margin-top:8px}
+#tab-gpa .folder-bar{display:block;height:6px;background:#E2E8F0;border-radius:6px;overflow:hidden;margin-top:8px}
 #tab-gpa .folder-bar i{display:block;height:100%;width:0;background:var(--teal);border-radius:6px}
 #tab-gpa .subj{background:#fff;border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin-top:8px}
 #tab-gpa .subj .top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
@@ -684,8 +684,15 @@ button.row{width:100%;text-align:left}
 .tr-steps li{counter-increment:step;position:relative;padding-left:34px;margin-bottom:10px;font-size:15px;line-height:1.6;color:var(--ink)}
 .tr-steps li::before{content:counter(step);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:6px;background:var(--teal);color:#fff;font-size:13px;font-weight:800;display:grid;place-items:center}
 .tr-acct{font-size:18px;font-weight:800;letter-spacing:.02em;color:var(--ink)}
-:focus-visible{outline:3px solid #0E7C86;outline-offset:2px}
-.search input:focus-visible{outline:3px solid #0E7C86;outline-offset:2px}
+:focus-visible{outline:3px solid #0F766E;outline-offset:2px}
+.search input:focus-visible{outline:3px solid #0F766E;outline-offset:2px}
+<style>
+/* Premium additions (Modern Academic Technology): sub-navigation + section labels */
+.subnav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 4px}
+.subnav a{display:inline-flex;align-items:center;min-height:46px;padding:10px 16px;border-radius:6px;background:#fff;border:1.5px solid var(--border);color:var(--ink);font-size:14px;font-weight:700;text-decoration:none}
+.subnav a:hover{border-color:var(--teal);color:var(--teal-dark)}
+.exam-kicker{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-dark);margin:0 0 10px}
+.counts-line{font-size:13px;color:var(--muted);margin:12px 0 0}
 </style></head>
 <body><header class="site-header">
   <div class="site-header-in">
@@ -709,6 +716,13 @@ button.row{width:100%;text-align:left}
       <h1>Examination</h1>
       <p>Results, transcript and GPA calculator for KMU BS Nursing students, in one place.</p>
     </div>
+    <nav class="subnav" aria-label="Examination sections">
+      <a href="#results">Examination results</a>
+      <a href="#transcript">Transcript application</a>
+      <a href="#gpa">GPA &amp; CGPA</a>
+      <a href="#gpa" data-exam-scroll="result-card-panel">Academic performance PDF</a>
+      <a href="#gpa" data-exam-scroll="grading-scale-panel">Grading scale</a>
+    </nav>
     <div id="exam-list">
       <button type="button" class="row" id="row-results"><span class="tile teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg></span><span class="body"><b>Examination Results</b><span>171 KMU result PDFs &middot; search by region, semester and batch</span></span><span class="chev">&rsaquo;</span></button>
       <button type="button" class="row" id="row-gpa"><span class="tile tool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg></span><span class="body"><b>GPA &amp; CGPA Calculator</b><span>8 semesters &middot; 1 CGPA calculator &middot; 135 credit hours</span></span><span class="chev">&rsaquo;</span></button>
@@ -716,6 +730,7 @@ button.row{width:100%;text-align:left}
     </div>
     <button type="button" class="up-btn hidden" id="exam-back">&uarr; Up one level</button>
     <div id="tab-results" class="tab-panel">
+      <p class="exam-kicker">Section 1 · Examination results and filters</p>
       <p>KMU BS Nursing result PDFs by region, semester and batch.</p>
     <p style="margin-top:6px;font-size:12px;color:var(--muted)">With thanks to Noman Ahmad · Admin Professor Nurse, KMU IHS Peshawar</p>
     <label class="search" style="margin-top:18px">
@@ -745,7 +760,9 @@ button.row{width:100%;text-align:left}
     </div>
     <div id="empty-state" class="empty"><b>Search or choose a filter to see results</b><p>171 results are ready — type a word above, or choose a region, semester, batch or session.</p></div>
     </div>
-    <div id="tab-transcript" class="tab-panel" hidden>    <div class="panel">
+    <div id="tab-transcript" class="tab-panel" hidden>
+      <p class="exam-kicker">Section 2 · Transcript application</p>
+    <div class="panel">
       <h2>Apply for a KMU Transcript (Semester System)</h2>
       <p>For BS Nursing students. Use the official KMU transcript form and the MCB fee slip below.</p>
     </div>
@@ -784,6 +801,7 @@ button.row{width:100%;text-align:left}
       </div>
     </div>    </div>
     <div id="tab-gpa" class="tab-panel" hidden>
+      <p class="exam-kicker">Section 3 · GPA and CGPA calculations</p>
       <div class="narrow">
       <div class="page-head">
       <h2>GPA &amp; CGPA Calculator</h2>
@@ -798,6 +816,7 @@ button.row{width:100%;text-align:left}
     <div id="view"></div>
 
     <div style="height:28px"></div>
+    <p class="exam-kicker">Section 4 · Academic performance PDF</p>
     <div class="panel" id="result-card-panel">
       <h2>Generate Your Academic Performance Summary</h2>
       <p>Download a clean PDF summary — only your name and institution are used.</p>
@@ -814,7 +833,8 @@ button.row{width:100%;text-align:left}
       <button type="button" class="btn-line hidden" id="recalc-btn">Calculate again</button>
       <p class="card-note" id="card-note" aria-live="polite">Enter your subject marks in the calculator above first. Once your GPA/CGPA is calculated, your PDF download button will activate automatically.</p>
     </div>
-    <div class="panel">
+    <p class="exam-kicker">Section 5 · Grading scale</p>
+    <div class="panel" id="grading-scale-panel">
       <h2>Grading Scale</h2>
       <p>This is the KMU BSN grading scale, verified from one KMU BSN result sheet — Final Result of B.Sc. Nursing Generic, 8th Semester Spring 2024, dated 28.01.2025.</p>
       <table class="scale-table">
@@ -847,6 +867,7 @@ button.row{width:100%;text-align:left}
   <div class="foot-close">
     <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
     <p>Contact: WhatsApp <a href="https://wa.me/923055959410">+92 305 5959410</a> &middot; Email <a href="mailto:nurseofuture@gmail.com">nurseofuture@gmail.com</a></p>
+    <p class="counts-line">1,083 study files · 171 results · 17 past-paper books</p>
     <p>&copy; 2026 TA SERIES. All rights reserved.</p>
   </div>
 </div></footer><script>
@@ -2136,5 +2157,23 @@ $("recalc-btn").addEventListener("click",expandEntry);
   });
   show(currentSection(),false);
 })();
-</script><script data-goatcounter="https://taseries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body>
+</script><script>
+(function(){
+  "use strict";
+  /* Sub-navigation: "Academic performance PDF" and "Grading scale" live
+     inside the GPA tab, so open that tab first, then scroll to the panel. */
+  document.querySelectorAll('[data-exam-scroll]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var target = a.getAttribute('data-exam-scroll');
+      if (window.location.hash !== '#gpa') window.location.hash = '#gpa';
+      setTimeout(function(){
+        var el = document.getElementById(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 60);
+    });
+  });
+})();
+</script>
+<script data-goatcounter="https://taseries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body>
 </html>

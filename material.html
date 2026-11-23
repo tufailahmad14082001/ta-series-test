@@ -11,11 +11,11 @@
 <link rel="stylesheet" href="style.css">
 <style>
 /* Locked folder (Slides Book under maintenance): matches site theme (teal), no blinking. */
-.row.locked{cursor:not-allowed;background:#EAF6F7;border:1.5px solid #0E7C86}
-.row.locked .maint-dot{width:10px;height:10px;border-radius:6px;background:#0E7C86;flex:none;display:inline-block;vertical-align:-1px;margin-right:6px}
+.row.locked{cursor:not-allowed;background:#EAF6F7;border:1.5px solid #0F766E}
+.row.locked .maint-dot{width:10px;height:10px;border-radius:6px;background:#0F766E;flex:none;display:inline-block;vertical-align:-1px;margin-right:6px}
 .btn-sm{min-height:36px;padding:8px 14px;font-size:13px;white-space:nowrap;flex:none}
 </style>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E7C86'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F766E'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
 <script src="tree.js?v=4"></script>
 <script src="labels.js"></script>
 <script src="app-mode.js"></script>
@@ -42,7 +42,7 @@
   <div class="container">
     <div class="page-head">
       <h1>Study Materials</h1>
-      <p>Notes, slides and books for all 8 semesters.</p>
+      <p>Notes, slides and books for all 8 semesters. Semester 1 is being updated; Semesters 2–8 are available.</p>
     </div>
     <label class="search" style="margin-top:18px">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></svg>
@@ -67,6 +67,7 @@
   <div class="foot-close">
     <p class="tagline">TA SERIES — Making Nursing Simple. Making Students Strong.</p>
     <p>Contact: WhatsApp <a href="https://wa.me/923055959410">+92 305 5959410</a> &middot; Email <a href="mailto:nurseofuture@gmail.com">nurseofuture@gmail.com</a></p>
+    <p class="counts-line">1,083 study files · 171 results · 17 past-paper books</p>
     <p>&copy; 2026 TA SERIES. All rights reserved.</p>
   </div>
 </div></footer>
@@ -84,7 +85,7 @@
       upBtn=document.getElementById('up-btn'), countEl=document.getElementById('count'),
       q=document.getElementById('q'), path=[], shown=8;
   var label=window.taLabel||function(n){return String(n);};
-  var folderColor=window.taFolderColor||function(){return '#0E7C86';};
+  var folderColor=window.taFolderColor||function(){return '#0F766E';};
   var FOLDER_SVG='<svg viewBox="0 0 48 40" aria-hidden="true"><path d="M3 8a4 4 0 0 1 4-4h10l4 4h20a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z" fill="currentColor" opacity=".72"/><path d="M3 15a4 4 0 0 1 4-4h34a4 4 0 0 1 4 4v19a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z" fill="currentColor"/><path d="M3 15a4 4 0 0 1 4-4h34a4 4 0 0 1 4 4v6H3z" fill="#fff" opacity=".28"/></svg>';
   var DL_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>';
   var CHECK_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>';
@@ -155,19 +156,19 @@
       return;
     }
     countEl.textContent = path.length===0
-      ? '9 folders · 1,083 files'
+      ? '9 folders · 1,083 files · Semester 1 being updated'
       : (folders.length? folders.length+' folder'+(folders.length>1?'s':'')+' · ':'') + allFiles+' file'+(allFiles===1?'':'s');
     folders.forEach(function(f){
       if(isLockedFolder(f.n)){
         var isSem1=/^semester 1$/i.test(f.n||'');
         html+='<div class="row locked" aria-disabled="true">'+folderIcon(f.n,path.length?path[0]:f.n)+
           '<span class="body"><b>'+esc(label(f.n))+'</b><span><span class="maint-dot"></span> Making it better. Back soon.</span></span>'+
-          '<span class="count">'+(isSem1?'Maintenance':'Live now')+'</span></div>';
+          '<span class="status-badge '+(isSem1?'updating':'available')+'">'+(isSem1?'Being updated':'Available')+'</span></div>';
         return;
       }
       html+='<a class="row" href="#'+encodeURIComponent(f.n)+'" data-folder="'+esc(f.n)+'">'+folderIcon(f.n,path.length?path[0]:f.n)+
         '<span class="body"><b>'+esc(label(f.n))+'</b><span>'+(f.d&&f.d.length? f.d.length+' subfolder'+(f.d.length>1?'s':'')+' · ':'')+f.c+' files</span></span>'+
-        '<span class="count">'+f.c+'</span><span class="chev">&rsaquo;</span></a>';
+        '<span class="status-badge available">Available</span><span class="count">'+f.c+'</span><span class="chev">&rsaquo;</span></a>';
     });
     files.slice(0,shown).forEach(function(f){ html+=fileRow(f,path); });
     if(files.length>shown){
