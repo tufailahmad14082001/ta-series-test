@@ -17,6 +17,10 @@ jobs:
           mkdir -p /tmp/new-site
           unzip -o TA_SERIES_Test_Unslop.zip -d /tmp/new-site
           ls -la /tmp/new-site
+          if [ -d /tmp/new-site/ta-website-unslop ]; then
+            cp -a /tmp/new-site/ta-website-unslop/. /tmp/new-site/
+            rm -rf /tmp/new-site/ta-website-unslop
+          fi
           if [ -d /tmp/new-site/TA_SERIES_Test_Unslop ]; then
             cp -a /tmp/new-site/TA_SERIES_Test_Unslop/. /tmp/new-site/
             rm -rf /tmp/new-site/TA_SERIES_Test_Unslop
